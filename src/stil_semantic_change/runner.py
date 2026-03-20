@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import logging
 from dataclasses import dataclass
+from datetime import UTC, datetime
 from pathlib import Path
+from time import perf_counter
 
 import pandas as pd
 from omegaconf import DictConfig, OmegaConf
@@ -18,6 +20,7 @@ from stil_semantic_change.utils.artifacts import (
     reset_stage_root,
     stage_complete,
     stage_manifest_path,
+    update_stage_manifest,
     write_dataframe,
     write_json,
 )
@@ -60,7 +63,41 @@ def run_experiment(cfg: ExperimentConfig, raw_cfg: DictConfig) -> None:
     for stage_name in cfg.task.pipeline:
         if stage_name not in stage_functions:
             raise ValueError(f"Unknown stage: {stage_name}")
+        stage_root = _stage_root(context.paths, stage_name)
+        skip_existing = stage_complete(stage_root, stage_name) and not cfg.force
+        started_at = datetime.now(UTC)
+        started_perf = perf_counter()
         stage_functions[stage_name](context)
+        if skip_existing:
+            continue
+        completed_at = datetime.now(UTC)
+        update_stage_manifest(
+            stage_root,
+            stage_name,
+            {
+                "stage_name": stage_name,
+                "task_name": cfg.task.name,
+                "dataset_name": cfg.dataset.name,
+                "started_at": started_at.isoformat(),
+                "completed_at": completed_at.isoformat(),
+                "duration_seconds": round(perf_counter() - started_perf, 3),
+            },
+        )
+
+
+def _stage_root(paths: ArtifactPaths, stage_name: str) -> Path:
+    stage_roots = {
+        "prepare_corpus": paths.prepared_root,
+        "train_word2vec": paths.models_root,
+        "align_embeddings": paths.aligned_root,
+        "score_candidates": paths.scores_root,
+        "report_candidates": paths.reports_root,
+        "bert_confirmatory": paths.scores_root,
+    }
+    try:
+        return stage_roots[stage_name]
+    except KeyError as exc:
+        raise ValueError(f"Unknown stage root for {stage_name}") from exc
 
 
 def _reset_stage_if_incomplete(stage_root: Path, stage_name: str) -> None:

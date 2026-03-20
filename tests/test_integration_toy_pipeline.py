@@ -7,6 +7,8 @@ from stil_semantic_change.runner import run_experiment
 from stil_semantic_change.utils.artifacts import (
     build_artifact_paths,
     ensure_directories,
+    read_json,
+    stage_manifest_path,
     write_dataframe,
 )
 from stil_semantic_change.utils.config import build_experiment_config
@@ -79,3 +81,19 @@ def test_toy_pipeline_smoke(project_root, toy_dataset_dir, tmp_path) -> None:
     assert (paths.reports_root / "drift_vs_frequency_dispersion.png").exists()
     assert (paths.reports_root / "drift_trajectories.png").exists()
     assert (paths.scores_root / "candidate_sets.json").exists()
+
+    manifest_specs = [
+        ("prepare_corpus", paths.prepared_root),
+        ("train_word2vec", paths.models_root),
+        ("align_embeddings", paths.aligned_root),
+        ("score_candidates", paths.scores_root),
+        ("report_candidates", paths.reports_root),
+    ]
+    for stage_name, stage_root in manifest_specs:
+        manifest = read_json(stage_manifest_path(stage_root, stage_name))
+        assert manifest["stage_name"] == stage_name
+        assert manifest["task_name"] == cfg.task.name
+        assert manifest["dataset_name"] == cfg.dataset.name
+        assert isinstance(manifest["started_at"], str)
+        assert isinstance(manifest["completed_at"], str)
+        assert manifest["duration_seconds"] >= 0.0
