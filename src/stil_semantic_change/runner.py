@@ -29,7 +29,7 @@ from stil_semantic_change.utils.logging import setup_logging
 from stil_semantic_change.utils.periods import slice_sort_key
 from stil_semantic_change.word2vec.align import align_models
 from stil_semantic_change.word2vec.score import score_candidates
-from stil_semantic_change.word2vec.train import train_word2vec_models
+from stil_semantic_change.word2vec.train import SLICE_SENTENCES_DIRNAME, train_word2vec_models
 
 logger = logging.getLogger(__name__)
 
@@ -120,8 +120,10 @@ def _prepare_corpus(context: ExperimentContext) -> None:
     _reset_stage_if_incomplete(context.paths.prepared_root, stage_name)
 
     docs_dir = context.paths.prepared_root / "docs"
+    slice_sentences_dir = context.paths.prepared_root / SLICE_SENTENCES_DIRNAME
     tokens_dir = context.paths.prepared_root / "tokens"
     docs_dir.mkdir(parents=True, exist_ok=True)
+    slice_sentences_dir.mkdir(parents=True, exist_ok=True)
     tokens_dir.mkdir(parents=True, exist_ok=True)
 
     preprocessor = PortuguesePreprocessor(context.cfg.preprocess)
@@ -147,6 +149,15 @@ def _prepare_corpus(context: ExperimentContext) -> None:
                 "slice_count": int(documents["slice_id"].nunique()),
             }
         )
+
+        for slice_id, slice_documents in documents.groupby("slice_id", sort=False):
+            clean_texts = [text for text in slice_documents["clean_text"].tolist() if text]
+            if not clean_texts:
+                continue
+            sentence_file = slice_sentences_dir / f"{slice_id}.txt"
+            with sentence_file.open("a", encoding="utf-8") as handle:
+                handle.write("\n".join(clean_texts))
+                handle.write("\n")
 
         for slice_id, doc_count, token_count in (
             documents.groupby("slice_id")
@@ -214,6 +225,7 @@ def _prepare_corpus(context: ExperimentContext) -> None:
             "dataset": context.cfg.dataset.name,
             "shard_count": len(shard_rows),
             "slice_count": int(len(slice_summary)),
+            "slice_sentence_files": int(len(list(slice_sentences_dir.glob("*.txt")))),
             "token_rows": int(lemma_stats_frame["frequency"].sum()),
         },
     )

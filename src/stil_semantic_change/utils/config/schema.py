@@ -47,13 +47,13 @@ class ModelConfig:
     name: str
     vector_size: int = 300
     window: int = 5
-    negative: int = 10
+    negative: int = 5
     min_count: int = 5
-    epochs: int = 10
+    epochs: int = 5
     sg: int = 1
-    workers: int = 1
+    workers: int = 6
     seed: int = 13
-    replicates: int = 3
+    replicates: int = 2
     bert_model_name: str = "rufimelo/bert-large-portuguese-cased-sts"
     bert_batch_size: int = 8
     bert_layers: tuple[int, ...] = (-1, -4)

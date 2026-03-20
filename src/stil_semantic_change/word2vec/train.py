@@ -13,9 +13,23 @@ from stil_semantic_change.utils.config.schema import ExperimentConfig
 from stil_semantic_change.word2vec.vector_store import save_vector_store, vector_store_from_model
 
 logger = logging.getLogger(__name__)
+SLICE_SENTENCES_DIRNAME = "slice_sentences"
 
 
-class SliceSentenceIterable:
+class SliceSentenceFileIterable:
+    def __init__(self, sentence_file: Path) -> None:
+        self.sentence_file = sentence_file
+
+    def __iter__(self) -> Iterator[list[str]]:
+        with self.sentence_file.open(encoding="utf-8") as handle:
+            for line in handle:
+                clean_text = line.strip()
+                if not clean_text:
+                    continue
+                yield [token for token in clean_text.split(" ") if token]
+
+
+class SliceSentenceShardIterable:
     def __init__(self, doc_shards: list[Path], slice_id: str) -> None:
         self.doc_shards = doc_shards
         self.slice_id = slice_id
@@ -41,9 +55,13 @@ def train_word2vec_models(
     prepared_root: Path,
     models_root: Path,
 ) -> TrainingOutputs:
+    sentence_dir = prepared_root / SLICE_SENTENCES_DIRNAME
     doc_shards = sorted((prepared_root / "docs").glob("*.parquet"))
-    if not doc_shards:
-        raise FileNotFoundError(f"No prepared document shards found under {prepared_root / 'docs'}")
+    if not sentence_dir.exists() and not doc_shards:
+        raise FileNotFoundError(
+            "No prepared slice sentences or document shards found under "
+            f"{sentence_dir} or {prepared_root / 'docs'}"
+        )
 
     slice_summary = pd.read_parquet(prepared_root / "slice_summary.parquet").sort_values("sort_key")
     slice_order = slice_summary["slice_id"].tolist()
@@ -65,7 +83,16 @@ def train_word2vec_models(
                 continue
 
             target_dir.mkdir(parents=True, exist_ok=True)
-            sentences = SliceSentenceIterable(doc_shards, slice_id)
+            sentence_file = sentence_dir / f"{slice_id}.txt"
+            if sentence_file.exists():
+                sentences: Iterator[list[str]] = SliceSentenceFileIterable(sentence_file)
+            else:
+                logger.warning(
+                    "Falling back to shard scan for slice %s because %s is missing",
+                    slice_id,
+                    sentence_file,
+                )
+                sentences = SliceSentenceShardIterable(doc_shards, slice_id)
             total_examples = int(
                 slice_summary.loc[slice_summary["slice_id"] == slice_id, "document_count"].iloc[0]
             )

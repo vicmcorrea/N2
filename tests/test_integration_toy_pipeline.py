@@ -13,6 +13,7 @@ from stil_semantic_change.utils.artifacts import (
 )
 from stil_semantic_change.utils.config import build_experiment_config
 from stil_semantic_change.word2vec.score import score_candidates
+from stil_semantic_change.word2vec.train import SLICE_SENTENCES_DIRNAME
 from stil_semantic_change.word2vec.vector_store import VectorStore, save_vector_store
 from tests.helpers import make_raw_cfg
 
@@ -77,10 +78,17 @@ def test_toy_pipeline_smoke(project_root, toy_dataset_dir, tmp_path) -> None:
     cfg = build_experiment_config(raw_cfg)
     run_experiment(cfg, raw_cfg)
     paths = build_artifact_paths(cfg, raw_cfg)
+    slice_sentence_dir = paths.prepared_root / SLICE_SENTENCES_DIRNAME
     assert (paths.reports_root / "coverage_by_slice.png").exists()
     assert (paths.reports_root / "drift_vs_frequency_dispersion.png").exists()
     assert (paths.reports_root / "drift_trajectories.png").exists()
     assert (paths.scores_root / "candidate_sets.json").exists()
+    assert slice_sentence_dir.exists()
+    assert sorted(path.name for path in slice_sentence_dir.glob("*.txt")) == [
+        "2001.txt",
+        "2002.txt",
+        "2003.txt",
+    ]
 
     manifest_specs = [
         ("prepare_corpus", paths.prepared_root),

@@ -2,13 +2,13 @@ kind: word2vec
 name: word2vec_skipgram_300d
 vector_size: 300
 window: 5
-negative: 10
+negative: 5
 min_count: 5
-epochs: 10
+epochs: 5
 sg: 1
-workers: 1
+workers: 6
 seed: 13
-replicates: 3
+replicates: 2
 bert_model_name: rufimelo/bert-large-portuguese-cased-sts
 bert_batch_size: 8
 bert_layers:
