@@ -1,0 +1,7 @@
+name: score_candidates
+pipeline:
+  - prepare_corpus
+  - train_word2vec
+  - align_embeddings
+  - score_candidates
+fail_fast: true

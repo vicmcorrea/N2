@@ -1,0 +1,5 @@
+name: train_word2vec
+pipeline:
+  - prepare_corpus
+  - train_word2vec
+fail_fast: true

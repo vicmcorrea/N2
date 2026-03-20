@@ -1,0 +1,91 @@
+task:
+  name: run_yearly_core
+  pipeline:
+  - prepare_corpus
+  - train_word2vec
+  - align_embeddings
+  - score_candidates
+  - report_candidates
+  fail_fast: true
+dataset:
+  kind: brpolicorpus_floor
+  name: brpolicorpus_floor_yearly
+  raw_dir: ./RawDatasets/BrPoliCorpus-Dataset/exports/floor
+  file_glob: '*.csv'
+  freq: yearly
+  text_column: Discurso
+  date_column: Data
+  limit_files: null
+  limit_rows_per_file: null
+preprocess:
+  spacy_model: pt_core_news_sm
+  fallback_to_blank: true
+  lowercase: true
+  preserve_accents: true
+  keep_pos:
+  - NOUN
+  - VERB
+  - ADJ
+  exclude_pos:
+  - PROPN
+  remove_stopwords: true
+  remove_punctuation: true
+  remove_numeric: true
+  min_token_length: 2
+  batch_size: 128
+model:
+  kind: word2vec
+  name: word2vec_skipgram_300d
+  vector_size: 300
+  window: 5
+  negative: 10
+  min_count: 5
+  epochs: 10
+  sg: 1
+  workers: 1
+  seed: 13
+  replicates: 3
+  bert_model_name: rufimelo/bert-large-portuguese-cased-sts
+  bert_batch_size: 8
+  bert_layers:
+  - -1
+  - -4
+  bert_max_contexts_per_slice: 64
+alignment:
+  kind: orthogonal_procrustes
+  anchor_top_k: 20000
+  min_anchor_words: 50
+selection:
+  min_occurrences_per_slice: 50
+  min_documents_per_slice: 5
+  min_slice_presence_ratio: 0.8
+  top_drift_candidates: 15
+  top_stable_controls: 10
+  top_seed_terms: 5
+  theory_seeds:
+  - democracia
+  - corrupção
+  - reforma
+  - economia
+  - liberdade
+  neighbor_k: 8
+report:
+  figure_style: whitegrid
+  coverage_palette:
+  - '#2f5d8a'
+  - '#e07a5f'
+  scatter_palette:
+  - '#1d3557'
+  - '#e63946'
+  - '#457b9d'
+  label_top_n: 12
+  small_multiple_terms: 8
+  neighbor_terms: 4
+logging:
+  level: INFO
+  format: text
+  log_dir: ./run/outputs/logs
+io:
+  project_root: .
+  artifacts_root: ./run/outputs
+  write_resolved_config: true

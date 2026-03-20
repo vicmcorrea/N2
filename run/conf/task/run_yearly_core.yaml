@@ -1,0 +1,8 @@
+name: run_yearly_core
+pipeline:
+  - prepare_corpus
+  - train_word2vec
+  - align_embeddings
+  - score_candidates
+  - report_candidates
+fail_fast: true

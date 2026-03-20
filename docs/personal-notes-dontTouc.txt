@@ -1,0 +1,52 @@
+Make mean consecutive drift more clear
+
+He didnt say project was dead, he just said to shift into making this an exploratory article about embedding techniques, he just said to add more than 1 drift technique(TF-IDF), to see which is better and hows more correlation.
+
+Word embedding was almost same but almost same perf as bert which is heavy.
+
+exploratory analysis for correlation in drift and embeddings techniqyes
+
+correlation between technques that find drift.
+
+Like there could be technques that are good at identifying soome types of drift.
+
+Drifts by fact, or writting style,etc...
+
+
+Even if they are all same level of quality its good aswell.
+Hard to analyze this dataset because there are no labels.
+Comparisons with drift techniques.
+
+Like if bert, word2vec, tf-idf all get similar results we can say that instead of wasting resources with bert we can just use fast tf-idf.
+
+
+try to defend that results whatever they are would be usefull in cotnext in it beween portguese and politiical, and talk about analyzing concept drift in political discourse if useful.
+
+
+He said maybe we can try to analyze symboloc lexical meaning of the text (idk how this would be best applied)
+
+
+Using this like nilc metrix to see things, or just regular symbolic analysis of rule words in portuguese, like some are symbolic lexical variables like emotivess is already a dictionary based.
+https://pln.venturus.dev.br/nilcmetrix
+https://github.com/nilc-nlp/nilcmetrix
+
+
+nornalize scores from NIILC METRICS (BR-LIWC)
+
+https://github.com/nilc-nlp/nilcmetrix
+
+----
+
+exploratory analysis for correlation in drift and embeddings techniqyes
+--
+IF we find anything.
+
+
+
+metrics and drifts, and SHOW if techniques is correlated.
+
+correlation between technques that find drift.
+
+Like there could be technques that are good at identifying soome types of drift.
+
+Drifts by fact, or writting style,etc...

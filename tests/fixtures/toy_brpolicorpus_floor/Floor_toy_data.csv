@@ -1,0 +1,10 @@
+Sessao,Quarto,Orador,HorarioQuarto,FaseSessaoSG,Data,FaseSessao,TipoSessaoTXT,HoraQuarto,Discurso,Apelido,Estado,Partido,Bloco
+001.1.01.O,1,1,10:00,PE,05/03/2001,Pequeno Expediente,Ordinária - CD,10:00,"A reforma econômica fortalece o mercado e a economia. Reforma econômica gera crescimento e trabalho.","ANA COSTA",SP,PT,False
+001.1.01.O,2,1,10:05,PE,05/03/2001,Pequeno Expediente,Ordinária - CD,10:05,"O presidente debate a economia no congresso. O presidente acompanha a reforma econômica.","BRUNO LIMA",RJ,PSDB,False
+001.1.02.O,1,1,11:00,PE,17/08/2001,Pequeno Expediente,Ordinária - CD,11:00,"A democracia protege a reforma econômica e o mercado nacional. Economia e trabalho precisam de estabilidade.","CLARA MOTA",MG,PT,False
+001.1.03.O,1,1,10:00,PE,14/04/2002,Pequeno Expediente,Ordinária - CD,10:00,"A reforma econômica ainda organiza o mercado e a economia. Reforma econômica exige investimento e crescimento.","ANA COSTA",SP,PT,False
+001.1.03.O,2,1,10:05,PE,14/04/2002,Pequeno Expediente,Ordinária - CD,10:05,"O presidente conversa com o congresso sobre a economia. O presidente mantém diálogo institucional.","BRUNO LIMA",RJ,PSDB,False
+001.1.04.O,1,1,11:00,PE,30/09/2002,Pequeno Expediente,Ordinária - CD,11:00,"A democracia observa a reforma econômica, o mercado e a renda. Economia produtiva ajuda o trabalho.","CLARA MOTA",MG,PT,False
+001.1.05.O,1,1,10:00,PE,12/03/2003,Pequeno Expediente,Ordinária - CD,10:00,"A reforma política amplia direitos, justiça e cidadania. Reforma política fortalece democracia e liberdade.","ANA COSTA",SP,PT,False
+001.1.05.O,2,1,10:05,PE,12/03/2003,Pequeno Expediente,Ordinária - CD,10:05,"O presidente conversa com o congresso sobre justiça e democracia. O presidente mantém diálogo institucional.","BRUNO LIMA",RJ,PSDB,False
+001.1.06.O,1,1,11:00,PE,22/10/2003,Pequeno Expediente,Ordinária - CD,11:00,"A reforma política conecta direitos humanos, justiça social e liberdade. Democracia e cidadania orientam a reforma.","CLARA MOTA",MG,PT,False

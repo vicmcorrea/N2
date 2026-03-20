@@ -1,0 +1,3 @@
+level: INFO
+format: text
+log_dir: ${io.artifacts_root}/logs

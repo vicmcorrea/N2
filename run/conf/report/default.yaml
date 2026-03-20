@@ -1,0 +1,11 @@
+figure_style: whitegrid
+coverage_palette:
+  - "#2f5d8a"
+  - "#e07a5f"
+scatter_palette:
+  - "#1d3557"
+  - "#e63946"
+  - "#457b9d"
+label_top_n: 12
+small_multiple_terms: 8
+neighbor_terms: 4

@@ -1,0 +1,3 @@
+kind: orthogonal_procrustes
+anchor_top_k: 20000
+min_anchor_words: 50

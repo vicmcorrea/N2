@@ -1,0 +1,4 @@
+name: print_config
+pipeline:
+  - print_config
+fail_fast: true

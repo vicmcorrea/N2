@@ -1,0 +1,3 @@
+project_root: .
+artifacts_root: ${io.project_root}/run/outputs
+write_resolved_config: true

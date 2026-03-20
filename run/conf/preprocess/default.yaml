@@ -1,0 +1,15 @@
+spacy_model: pt_core_news_sm
+fallback_to_blank: true
+lowercase: true
+preserve_accents: true
+keep_pos:
+  - NOUN
+  - VERB
+  - ADJ
+exclude_pos:
+  - PROPN
+remove_stopwords: true
+remove_punctuation: true
+remove_numeric: true
+min_token_length: 2
+batch_size: 128

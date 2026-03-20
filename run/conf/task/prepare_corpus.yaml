@@ -1,0 +1,4 @@
+name: prepare_corpus
+pipeline:
+  - prepare_corpus
+fail_fast: true

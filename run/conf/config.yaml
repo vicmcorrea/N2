@@ -1,0 +1,19 @@
+defaults:
+  - task: run_yearly_core
+  - dataset: brpolicorpus_floor_yearly
+  - preprocess: default
+  - model: word2vec_skipgram_300d
+  - alignment: procrustes
+  - selection: default
+  - report: default
+  - logging: default
+  - io: default
+  - _self_
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: ${io.artifacts_root}/hydra/${now:%Y-%m-%d_%H-%M-%S}
+  sweep:
+    dir: ${io.artifacts_root}/hydra/multirun/${now:%Y-%m-%d_%H-%M-%S}

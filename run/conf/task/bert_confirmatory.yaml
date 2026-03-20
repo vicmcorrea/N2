@@ -1,0 +1,5 @@
+name: bert_confirmatory
+pipeline:
+  - prepare_corpus
+  - bert_confirmatory
+fail_fast: true

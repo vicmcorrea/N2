@@ -1,0 +1,17 @@
+kind: word2vec
+name: word2vec_skipgram_300d
+vector_size: 300
+window: 5
+negative: 10
+min_count: 5
+epochs: 10
+sg: 1
+workers: 1
+seed: 13
+replicates: 3
+bert_model_name: rufimelo/bert-large-portuguese-cased-sts
+bert_batch_size: 8
+bert_layers:
+  - -1
+  - -4
+bert_max_contexts_per_slice: 64

@@ -1,0 +1,6 @@
+name: align_embeddings
+pipeline:
+  - prepare_corpus
+  - train_word2vec
+  - align_embeddings
+fail_fast: true

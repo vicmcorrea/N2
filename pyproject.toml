@@ -1,0 +1,85 @@
+[project]
+name = "stil-semantic-change"
+version = "0.1.0"
+description = "Portuguese diachronic semantic-change pipeline for the N2 STIL paper."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "gensim>=4.3.3",
+  "hydra-core>=1.3.2",
+  "matplotlib>=3.10",
+  "numpy>=2.1",
+  "omegaconf>=2.3.0",
+  "pandas>=2.2",
+  "pyarrow>=18.0",
+  "scipy>=1.14",
+  "seaborn>=0.13",
+  "sentence-transformers>=5.2",
+  "spacy>=3.8",
+  "spacy-lookups-data>=1.0.5",
+  "torch>=2.5",
+  "transformers>=4.57",
+]
+
+[dependency-groups]
+dev = [
+  "mypy>=1.13",
+  "pandas-stubs>=2.2",
+  "pytest>=8.3",
+  "pytest-cov>=6.0",
+  "ruff>=0.8.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/stil_semantic_change"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [
+  "RawDatasets",
+  "run/outputs",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "C4"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["stil_semantic_change"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_unused_configs = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+no_implicit_optional = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = "gensim.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "scipy.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "sentence_transformers.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "spacy.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "transformers.*"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,9 @@
+kind: roda_viva
+name: roda_viva_full_yearly
+raw_dir: ${io.project_root}/RawDatasets/Roda-Viva-Dataset/exports/V0-2/csv
+metadata_dir: ${io.project_root}/RawDatasets/Roda-Viva-Dataset/exports/Metadata
+file_glob: "*.csv"
+freq: yearly
+category_filter: null
+limit_files: null
+limit_rows_per_file: null
