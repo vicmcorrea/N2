@@ -29,11 +29,8 @@ build/
 # Raw datasets (too heavy for git)
 RawDatasets/
 
-# Run artifacts
-run/outputs/data/
-run/outputs/cache/
-run/outputs/hydra/
-run/outputs/logs/
+# Run artifacts (experiments, data, cache, models - all regenerable)
+run/outputs/
 
 # LaTeX build artifacts
 *.aux
