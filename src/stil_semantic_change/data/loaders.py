@@ -12,7 +12,7 @@ from stil_semantic_change.utils.config.schema import DatasetConfig
 from stil_semantic_change.utils.periods import make_slice_id
 
 logger = logging.getLogger(__name__)
-CSV_CHUNK_SIZE = 250
+CSV_CHUNK_SIZE = 1000
 
 
 def parse_brpolicorpus_date(value: str) -> pd.Timestamp:
@@ -36,14 +36,14 @@ def _iter_csv_chunks(
     if limit_rows is not None:
         yield pd.read_csv(
             file_path,
-            usecols=lambda column: column in usecols,
+            usecols=usecols,
             nrows=limit_rows,
         )
         return
 
     yield from pd.read_csv(
         file_path,
-        usecols=lambda column: column in usecols,
+        usecols=usecols,
         chunksize=CSV_CHUNK_SIZE,
     )
 

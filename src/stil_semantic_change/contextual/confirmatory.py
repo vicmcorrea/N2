@@ -228,7 +228,7 @@ def _sample_occurrences(
     for shard_path in sorted((prepared_root / "tokens").glob("*.parquet")):
         frame = pd.read_parquet(
             shard_path,
-            columns=["doc_id", "slice_id", "lemma", "token_index", "token"],
+            columns=["doc_id", "slice_id", "lemma", "token_index"],
         )
         shard = frame.loc[frame["lemma"].isin(term_set)].copy()
         if not shard.empty:

@@ -97,10 +97,15 @@ class PortuguesePreprocessor:
         documents: list[dict[str, object]] = []
         tokens: list[dict[str, object]] = []
 
+        meta_records = records.to_dict(orient="records")
         text_values = records["text"].fillna("").astype(str).tolist()
-        docs = self._nlp.pipe(text_values, batch_size=self.cfg.batch_size)
+        docs = self._nlp.pipe(
+            text_values,
+            batch_size=self.cfg.batch_size,
+            n_process=max(1, self.cfg.n_process),
+        )
 
-        for meta, doc in zip(records.to_dict(orient="records"), docs, strict=True):
+        for meta, doc in zip(meta_records, docs, strict=True):
             token_rows = self._extract_tokens(doc, meta)
             documents.append(
                 {
@@ -123,26 +128,28 @@ class PortuguesePreprocessor:
 
         for index, token in enumerate(doc):
             original_text = str(token.text)
-            normalized = self._normalize_text(original_text)
-            if not normalized:
-                continue
-
-            pos = token.pos_ or self._guess_pos(original_text)
-            lemma = token.lemma_ if getattr(token, "lemma_", "") else normalized
-            lemma = self._normalize_text(lemma)
-            if not lemma:
-                continue
-
             if self.cfg.remove_punctuation and (
                 token.is_punct or not TOKEN_RE.search(original_text)
             ):
                 continue
             if self.cfg.remove_numeric and any(char.isdigit() for char in original_text):
                 continue
+
+            normalized = self._normalize_text(original_text)
+            if not normalized:
+                continue
+
+            lemma = token.lemma_ if getattr(token, "lemma_", "") else normalized
+            lemma = self._normalize_text(lemma)
+            if not lemma:
+                continue
+
             if self.cfg.remove_stopwords and lemma in self.stopwords:
                 continue
             if len(lemma) < self.cfg.min_token_length:
                 continue
+
+            pos = token.pos_ or self._guess_pos(original_text)
             if self.cfg.exclude_pos and pos in self.cfg.exclude_pos:
                 continue
             if self.cfg.keep_pos and pos not in self.cfg.keep_pos:
@@ -154,7 +161,6 @@ class PortuguesePreprocessor:
                     "date": meta["date"],
                     "slice_id": meta["slice_id"],
                     "token_index": index,
-                    "token": normalized,
                     "lemma": lemma,
                     "pos": pos,
                 }

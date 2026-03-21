@@ -88,6 +88,7 @@ def build_experiment_config(cfg: DictConfig) -> ExperimentConfig:
         remove_numeric=bool(cfg.preprocess.remove_numeric),
         min_token_length=int(cfg.preprocess.min_token_length),
         batch_size=int(cfg.preprocess.batch_size),
+        n_process=int(cfg.preprocess.get("n_process", 6)),
     )
 
     model_cfg = ModelConfig(

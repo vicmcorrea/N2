@@ -38,7 +38,8 @@ class PreprocessConfig:
     remove_punctuation: bool = True
     remove_numeric: bool = True
     min_token_length: int = 2
-    batch_size: int = 128
+    batch_size: int = 512
+    n_process: int = 6
 
 
 @dataclass(frozen=True)

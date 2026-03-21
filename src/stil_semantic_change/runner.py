@@ -139,14 +139,15 @@ def _prepare_corpus(context: ExperimentContext) -> None:
             continue
 
         shard_name = f"batch_{batch_index:04d}.parquet"
-        write_dataframe(docs_dir / shard_name, documents)
+        docs_output = documents.drop(columns=["clean_text"])
+        write_dataframe(docs_dir / shard_name, docs_output)
         write_dataframe(tokens_dir / shard_name, tokens)
         shard_rows.append(
             {
                 "shard_name": shard_name,
-                "document_count": int(len(documents)),
-                "token_count": int(documents["token_count"].sum()),
-                "slice_count": int(documents["slice_id"].nunique()),
+                "document_count": int(len(docs_output)),
+                "token_count": int(docs_output["token_count"].sum()),
+                "slice_count": int(docs_output["slice_id"].nunique()),
             }
         )
 

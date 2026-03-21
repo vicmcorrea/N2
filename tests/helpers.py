@@ -48,6 +48,7 @@ def make_raw_cfg(
                 "remove_numeric": True,
                 "min_token_length": 2,
                 "batch_size": 64,
+                "n_process": 1,
             },
             "model": {
                 "kind": "word2vec",
