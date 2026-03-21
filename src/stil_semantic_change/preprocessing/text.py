@@ -161,6 +161,7 @@ class PortuguesePreprocessor:
                     "date": meta["date"],
                     "slice_id": meta["slice_id"],
                     "token_index": index,
+                    "token": normalized,
                     "lemma": lemma,
                     "pos": pos,
                 }

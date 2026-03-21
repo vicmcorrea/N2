@@ -139,9 +139,12 @@ def _prepare_corpus(context: ExperimentContext) -> None:
             continue
 
         shard_name = f"batch_{batch_index:04d}.parquet"
-        docs_output = documents.drop(columns=["clean_text"])
+        docs_output = documents[
+            ["doc_id", "date", "slice_id", "text", "source_file", "token_count"]
+        ].copy()
+        tokens_output = tokens[["doc_id", "slice_id", "token_index", "token", "lemma"]].copy()
         write_dataframe(docs_dir / shard_name, docs_output)
-        write_dataframe(tokens_dir / shard_name, tokens)
+        write_dataframe(tokens_dir / shard_name, tokens_output)
         shard_rows.append(
             {
                 "shard_name": shard_name,
@@ -171,7 +174,7 @@ def _prepare_corpus(context: ExperimentContext) -> None:
             current["token_count"] += int(token_count)
 
         grouped = (
-            tokens.groupby(["slice_id", "lemma"])
+            tokens_output.groupby(["slice_id", "lemma"])
             .agg(frequency=("lemma", "size"), document_count=("doc_id", "nunique"))
             .reset_index()
         )
