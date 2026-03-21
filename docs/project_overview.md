@@ -117,6 +117,7 @@ Important current implementation details:
 The main docs to keep current are:
 
 - `project_overview.md`
+- `comparative_pipeline_readiness_2026_03_21.md`
 - `exploratory_drift_comparison_plan.md`
 - `progress_status_2026_03_20.md`
 - `research_readiness_datasets.md`

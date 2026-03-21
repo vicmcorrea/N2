@@ -8,14 +8,15 @@ Please read these files before deciding on the next step:
 
 1. `README.md`
 2. `docs/project_overview.md`
-3. `docs/exploratory_drift_comparison_plan.md`
-4. `docs/progress_status_2026_03_20.md`
-5. `docs/research_readiness_datasets.md`
-6. `docs/semantic_change_literature_guide.md`
-7. `docs/word_selection_protocol.md`
-8. `docs/embedding_strategy_nilc_word2vec.md`
-9. `docs/prepared_artifact_layout_2026_03_21.md`
-10. `docs/runtime_config_cleanup_2026_03_21.md`
+3. `docs/comparative_pipeline_readiness_2026_03_21.md`
+4. `docs/exploratory_drift_comparison_plan.md`
+5. `docs/progress_status_2026_03_20.md`
+6. `docs/research_readiness_datasets.md`
+7. `docs/semantic_change_literature_guide.md`
+8. `docs/word_selection_protocol.md`
+9. `docs/embedding_strategy_nilc_word2vec.md`
+10. `docs/prepared_artifact_layout_2026_03_21.md`
+11. `docs/runtime_config_cleanup_2026_03_21.md`
 
 ## Current Paper Direction
 
@@ -52,7 +53,11 @@ Current method families:
 
 ## Most Important Current Outputs
 
-Preliminary completed run:
+Current clean Word2Vec baseline:
+
+- `run/outputs/experiments/brpolicorpus_floor_yearly/2cf8a857028c`
+
+Earlier exploratory quicklook:
 
 - `run/outputs/experiments/brpolicorpus_floor_yearly/ae5022228b99/quicklook/yearly_2003_2023_r1`
 
@@ -70,7 +75,7 @@ Progress summary:
 The next useful work usually falls into one of these:
 
 1. implement and run the comparative drift baselines, especially `TF-IDF`
-2. finish the cleaner yearly rerun on `BrPoliCorpus floor`
-3. define shared comparison metrics across methods
-4. prepare paper-facing figures and tables for cross-method comparison
-5. refine the exploratory paper outline and methodology section
+2. build the shared method-comparison panel used by every downstream scorer
+3. refactor contextual `BERT` to read that panel instead of Word2Vec-only candidate sets
+4. add the `PTPARL-V` validation-table build as a separate pipeline path
+5. prepare paper-facing figures and tables for cross-method comparison
