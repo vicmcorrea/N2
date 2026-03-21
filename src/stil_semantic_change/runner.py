@@ -12,6 +12,17 @@ from omegaconf import DictConfig, OmegaConf
 from stil_semantic_change.contextual import run_bert_confirmatory
 from stil_semantic_change.data.loaders import iter_dataset_batches
 from stil_semantic_change.preprocessing.text import PortuguesePreprocessor
+from stil_semantic_change.preprocessing.views import (
+    CONTENT_LEMMA_VIEW,
+    CONTENT_SURFACE_VIEW,
+    NORMALIZED_SURFACE_VIEW,
+    TEXT_VIEW_TO_COLUMN,
+    prepared_content_tokens_dir,
+    prepared_doc_metadata_dir,
+    prepared_doc_raw_text_dir,
+    prepared_text_view_by_slice_dir,
+    prepared_text_views_by_doc_dir,
+)
 from stil_semantic_change.reporting.plots import generate_reports
 from stil_semantic_change.utils.artifacts import (
     ArtifactPaths,
@@ -29,7 +40,7 @@ from stil_semantic_change.utils.logging import setup_logging
 from stil_semantic_change.utils.periods import slice_sort_key
 from stil_semantic_change.word2vec.align import align_models
 from stil_semantic_change.word2vec.score import score_candidates
-from stil_semantic_change.word2vec.train import SLICE_SENTENCES_DIRNAME, train_word2vec_models
+from stil_semantic_change.word2vec.train import train_word2vec_models
 
 logger = logging.getLogger(__name__)
 
@@ -119,12 +130,24 @@ def _prepare_corpus(context: ExperimentContext) -> None:
         return
     _reset_stage_if_incomplete(context.paths.prepared_root, stage_name)
 
-    docs_dir = context.paths.prepared_root / "docs"
-    slice_sentences_dir = context.paths.prepared_root / SLICE_SENTENCES_DIRNAME
-    tokens_dir = context.paths.prepared_root / "tokens"
-    docs_dir.mkdir(parents=True, exist_ok=True)
-    slice_sentences_dir.mkdir(parents=True, exist_ok=True)
+    metadata_dir = prepared_doc_metadata_dir(context.paths.prepared_root)
+    raw_text_dir = prepared_doc_raw_text_dir(context.paths.prepared_root)
+    text_views_dir = prepared_text_views_by_doc_dir(context.paths.prepared_root)
+    tokens_dir = prepared_content_tokens_dir(context.paths.prepared_root)
+    slice_text_dirs = {
+        view_name: prepared_text_view_by_slice_dir(context.paths.prepared_root, view_name)
+        for view_name in (
+            NORMALIZED_SURFACE_VIEW,
+            CONTENT_SURFACE_VIEW,
+            CONTENT_LEMMA_VIEW,
+        )
+    }
+    metadata_dir.mkdir(parents=True, exist_ok=True)
+    raw_text_dir.mkdir(parents=True, exist_ok=True)
+    text_views_dir.mkdir(parents=True, exist_ok=True)
     tokens_dir.mkdir(parents=True, exist_ok=True)
+    for directory in slice_text_dirs.values():
+        directory.mkdir(parents=True, exist_ok=True)
 
     preprocessor = PortuguesePreprocessor(context.cfg.preprocess)
     slice_stats: dict[str, dict[str, int]] = {}
@@ -139,29 +162,52 @@ def _prepare_corpus(context: ExperimentContext) -> None:
             continue
 
         shard_name = f"batch_{batch_index:04d}.parquet"
-        docs_output = documents[
-            ["doc_id", "date", "slice_id", "text", "source_file", "token_count"]
+        metadata_output = documents[
+            [
+                "doc_id",
+                "date",
+                "slice_id",
+                "source_file",
+                "normalized_token_count",
+                "token_count",
+            ]
         ].copy()
-        tokens_output = tokens[["doc_id", "slice_id", "token_index", "token", "lemma"]].copy()
-        write_dataframe(docs_dir / shard_name, docs_output)
+        raw_text_output = documents[["doc_id", "slice_id", "raw_text"]].copy()
+        text_views_output = documents[
+            [
+                "doc_id",
+                "slice_id",
+                "normalized_surface_text",
+                "content_surface_text",
+                "content_lemma_text",
+            ]
+        ].copy()
+        tokens_output = tokens[
+            ["doc_id", "slice_id", "token_index", "token", "lemma", "pos"]
+        ].copy()
+        write_dataframe(metadata_dir / shard_name, metadata_output)
+        write_dataframe(raw_text_dir / shard_name, raw_text_output)
+        write_dataframe(text_views_dir / shard_name, text_views_output)
         write_dataframe(tokens_dir / shard_name, tokens_output)
         shard_rows.append(
             {
                 "shard_name": shard_name,
-                "document_count": int(len(docs_output)),
-                "token_count": int(docs_output["token_count"].sum()),
-                "slice_count": int(docs_output["slice_id"].nunique()),
+                "document_count": int(len(metadata_output)),
+                "normalized_token_count": int(metadata_output["normalized_token_count"].sum()),
+                "content_token_count": int(metadata_output["token_count"].sum()),
+                "slice_count": int(metadata_output["slice_id"].nunique()),
             }
         )
 
         for slice_id, slice_documents in documents.groupby("slice_id", sort=False):
-            clean_texts = [text for text in slice_documents["clean_text"].tolist() if text]
-            if not clean_texts:
-                continue
-            sentence_file = slice_sentences_dir / f"{slice_id}.txt"
-            with sentence_file.open("a", encoding="utf-8") as handle:
-                handle.write("\n".join(clean_texts))
-                handle.write("\n")
+            for view_name, column_name in TEXT_VIEW_TO_COLUMN.items():
+                texts = [text for text in slice_documents[column_name].tolist() if text]
+                if not texts:
+                    continue
+                sentence_file = slice_text_dirs[view_name] / f"{slice_id}.txt"
+                with sentence_file.open("a", encoding="utf-8") as handle:
+                    handle.write("\n".join(texts))
+                    handle.write("\n")
 
         for slice_id, doc_count, token_count in (
             documents.groupby("slice_id")
@@ -229,7 +275,11 @@ def _prepare_corpus(context: ExperimentContext) -> None:
             "dataset": context.cfg.dataset.name,
             "shard_count": len(shard_rows),
             "slice_count": int(len(slice_summary)),
-            "slice_sentence_files": int(len(list(slice_sentences_dir.glob("*.txt")))),
+            "text_views": list(TEXT_VIEW_TO_COLUMN),
+            "slice_text_file_counts": {
+                view_name: int(len(list(directory.glob("*.txt"))))
+                for view_name, directory in slice_text_dirs.items()
+            },
             "token_rows": int(lemma_stats_frame["frequency"].sum()),
         },
     )

@@ -3,6 +3,16 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
+from stil_semantic_change.preprocessing.views import (
+    CONTENT_LEMMA_VIEW,
+    CONTENT_SURFACE_VIEW,
+    NORMALIZED_SURFACE_VIEW,
+    prepared_content_tokens_dir,
+    prepared_doc_metadata_dir,
+    prepared_doc_raw_text_dir,
+    prepared_text_view_by_slice_dir,
+    prepared_text_views_by_doc_dir,
+)
 from stil_semantic_change.runner import run_experiment
 from stil_semantic_change.utils.artifacts import (
     build_artifact_paths,
@@ -13,7 +23,6 @@ from stil_semantic_change.utils.artifacts import (
 )
 from stil_semantic_change.utils.config import build_experiment_config
 from stil_semantic_change.word2vec.score import score_candidates
-from stil_semantic_change.word2vec.train import SLICE_SENTENCES_DIRNAME
 from stil_semantic_change.word2vec.vector_store import VectorStore, save_vector_store
 from tests.helpers import make_raw_cfg
 
@@ -131,17 +140,26 @@ def test_toy_pipeline_smoke(project_root, toy_dataset_dir, tmp_path) -> None:
     cfg = build_experiment_config(raw_cfg)
     run_experiment(cfg, raw_cfg)
     paths = build_artifact_paths(cfg, raw_cfg)
-    slice_sentence_dir = paths.prepared_root / SLICE_SENTENCES_DIRNAME
+    doc_metadata_dir = prepared_doc_metadata_dir(paths.prepared_root)
+    doc_raw_text_dir = prepared_doc_raw_text_dir(paths.prepared_root)
+    text_views_dir = prepared_text_views_by_doc_dir(paths.prepared_root)
+    content_tokens_dir = prepared_content_tokens_dir(paths.prepared_root)
     assert (paths.reports_root / "coverage_by_slice.png").exists()
     assert (paths.reports_root / "drift_vs_frequency_dispersion.png").exists()
     assert (paths.reports_root / "drift_trajectories.png").exists()
     assert (paths.scores_root / "candidate_sets.json").exists()
-    assert slice_sentence_dir.exists()
-    assert sorted(path.name for path in slice_sentence_dir.glob("*.txt")) == [
-        "2001.txt",
-        "2002.txt",
-        "2003.txt",
-    ]
+    assert doc_metadata_dir.exists()
+    assert doc_raw_text_dir.exists()
+    assert text_views_dir.exists()
+    assert content_tokens_dir.exists()
+    for view_name in (NORMALIZED_SURFACE_VIEW, CONTENT_SURFACE_VIEW, CONTENT_LEMMA_VIEW):
+        slice_view_dir = prepared_text_view_by_slice_dir(paths.prepared_root, view_name)
+        assert slice_view_dir.exists()
+        assert sorted(path.name for path in slice_view_dir.glob("*.txt")) == [
+            "2001.txt",
+            "2002.txt",
+            "2003.txt",
+        ]
 
     manifest_specs = [
         ("prepare_corpus", paths.prepared_root),
@@ -158,3 +176,10 @@ def test_toy_pipeline_smoke(project_root, toy_dataset_dir, tmp_path) -> None:
         assert isinstance(manifest["started_at"], str)
         assert isinstance(manifest["completed_at"], str)
         assert manifest["duration_seconds"] >= 0.0
+
+    prepare_manifest = read_json(stage_manifest_path(paths.prepared_root, "prepare_corpus"))
+    assert prepare_manifest["text_views"] == [
+        NORMALIZED_SURFACE_VIEW,
+        CONTENT_SURFACE_VIEW,
+        CONTENT_LEMMA_VIEW,
+    ]

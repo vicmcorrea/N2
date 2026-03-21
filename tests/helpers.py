@@ -53,6 +53,7 @@ def make_raw_cfg(
             "model": {
                 "kind": "word2vec",
                 "name": "word2vec_skipgram_300d",
+                "text_view": "content_lemma",
                 "vector_size": 40,
                 "window": 3,
                 "negative": 3,

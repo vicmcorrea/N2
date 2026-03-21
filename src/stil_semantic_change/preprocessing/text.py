@@ -169,14 +169,8 @@ class PortuguesePreprocessor:
         )
 
         for meta, doc in zip(meta_records, docs, strict=True):
-            token_rows = self._extract_tokens(doc, meta)
-            documents.append(
-                {
-                    **meta,
-                    "clean_text": " ".join(row["lemma"] for row in token_rows),
-                    "token_count": len(token_rows),
-                }
-            )
+            document_row, token_rows = self._process_document(doc, meta)
+            documents.append(document_row)
             tokens.extend(token_rows)
 
         documents_df = pd.DataFrame(documents)
@@ -186,8 +180,15 @@ class PortuguesePreprocessor:
     def tokenize_text(self, text: str) -> list[str]:
         return [str(token.text) for token in self._nlp(text)]
 
-    def _extract_tokens(self, doc, meta: dict[str, object]) -> list[dict[str, object]]:  # type: ignore[no-untyped-def]
+    def _process_document(
+        self,
+        doc,
+        meta: dict[str, object],
+    ) -> tuple[dict[str, object], list[dict[str, object]]]:  # type: ignore[no-untyped-def]
         token_rows: list[dict[str, object]] = []
+        normalized_tokens: list[str] = []
+        content_tokens: list[str] = []
+        content_lemmas: list[str] = []
 
         for index, token in enumerate(doc):
             original_text = str(token.text)
@@ -201,6 +202,7 @@ class PortuguesePreprocessor:
             normalized = self._normalize_text(original_text)
             if not normalized:
                 continue
+            normalized_tokens.append(normalized)
 
             lemma = self._resolve_lemma(token, normalized)
             if not lemma:
@@ -217,6 +219,8 @@ class PortuguesePreprocessor:
             if self.cfg.keep_pos and pos not in self.cfg.keep_pos:
                 continue
 
+            content_tokens.append(normalized)
+            content_lemmas.append(lemma)
             token_rows.append(
                 {
                     "doc_id": meta["doc_id"],
@@ -229,6 +233,19 @@ class PortuguesePreprocessor:
                 }
             )
 
+        document_row = {
+            **meta,
+            "raw_text": str(meta.get("text", "")),
+            "normalized_surface_text": " ".join(normalized_tokens),
+            "content_surface_text": " ".join(content_tokens),
+            "content_lemma_text": " ".join(content_lemmas),
+            "normalized_token_count": len(normalized_tokens),
+            "token_count": len(token_rows),
+        }
+        return document_row, token_rows
+
+    def _extract_tokens(self, doc, meta: dict[str, object]) -> list[dict[str, object]]:  # type: ignore[no-untyped-def]
+        _, token_rows = self._process_document(doc, meta)
         return token_rows
 
     def _resolve_lemma(self, token, normalized: str) -> str:  # type: ignore[no-untyped-def]

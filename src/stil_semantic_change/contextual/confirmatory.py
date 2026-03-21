@@ -11,6 +11,11 @@ import torch
 from transformers import AutoModel, AutoTokenizer
 
 from stil_semantic_change.preprocessing.text import PortuguesePreprocessor
+from stil_semantic_change.preprocessing.views import (
+    prepared_content_tokens_dir,
+    prepared_doc_metadata_dir,
+    prepared_doc_raw_text_dir,
+)
 from stil_semantic_change.utils.artifacts import write_dataframe, write_json, write_npz
 from stil_semantic_change.utils.config.schema import ExperimentConfig
 
@@ -225,7 +230,7 @@ def _sample_occurrences(
 ) -> pd.DataFrame:
     term_set = set(selected_terms)
     token_frames: list[pd.DataFrame] = []
-    for shard_path in sorted((prepared_root / "tokens").glob("*.parquet")):
+    for shard_path in sorted(prepared_content_tokens_dir(prepared_root).glob("*.parquet")):
         frame = pd.read_parquet(
             shard_path,
             columns=["doc_id", "slice_id", "lemma", "token_index"],
@@ -259,7 +264,7 @@ def _sample_occurrences(
 
 def _load_document_metadata(prepared_root: Path, doc_ids: set[str]) -> pd.DataFrame:
     rows: list[pd.DataFrame] = []
-    for shard_path in sorted((prepared_root / "docs").glob("*.parquet")):
+    for shard_path in sorted(prepared_doc_metadata_dir(prepared_root).glob("*.parquet")):
         frame = pd.read_parquet(shard_path, columns=["doc_id", "date", "source_file"])
         shard = frame.loc[frame["doc_id"].isin(doc_ids)].copy()
         if not shard.empty:
@@ -271,11 +276,11 @@ def _load_document_metadata(prepared_root: Path, doc_ids: set[str]) -> pd.DataFr
 
 def _load_document_texts(prepared_root: Path, doc_ids: set[str]) -> dict[str, str]:
     document_texts: dict[str, str] = {}
-    for shard_path in sorted((prepared_root / "docs").glob("*.parquet")):
-        frame = pd.read_parquet(shard_path, columns=["doc_id", "text"])
+    for shard_path in sorted(prepared_doc_raw_text_dir(prepared_root).glob("*.parquet")):
+        frame = pd.read_parquet(shard_path, columns=["doc_id", "raw_text"])
         shard = frame.loc[frame["doc_id"].isin(doc_ids)]
         for row in shard.itertuples(index=False):
-            document_texts[str(row.doc_id)] = str(row.text)
+            document_texts[str(row.doc_id)] = str(row.raw_text)
     return document_texts
 
 

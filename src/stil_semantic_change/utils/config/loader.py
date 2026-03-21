@@ -94,6 +94,7 @@ def build_experiment_config(cfg: DictConfig) -> ExperimentConfig:
     model_cfg = ModelConfig(
         kind=str(cfg.model.kind),
         name=str(cfg.model.name),
+        text_view=str(cfg.model.get("text_view", "content_lemma")),
         vector_size=int(cfg.model.vector_size),
         window=int(cfg.model.window),
         negative=int(cfg.model.negative),

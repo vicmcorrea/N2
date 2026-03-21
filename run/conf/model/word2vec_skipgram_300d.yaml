@@ -1,5 +1,6 @@
 kind: word2vec
 name: word2vec_skipgram_300d
+text_view: content_lemma
 vector_size: 300
 window: 5
 negative: 5

@@ -46,6 +46,7 @@ class PreprocessConfig:
 class ModelConfig:
     kind: str
     name: str
+    text_view: str = "content_lemma"
     vector_size: int = 300
     window: int = 5
     negative: int = 5
