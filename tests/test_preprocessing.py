@@ -134,3 +134,41 @@ def test_preprocessing_repairs_broken_lemmas_and_pronominal_spacing() -> None:
     assert "transformou-se" in lemmas
     assert "conferido" in lemmas
     assert "procurar" in lemmas
+
+
+def test_preprocessing_can_strip_accents(monkeypatch) -> None:
+    import spacy
+
+    monkeypatch.setattr(
+        spacy,
+        "load",
+        lambda *args, **kwargs: (_ for _ in ()).throw(OSError("missing model")),
+    )
+    cfg = PreprocessConfig(
+        spacy_model="pt_lookup",
+        fallback_to_blank=True,
+        preserve_accents=False,
+        remove_stopwords=True,
+        remove_punctuation=True,
+        remove_numeric=True,
+        min_token_length=2,
+    )
+    processor = PortuguesePreprocessor(cfg)
+    records = pd.DataFrame(
+        [
+            {
+                "doc_id": "doc4",
+                "date": pd.Timestamp("2001-01-01"),
+                "slice_id": "2001",
+                "text": "Ação econômica, aliás, democrática.",
+                "source_file": "toy.csv",
+            }
+        ]
+    )
+
+    batch = processor.process_records(records)
+    assert "acao" in batch.documents.loc[0, "normalized_surface_text"]
+    assert "economica" in batch.documents.loc[0, "content_surface_text"]
+    assert "economica" in batch.tokens["lemma"].tolist()
+    assert "democratico" in batch.tokens["lemma"].tolist()
+    assert "alias" not in batch.tokens["lemma"].tolist()

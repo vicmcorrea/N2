@@ -130,7 +130,14 @@ class ProcessedBatch:
 class PortuguesePreprocessor:
     def __init__(self, cfg: PreprocessConfig) -> None:
         self.cfg = cfg
-        self.stopwords = set(STOP_WORDS)
+        self.stopwords = {self._normalize_text(token) for token in STOP_WORDS}
+        self.function_word_pos = {
+            self._normalize_text(token): pos for token, pos in FUNCTION_WORD_POS.items()
+        }
+        self.lemma_overrides = {
+            self._normalize_text(token): self._normalize_text(lemma)
+            for token, lemma in LEMMA_OVERRIDES.items()
+        }
         self._nlp = self._load_nlp()
 
     def _load_nlp(self):  # type: ignore[no-untyped-def]
@@ -213,7 +220,7 @@ class PortuguesePreprocessor:
             if len(lemma) < self.cfg.min_token_length:
                 continue
 
-            pos = token.pos_ or self._guess_pos(original_text)
+            pos = token.pos_ or self._guess_pos(normalized)
             if self.cfg.exclude_pos and pos in self.cfg.exclude_pos:
                 continue
             if self.cfg.keep_pos and pos not in self.cfg.keep_pos:
@@ -249,7 +256,7 @@ class PortuguesePreprocessor:
         return token_rows
 
     def _resolve_lemma(self, token, normalized: str) -> str:  # type: ignore[no-untyped-def]
-        override = LEMMA_OVERRIDES.get(normalized)
+        override = self.lemma_overrides.get(normalized)
         if override is not None:
             return override
 
@@ -296,18 +303,25 @@ class PortuguesePreprocessor:
         text = unicodedata.normalize("NFC", value.strip())
         if self.cfg.lowercase:
             text = text.lower()
+        if not self.cfg.preserve_accents:
+            text = "".join(
+                char
+                for char in unicodedata.normalize("NFD", text)
+                if not unicodedata.combining(char)
+            )
+            text = unicodedata.normalize("NFC", text)
         return text
 
     def _guess_pos(self, token: str) -> str:
         if token[:1].isupper() and token[1:].islower():
             return "PROPN"
-        lowered = token.lower()
-        if lowered in FUNCTION_WORD_POS:
-            return FUNCTION_WORD_POS[lowered]
-        if lowered.endswith(ADV_SUFFIXES):
+        normalized = self._normalize_text(token)
+        if normalized in self.function_word_pos:
+            return self.function_word_pos[normalized]
+        if normalized.endswith(ADV_SUFFIXES):
             return "ADV"
-        if lowered.endswith(VERB_SUFFIXES):
+        if normalized.endswith(VERB_SUFFIXES):
             return "VERB"
-        if lowered.endswith(ADJ_SUFFIXES):
+        if normalized.endswith(ADJ_SUFFIXES):
             return "ADJ"
         return "NOUN"

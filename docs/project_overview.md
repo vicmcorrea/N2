@@ -99,6 +99,19 @@ The paper does not need one method to “win.” Useful outcomes include:
 6. use symbolic features to interpret change type when useful
 7. write the STIL paper as an exploratory comparative study
 
+## Current Implementation Notes
+
+The experiment package now assumes a multi-view prepared-artifact contract instead of a
+single universal cleaned-text field.
+
+Important current implementation details:
+
+- `Word2Vec` trains from a configurable prepared text view via `model.text_view`
+- the default training view is `content_lemma`
+- `model.text_view` is validated at config load time
+- `preprocess.preserve_accents` is now an active normalization switch
+- contextual `BERT` dependencies are lazy-loaded so non-BERT runs stay lighter
+
 ## Active Documentation
 
 The main docs to keep current are:
@@ -111,3 +124,5 @@ The main docs to keep current are:
 - `word_selection_protocol.md`
 - `embedding_strategy_nilc_word2vec.md`
 - `chat_handoff.md`
+- `prepared_artifact_layout_2026_03_21.md`
+- `runtime_config_cleanup_2026_03_21.md`

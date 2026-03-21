@@ -20,10 +20,11 @@ analysis over Portuguese corpora, centered on `BrPoliCorpus floor`.
 ## Start here
 
 - `docs/chat_handoff.md`
-- `docs/next_chat_prompt.md`
 - `docs/project_overview.md`
 - `docs/stil_plan_recommendation.md`
 - `docs/research_readiness_datasets.md`
+- `docs/prepared_artifact_layout_2026_03_21.md`
+- `docs/runtime_config_cleanup_2026_03_21.md`
 
 ## Experiment Quickstart
 
@@ -32,6 +33,11 @@ Install dependencies with `uv`:
 ```bash
 uv sync --group dev
 ```
+
+The prepared-corpus layout and recent runtime/config cleanup are documented here:
+
+- `docs/prepared_artifact_layout_2026_03_21.md`
+- `docs/runtime_config_cleanup_2026_03_21.md`
 
 Run the toy end-to-end smoke pipeline:
 
@@ -49,6 +55,16 @@ uv run python run/pipeline/main.py task=run_yearly_core dataset=brpolicorpus_flo
 ```
 
 Outputs are written under `run/outputs/`.
+
+## Important Runtime Notes
+
+- `model.text_view` is validated at config-load time
+  - valid values: `normalized_surface`, `content_surface`, `content_lemma`
+- the default `Word2Vec` training representation is `content_lemma`
+- `preprocess.preserve_accents` is active
+  - `true` keeps accented forms such as `corrupção`
+  - `false` normalizes them to forms such as `corrupcao`
+- contextual `BERT` dependencies are lazy-loaded and should only be paid for when the `bert_confirmatory` stage actually runs
 
 ## Most important current decision
 

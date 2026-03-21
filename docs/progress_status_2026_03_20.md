@@ -92,6 +92,20 @@ The codebase already includes a confirmatory contextual path:
 
 However, BERT has not yet been used to produce the final comparative outputs needed for the new paper framing.
 
+### 6. Runtime and configuration cleanup
+
+The experiment package has now been tightened in a few important ways:
+
+- prepared artifacts are explicitly multi-view rather than centered on one universal cleaned-text field
+- `model.text_view` now validates at config load time
+- `preprocess.preserve_accents` now affects normalization behavior instead of remaining unused
+- contextual `BERT` dependencies are lazy-loaded so the core non-BERT pipeline starts lighter
+
+Reference notes:
+
+- `docs/prepared_artifact_layout_2026_03_21.md`
+- `docs/runtime_config_cleanup_2026_03_21.md`
+
 ## What The Current Results Still Tell Us
 
 Even under the new framing, the completed quicklook remains useful.
@@ -212,6 +226,7 @@ What exists now:
 - one completed exploratory `Word2Vec` quicklook
 - partial later reruns
 - a preliminary advisor memo
+- a cleaner multi-view prepared-artifact contract with stricter runtime validation
 
 What is still missing for the actual paper:
 

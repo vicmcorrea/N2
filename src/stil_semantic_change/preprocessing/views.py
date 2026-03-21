@@ -14,6 +14,11 @@ BY_SLICE_DIRNAME = "by_slice"
 NORMALIZED_SURFACE_VIEW = "normalized_surface"
 CONTENT_SURFACE_VIEW = "content_surface"
 CONTENT_LEMMA_VIEW = "content_lemma"
+TEXT_VIEW_NAMES = (
+    NORMALIZED_SURFACE_VIEW,
+    CONTENT_SURFACE_VIEW,
+    CONTENT_LEMMA_VIEW,
+)
 
 TEXT_VIEW_TO_COLUMN = {
     NORMALIZED_SURFACE_VIEW: "normalized_surface_text",

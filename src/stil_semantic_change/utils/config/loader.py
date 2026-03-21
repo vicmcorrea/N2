@@ -5,6 +5,7 @@ from typing import Any
 
 from omegaconf import DictConfig
 
+from stil_semantic_change.preprocessing.views import TEXT_VIEW_NAMES
 from stil_semantic_change.utils.config.schema import (
     AlignmentConfig,
     DatasetConfig,
@@ -36,6 +37,13 @@ def _tuple_int(values: Any) -> tuple[int, ...]:
     if values is None:
         return ()
     return tuple(int(value) for value in values)
+
+
+def _validate_text_view(value: str) -> str:
+    if value not in TEXT_VIEW_NAMES:
+        expected = ", ".join(TEXT_VIEW_NAMES)
+        raise ValueError(f"Invalid model.text_view '{value}'. Expected one of: {expected}")
+    return value
 
 
 def build_experiment_config(cfg: DictConfig) -> ExperimentConfig:
@@ -94,7 +102,7 @@ def build_experiment_config(cfg: DictConfig) -> ExperimentConfig:
     model_cfg = ModelConfig(
         kind=str(cfg.model.kind),
         name=str(cfg.model.name),
-        text_view=str(cfg.model.get("text_view", "content_lemma")),
+        text_view=_validate_text_view(str(cfg.model.get("text_view", "content_lemma"))),
         vector_size=int(cfg.model.vector_size),
         window=int(cfg.model.window),
         negative=int(cfg.model.negative),

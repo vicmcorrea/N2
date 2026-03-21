@@ -9,13 +9,10 @@ from time import perf_counter
 import pandas as pd
 from omegaconf import DictConfig, OmegaConf
 
-from stil_semantic_change.contextual import run_bert_confirmatory
 from stil_semantic_change.data.loaders import iter_dataset_batches
 from stil_semantic_change.preprocessing.text import PortuguesePreprocessor
 from stil_semantic_change.preprocessing.views import (
-    CONTENT_LEMMA_VIEW,
-    CONTENT_SURFACE_VIEW,
-    NORMALIZED_SURFACE_VIEW,
+    TEXT_VIEW_NAMES,
     TEXT_VIEW_TO_COLUMN,
     prepared_content_tokens_dir,
     prepared_doc_metadata_dir,
@@ -23,7 +20,6 @@ from stil_semantic_change.preprocessing.views import (
     prepared_text_view_by_slice_dir,
     prepared_text_views_by_doc_dir,
 )
-from stil_semantic_change.reporting.plots import generate_reports
 from stil_semantic_change.utils.artifacts import (
     ArtifactPaths,
     build_artifact_paths,
@@ -136,11 +132,7 @@ def _prepare_corpus(context: ExperimentContext) -> None:
     tokens_dir = prepared_content_tokens_dir(context.paths.prepared_root)
     slice_text_dirs = {
         view_name: prepared_text_view_by_slice_dir(context.paths.prepared_root, view_name)
-        for view_name in (
-            NORMALIZED_SURFACE_VIEW,
-            CONTENT_SURFACE_VIEW,
-            CONTENT_LEMMA_VIEW,
-        )
+        for view_name in TEXT_VIEW_NAMES
     }
     metadata_dir.mkdir(parents=True, exist_ok=True)
     raw_text_dir.mkdir(parents=True, exist_ok=True)
@@ -357,6 +349,8 @@ def _report_candidates(context: ExperimentContext) -> None:
         return
     _reset_stage_if_incomplete(context.paths.reports_root, stage_name)
 
+    from stil_semantic_change.reporting.plots import generate_reports
+
     generate_reports(
         context.cfg,
         context.paths.prepared_root,
@@ -381,6 +375,8 @@ def _bert_confirmatory(context: ExperimentContext) -> None:
     if bert_root.exists() and not stage_complete(context.paths.scores_root, stage_name):
         logger.info("Resetting incomplete BERT confirmatory outputs under %s", bert_root)
         reset_stage_root(bert_root)
+
+    from stil_semantic_change.contextual.confirmatory import run_bert_confirmatory
 
     comparison = run_bert_confirmatory(
         context.cfg,

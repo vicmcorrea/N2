@@ -70,3 +70,12 @@ Instead, we store multiple named text views so different methods can consume the
 
 When adding a new method, do not overload an existing text column with a new meaning.
 Add a named view if the representation is methodologically distinct.
+
+## Runtime Safeguards
+
+The codebase now also enforces a few supporting rules around this layout:
+
+- `model.text_view` is validated at config load time
+- `preprocess.preserve_accents` now affects normalization behavior instead of remaining a dead config flag
+- optional contextual dependencies are lazy-loaded
+  - non-BERT runs should no longer import `torch` and `transformers` just by importing the main runner
