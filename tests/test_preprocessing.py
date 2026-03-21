@@ -105,8 +105,10 @@ def test_preprocessing_repairs_broken_lemmas_and_pronominal_spacing() -> None:
         FakeToken("começaremos", "começarer"),
         FakeToken("estaremos", "estarer"),
         FakeToken("veremos", "verer"),
+        FakeToken("iríamos", "irer"),
         FakeToken("deveríamos", "deverer"),
         FakeToken("transformou-se", "transformour se"),
+        FakeToken("conferido", "conferer"),
         FakeToken("procurem", "procur"),
     ]
 
@@ -127,6 +129,8 @@ def test_preprocessing_repairs_broken_lemmas_and_pronominal_spacing() -> None:
     assert "começar" in lemmas
     assert "estar" in lemmas
     assert "ver" in lemmas
+    assert "ir" in lemmas
     assert "dever" in lemmas
     assert "transformou-se" in lemmas
+    assert "conferido" in lemmas
     assert "procurar" in lemmas

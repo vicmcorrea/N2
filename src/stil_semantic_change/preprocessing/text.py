@@ -88,6 +88,11 @@ LEMMA_OVERRIDES = {
     "repitamos": "repetir",
     "repito": "repetir",
 }
+VALID_ARER_ERER_IRER_LEMMAS = {
+    "bem-querer",
+    "querer",
+    "requerer",
+}
 SURFACE_TO_INFINITIVE_SUFFIXES = (
     ("aríamos", "ar"),
     ("eríamos", "er"),
@@ -110,6 +115,9 @@ SURFACE_TO_INFINITIVE_SUFFIXES = (
     ("aria", "ar"),
     ("eria", "er"),
     ("iria", "ir"),
+    ("arem", "ar"),
+    ("erem", "er"),
+    ("irem", "ir"),
 )
 
 
@@ -234,6 +242,8 @@ class PortuguesePreprocessor:
             return normalized
         if repaired := self._repair_infinitive_from_surface(lemma, normalized):
             return repaired
+        if self._looks_like_malformed_infinitive(lemma):
+            return normalized
         if " " not in lemma:
             return lemma
 
@@ -247,14 +257,20 @@ class PortuguesePreprocessor:
         return normalized
 
     def _repair_infinitive_from_surface(self, lemma: str, normalized: str) -> str | None:
-        if not lemma.endswith(("arer", "erer", "irer")):
+        if not self._looks_like_malformed_infinitive(lemma):
             return None
 
         surface = normalized.split("-", maxsplit=1)[0]
         for suffix, infinitive in SURFACE_TO_INFINITIVE_SUFFIXES:
-            if surface.endswith(suffix) and len(surface) > len(suffix):
+            if surface.endswith(suffix) and len(surface) >= len(suffix):
                 return f"{surface[: -len(suffix)]}{infinitive}"
         return None
+
+    def _looks_like_malformed_infinitive(self, lemma: str) -> bool:
+        return (
+            lemma.endswith(("arer", "erer", "irer"))
+            and lemma not in VALID_ARER_ERER_IRER_LEMMAS
+        )
 
     def _looks_like_infinitive(self, lemma: str) -> bool:
         return len(lemma) > 3 and lemma.endswith(("ar", "er", "ir"))
