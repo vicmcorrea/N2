@@ -26,6 +26,7 @@ def _eligible_vocabulary(
     total_slices: int,
 ) -> pd.DataFrame:
     stats = lemma_slice_stats.copy()
+    excluded = set(cfg.selection.exclude_lemmas)
     stats["qualifies"] = (
         (stats["frequency"] >= cfg.selection.min_occurrences_per_slice)
         & (stats["document_count"] >= cfg.selection.min_documents_per_slice)
@@ -42,10 +43,15 @@ def _eligible_vocabulary(
         .reset_index()
     )
     grouped["slice_presence_ratio"] = grouped["qualifying_slices"] / float(total_slices)
-    grouped["eligible"] = grouped["slice_presence_ratio"] >= cfg.selection.min_slice_presence_ratio
+    grouped["has_whitespace"] = grouped["lemma"].str.contains(r"\s", regex=True, na=False)
+    grouped["excluded"] = grouped["has_whitespace"] | grouped["lemma"].isin(excluded)
+    grouped["eligible"] = (
+        (grouped["slice_presence_ratio"] >= cfg.selection.min_slice_presence_ratio)
+        & ~grouped["excluded"]
+    )
     return grouped.sort_values(
-        ["eligible", "slice_presence_ratio", "total_frequency"],
-        ascending=[False, False, False],
+        ["eligible", "excluded", "slice_presence_ratio", "total_frequency"],
+        ascending=[False, True, False, False],
     )
 
 

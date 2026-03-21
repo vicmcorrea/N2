@@ -77,3 +77,56 @@ def test_lookup_fallback_excludes_obvious_discourse_markers(monkeypatch) -> None
     assert "aliás" not in lemmas
     assert "democracia" in lemmas
     assert "economia" in lemmas
+
+
+def test_preprocessing_repairs_broken_lemmas_and_pronominal_spacing() -> None:
+    cfg = PreprocessConfig(
+        spacy_model="pt_lookup",
+        fallback_to_blank=True,
+        remove_stopwords=False,
+        remove_punctuation=True,
+        remove_numeric=True,
+        min_token_length=2,
+    )
+    processor = PortuguesePreprocessor(cfg)
+
+    class FakeToken:
+        def __init__(self, text: str, lemma: str, pos: str = "VERB") -> None:
+            self.text = text
+            self.lemma_ = lemma
+            self.pos_ = pos
+            self.is_punct = False
+
+    fake_doc = [
+        FakeToken("digo", "digar"),
+        FakeToken("repita", "repitar"),
+        FakeToken("trata-se", "tratar se"),
+        FakeToken("fazê-lo", "fazer ele"),
+        FakeToken("começaremos", "começarer"),
+        FakeToken("estaremos", "estarer"),
+        FakeToken("veremos", "verer"),
+        FakeToken("deveríamos", "deverer"),
+        FakeToken("transformou-se", "transformour se"),
+        FakeToken("procurem", "procur"),
+    ]
+
+    token_rows = processor._extract_tokens(
+        fake_doc,
+        {
+            "doc_id": "doc3",
+            "date": pd.Timestamp("2001-01-01"),
+            "slice_id": "2001",
+        },
+    )
+    lemmas = [row["lemma"] for row in token_rows]
+
+    assert "dizer" in lemmas
+    assert "repetir" in lemmas
+    assert "tratar-se" in lemmas
+    assert "fazê-lo" in lemmas
+    assert "começar" in lemmas
+    assert "estar" in lemmas
+    assert "ver" in lemmas
+    assert "dever" in lemmas
+    assert "transformou-se" in lemmas
+    assert "procurar" in lemmas

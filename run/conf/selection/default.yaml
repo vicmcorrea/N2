@@ -1,6 +1,13 @@
 min_occurrences_per_slice: 50
 min_documents_per_slice: 5
 min_slice_presence_ratio: 0.8
+exclude_lemmas:
+  - dizer
+  - repetir
+  - dito
+  - visto
+  - diga-se
+  - aspa
 top_drift_candidates: 15
 top_stable_controls: 10
 top_seed_terms: 5

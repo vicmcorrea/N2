@@ -56,6 +56,61 @@ FUNCTION_WORD_POS = {
     "verdadeiramente": "ADV",
     "àquele": "PRON",
 }
+CLITIC_SUFFIXES = {
+    "lhe",
+    "lhes",
+    "lo",
+    "la",
+    "los",
+    "las",
+    "me",
+    "se",
+    "te",
+    "nos",
+    "vos",
+}
+LEMMA_OVERRIDES = {
+    "começaremos": "começar",
+    "diga": "dizer",
+    "diga-se": "dizer-se",
+    "digamos": "dizer",
+    "digo": "dizer",
+    "direi": "dizer",
+    "diria": "dizer",
+    "dirá": "dizer",
+    "dirão": "dizer",
+    "diriam": "dizer",
+    "procurei": "procurar",
+    "procurem": "procurar",
+    "procures": "procurar",
+    "repita": "repetir",
+    "repitam": "repetir",
+    "repitamos": "repetir",
+    "repito": "repetir",
+}
+SURFACE_TO_INFINITIVE_SUFFIXES = (
+    ("aríamos", "ar"),
+    ("eríamos", "er"),
+    ("iríamos", "ir"),
+    ("aremos", "ar"),
+    ("eremos", "er"),
+    ("iremos", "ir"),
+    ("ariam", "ar"),
+    ("eriam", "er"),
+    ("iriam", "ir"),
+    ("arei", "ar"),
+    ("erei", "er"),
+    ("irei", "ir"),
+    ("ará", "ar"),
+    ("erá", "er"),
+    ("irá", "ir"),
+    ("arão", "ar"),
+    ("erão", "er"),
+    ("irão", "ir"),
+    ("aria", "ar"),
+    ("eria", "er"),
+    ("iria", "ir"),
+)
 
 
 @dataclass(frozen=True)
@@ -139,8 +194,7 @@ class PortuguesePreprocessor:
             if not normalized:
                 continue
 
-            lemma = token.lemma_ if getattr(token, "lemma_", "") else normalized
-            lemma = self._normalize_text(lemma)
+            lemma = self._resolve_lemma(token, normalized)
             if not lemma:
                 continue
 
@@ -168,6 +222,42 @@ class PortuguesePreprocessor:
             )
 
         return token_rows
+
+    def _resolve_lemma(self, token, normalized: str) -> str:  # type: ignore[no-untyped-def]
+        override = LEMMA_OVERRIDES.get(normalized)
+        if override is not None:
+            return override
+
+        lemma_value = token.lemma_ if getattr(token, "lemma_", "") else normalized
+        lemma = self._normalize_text(lemma_value)
+        if not lemma:
+            return normalized
+        if repaired := self._repair_infinitive_from_surface(lemma, normalized):
+            return repaired
+        if " " not in lemma:
+            return lemma
+
+        parts = [part for part in lemma.split(" ") if part]
+        if len(parts) > 1 and all(part in CLITIC_SUFFIXES for part in parts[1:]):
+            if self._looks_like_infinitive(parts[0]):
+                return "-".join(parts)
+            if repaired := self._repair_infinitive_from_surface(parts[0], normalized):
+                return "-".join([repaired, *parts[1:]])
+            return normalized
+        return normalized
+
+    def _repair_infinitive_from_surface(self, lemma: str, normalized: str) -> str | None:
+        if not lemma.endswith(("arer", "erer", "irer")):
+            return None
+
+        surface = normalized.split("-", maxsplit=1)[0]
+        for suffix, infinitive in SURFACE_TO_INFINITIVE_SUFFIXES:
+            if surface.endswith(suffix) and len(surface) > len(suffix):
+                return f"{surface[: -len(suffix)]}{infinitive}"
+        return None
+
+    def _looks_like_infinitive(self, lemma: str) -> bool:
+        return len(lemma) > 3 and lemma.endswith(("ar", "er", "ir"))
 
     def _normalize_text(self, value: str) -> str:
         text = unicodedata.normalize("NFC", value.strip())

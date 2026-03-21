@@ -76,6 +76,7 @@ def make_raw_cfg(
                 "min_occurrences_per_slice": 2,
                 "min_documents_per_slice": 1,
                 "min_slice_presence_ratio": 0.66,
+                "exclude_lemmas": [],
                 "top_drift_candidates": 5,
                 "top_stable_controls": 3,
                 "top_seed_terms": 3,

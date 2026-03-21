@@ -73,6 +73,7 @@ class SelectionConfig:
     min_occurrences_per_slice: int = 50
     min_documents_per_slice: int = 5
     min_slice_presence_ratio: float = 0.8
+    exclude_lemmas: tuple[str, ...] = ()
     top_drift_candidates: int = 15
     top_stable_controls: int = 10
     top_seed_terms: int = 5

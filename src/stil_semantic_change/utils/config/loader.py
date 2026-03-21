@@ -119,6 +119,7 @@ def build_experiment_config(cfg: DictConfig) -> ExperimentConfig:
         min_occurrences_per_slice=int(cfg.selection.min_occurrences_per_slice),
         min_documents_per_slice=int(cfg.selection.min_documents_per_slice),
         min_slice_presence_ratio=float(cfg.selection.min_slice_presence_ratio),
+        exclude_lemmas=_tuple_str(cfg.selection.get("exclude_lemmas")),
         top_drift_candidates=int(cfg.selection.top_drift_candidates),
         top_stable_controls=int(cfg.selection.top_stable_controls),
         top_seed_terms=int(cfg.selection.top_seed_terms),
