@@ -9,6 +9,7 @@ from time import perf_counter
 import pandas as pd
 from omegaconf import DictConfig, OmegaConf
 
+from stil_semantic_change.comparison.panel import build_comparison_panel
 from stil_semantic_change.data.loaders import iter_dataset_batches
 from stil_semantic_change.preprocessing.text import PortuguesePreprocessor
 from stil_semantic_change.preprocessing.views import (
@@ -66,6 +67,7 @@ def run_experiment(cfg: ExperimentConfig, raw_cfg: DictConfig) -> None:
         "score_candidates": _score_candidates,
         "report_candidates": _report_candidates,
         "tfidf_drift": _tfidf_drift,
+        "comparison_panel": _comparison_panel,
         "bert_confirmatory": _bert_confirmatory,
     }
 
@@ -102,6 +104,7 @@ def _stage_root(paths: ArtifactPaths, stage_name: str) -> Path:
         "score_candidates": paths.scores_root,
         "report_candidates": paths.reports_root,
         "tfidf_drift": paths.scores_root / "tfidf_drift",
+        "comparison_panel": paths.scores_root / "comparison_panel",
         "bert_confirmatory": paths.scores_root,
     }
     try:
@@ -391,6 +394,30 @@ def _tfidf_drift(context: ExperimentContext) -> None:
             "trajectory_rows": int(len(trajectory)),
             "tfidf_root": str(tfidf_root),
             "text_view": context.cfg.model.text_view,
+        },
+    )
+
+
+def _comparison_panel(context: ExperimentContext) -> None:
+    stage_name = "comparison_panel"
+    panel_root = context.paths.scores_root / "comparison_panel"
+    if stage_complete(panel_root, stage_name) and not context.cfg.force:
+        logger.info("Skipping comparison-panel build because outputs already exist")
+        return
+    if panel_root.exists() and not stage_complete(panel_root, stage_name):
+        logger.info("Resetting incomplete comparison-panel outputs under %s", panel_root)
+        reset_stage_root(panel_root)
+
+    panel = build_comparison_panel(
+        context.cfg,
+        context.paths.scores_root,
+        panel_root,
+    )
+    write_json(
+        stage_manifest_path(panel_root, stage_name),
+        {
+            "row_count": int(len(panel)),
+            "panel_root": str(panel_root),
         },
     )
 

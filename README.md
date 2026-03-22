@@ -27,6 +27,8 @@ analysis over Portuguese corpora, centered on `BrPoliCorpus floor`.
 - `docs/runtime_config_cleanup_2026_03_21.md`
 - `docs/word2vec_baseline_freeze_2026_03_21.md`
 - `docs/candidate_panel_filter_2026_03_21.md`
+- `docs/tfidf_drift_baseline_2026_03_22.md`
+- `docs/comparison_panel_2026_03_22.md`
 
 ## Experiment Quickstart
 
@@ -42,6 +44,8 @@ The prepared-corpus layout and recent runtime/config cleanup are documented here
 - `docs/runtime_config_cleanup_2026_03_21.md`
 - `docs/word2vec_baseline_freeze_2026_03_21.md`
 - `docs/candidate_panel_filter_2026_03_21.md`
+- `docs/tfidf_drift_baseline_2026_03_22.md`
+- `docs/comparison_panel_2026_03_22.md`
 
 Run the toy end-to-end smoke pipeline:
 
@@ -73,6 +77,11 @@ Outputs are written under `run/outputs/`.
   - dominant POS gating for drift/stable panels
   - centralized lexical exclusions in `src/stil_semantic_change/selection/lexicons.py`
   - validated preview on frozen run `ba65fe5b9cce`
+- the clean `TF-IDF` baseline is attached to frozen run `ba65fe5b9cce`
+- the first shared `comparison_panel` also exists under frozen run `ba65fe5b9cce`
+  - current panel size: `55`
+  - current shared drift overlap: `0`
+  - current disagreement cases: `30`
 
 ## Most important current decision
 

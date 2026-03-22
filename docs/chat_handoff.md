@@ -20,6 +20,7 @@ Please read these files before deciding on the next step:
 12. `docs/word2vec_baseline_freeze_2026_03_21.md`
 13. `docs/candidate_panel_filter_2026_03_21.md`
 14. `docs/tfidf_drift_baseline_2026_03_22.md`
+15. `docs/comparison_panel_2026_03_22.md`
 
 ## Current Paper Direction
 
@@ -55,6 +56,7 @@ Current method families:
 - contextual `BERT` dependencies are lazy-loaded and should not be pulled into non-BERT runs without a good reason
 - the cleaned `Word2Vec` baseline is frozen at `ba65fe5b9cce`
 - a first-class `tfidf_drift` stage now exists and writes method-local outputs under `scores/tfidf_drift/`
+- a first-class `comparison_panel` stage now exists and writes shared outputs under `scores/comparison_panel/`
 - candidate-panel filtering now sits on top of the raw score table rather than mutating the raw ranking
 - candidate-panel filtering is now stricter than the earlier lexical-only pass:
   - dominant POS gating for drift/stable panels
@@ -75,6 +77,9 @@ Current clean Word2Vec baseline:
 - clean TF-IDF baseline on top of the same frozen run:
   - `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/tfidf_drift`
   - see `docs/tfidf_drift_baseline_2026_03_22.md`
+- shared comparison panel on top of the same frozen run:
+  - `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/comparison_panel`
+  - see `docs/comparison_panel_2026_03_22.md`
 
 Important integrity note:
 
@@ -99,8 +104,7 @@ Progress summary:
 
 The next useful work usually falls into one of these:
 
-1. implement and run the comparative drift baselines, especially `TF-IDF`
-2. build the shared method-comparison panel used by every downstream scorer
-3. refactor contextual `BERT` to read that panel instead of Word2Vec-only candidate sets
+1. refactor contextual `BERT` to read the shared comparison panel instead of Word2Vec-only candidate sets
+2. produce agreement/disagreement artifacts between `Word2Vec` and `TF-IDF`
+3. add rank-correlation and overlap summaries on top of the shared panel
 4. add the `PTPARL-V` validation-table build as a separate pipeline path
-5. produce agreement/disagreement artifacts between `Word2Vec` and `TF-IDF`

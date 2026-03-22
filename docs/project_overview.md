@@ -118,6 +118,14 @@ Important current implementation details:
   - validated preview filtering on frozen run `ba65fe5b9cce`
 - `TF-IDF` drift now writes method-local artifacts under `scores/tfidf_drift/`
 - the clean frozen `TF-IDF` baseline is currently attached to frozen run `ba65fe5b9cce`
+- a first-class shared `comparison_panel` stage now exists under `scores/comparison_panel/`
+- the current shared panel was built directly against frozen run `ba65fe5b9cce`
+- the current panel contains `55` rows:
+  - `15` `Word2Vec` drift terms
+  - `15` `TF-IDF` drift terms
+  - `20` stable controls
+  - `5` theory seeds
+- the current cheap-method overlap is `0`, so the first panel is primarily a disagreement panel
 - `8e15dc2372c5` should not be treated as the immutable prepared-artifact source after an aborted forced rerun briefly re-entered `prepare_corpus`
 
 ## Active Documentation
@@ -138,3 +146,4 @@ The main docs to keep current are:
 - `word2vec_baseline_freeze_2026_03_21.md`
 - `candidate_panel_filter_2026_03_21.md`
 - `tfidf_drift_baseline_2026_03_22.md`
+- `comparison_panel_2026_03_22.md`

@@ -111,15 +111,20 @@ negative:
 This is useful for the paper because it suggests the cheap lexical-profile
 baseline is not simply recovering the same ranking as aligned `Word2Vec`.
 
-## Recommended Next Step
+## Status After Panel Build
 
-The next implementation step should be:
+That next step is now complete.
 
-1. build a shared `comparison_panel`
-2. merge:
-   - `Word2Vec` drift candidates
-   - `TF-IDF` drift candidates
-   - theory seeds
-   - stable controls
-3. use that panel as the common downstream candidate universe for contextual
-   scoring and agreement analysis
+The shared comparison universe built on top of this frozen run is documented in:
+
+- `docs/comparison_panel_2026_03_22.md`
+
+Current result:
+
+- `15` `Word2Vec` drift terms
+- `15` `TF-IDF` drift terms
+- `0` shared drift terms
+- `30` disagreement cases across the two cheap methods
+
+That makes the first comparison panel a strong input for contextual follow-up,
+because it concentrates exactly on the terms where the cheap methods disagree.

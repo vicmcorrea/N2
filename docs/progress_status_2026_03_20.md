@@ -12,6 +12,8 @@ Since this note was first written:
 - a first-class `TF-IDF` drift stage was implemented
 - clean `TF-IDF` artifacts were generated directly from the frozen baseline under:
   - `Articles/N2/run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/tfidf_drift`
+- a first-class shared `comparison_panel` was built directly from the same frozen baseline under:
+  - `Articles/N2/run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/comparison_panel`
 
 Important integrity note:
 
@@ -58,6 +60,7 @@ Existing stages include:
 - `score_candidates`
 - `report_candidates`
 - `tfidf_drift`
+- `comparison_panel`
 - `run_yearly_core`
 - `bert_confirmatory`
 
@@ -181,16 +184,25 @@ Needed:
 - common scoring table across methods
 - agreement and disagreement analysis
 
-### 2. Build the shared comparison panel
+### 2. Shared comparison panel
 
-`TF-IDF` is no longer missing as a first-class method. The next gap is the
-shared candidate universe used by all downstream comparison stages.
+This step is now implemented.
 
-Needed outputs:
+Current outputs on frozen run `ba65fe5b9cce`:
 
 - merged `Word2Vec` + `TF-IDF` + seeds + stable-controls panel
 - reusable comparison-ready term table
 - one common downstream input for contextual scoring
+
+Current summary:
+
+- `55` rows
+- `15` `Word2Vec` drift terms
+- `15` `TF-IDF` drift terms
+- `20` stable controls
+- `5` theory seeds
+- `0` shared drift terms
+- `30` disagreement cases
 
 ### 3. Freeze the clean yearly `Word2Vec` baseline and improve the panel filter
 
@@ -234,12 +246,11 @@ Need final paper-facing visuals for:
 
 ## Recommended Next Order
 
-1. define the shared candidate panel
-2. run cross-method correlation and overlap analysis
-3. run `BERT` on the filtered comparison panel
-4. add symbolic support features if feasible
-5. build final paper-facing comparative figures
-6. draft the exploratory comparative paper
+1. run `BERT` on the filtered shared comparison panel
+2. run cross-method correlation and overlap analysis on top of that panel
+3. add symbolic support features if feasible
+4. build final paper-facing comparative figures
+5. draft the exploratory comparative paper
 
 ## Practical Summary
 
@@ -250,13 +261,14 @@ What exists now:
 - one completed exploratory `Word2Vec` quicklook
 - one frozen clean yearly `Word2Vec` baseline at `ba65fe5b9cce`
 - one clean first-class `TF-IDF` baseline attached to that frozen run
+- one clean first shared comparison panel attached to that frozen run
 - partial later reruns
 - a preliminary advisor memo
 - a cleaner multi-view prepared-artifact contract with stricter runtime validation
 
 What is still missing for the actual paper:
 
-- clean cross-method comparison tables
+- contextual comparison results on the shared panel
 - symbolic support analysis
 - final paper figures
 - the new comparative draft itself
