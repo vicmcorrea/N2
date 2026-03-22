@@ -1,5 +1,10 @@
 name: bert_confirmatory
 pipeline:
   - prepare_corpus
+  - train_word2vec
+  - align_embeddings
+  - score_candidates
+  - tfidf_drift
+  - comparison_panel
   - bert_confirmatory
 fail_fast: true

@@ -16,7 +16,7 @@ from stil_semantic_change.preprocessing.views import (
     prepared_doc_metadata_dir,
     prepared_doc_raw_text_dir,
 )
-from stil_semantic_change.utils.artifacts import write_dataframe, write_json, write_npz
+from stil_semantic_change.utils.artifacts import read_json, write_dataframe, write_json, write_npz
 from stil_semantic_change.utils.config.schema import ExperimentConfig
 
 logger = logging.getLogger(__name__)
@@ -44,6 +44,15 @@ def select_confirmatory_terms(candidate_sets: dict[str, object]) -> list[str]:
             normalized = str(term)
             if normalized and normalized not in terms:
                 terms.append(normalized)
+    return terms
+
+
+def select_confirmatory_terms_from_panel(panel: pd.DataFrame) -> list[str]:
+    terms: list[str] = []
+    for term in panel.get("lemma", pd.Series(dtype=object)).tolist():
+        normalized = str(term)
+        if normalized and normalized not in terms:
+            terms.append(normalized)
     return terms
 
 
@@ -128,12 +137,11 @@ def run_bert_confirmatory(
     bert_root = scores_root / "bert_confirmatory"
     bert_root.mkdir(parents=True, exist_ok=True)
 
-    candidate_sets = _load_candidate_sets(scores_root)
-    selected_terms = select_confirmatory_terms(candidate_sets)
+    selected_terms, slice_order, selection_source, comparison_panel = _load_confirmatory_inputs(
+        scores_root
+    )
     if not selected_terms:
-        raise ValueError("No confirmatory terms were found in candidate_sets.json")
-
-    slice_order = [str(slice_id) for slice_id in candidate_sets["slice_order"]]
+        raise ValueError("No confirmatory terms were found for the BERT stage")
     samples = _sample_occurrences(
         prepared_root=prepared_root,
         selected_terms=selected_terms,
@@ -178,20 +186,7 @@ def run_bert_confirmatory(
         write_npz(bert_root / f"prototype_embeddings_layer_{layer}.npz", embeddings=matrix)
 
     bert_scores, bert_trajectory = score_prototype_distances(prototypes, slice_order)
-    word2vec_scores = pd.read_parquet(scores_root / "scores_aggregated.parquet")
-    comparison = bert_scores.merge(
-        word2vec_scores[["lemma", "primary_drift_mean", "first_last_drift_mean"]],
-        on="lemma",
-        how="left",
-    ).rename(
-        columns={
-            "primary_drift_mean": "word2vec_primary_drift_mean",
-            "first_last_drift_mean": "word2vec_first_last_drift_mean",
-        }
-    )
-    comparison["bert_word2vec_gap"] = (
-        comparison["primary_drift"] - comparison["word2vec_primary_drift_mean"]
-    )
+    comparison = _build_comparison_frame(bert_scores, scores_root, comparison_panel)
 
     write_dataframe(bert_root / "scores.parquet", bert_scores)
     write_dataframe(bert_root / "trajectory.parquet", bert_trajectory)
@@ -202,6 +197,7 @@ def run_bert_confirmatory(
             "model_name": cfg.model.bert_model_name,
             "device": device,
             "layers": list(cfg.model.bert_layers),
+            "selection_source": selection_source,
             "selected_terms": selected_terms,
             "sampled_occurrences": int(len(samples)),
             "embedded_occurrences": int(len(occurrence_meta)),
@@ -220,6 +216,77 @@ def _load_candidate_sets(scores_root: Path) -> dict[str, object]:
             "the confirmatory BERT stage."
         )
     return pd.read_json(path, typ="series").to_dict()
+
+
+def _load_confirmatory_inputs(
+    scores_root: Path,
+) -> tuple[list[str], list[str], str, pd.DataFrame | None]:
+    panel_root = scores_root / "comparison_panel"
+    panel_path = panel_root / "comparison_panel.parquet"
+    summary_path = panel_root / "summary.json"
+    if panel_path.exists() and summary_path.exists():
+        panel = pd.read_parquet(panel_path)
+        summary = read_json(summary_path)
+        selected_terms = select_confirmatory_terms_from_panel(panel)
+        slice_order = [str(slice_id) for slice_id in summary["slice_order"]]
+        return selected_terms, slice_order, "comparison_panel", panel
+
+    candidate_sets = _load_candidate_sets(scores_root)
+    selected_terms = select_confirmatory_terms(candidate_sets)
+    slice_order = [str(slice_id) for slice_id in candidate_sets["slice_order"]]
+    return selected_terms, slice_order, "candidate_sets", None
+
+
+def _build_comparison_frame(
+    bert_scores: pd.DataFrame,
+    scores_root: Path,
+    comparison_panel: pd.DataFrame | None,
+) -> pd.DataFrame:
+    if comparison_panel is None:
+        word2vec_scores = pd.read_parquet(scores_root / "scores_aggregated.parquet")
+        comparison = bert_scores.merge(
+            word2vec_scores[["lemma", "primary_drift_mean", "first_last_drift_mean"]],
+            on="lemma",
+            how="left",
+        ).rename(
+            columns={
+                "primary_drift_mean": "word2vec_primary_drift",
+                "first_last_drift_mean": "word2vec_first_last_drift",
+            }
+        )
+    else:
+        comparison_columns = [
+            "lemma",
+            "bucket",
+            "word2vec_rank",
+            "word2vec_primary_drift",
+            "word2vec_first_last_drift",
+            "tfidf_rank",
+            "tfidf_primary_drift",
+            "tfidf_first_last_drift",
+            "selected_by_word2vec",
+            "selected_by_tfidf",
+            "selected_as_stable_control",
+            "selected_as_theory_seed",
+            "selected_as_disagreement_case",
+        ]
+        available_columns = [
+            column for column in comparison_columns if column in comparison_panel.columns
+        ]
+        comparison = bert_scores.merge(
+            comparison_panel[available_columns].drop_duplicates(subset=["lemma"]),
+            on="lemma",
+            how="left",
+        )
+
+    comparison["bert_word2vec_gap"] = (
+        comparison["primary_drift"] - comparison["word2vec_primary_drift"]
+    )
+    if "tfidf_primary_drift" in comparison.columns:
+        comparison["bert_tfidf_gap"] = (
+            comparison["primary_drift"] - comparison["tfidf_primary_drift"]
+        )
+    return comparison
 
 
 def _sample_occurrences(

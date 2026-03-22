@@ -57,6 +57,8 @@ Current method families:
 - the cleaned `Word2Vec` baseline is frozen at `ba65fe5b9cce`
 - a first-class `tfidf_drift` stage now exists and writes method-local outputs under `scores/tfidf_drift/`
 - a first-class `comparison_panel` stage now exists and writes shared outputs under `scores/comparison_panel/`
+- contextual `BERT` now prefers the shared `comparison_panel` as its term source
+  - fallback to legacy `candidate_sets.json` remains only for backward compatibility
 - candidate-panel filtering now sits on top of the raw score table rather than mutating the raw ranking
 - candidate-panel filtering is now stricter than the earlier lexical-only pass:
   - dominant POS gating for drift/stable panels
@@ -104,7 +106,7 @@ Progress summary:
 
 The next useful work usually falls into one of these:
 
-1. refactor contextual `BERT` to read the shared comparison panel instead of Word2Vec-only candidate sets
-2. produce agreement/disagreement artifacts between `Word2Vec` and `TF-IDF`
+1. run contextual `BERT` on the shared comparison panel
+2. produce agreement/disagreement artifacts between `Word2Vec`, `TF-IDF`, and `BERT`
 3. add rank-correlation and overlap summaries on top of the shared panel
 4. add the `PTPARL-V` validation-table build as a separate pipeline path

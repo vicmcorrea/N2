@@ -82,6 +82,8 @@ Outputs are written under `run/outputs/`.
   - current panel size: `55`
   - current shared drift overlap: `0`
   - current disagreement cases: `30`
+- contextual `BERT` now prefers the shared `comparison_panel` as its candidate universe
+  - it falls back to legacy `candidate_sets.json` only if the shared panel is absent
 
 ## Most important current decision
 

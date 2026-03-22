@@ -14,6 +14,7 @@ Since this note was first written:
   - `Articles/N2/run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/tfidf_drift`
 - a first-class shared `comparison_panel` was built directly from the same frozen baseline under:
   - `Articles/N2/run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/comparison_panel`
+- contextual `BERT` was refactored to use that shared panel by default instead of the older Word2Vec-only candidate set
 
 Important integrity note:
 
@@ -233,6 +234,7 @@ BERT should now be used as:
 
 - the expensive contextual comparison method
 - not the only “confirmatory truth” layer
+- with the shared `comparison_panel` as its default candidate universe
 
 ### 7. Rebuild the paper figures
 

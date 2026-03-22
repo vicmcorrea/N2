@@ -126,6 +126,8 @@ Important current implementation details:
   - `20` stable controls
   - `5` theory seeds
 - the current cheap-method overlap is `0`, so the first panel is primarily a disagreement panel
+- contextual `BERT` now prefers that shared panel as its downstream candidate universe
+- the legacy `candidate_sets.json` path remains as a backward-compatible fallback only
 - `8e15dc2372c5` should not be treated as the immutable prepared-artifact source after an aborted forced rerun briefly re-entered `prepare_corpus`
 
 ## Active Documentation
