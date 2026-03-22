@@ -100,11 +100,15 @@ The experiment package has now been tightened in a few important ways:
 - `model.text_view` now validates at config load time
 - `preprocess.preserve_accents` now affects normalization behavior instead of remaining unused
 - contextual `BERT` dependencies are lazy-loaded so the core non-BERT pipeline starts lighter
+- candidate-panel selection now uses dominant POS gating and centralized lexical exclusions
+- residual malformed lemma cases such as `vejar`, `teríar`, `enter`, `mantir`, and `ademal` are explicitly patched for future reruns
 
 Reference notes:
 
 - `docs/prepared_artifact_layout_2026_03_21.md`
 - `docs/runtime_config_cleanup_2026_03_21.md`
+- `docs/word2vec_baseline_freeze_2026_03_21.md`
+- `docs/candidate_panel_filter_2026_03_21.md`
 
 ## What The Current Results Still Tell Us
 
@@ -167,9 +171,9 @@ Needed outputs:
 - top-k drift ranking
 - comparison with `Word2Vec` and later `BERT`
 
-### 3. Finish the clean yearly `Word2Vec` run
+### 3. Freeze the clean yearly `Word2Vec` baseline and improve the panel filter
 
-We still need a cleaner main yearly run on `BrPoliCorpus floor` to avoid carrying obvious preprocessing noise into the comparative analysis.
+The cleaned yearly `Word2Vec` baseline now exists, and the candidate-panel filter has been strengthened and validated on the frozen baseline before the next long rerun.
 
 ### 4. Define cross-method evaluation metrics
 

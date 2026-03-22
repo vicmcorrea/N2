@@ -6,6 +6,12 @@ from typing import Any
 from omegaconf import DictConfig
 
 from stil_semantic_change.preprocessing.views import TEXT_VIEW_NAMES
+from stil_semantic_change.selection import (
+    DEFAULT_DRIFT_CANDIDATE_ALLOWED_POS,
+    DEFAULT_DRIFT_CANDIDATE_EXCLUDE_LEMMAS,
+    DEFAULT_STABLE_CONTROL_ALLOWED_POS,
+    DEFAULT_STABLE_CONTROL_EXCLUDE_LEMMAS,
+)
 from stil_semantic_change.utils.config.schema import (
     AlignmentConfig,
     DatasetConfig,
@@ -129,6 +135,30 @@ def build_experiment_config(cfg: DictConfig) -> ExperimentConfig:
         min_documents_per_slice=int(cfg.selection.min_documents_per_slice),
         min_slice_presence_ratio=float(cfg.selection.min_slice_presence_ratio),
         exclude_lemmas=_tuple_str(cfg.selection.get("exclude_lemmas")),
+        drift_candidate_allowed_pos=_tuple_str(
+            cfg.selection.get(
+                "drift_candidate_allowed_pos",
+                DEFAULT_DRIFT_CANDIDATE_ALLOWED_POS,
+            )
+        ),
+        drift_candidate_exclude_lemmas=_tuple_str(
+            cfg.selection.get(
+                "drift_candidate_exclude_lemmas",
+                DEFAULT_DRIFT_CANDIDATE_EXCLUDE_LEMMAS,
+            )
+        ),
+        stable_control_allowed_pos=_tuple_str(
+            cfg.selection.get(
+                "stable_control_allowed_pos",
+                DEFAULT_STABLE_CONTROL_ALLOWED_POS,
+            )
+        ),
+        stable_control_exclude_lemmas=_tuple_str(
+            cfg.selection.get(
+                "stable_control_exclude_lemmas",
+                DEFAULT_STABLE_CONTROL_EXCLUDE_LEMMAS,
+            )
+        ),
         top_drift_candidates=int(cfg.selection.top_drift_candidates),
         top_stable_controls=int(cfg.selection.top_stable_controls),
         top_seed_terms=int(cfg.selection.top_seed_terms),

@@ -31,6 +31,7 @@ ADJ_SUFFIXES = (
     "iva",
 )
 FUNCTION_WORD_POS = {
+    "ademais": "ADV",
     "afinal": "ADV",
     "aliás": "ADV",
     "daí": "ADV",
@@ -80,6 +81,12 @@ LEMMA_OVERRIDES = {
     "dirá": "dizer",
     "dirão": "dizer",
     "diriam": "dizer",
+    "entendo": "entender",
+    "mantem": "manter",
+    "mantida": "manter",
+    "mantidas": "manter",
+    "mantidos": "manter",
+    "mantinham": "manter",
     "procurei": "procurar",
     "procurem": "procurar",
     "procures": "procurar",
@@ -87,6 +94,11 @@ LEMMA_OVERRIDES = {
     "repitam": "repetir",
     "repitamos": "repetir",
     "repito": "repetir",
+    "teríamos": "ter",
+    "veja": "ver",
+    "vejam": "ver",
+    "vejamos": "ver",
+    "vejo": "ver",
 }
 VALID_ARER_ERER_IRER_LEMMAS = {
     "bem-querer",

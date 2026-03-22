@@ -8,6 +8,12 @@ exclude_lemmas:
   - visto
   - diga-se
   - aspa
+drift_candidate_allowed_pos:
+  - NOUN
+  - ADJ
+stable_control_allowed_pos:
+  - NOUN
+  - ADJ
 top_drift_candidates: 15
 top_stable_controls: 10
 top_seed_terms: 5

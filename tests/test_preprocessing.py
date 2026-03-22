@@ -110,6 +110,11 @@ def test_preprocessing_repairs_broken_lemmas_and_pronominal_spacing() -> None:
         FakeToken("transformou-se", "transformour se"),
         FakeToken("conferido", "conferer"),
         FakeToken("procurem", "procur"),
+        FakeToken("vejam", "vejar"),
+        FakeToken("teríamos", "teríar"),
+        FakeToken("entendo", "enter"),
+        FakeToken("mantidas", "mantir"),
+        FakeToken("ademais", "ademal", pos="ADV"),
     ]
 
     token_rows = processor._extract_tokens(
@@ -134,6 +139,11 @@ def test_preprocessing_repairs_broken_lemmas_and_pronominal_spacing() -> None:
     assert "transformou-se" in lemmas
     assert "conferido" in lemmas
     assert "procurar" in lemmas
+    assert "ver" in lemmas
+    assert "ter" in lemmas
+    assert "entender" in lemmas
+    assert "manter" in lemmas
+    assert "ademais" not in lemmas
 
 
 def test_preprocessing_can_strip_accents(monkeypatch) -> None:

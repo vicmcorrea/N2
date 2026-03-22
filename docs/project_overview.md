@@ -111,6 +111,10 @@ Important current implementation details:
 - `model.text_view` is validated at config load time
 - `preprocess.preserve_accents` is now an active normalization switch
 - contextual `BERT` dependencies are lazy-loaded so non-BERT runs stay lighter
+- candidate-panel selection now uses:
+  - dominant POS gating for drift/stable panels
+  - centralized lexical exclusions in `src/stil_semantic_change/selection/lexicons.py`
+  - validated preview filtering on frozen run `ba65fe5b9cce`
 
 ## Active Documentation
 
@@ -127,3 +131,5 @@ The main docs to keep current are:
 - `chat_handoff.md`
 - `prepared_artifact_layout_2026_03_21.md`
 - `runtime_config_cleanup_2026_03_21.md`
+- `word2vec_baseline_freeze_2026_03_21.md`
+- `candidate_panel_filter_2026_03_21.md`

@@ -17,6 +17,8 @@ Please read these files before deciding on the next step:
 9. `docs/embedding_strategy_nilc_word2vec.md`
 10. `docs/prepared_artifact_layout_2026_03_21.md`
 11. `docs/runtime_config_cleanup_2026_03_21.md`
+12. `docs/word2vec_baseline_freeze_2026_03_21.md`
+13. `docs/candidate_panel_filter_2026_03_21.md`
 
 ## Current Paper Direction
 
@@ -50,12 +52,21 @@ Current method families:
 - `model.text_view` is validated at config load time
 - `preprocess.preserve_accents` is active and affects normalization
 - contextual `BERT` dependencies are lazy-loaded and should not be pulled into non-BERT runs without a good reason
+- the cleaned `Word2Vec` baseline is frozen at `ba65fe5b9cce`
+- candidate-panel filtering now sits on top of the raw score table rather than mutating the raw ranking
+- candidate-panel filtering is now stricter than the earlier lexical-only pass:
+  - dominant POS gating for drift/stable panels
+  - centralized lexical defaults in `src/stil_semantic_change/selection/lexicons.py`
+  - validated preview drift panel documented in `docs/candidate_panel_filter_2026_03_21.md`
+- preprocessing now also patches residual malformed lemmas such as `vejar`, `teríar`, `enter`, `mantir`, and `ademal`-type cases
 
 ## Most Important Current Outputs
 
 Current clean Word2Vec baseline:
 
-- `run/outputs/experiments/brpolicorpus_floor_yearly/2cf8a857028c`
+- `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce`
+- candidate-panel preview validated on top of that frozen run:
+  - see `docs/candidate_panel_filter_2026_03_21.md`
 
 Earlier exploratory quicklook:
 
@@ -75,7 +86,7 @@ Progress summary:
 The next useful work usually falls into one of these:
 
 1. implement and run the comparative drift baselines, especially `TF-IDF`
-2. build the shared method-comparison panel used by every downstream scorer
-3. refactor contextual `BERT` to read that panel instead of Word2Vec-only candidate sets
-4. add the `PTPARL-V` validation-table build as a separate pipeline path
-5. prepare paper-facing figures and tables for cross-method comparison
+2. validate the new candidate-panel filtering logic on frozen `Word2Vec` outputs before the next long rerun
+3. build the shared method-comparison panel used by every downstream scorer
+4. refactor contextual `BERT` to read that panel instead of Word2Vec-only candidate sets
+5. add the `PTPARL-V` validation-table build as a separate pipeline path
