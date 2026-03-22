@@ -2,10 +2,10 @@ from __future__ import annotations
 
 import pandas as pd
 
-from stil_semantic_change.word2vec.score import (
-    _build_candidate_sets,
-    _candidate_exclusion_flags,
-    _eligible_vocabulary,
+from stil_semantic_change.selection import (
+    build_candidate_sets,
+    candidate_exclusion_flags,
+    eligible_vocabulary,
 )
 
 
@@ -21,7 +21,7 @@ def test_eligible_vocabulary_filters_by_slice_presence(built_cfg) -> None:
             {"slice_id": "2003", "lemma": "raro", "frequency": 1, "document_count": 1},
         ]
     )
-    eligible = _eligible_vocabulary(lemma_slice_stats, cfg, total_slices=3)
+    eligible = eligible_vocabulary(lemma_slice_stats, cfg, total_slices=3)
     assert bool(eligible.loc[eligible["lemma"] == "reforma", "eligible"].iloc[0]) is True
     assert bool(eligible.loc[eligible["lemma"] == "raro", "eligible"].iloc[0]) is False
 
@@ -35,7 +35,7 @@ def test_eligible_vocabulary_excludes_whitespace_lemmas(built_cfg) -> None:
             {"slice_id": "2003", "lemma": "tratar se", "frequency": 12, "document_count": 3},
         ]
     )
-    eligible = _eligible_vocabulary(lemma_slice_stats, cfg, total_slices=3)
+    eligible = eligible_vocabulary(lemma_slice_stats, cfg, total_slices=3)
     assert bool(eligible.loc[eligible["lemma"] == "tratar se", "eligible"].iloc[0]) is False
     assert bool(eligible.loc[eligible["lemma"] == "tratar se", "excluded"].iloc[0]) is True
 
@@ -64,8 +64,8 @@ def test_candidate_sets_exclude_low_content_drift_terms(built_cfg) -> None:
             ),
         }
     )
-    annotated = _candidate_exclusion_flags(summary, cfg)
-    candidate_sets = _build_candidate_sets(annotated, cfg, ["2001", "2002", "2003"])
+    annotated = candidate_exclusion_flags(summary, cfg)
+    candidate_sets = build_candidate_sets(annotated, cfg, ["2001", "2002", "2003"])
 
     assert "acaso" not in candidate_sets["drift_candidates"]
     assert "novidade" not in candidate_sets["drift_candidates"]
@@ -96,8 +96,8 @@ def test_candidate_sets_exclude_procedural_stable_controls(built_cfg) -> None:
             ),
         }
     )
-    annotated = _candidate_exclusion_flags(summary, cfg)
-    candidate_sets = _build_candidate_sets(annotated, cfg, ["2001", "2002", "2003"])
+    annotated = candidate_exclusion_flags(summary, cfg)
+    candidate_sets = build_candidate_sets(annotated, cfg, ["2001", "2002", "2003"])
 
     assert "sessão" not in candidate_sets["stable_controls"]
     assert "art." not in candidate_sets["stable_controls"]
@@ -114,8 +114,8 @@ def test_candidate_sets_exclude_disallowed_pos(built_cfg) -> None:
             {"lemma": "democracia", "primary_drift_mean": 0.28, "dominant_pos": "NOUN"},
         ]
     )
-    annotated = _candidate_exclusion_flags(summary, cfg)
-    candidate_sets = _build_candidate_sets(annotated, cfg, ["2001", "2002", "2003"])
+    annotated = candidate_exclusion_flags(summary, cfg)
+    candidate_sets = build_candidate_sets(annotated, cfg, ["2001", "2002", "2003"])
 
     assert "puder" not in candidate_sets["drift_candidates"]
     assert "intervenção" in candidate_sets["drift_candidates"]

@@ -19,6 +19,7 @@ Please read these files before deciding on the next step:
 11. `docs/runtime_config_cleanup_2026_03_21.md`
 12. `docs/word2vec_baseline_freeze_2026_03_21.md`
 13. `docs/candidate_panel_filter_2026_03_21.md`
+14. `docs/tfidf_drift_baseline_2026_03_22.md`
 
 ## Current Paper Direction
 
@@ -53,11 +54,15 @@ Current method families:
 - `preprocess.preserve_accents` is active and affects normalization
 - contextual `BERT` dependencies are lazy-loaded and should not be pulled into non-BERT runs without a good reason
 - the cleaned `Word2Vec` baseline is frozen at `ba65fe5b9cce`
+- a first-class `tfidf_drift` stage now exists and writes method-local outputs under `scores/tfidf_drift/`
 - candidate-panel filtering now sits on top of the raw score table rather than mutating the raw ranking
 - candidate-panel filtering is now stricter than the earlier lexical-only pass:
   - dominant POS gating for drift/stable panels
   - centralized lexical defaults in `src/stil_semantic_change/selection/lexicons.py`
   - validated preview drift panel documented in `docs/candidate_panel_filter_2026_03_21.md`
+- TF-IDF candidate-panel filtering now also applies:
+  - a tiny method-local lexical exclusion list for obvious procedural offenders
+  - a high-frequency ceiling at the `0.995` quantile for drift-panel selection
 - preprocessing now also patches residual malformed lemmas such as `vejar`, `teríar`, `enter`, `mantir`, and `ademal`-type cases
 
 ## Most Important Current Outputs
@@ -67,6 +72,15 @@ Current clean Word2Vec baseline:
 - `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce`
 - candidate-panel preview validated on top of that frozen run:
   - see `docs/candidate_panel_filter_2026_03_21.md`
+- clean TF-IDF baseline on top of the same frozen run:
+  - `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/tfidf_drift`
+  - see `docs/tfidf_drift_baseline_2026_03_22.md`
+
+Important integrity note:
+
+- `run/outputs/experiments/brpolicorpus_floor_yearly/8e15dc2372c5` finished as a clean overnight `Word2Vec` rerun, but its prepared root was later touched by an aborted forced `tfidf_drift` rerun
+- do not use `8e15dc2372c5/prepared` as the frozen source of truth for future method runs
+- keep `ba65fe5b9cce` as the frozen clean baseline source
 
 Earlier exploratory quicklook:
 
@@ -86,7 +100,7 @@ Progress summary:
 The next useful work usually falls into one of these:
 
 1. implement and run the comparative drift baselines, especially `TF-IDF`
-2. validate the new candidate-panel filtering logic on frozen `Word2Vec` outputs before the next long rerun
-3. build the shared method-comparison panel used by every downstream scorer
-4. refactor contextual `BERT` to read that panel instead of Word2Vec-only candidate sets
-5. add the `PTPARL-V` validation-table build as a separate pipeline path
+2. build the shared method-comparison panel used by every downstream scorer
+3. refactor contextual `BERT` to read that panel instead of Word2Vec-only candidate sets
+4. add the `PTPARL-V` validation-table build as a separate pipeline path
+5. produce agreement/disagreement artifacts between `Word2Vec` and `TF-IDF`

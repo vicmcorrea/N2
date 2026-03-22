@@ -20,6 +20,7 @@ from stil_semantic_change.preprocessing.views import (
     prepared_text_view_by_slice_dir,
     prepared_text_views_by_doc_dir,
 )
+from stil_semantic_change.tfidf.score import score_tfidf_drift
 from stil_semantic_change.utils.artifacts import (
     ArtifactPaths,
     build_artifact_paths,
@@ -64,6 +65,7 @@ def run_experiment(cfg: ExperimentConfig, raw_cfg: DictConfig) -> None:
         "align_embeddings": _align_embeddings,
         "score_candidates": _score_candidates,
         "report_candidates": _report_candidates,
+        "tfidf_drift": _tfidf_drift,
         "bert_confirmatory": _bert_confirmatory,
     }
 
@@ -99,6 +101,7 @@ def _stage_root(paths: ArtifactPaths, stage_name: str) -> Path:
         "align_embeddings": paths.aligned_root,
         "score_candidates": paths.scores_root,
         "report_candidates": paths.reports_root,
+        "tfidf_drift": paths.scores_root / "tfidf_drift",
         "bert_confirmatory": paths.scores_root,
     }
     try:
@@ -362,6 +365,32 @@ def _report_candidates(context: ExperimentContext) -> None:
         stage_manifest_path(context.paths.reports_root, stage_name),
         {
             "report_root": str(context.paths.reports_root),
+        },
+    )
+
+
+def _tfidf_drift(context: ExperimentContext) -> None:
+    stage_name = "tfidf_drift"
+    tfidf_root = context.paths.scores_root / "tfidf_drift"
+    if stage_complete(tfidf_root, stage_name) and not context.cfg.force:
+        logger.info("Skipping TF-IDF drift scoring because outputs already exist")
+        return
+    if tfidf_root.exists() and not stage_complete(tfidf_root, stage_name):
+        logger.info("Resetting incomplete TF-IDF drift outputs under %s", tfidf_root)
+        reset_stage_root(tfidf_root)
+
+    summary, trajectory = score_tfidf_drift(
+        context.cfg,
+        context.paths.prepared_root,
+        tfidf_root,
+    )
+    write_json(
+        stage_manifest_path(tfidf_root, stage_name),
+        {
+            "scored_terms": int(len(summary)),
+            "trajectory_rows": int(len(trajectory)),
+            "tfidf_root": str(tfidf_root),
+            "text_view": context.cfg.model.text_view,
         },
     )
 

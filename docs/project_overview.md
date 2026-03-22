@@ -107,6 +107,7 @@ single universal cleaned-text field.
 Important current implementation details:
 
 - `Word2Vec` trains from a configurable prepared text view via `model.text_view`
+- the first-class `TF-IDF` drift stage also reads the declared prepared text view, currently `content_lemma`
 - the default training view is `content_lemma`
 - `model.text_view` is validated at config load time
 - `preprocess.preserve_accents` is now an active normalization switch
@@ -115,6 +116,9 @@ Important current implementation details:
   - dominant POS gating for drift/stable panels
   - centralized lexical exclusions in `src/stil_semantic_change/selection/lexicons.py`
   - validated preview filtering on frozen run `ba65fe5b9cce`
+- `TF-IDF` drift now writes method-local artifacts under `scores/tfidf_drift/`
+- the clean frozen `TF-IDF` baseline is currently attached to frozen run `ba65fe5b9cce`
+- `8e15dc2372c5` should not be treated as the immutable prepared-artifact source after an aborted forced rerun briefly re-entered `prepare_corpus`
 
 ## Active Documentation
 
@@ -133,3 +137,4 @@ The main docs to keep current are:
 - `runtime_config_cleanup_2026_03_21.md`
 - `word2vec_baseline_freeze_2026_03_21.md`
 - `candidate_panel_filter_2026_03_21.md`
+- `tfidf_drift_baseline_2026_03_22.md`

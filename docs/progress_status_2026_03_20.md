@@ -2,6 +2,25 @@
 
 Date: 2026-03-20
 
+## Update: 2026-03-22
+
+Since this note was first written:
+
+- the clean `Word2Vec` yearly baseline was frozen at:
+  - `Articles/N2/run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce`
+- the strengthened candidate-panel filter was validated and documented
+- a first-class `TF-IDF` drift stage was implemented
+- clean `TF-IDF` artifacts were generated directly from the frozen baseline under:
+  - `Articles/N2/run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/tfidf_drift`
+
+Important integrity note:
+
+- a later overnight rerun at `8e15dc2372c5` did finish, but its prepared root was
+  later touched by an aborted forced rerun attempt
+- because of that, `8e15dc2372c5` should not be treated as the immutable
+  prepared-artifact source for future method runs
+- `ba65fe5b9cce` remains the clean frozen baseline source
+
 ## Scope
 
 This note records the current state of `Articles/N2` after the advisor feedback that shifted the paper away from a validation-heavy semantic-change claim and toward an exploratory comparison of drift techniques in Portuguese political discourse.
@@ -38,6 +57,7 @@ Existing stages include:
 - `align_embeddings`
 - `score_candidates`
 - `report_candidates`
+- `tfidf_drift`
 - `run_yearly_core`
 - `bert_confirmatory`
 
@@ -161,15 +181,16 @@ Needed:
 - common scoring table across methods
 - agreement and disagreement analysis
 
-### 2. Implement the `TF-IDF` drift baseline
+### 2. Build the shared comparison panel
 
-This is the most important missing method family.
+`TF-IDF` is no longer missing as a first-class method. The next gap is the
+shared candidate universe used by all downstream comparison stages.
 
 Needed outputs:
 
-- per-term `TF-IDF` drift score
-- top-k drift ranking
-- comparison with `Word2Vec` and later `BERT`
+- merged `Word2Vec` + `TF-IDF` + seeds + stable-controls panel
+- reusable comparison-ready term table
+- one common downstream input for contextual scoring
 
 ### 3. Freeze the clean yearly `Word2Vec` baseline and improve the panel filter
 
@@ -213,13 +234,12 @@ Need final paper-facing visuals for:
 
 ## Recommended Next Order
 
-1. implement the `TF-IDF` baseline
-2. define the shared candidate panel
-3. complete a cleaner yearly `Word2Vec` run
-4. run cross-method correlation analysis
-5. add symbolic support features if feasible
-6. run `BERT` on the filtered comparison panel
-7. draft the exploratory comparative paper
+1. define the shared candidate panel
+2. run cross-method correlation and overlap analysis
+3. run `BERT` on the filtered comparison panel
+4. add symbolic support features if feasible
+5. build final paper-facing comparative figures
+6. draft the exploratory comparative paper
 
 ## Practical Summary
 
@@ -228,13 +248,14 @@ What exists now:
 - organized corpora
 - working N2 experiment code
 - one completed exploratory `Word2Vec` quicklook
+- one frozen clean yearly `Word2Vec` baseline at `ba65fe5b9cce`
+- one clean first-class `TF-IDF` baseline attached to that frozen run
 - partial later reruns
 - a preliminary advisor memo
 - a cleaner multi-view prepared-artifact contract with stricter runtime validation
 
 What is still missing for the actual paper:
 
-- `TF-IDF` comparison
 - clean cross-method comparison tables
 - symbolic support analysis
 - final paper figures
