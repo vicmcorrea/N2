@@ -64,6 +64,7 @@ def make_raw_cfg(
                 "seed": 13,
                 "replicates": 1,
                 "bert_model_name": "rufimelo/bert-large-portuguese-cased-sts",
+                "bert_device": "auto",
                 "bert_batch_size": 4,
                 "bert_layers": [-1, -4],
                 "bert_max_contexts_per_slice": 8,

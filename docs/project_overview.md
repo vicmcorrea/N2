@@ -120,6 +120,8 @@ Important current implementation details:
 - the clean frozen `TF-IDF` baseline is currently attached to frozen run `ba65fe5b9cce`
 - a first-class shared `comparison_panel` stage now exists under `scores/comparison_panel/`
 - the current shared panel was built directly against frozen run `ba65fe5b9cce`
+- a first-class `cross_method_agreement` analysis stage now exists under `scores/cross_method_agreement/`
+- the current cross-method layer was also built directly against frozen run `ba65fe5b9cce`
 - the current panel contains `55` rows:
   - `15` `Word2Vec` drift terms
   - `15` `TF-IDF` drift terms
@@ -128,6 +130,11 @@ Important current implementation details:
 - the current cheap-method overlap is `0`, so the first panel is primarily a disagreement panel
 - contextual `BERT` now prefers that shared panel as its downstream candidate universe
 - the legacy `candidate_sets.json` path remains as a backward-compatible fallback only
+- the current contextual comparison layer adds:
+  - rank correlations across methods
+  - top-k overlap tables
+  - a filtered contextual drift panel
+  - a stable-control leakage diagnostic table
 - `8e15dc2372c5` should not be treated as the immutable prepared-artifact source after an aborted forced rerun briefly re-entered `prepare_corpus`
 
 ## Active Documentation
@@ -149,3 +156,4 @@ The main docs to keep current are:
 - `candidate_panel_filter_2026_03_21.md`
 - `tfidf_drift_baseline_2026_03_22.md`
 - `comparison_panel_2026_03_22.md`
+- `cross_method_agreement_2026_03_23.md`

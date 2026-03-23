@@ -57,6 +57,7 @@ class ModelConfig:
     seed: int = 13
     replicates: int = 2
     bert_model_name: str = "rufimelo/bert-large-portuguese-cased-sts"
+    bert_device: str = "auto"
     bert_batch_size: int = 8
     bert_layers: tuple[int, ...] = (-1, -4)
     bert_max_contexts_per_slice: int = 64

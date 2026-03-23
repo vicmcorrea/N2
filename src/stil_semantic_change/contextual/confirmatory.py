@@ -158,7 +158,7 @@ def run_bert_confirmatory(
     if not examples:
         raise ValueError("Could not build any token-aligned BERT contexts for sampled occurrences")
 
-    device = _resolve_device()
+    device = _resolve_device(cfg.model.bert_device)
     logger.info("Running BERT confirmatory analysis on device %s", device)
     tokenizer = AutoTokenizer.from_pretrained(cfg.model.bert_model_name, use_fast=True)
     model = AutoModel.from_pretrained(cfg.model.bert_model_name)
@@ -382,7 +382,22 @@ def _build_context_examples(
     return examples
 
 
-def _resolve_device() -> str:
+def _resolve_device(preferred_device: str = "auto") -> str:
+    normalized = preferred_device.strip().lower()
+    if normalized not in {"auto", "cpu", "cuda", "mps"}:
+        raise ValueError(
+            f"Invalid model.bert_device '{preferred_device}'. Expected one of: auto, cpu, cuda, mps"
+        )
+    if normalized == "cpu":
+        return "cpu"
+    if normalized == "cuda":
+        if torch.cuda.is_available():
+            return "cuda"
+        raise ValueError("model.bert_device='cuda' was requested but CUDA is not available")
+    if normalized == "mps":
+        if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+            return "mps"
+        raise ValueError("model.bert_device='mps' was requested but MPS is not available")
     if torch.cuda.is_available():
         return "cuda"
     if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():

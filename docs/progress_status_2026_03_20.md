@@ -15,6 +15,9 @@ Since this note was first written:
 - a first-class shared `comparison_panel` was built directly from the same frozen baseline under:
   - `Articles/N2/run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/comparison_panel`
 - contextual `BERT` was refactored to use that shared panel by default instead of the older Word2Vec-only candidate set
+- contextual `BERT` was then run successfully on that shared panel
+- a post-run `cross_method_agreement` layer was generated on the same frozen baseline under:
+  - `Articles/N2/run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/cross_method_agreement`
 
 Important integrity note:
 
@@ -62,8 +65,9 @@ Existing stages include:
 - `report_candidates`
 - `tfidf_drift`
 - `comparison_panel`
-- `run_yearly_core`
 - `bert_confirmatory`
+- `cross_method_agreement`
+- `run_yearly_core`
 
 ### 2. Corpus organization
 
@@ -107,14 +111,26 @@ A preliminary advisor-facing memo exists at:
 
 This remains useful as a meeting artifact, but it should not be treated as the final paper direction.
 
-### 5. BERT support in code
+### 5. BERT support in code and outputs
 
 The codebase already includes a confirmatory contextual path:
 
 - `Articles/N2/src/stil_semantic_change/contextual/confirmatory.py`
 - `Articles/N2/src/stil_semantic_change/runner.py`
 
-However, BERT has not yet been used to produce the final comparative outputs needed for the new paper framing.
+That contextual path has now been run successfully on the frozen baseline and attached to
+the shared comparison panel.
+
+Current contextual artifacts on frozen run `ba65fe5b9cce`:
+
+- `scores/bert_confirmatory`
+- `scores/cross_method_agreement`
+
+Current high-level result:
+
+- BERT is moderately closer to `Word2Vec` than to `TF-IDF`
+- raw contextual top ranks still leak stable controls
+- a filtered contextual panel now exists for paper-facing comparison
 
 ### 6. Runtime and configuration cleanup
 
@@ -156,8 +172,8 @@ Under the old paper framing, this weakened the semantic-change claim.
 
 Under the new framing, it is still acceptable as a preliminary `Word2Vec` result, but it is not enough because:
 
-- `TF-IDF` comparison is still missing
-- cross-method correlation analysis is still missing
+- the cheap lexical and contextual baselines now exist
+- cross-method correlation analysis now exists
 - runtime/cost comparison is still missing
 - symbolic interpretation is still missing
 
@@ -211,13 +227,21 @@ The cleaned yearly `Word2Vec` baseline now exists, and the candidate-panel filte
 
 ### 4. Define cross-method evaluation metrics
 
-Needed:
+This step is now implemented at a first useful level.
 
-- Spearman or Kendall rank correlation
-- top-k overlap
-- stable-controls agreement
-- disagreement cases
+Current outputs on frozen run `ba65fe5b9cce`:
+
+- `scores/cross_method_agreement/correlations.parquet`
+- `scores/cross_method_agreement/topk_overlap.parquet`
+- `scores/cross_method_agreement/bert_filtered_panel.parquet`
+- `scores/cross_method_agreement/bert_stable_control_leakage.parquet`
+- `scores/cross_method_agreement/summary.json`
+
+Still useful to add next:
+
 - runtime/cost comparison
+- qualitative agreement packets with neighbors and contexts
+- a final decision on whether the paper-facing BERT list needs only stable-control filtering or one extra lexical cleanup pass
 
 ### 5. Add symbolic analysis
 
@@ -228,13 +252,14 @@ Most useful likely role:
 - distinguish semantic/contextual change from rhetoric, topicality, or style
 - use selected `NILC-Metrix` features or simple rule-based lexical measures
 
-### 6. Run BERT in the new comparative setup
+### 6. Contextual BERT in the new comparative setup
 
-BERT should now be used as:
+BERT is now being used as:
 
 - the expensive contextual comparison method
 - not the only “confirmatory truth” layer
 - with the shared `comparison_panel` as its default candidate universe
+- with a post-run `cross_method_agreement` layer that filters stable-control leakage from the paper-facing contextual top list
 
 ### 7. Rebuild the paper figures
 
@@ -249,7 +274,7 @@ Need final paper-facing visuals for:
 ## Recommended Next Order
 
 1. run `BERT` on the filtered shared comparison panel
-2. run cross-method correlation and overlap analysis on top of that panel
+2. produce qualitative agreement/disagreement packets from the frozen comparison artifacts
 3. add symbolic support features if feasible
 4. build final paper-facing comparative figures
 5. draft the exploratory comparative paper
@@ -270,7 +295,6 @@ What exists now:
 
 What is still missing for the actual paper:
 
-- contextual comparison results on the shared panel
 - symbolic support analysis
 - final paper figures
 - the new comparative draft itself

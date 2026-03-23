@@ -29,6 +29,7 @@ analysis over Portuguese corpora, centered on `BrPoliCorpus floor`.
 - `docs/candidate_panel_filter_2026_03_21.md`
 - `docs/tfidf_drift_baseline_2026_03_22.md`
 - `docs/comparison_panel_2026_03_22.md`
+- `docs/cross_method_agreement_2026_03_23.md`
 
 ## Experiment Quickstart
 
@@ -46,6 +47,7 @@ The prepared-corpus layout and recent runtime/config cleanup are documented here
 - `docs/candidate_panel_filter_2026_03_21.md`
 - `docs/tfidf_drift_baseline_2026_03_22.md`
 - `docs/comparison_panel_2026_03_22.md`
+- `docs/cross_method_agreement_2026_03_23.md`
 
 Run the toy end-to-end smoke pipeline:
 
@@ -63,6 +65,10 @@ uv run python run/pipeline/main.py task=run_yearly_core dataset=brpolicorpus_flo
 ```
 
 Outputs are written under `run/outputs/`.
+
+Full-tree backup of the frozen baseline run `ba65fe5b9cce` (Word2Vec, TF-IDF, panel, BERT, prepared corpus):
+
+- `run/outputs/backups/ba65fe5b9cce_word2vec_bert_20260322.tar.gz`
 
 ## Important Runtime Notes
 
@@ -84,6 +90,9 @@ Outputs are written under `run/outputs/`.
   - current disagreement cases: `30`
 - contextual `BERT` now prefers the shared `comparison_panel` as its candidate universe
   - it falls back to legacy `candidate_sets.json` only if the shared panel is absent
+- a cross-method agreement layer now exists on the same frozen run under `scores/cross_method_agreement`
+  - it provides rank correlations, top-k overlap tables, a filtered BERT panel, and a stable-control leakage table
+  - the current preferred contextual layer is `-1`
 
 ## Most important current decision
 
@@ -92,7 +101,9 @@ The current plan is:
 - main corpus: `RawDatasets/BrPoliCorpus-Dataset/exports/floor`
 - complementary corpus: `RawDatasets/Roda-Viva-Dataset/exports/V0-2/csv`
 - main method: Word2Vec Skip-Gram 300d by time slice + Orthogonal Procrustes
-- confirmatory method: `rufimelo/bert-large-portuguese-cased-sts`
+- cheap baseline: `TF-IDF` drift on the same prepared view
+- contextual method: `rufimelo/bert-large-portuguese-cased-sts`
+- comparative readout: shared panel + cross-method agreement layer on frozen run `ba65fe5b9cce`
 
 ## Dataset references
 

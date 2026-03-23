@@ -119,6 +119,7 @@ def build_experiment_config(cfg: DictConfig) -> ExperimentConfig:
         seed=int(cfg.model.seed),
         replicates=int(cfg.model.replicates),
         bert_model_name=str(cfg.model.bert_model_name),
+        bert_device=str(cfg.model.get("bert_device", "auto")),
         bert_batch_size=int(cfg.model.bert_batch_size),
         bert_layers=_tuple_int(cfg.model.bert_layers),
         bert_max_contexts_per_slice=int(cfg.model.bert_max_contexts_per_slice),

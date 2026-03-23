@@ -21,6 +21,7 @@ Please read these files before deciding on the next step:
 13. `docs/candidate_panel_filter_2026_03_21.md`
 14. `docs/tfidf_drift_baseline_2026_03_22.md`
 15. `docs/comparison_panel_2026_03_22.md`
+16. `docs/cross_method_agreement_2026_03_23.md`
 
 ## Current Paper Direction
 
@@ -59,6 +60,11 @@ Current method families:
 - a first-class `comparison_panel` stage now exists and writes shared outputs under `scores/comparison_panel/`
 - contextual `BERT` now prefers the shared `comparison_panel` as its term source
   - fallback to legacy `candidate_sets.json` remains only for backward compatibility
+- a first-class `cross_method_agreement` analysis stage now exists and writes:
+  - rank correlations
+  - top-k overlaps
+  - a filtered contextual drift panel
+  - a stable-control leakage diagnostic table
 - candidate-panel filtering now sits on top of the raw score table rather than mutating the raw ranking
 - candidate-panel filtering is now stricter than the earlier lexical-only pass:
   - dominant POS gating for drift/stable panels
@@ -82,6 +88,9 @@ Current clean Word2Vec baseline:
 - shared comparison panel on top of the same frozen run:
   - `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/comparison_panel`
   - see `docs/comparison_panel_2026_03_22.md`
+- cross-method agreement layer on top of the same frozen run:
+  - `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/cross_method_agreement`
+  - see `docs/cross_method_agreement_2026_03_23.md`
 
 Important integrity note:
 
@@ -106,7 +115,7 @@ Progress summary:
 
 The next useful work usually falls into one of these:
 
-1. run contextual `BERT` on the shared comparison panel
-2. produce agreement/disagreement artifacts between `Word2Vec`, `TF-IDF`, and `BERT`
-3. add rank-correlation and overlap summaries on top of the shared panel
+1. produce qualitative agreement/disagreement packets from the frozen comparison artifacts
+2. add runtime/cost summary tables across `TF-IDF`, `Word2Vec`, and `BERT`
+3. decide whether the contextual paper-facing list should use only stable-control filtering or one additional lexical cleanup layer
 4. add the `PTPARL-V` validation-table build as a separate pipeline path

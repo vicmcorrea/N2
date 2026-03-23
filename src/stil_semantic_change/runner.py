@@ -9,6 +9,7 @@ from time import perf_counter
 import pandas as pd
 from omegaconf import DictConfig, OmegaConf
 
+from stil_semantic_change.comparison.cross_method import write_cross_method_agreement
 from stil_semantic_change.comparison.panel import build_comparison_panel
 from stil_semantic_change.data.loaders import iter_dataset_batches
 from stil_semantic_change.preprocessing.text import PortuguesePreprocessor
@@ -69,6 +70,7 @@ def run_experiment(cfg: ExperimentConfig, raw_cfg: DictConfig) -> None:
         "tfidf_drift": _tfidf_drift,
         "comparison_panel": _comparison_panel,
         "bert_confirmatory": _bert_confirmatory,
+        "cross_method_agreement": _cross_method_agreement,
     }
 
     for stage_name in cfg.task.pipeline:
@@ -106,6 +108,7 @@ def _stage_root(paths: ArtifactPaths, stage_name: str) -> Path:
         "tfidf_drift": paths.scores_root / "tfidf_drift",
         "comparison_panel": paths.scores_root / "comparison_panel",
         "bert_confirmatory": paths.scores_root,
+        "cross_method_agreement": paths.scores_root / "cross_method_agreement",
     }
     try:
         return stage_roots[stage_name]
@@ -444,5 +447,21 @@ def _bert_confirmatory(context: ExperimentContext) -> None:
         {
             "rows": int(len(comparison)),
             "bert_root": str(context.paths.scores_root / "bert_confirmatory"),
+        },
+    )
+
+
+def _cross_method_agreement(context: ExperimentContext) -> None:
+    stage_name = "cross_method_agreement"
+    agreement_root = context.paths.scores_root / "cross_method_agreement"
+    if stage_complete(agreement_root, stage_name) and not context.cfg.force:
+        logger.info("Skipping cross-method agreement because outputs already exist")
+        return
+    _reset_stage_if_incomplete(agreement_root, stage_name)
+    out_dir = write_cross_method_agreement(context.paths.scores_root)
+    write_json(
+        stage_manifest_path(agreement_root, stage_name),
+        {
+            "agreement_root": str(out_dir),
         },
     )

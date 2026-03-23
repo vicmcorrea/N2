@@ -405,13 +405,13 @@ def _write_analysis_summary(
                 "",
                 "## BERT Confirmatory Snapshot",
                 "",
-                "| layer | lemma | bert_primary_drift | word2vec_primary_drift_mean | gap |",
+                "| layer | lemma | bert_primary_drift | word2vec_primary_drift | gap |",
                 "| ---: | --- | ---: | ---: | ---: |",
             ]
         )
         lines.extend(
             f"| {int(row.layer)} | {row.lemma} | {row.primary_drift:.4f} | "
-            f"{row.word2vec_primary_drift_mean:.4f} | {row.bert_word2vec_gap:.4f} |"
+            f"{row.word2vec_primary_drift:.4f} | {row.bert_word2vec_gap:.4f} |"
             for row in bert_frame.itertuples(index=False)
         )
 
@@ -428,7 +428,7 @@ def _plot_bert_comparison_if_available(
         return
 
     frame = pd.read_parquet(bert_path).copy()
-    frame = frame.dropna(subset=["word2vec_primary_drift_mean"])
+    frame = frame.dropna(subset=["word2vec_primary_drift"])
     if frame.empty:
         return
 
@@ -440,7 +440,7 @@ def _plot_bert_comparison_if_available(
     fig, ax = plt.subplots(figsize=(10, 8))
     sns.scatterplot(
         data=frame,
-        x="word2vec_primary_drift_mean",
+        x="word2vec_primary_drift",
         y="primary_drift",
         hue="layer",
         style=frame["lemma"].isin(highlight_terms).map({True: "selected", False: "other"}),
@@ -450,7 +450,7 @@ def _plot_bert_comparison_if_available(
     for _, row in frame.loc[frame["lemma"].isin(highlight_terms)].iterrows():
         ax.annotate(
             row["lemma"],
-            (row["word2vec_primary_drift_mean"], row["primary_drift"]),
+            (row["word2vec_primary_drift"], row["primary_drift"]),
             xytext=(4, 4),
             textcoords="offset points",
             fontsize=8,

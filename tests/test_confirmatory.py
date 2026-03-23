@@ -10,6 +10,7 @@ import pytest
 from stil_semantic_change.contextual.confirmatory import (
     _build_comparison_frame,
     _load_confirmatory_inputs,
+    _resolve_device,
     score_prototype_distances,
     select_confirmatory_terms,
     select_confirmatory_terms_from_panel,
@@ -113,6 +114,15 @@ def test_build_comparison_frame_uses_panel_metadata() -> None:
     assert comparison.loc[0, "bucket"] == "shared_drift"
     assert comparison.loc[0, "bert_word2vec_gap"] == pytest.approx(0.2)
     assert comparison.loc[0, "bert_tfidf_gap"] == pytest.approx(0.1)
+
+
+def test_resolve_device_respects_explicit_cpu() -> None:
+    assert _resolve_device("cpu") == "cpu"
+
+
+def test_resolve_device_rejects_unknown_value() -> None:
+    with pytest.raises(ValueError, match="Invalid model.bert_device"):
+        _resolve_device("banana")
 
 
 def test_score_prototype_distances_prefers_larger_shift() -> None:

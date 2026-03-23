@@ -11,6 +11,7 @@ workers: 6
 seed: 13
 replicates: 2
 bert_model_name: rufimelo/bert-large-portuguese-cased-sts
+bert_device: auto
 bert_batch_size: 8
 bert_layers:
   - -1

@@ -1,0 +1,11 @@
+name: cross_method_agreement
+pipeline:
+  - prepare_corpus
+  - train_word2vec
+  - align_embeddings
+  - score_candidates
+  - tfidf_drift
+  - comparison_panel
+  - bert_confirmatory
+  - cross_method_agreement
+fail_fast: true
