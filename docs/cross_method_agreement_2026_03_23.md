@@ -155,6 +155,17 @@ For the paper-facing comparison section:
 4. keep `scores/cross_method_agreement/bert_stable_control_leakage.parquet` as an
    explicit diagnostic artifact
 
+## Current manuscript integration
+
+These frozen agreement artifacts are now already reflected in the paper-facing draft:
+
+- `2026S1_STIL_conceptDrift/main.tex`
+- `2026S1_STIL_conceptDrift/figs/paper/figure_02_method_agreement.pdf`
+- `2026S1_STIL_conceptDrift/figs/paper/figure_03_overlap_and_rank_statistics.pdf`
+
+So this note is no longer only an implementation log. It also serves as the source
+note behind the current agreement/disagreement figures used in the manuscript.
+
 ## Next useful work
 
 - produce a qualitative agreement/disagreement packet with nearest neighbors and contexts

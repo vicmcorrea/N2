@@ -9,3 +9,10 @@ Files were moved here because they were:
 - operational prompt notes rather than long-term project references
 
 The current active docs are in the parent `docs/` folder.
+
+Recently archived because they were superseded by the frozen comparative baseline and
+the paper-writing handoff:
+
+- `task_plan.md`
+- `next_steps_execution_plan_2026_03_20.md`
+- `codex_thread_019d0bfc_summary_2026_03_22.md`

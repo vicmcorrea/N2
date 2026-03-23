@@ -2,6 +2,36 @@
 
 Date: 2026-03-20
 
+## Update: 2026-03-23
+
+Since the 2026-03-22 update:
+
+- the contextual run was analyzed and folded into a paper-facing `cross_method_agreement` layer
+- a filtered contextual panel and stable-control leakage diagnostics were frozen on top of `ba65fe5b9cce`
+- a publication-oriented figure package was generated directly from the frozen baseline under:
+  - `Articles/N2/2026S1_STIL_conceptDrift/figs/paper`
+- the active manuscript draft in:
+  - `Articles/N2/2026S1_STIL_conceptDrift/main.tex`
+  was updated to include:
+  - a concrete paper title
+  - an abstract
+  - working prose for introduction, methods, results, and conclusion
+  - figure environments wired to the new paper figures
+
+Current figure package:
+
+- `figure_01_corpus_profile`
+- `figure_02_method_agreement`
+- `figure_03_overlap_and_rank_statistics`
+- `figure_04_representative_trajectories`
+
+Each figure now exists as:
+
+- `PDF`
+- `EPS`
+- `PNG`
+- `TIFF`
+
 ## Update: 2026-03-22
 
 Since this note was first written:
@@ -150,6 +180,33 @@ Reference notes:
 - `docs/word2vec_baseline_freeze_2026_03_21.md`
 - `docs/candidate_panel_filter_2026_03_21.md`
 
+### 7. Paper-facing comparative results snapshot
+
+Current shared-panel summary on frozen run `ba65fe5b9cce`:
+
+- `55` lemmas total
+- `15` `Word2Vec` drift terms
+- `15` `TF-IDF` drift terms
+- `20` stable controls
+- `5` theory seeds
+
+Current cross-method result snapshot:
+
+- `Word2Vec` vs `TF-IDF` Spearman: `-0.540`
+- `BERT(-1)` vs `Word2Vec` Spearman: `0.208`
+- `BERT(-1)` vs `TF-IDF` Spearman: `0.125`
+- `BERT` layer agreement Spearman: `0.858`
+- top-15 overlap:
+  - `BERT` / `Word2Vec`: `7`
+  - `BERT` / `TF-IDF`: `6`
+  - `Word2Vec` / `TF-IDF`: `0`
+
+Current filtered contextual top terms:
+
+- `bloqueio`, `típico`, `exposição`, `salário`, `mínimo`
+- `troca`, `preço`, `voto`, `real`, `intervenção`
+- `excepcional`, `renovação`, `eleição`, `crítico`, `político`
+
 ## What The Current Results Still Tell Us
 
 Even under the new framing, the completed quicklook remains useful.
@@ -193,13 +250,13 @@ Observed status:
 
 ### 1. Reframe the experiment outputs around comparison
 
-The current article should compare methods rather than defend a single drift detector.
+This reframing is already implemented in both code and manuscript direction.
 
-Needed:
+Current state:
 
-- shared comparison vocabulary
-- common scoring table across methods
-- agreement and disagreement analysis
+- the frozen baseline is comparative rather than single-method
+- the article draft already treats agreement and disagreement as the core result
+- the remaining work is paper assembly, not conceptual reframing
 
 ### 2. Shared comparison panel
 
@@ -271,13 +328,22 @@ Need final paper-facing visuals for:
 - representative disagreement cases
 - cost vs signal tradeoff
 
+This step is now implemented for the current frozen comparative package. The figures
+exist under:
+
+- `Articles/N2/2026S1_STIL_conceptDrift/figs/paper`
+
+and are already integrated into:
+
+- `Articles/N2/2026S1_STIL_conceptDrift/main.tex`
+
 ## Recommended Next Order
 
-1. run `BERT` on the filtered shared comparison panel
+1. continue writing and tightening `2026S1_STIL_conceptDrift/main.tex`
 2. produce qualitative agreement/disagreement packets from the frozen comparison artifacts
-3. add symbolic support features if feasible
-4. build final paper-facing comparative figures
-5. draft the exploratory comparative paper
+3. add a runtime/cost comparison table across `TF-IDF`, `Word2Vec`, and `BERT`
+4. add symbolic support features if feasible
+5. decide how to position `PTPARL-V` in limitations or future work
 
 ## Practical Summary
 
@@ -296,5 +362,6 @@ What exists now:
 What is still missing for the actual paper:
 
 - symbolic support analysis
-- final paper figures
-- the new comparative draft itself
+- runtime/cost reporting
+- qualitative agreement/disagreement packets
+- citation-grounded related work and final prose polish

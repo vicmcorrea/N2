@@ -1,28 +1,43 @@
 # N2 Overview
 
-This folder is the self-contained workspace for the new STIL paper direction.
+This folder is the self-contained workspace for the current STIL paper direction.
 
-It now also contains a config-driven experiment package for yearly semantic-change
-analysis over Portuguese corpora, centered on `BrPoliCorpus floor`.
+It contains both:
+
+- a config-driven comparative experiment package for Portuguese political diachronic NLP
+- the active manuscript draft and paper-figure package for the STIL submission
+
+The project is now framed as an exploratory comparison of drift signals in Brazilian
+Portuguese political discourse, not as a validation-heavy claim that one method has
+solved semantic-change detection.
 
 ## Main folders
 
 - `2026S1_STIL_conceptDrift/`
   - cleaned LaTeX STIL template
-  - `main.tex` and compiled `main.pdf`
+  - active manuscript draft in `main.tex`
+  - paper figure package in `figs/paper/`
 - `RawDatasets/`
   - organized local copies of the datasets for the paper
   - `BrPoliCorpus-Dataset/`
   - `Roda-Viva-Dataset/`
+  - `PTPARL-V/`
 - `docs/`
   - project notes, dataset readiness, literature notes, and handoff material
+- `run/`
+  - pipeline entrypoints, Hydra configs, and experiment outputs
+- `src/stil_semantic_change/`
+  - comparative drift pipeline implementation
 
 ## Start here
 
 - `docs/chat_handoff.md`
 - `docs/project_overview.md`
-- `docs/stil_plan_recommendation.md`
+- `docs/advisor_feedback_2026_03_20.md`
+- `docs/paper_writing_status_2026_03_23.md`
+- `docs/article_continuation_prompt_2026_03_23.md`
 - `docs/research_readiness_datasets.md`
+- `docs/ptparl_v_vote_label_note.md`
 - `docs/prepared_artifact_layout_2026_03_21.md`
 - `docs/runtime_config_cleanup_2026_03_21.md`
 - `docs/word2vec_baseline_freeze_2026_03_21.md`
@@ -48,6 +63,7 @@ The prepared-corpus layout and recent runtime/config cleanup are documented here
 - `docs/tfidf_drift_baseline_2026_03_22.md`
 - `docs/comparison_panel_2026_03_22.md`
 - `docs/cross_method_agreement_2026_03_23.md`
+- `docs/paper_writing_status_2026_03_23.md`
 
 Run the toy end-to-end smoke pipeline:
 
@@ -69,6 +85,24 @@ Outputs are written under `run/outputs/`.
 Full-tree backup of the frozen baseline run `ba65fe5b9cce` (Word2Vec, TF-IDF, panel, BERT, prepared corpus):
 
 - `run/outputs/backups/ba65fe5b9cce_word2vec_bert_20260322.tar.gz`
+
+## Frozen Comparative Baseline
+
+The current source of truth is:
+
+- `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce`
+
+That frozen run now anchors:
+
+- the cleaned `Word2Vec` baseline
+- the cleaned `TF-IDF` baseline
+- the shared `comparison_panel`
+- contextual `BERT`
+- the `cross_method_agreement` layer
+- the paper figure package in `2026S1_STIL_conceptDrift/figs/paper/`
+
+Do not use `8e15dc2372c5` as the immutable prepared-artifact source because its
+prepared root was touched by an aborted forced rerun after completion.
 
 ## Important Runtime Notes
 
@@ -94,6 +128,30 @@ Full-tree backup of the frozen baseline run `ba65fe5b9cce` (Word2Vec, TF-IDF, pa
   - it provides rank correlations, top-k overlap tables, a filtered BERT panel, and a stable-control leakage table
   - the current preferred contextual layer is `-1`
 
+## Current Comparative Snapshot
+
+Current shared-panel summary on frozen run `ba65fe5b9cce`:
+
+- panel size: `55`
+- `Word2Vec` drift terms: `15`
+- `TF-IDF` drift terms: `15`
+- stable controls: `20`
+- theory seeds: `5`
+- cheap-method top-15 overlap: `0`
+
+Current cross-method summary:
+
+- `Word2Vec` vs `TF-IDF` Spearman: `-0.540`
+- `BERT(-1)` vs `Word2Vec` Spearman: `0.208`
+- `BERT(-1)` vs `TF-IDF` Spearman: `0.125`
+- `BERT` layer agreement Spearman: `0.858`
+
+Current filtered contextual top terms:
+
+- `bloqueio`, `típico`, `exposição`, `salário`, `mínimo`
+- `troca`, `preço`, `voto`, `real`, `intervenção`
+- `excepcional`, `renovação`, `eleição`, `crítico`, `político`
+
 ## Most important current decision
 
 The current plan is:
@@ -113,5 +171,7 @@ The current plan is:
 ## Writing references
 
 - `2026S1_STIL_conceptDrift/main.tex`
+- `2026S1_STIL_conceptDrift/figs/paper/figure_inventory.md`
 - `docs/semantic_change_literature_guide.md`
 - `docs/word_selection_protocol.md`
+- `docs/paper_writing_status_2026_03_23.md`

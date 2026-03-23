@@ -35,6 +35,24 @@ The paper should answer questions such as:
 3. Does contextual BERT add enough value over lighter methods such as TF-IDF or Word2Vec?
 4. Can symbolic or rule-based linguistic features help distinguish semantic drift from style, rhetoric, or discourse-structure change?
 
+## Current Frozen Comparative Baseline
+
+The current source of truth for the comparative pipeline is:
+
+- `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce`
+
+This frozen run now anchors:
+
+- the cleaned `Word2Vec` baseline
+- the cleaned `TF-IDF` baseline
+- the shared `comparison_panel`
+- contextual `BERT`
+- the `cross_method_agreement` layer
+- the paper-figure package used by the draft manuscript
+
+Do not treat `8e15dc2372c5` as the immutable prepared-artifact source because its
+prepared root was touched by an aborted forced rerun attempt after completion.
+
 ## Main Corpus Strategy
 
 ### Main corpus
@@ -57,6 +75,17 @@ Why:
 - it adds a different but still relevant Portuguese public-discourse genre
 - it is useful for qualitative checks and limited cross-corpus comparisons
 - it should remain separate from `BrPoliCorpus` unless genre is explicitly controlled
+
+### Validation-oriented auxiliary corpus
+
+`PTPARL-V` is promising, but it should currently be treated as a separate
+validation-oriented corpus rather than as a replacement for `BrPoliCorpus floor`.
+
+Current recommendation:
+
+- treat its vote labels as noisy derived political supervision
+- clean them with explicit aggregation and conflict-dropping rules before use
+- use `PTPARL-V` later as a secondary evaluation layer, not as the main discovery corpus
 
 ## Method Families To Compare
 
@@ -88,6 +117,36 @@ The paper does not need one method to “win.” Useful outcomes include:
 - low agreement that reveals different drift types
 - evidence that cheap methods approximate expensive ones
 - evidence that expensive methods detect only a narrower subset of changes
+
+## Current Comparative Findings
+
+Current shared-panel summary on frozen run `ba65fe5b9cce`:
+
+- `55` rows total
+- `15` `Word2Vec` drift terms
+- `15` `TF-IDF` drift terms
+- `20` stable controls
+- `5` theory seeds
+- cheap-method top-15 overlap: `0`
+
+Current cross-method summary:
+
+- `Word2Vec` vs `TF-IDF` Spearman: `-0.540`
+- `BERT(-1)` vs `Word2Vec` Spearman: `0.208`
+- `BERT(-1)` vs `TF-IDF` Spearman: `0.125`
+- `BERT` layer agreement Spearman: `0.858`
+
+Current filtered contextual top terms:
+
+- `bloqueio`, `típico`, `exposição`, `salário`, `mínimo`
+- `troca`, `preço`, `voto`, `real`, `intervenção`
+- `excepcional`, `renovação`, `eleição`, `crítico`, `político`
+
+Interpretation:
+
+- the cheap methods identify sharply different candidate sets
+- contextual BERT acts more as an adjudication layer than as a replacement for both
+- the current comparative story is already strong enough for a paper centered on agreement, disagreement, and cost
 
 ## Current Workflow
 
@@ -142,6 +201,7 @@ Important current implementation details:
 The main docs to keep current are:
 
 - `project_overview.md`
+- `advisor_feedback_2026_03_20.md`
 - `comparative_pipeline_readiness_2026_03_21.md`
 - `exploratory_drift_comparison_plan.md`
 - `progress_status_2026_03_20.md`
@@ -157,3 +217,26 @@ The main docs to keep current are:
 - `tfidf_drift_baseline_2026_03_22.md`
 - `comparison_panel_2026_03_22.md`
 - `cross_method_agreement_2026_03_23.md`
+- `ptparl_v_vote_label_note.md`
+- `paper_writing_status_2026_03_23.md`
+- `article_continuation_prompt_2026_03_23.md`
+
+## Current Manuscript Status
+
+The article draft is now active in:
+
+- `2026S1_STIL_conceptDrift/main.tex`
+
+The current paper-facing figure package is in:
+
+- `2026S1_STIL_conceptDrift/figs/paper/`
+
+Current figure inventory:
+
+- `figure_01_corpus_profile`
+- `figure_02_method_agreement`
+- `figure_03_overlap_and_rank_statistics`
+- `figure_04_representative_trajectories`
+
+These figures are already integrated into `main.tex` and exported as vector and
+raster publication files.

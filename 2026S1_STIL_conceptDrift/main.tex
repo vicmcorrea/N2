@@ -27,7 +27,7 @@
 % Keep the commented examples at the end of the file for quick reuse.
 % ------------------------------------------------------------------
 
-\title{Working Title of the Paper}
+\title{Comparing Lexical, Static-Embedding, and Contextual Drift Signals in Brazilian Portuguese Political Discourse}
 
 \author{
 Jo\~ao Victor M. Corr\^ea\inst{1}
@@ -47,85 +47,166 @@ University of S\~ao Paulo (USP), S\~ao Carlos, SP, Brazil\\
 \maketitle
 
 \begin{abstract}
-Replace this abstract with a concise summary of the final paper.
-For STIL, this usually means five parts in one short paragraph:
-the problem, the Portuguese corpus or dataset, the method,
-the main empirical result, and the contribution to Portuguese NLP.
+We compare three families of diachronic drift signals in Brazilian Portuguese
+political discourse: a lexical-profile baseline based on TF-IDF, a static
+embedding pipeline based on slice-specific Word2Vec models with Orthogonal
+Procrustes alignment, and a contextual analysis based on Portuguese BERT. The
+study uses the floor subset of BrPoliCorpus, covering 24 yearly slices from
+2000 to 2023 with 428{,}366 speeches and 63.1 million retained tokens after
+preprocessing. To make the methods directly comparable, we build a shared panel
+of 55 lemmas containing method-specific drift candidates, stable controls, and
+theory seeds. The resulting comparison shows strong disagreement between the
+cheap methods, with Spearman correlation of $-0.54$ and zero overlap in their
+top 15 terms, while contextual BERT remains moderately closer to Word2Vec than
+to TF-IDF. A filtered contextual panel reduces stable-control leakage and
+highlights terms such as \textit{bloqueio}, \textit{sal\'ario},
+\textit{interven\c{c}\~ao}, and \textit{reforma}. The paper contributes a
+paper-ready comparative analysis package for Portuguese political diachronic NLP
+and a figure set that makes agreement, disagreement, and term-level trajectories
+directly inspectable.
 \end{abstract}
 
 \section{Introduction}
 \label{sec:introduction}
 
-Use this section to explain:
-\begin{itemize}
-    \item the research problem and why it matters;
-    \item why the topic is relevant for Portuguese;
-    \item the main gap in prior work;
-    \item the paper's research questions or objectives;
-    \item the main contribution in one short paragraph.
-\end{itemize}
-
-If useful, end the introduction with a short roadmap of the paper.
+Political discourse is a useful setting for diachronic NLP because lexical
+choices, evaluative language, and policy framing shift as coalitions,
+administrations, and crises change over time. At the same time, there is no
+reason to expect all drift detectors to capture the same phenomenon. Profile
+methods such as TF-IDF are sensitive to shifting lexical environments, static
+embedding pipelines emphasize local neighborhood movement after alignment, and
+contextual encoders may privilege usage-level distinctions that are invisible to
+lighter approaches. This paper therefore treats method comparison itself as the
+core research object. We ask how strongly the methods agree on a shared set of
+Portuguese political terms, which candidates remain method-specific, and whether
+the expensive contextual layer contributes information beyond cheaper baselines.
 
 \section{Related Work}
 \label{sec:related_work}
 
-Organize the literature review around the themes that matter for the final paper.
-For example:
-\begin{itemize}
-    \item prior work on semantic change or concept drift;
-    \item prior work on Portuguese corpora or Portuguese NLP;
-    \item datasets, benchmarks, and methodological gaps.
-\end{itemize}
+The final version of this section will connect the experiment to work on
+semantic change detection, concept drift, Portuguese political corpora, and the
+evaluation gap between static and contextual methods. For the present draft, the
+main practical point is that the comparison is deliberately method-neutral: all
+three families are constrained to the same corpus slices and the same shared
+candidate panel so that agreement and disagreement can be inspected directly in
+the figures and tables below.
 
 \section{Corpus and Experimental Setup}
 \label{sec:data_setup}
 
-Describe the dataset or corpus here.
-This section will likely include:
-\begin{itemize}
-    \item source and collection procedure;
-    \item temporal coverage;
-    \item filtering and preprocessing;
-    \item descriptive statistics;
-    \item train, validation, and test split strategy if applicable.
-\end{itemize}
+The experiments use the floor subset of BrPoliCorpus as the main diachronic
+panel. The frozen baseline contains 24 yearly slices from 2000 to 2023, 428{,}366
+prepared speeches, and 63{,}071{,}705 retained tokens after normalization,
+content-token filtering, and lemma repair. The prepared artifacts preserve
+multiple text views, but the main comparative pipeline operates on the
+\texttt{content\_lemma} representation. Figure~\ref{fig:corpus_profile} shows the
+yearly profile of the corpus. Document volume is high throughout the panel, but
+token volume and vocabulary size vary enough to motivate explicit controls for
+frequency, slice presence, and candidate eligibility.
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{figs/paper/figure_01_corpus_profile.pdf}
+    \caption{Corpus profile for the frozen BrPoliCorpus floor baseline. Panel (A)
+    shows the number of floor speeches per yearly slice, panel (B) the retained
+    token volume, and panel (C) the number of unique lemmas observed after
+    preprocessing.}
+    \label{fig:corpus_profile}
+\end{figure*}
 
 \section{Methodology}
 \label{sec:methodology}
 
-Explain the analytical pipeline clearly enough that it can be reproduced.
-Typical subsections might include:
-\begin{itemize}
-    \item text representation or embeddings;
-    \item temporal aggregation strategy;
-    \item drift or semantic change metrics;
-    \item baselines and comparison settings;
-    \item evaluation criteria.
-\end{itemize}
+The comparison begins with a frozen Word2Vec baseline built from yearly slices,
+skip-gram training, and Orthogonal Procrustes alignment across time. We then add
+a lexical baseline based on TF-IDF change between adjacent slices and a
+contextual analysis based on Portuguese BERT over sampled in-slice occurrences.
+Rather than compare unrestricted vocabularies, we construct a shared panel of 55
+lemmas containing 15 Word2Vec-led drift candidates, 15 TF-IDF-led drift
+candidates, 20 stable controls, and 5 theory seeds. The contextual stage scores
+that shared panel and the post-run agreement layer derives pairwise rank
+correlations, top-$k$ overlaps, stable-control leakage diagnostics, and a
+filtered contextual ranking. Figure~\ref{fig:method_agreement} visualizes the
+pairwise agreement structure, while Figure~\ref{fig:overlap_rank_stats}
+summarizes overlap and rank-distribution statistics.
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{figs/paper/figure_02_method_agreement.pdf}
+    \caption{Pairwise agreement across drift methods on the shared comparison
+    panel. Panels (A) through (C) show percentile-rank agreement between the
+    preferred BERT layer, Word2Vec, and TF-IDF, while panel (D) compares the two
+    contextual layers. Annotations report Spearman correlation and two-sided
+    p-values.}
+    \label{fig:method_agreement}
+\end{figure*}
 
 \section{Results and Discussion}
 \label{sec:results}
 
-This section should present the main findings and their interpretation.
-It often helps to separate:
-\begin{itemize}
-    \item core quantitative results;
-    \item qualitative examples or case studies;
-    \item ablations, robustness checks, or comparisons;
-    \item implications for Portuguese NLP.
-\end{itemize}
+The first result is that the two cheap methods disagree strongly even after they
+are constrained to the same candidate universe. On the shared panel, Word2Vec
+and TF-IDF reach Spearman correlation of $-0.54$ and share zero terms in their
+top 15 rankings. The preferred contextual layer partly mediates this split, but
+it does not collapse onto either baseline. Its correlation with Word2Vec is
+$0.21$, while its correlation with TF-IDF is $0.12$. Figure~\ref{fig:method_agreement}
+shows that the contextual top ranks retain clear support for both method camps.
+
+The second result is that overlap statistics and bucket-level rank distributions
+are more informative than raw top-$k$ lists alone. In the preferred BERT layer,
+the top-15 overlap is 7 terms with Word2Vec and 6 terms with TF-IDF, whereas the
+cheap-method overlap remains zero. Figure~\ref{fig:overlap_rank_stats} also
+shows that selected drift terms are ranked significantly above stable controls by
+Word2Vec and TF-IDF ($p < .001$ in both cases), while contextual BERT still
+separates the groups but with weaker margins ($p = .008$). This pattern matches
+the filtered contextual panel: BERT provides useful adjudication, but the raw
+contextual ranking still leaks some stable controls and should not be treated as
+an unrestricted final list.
+
+The third result is qualitative rather than purely statistical. Representative
+term trajectories show that the methods often disagree about when a term moves,
+not only whether it moves at all. Figure~\ref{fig:representative_trajectories}
+illustrates four cases: a Word2Vec-led term with strong contextual support
+(\textit{bloqueio}), a TF-IDF-led term with strong contextual support
+(\textit{sal\'ario}), a theory seed whose contextual rank rises despite modest
+static drift (\textit{reforma}), and a stable-control diagnostic term
+(\textit{trabalho}) that reveals where contextual leakage remains. These cases
+show why a comparative analysis is more informative than a single-method ranking.
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{figs/paper/figure_03_overlap_and_rank_statistics.pdf}
+    \caption{Overlap and rank-distribution summaries on the shared comparison
+    panel. Panel (A) traces top-$k$ overlap for the preferred BERT layer. Panels
+    (B) through (D) show rank-percentile distributions by bucket for Word2Vec,
+    TF-IDF, and BERT. Points show individual terms, large markers show means,
+    error bars show 95\% bootstrap confidence intervals, and brackets report
+    one-sided Mann-Whitney tests for selected drift terms versus stable controls.}
+    \label{fig:overlap_rank_stats}
+\end{figure*}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{figs/paper/figure_04_representative_trajectories.pdf}
+    \caption{Representative term trajectories across methods. Each panel shows
+    transition-level scores standardized within term and method to emphasize
+    temporal shape rather than absolute scale. Word2Vec ribbons denote replicate
+    variability; TF-IDF and BERT are single-series estimates.}
+    \label{fig:representative_trajectories}
+\end{figure*}
 
 \section{Conclusion}
 \label{sec:conclusion}
 
-Close with:
-\begin{itemize}
-    \item the main answer to the research question;
-    \item the most important empirical takeaway;
-    \item the main limitation;
-    \item one or two realistic next steps.
-\end{itemize}
+The current frozen baseline supports an exploratory comparative paper rather than
+an argument for a single best drift detector. Word2Vec and TF-IDF highlight
+different regions of the candidate space, while contextual BERT adds a useful
+adjudication layer that is closer to Word2Vec than to TF-IDF but still distinct
+from both. The main remaining limitation is that the contextual stage still
+requires filtering to suppress stable-control leakage. The next steps are to add
+qualitative agreement packets, finalize the literature-grounded framing, and
+convert the current figure package into the camera-ready STIL submission.
 
 \section*{Acknowledgments}
 

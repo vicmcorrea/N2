@@ -8,20 +8,24 @@ Please read these files before deciding on the next step:
 
 1. `README.md`
 2. `docs/project_overview.md`
-3. `docs/comparative_pipeline_readiness_2026_03_21.md`
-4. `docs/exploratory_drift_comparison_plan.md`
+3. `docs/advisor_feedback_2026_03_20.md`
+4. `docs/paper_writing_status_2026_03_23.md`
 5. `docs/progress_status_2026_03_20.md`
-6. `docs/research_readiness_datasets.md`
-7. `docs/semantic_change_literature_guide.md`
-8. `docs/word_selection_protocol.md`
-9. `docs/embedding_strategy_nilc_word2vec.md`
-10. `docs/prepared_artifact_layout_2026_03_21.md`
-11. `docs/runtime_config_cleanup_2026_03_21.md`
-12. `docs/word2vec_baseline_freeze_2026_03_21.md`
-13. `docs/candidate_panel_filter_2026_03_21.md`
-14. `docs/tfidf_drift_baseline_2026_03_22.md`
-15. `docs/comparison_panel_2026_03_22.md`
-16. `docs/cross_method_agreement_2026_03_23.md`
+6. `docs/comparative_pipeline_readiness_2026_03_21.md`
+7. `docs/exploratory_drift_comparison_plan.md`
+8. `docs/research_readiness_datasets.md`
+9. `docs/semantic_change_literature_guide.md`
+10. `docs/word_selection_protocol.md`
+11. `docs/embedding_strategy_nilc_word2vec.md`
+12. `docs/prepared_artifact_layout_2026_03_21.md`
+13. `docs/runtime_config_cleanup_2026_03_21.md`
+14. `docs/word2vec_baseline_freeze_2026_03_21.md`
+15. `docs/candidate_panel_filter_2026_03_21.md`
+16. `docs/tfidf_drift_baseline_2026_03_22.md`
+17. `docs/comparison_panel_2026_03_22.md`
+18. `docs/cross_method_agreement_2026_03_23.md`
+19. `docs/ptparl_v_vote_label_note.md`
+20. `docs/article_continuation_prompt_2026_03_23.md`
 
 ## Current Paper Direction
 
@@ -39,6 +43,25 @@ Current method families:
 - `Word2Vec` Skip-Gram + Orthogonal Procrustes
 - contextual `BERT`
 - optional symbolic analysis using selected `NILC-Metrix` or related lexical indicators
+
+## Current Paper Status
+
+The project is now beyond method implementation and has an active manuscript draft.
+
+Current manuscript assets:
+
+- `2026S1_STIL_conceptDrift/main.tex`
+- `2026S1_STIL_conceptDrift/figs/paper/figure_inventory.md`
+- `2026S1_STIL_conceptDrift/figs/paper/figure_manifest.json`
+
+Current paper-facing figure package:
+
+- `figure_01_corpus_profile`
+- `figure_02_method_agreement`
+- `figure_03_overlap_and_rank_statistics`
+- `figure_04_representative_trajectories`
+
+Each figure is exported as `PDF`, `EPS`, `PNG`, and `TIFF`.
 
 ## Important Constraints
 
@@ -74,6 +97,46 @@ Current method families:
   - a tiny method-local lexical exclusion list for obvious procedural offenders
   - a high-frequency ceiling at the `0.995` quantile for drift-panel selection
 - preprocessing now also patches residual malformed lemmas such as `vejar`, `teríar`, `enter`, `mantir`, and `ademal`-type cases
+
+## Most Important Current Results
+
+Main frozen experiment root:
+
+- `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce`
+
+Shared comparison panel:
+
+- `55` lemmas total
+- `15` `Word2Vec` drift terms
+- `15` `TF-IDF` drift terms
+- `20` stable controls
+- `5` theory seeds
+- cheap-method top-15 overlap: `0`
+
+Current cross-method summary:
+
+- `Word2Vec` vs `TF-IDF` Spearman: `-0.540`
+- `BERT(-1)` vs `Word2Vec` Spearman: `0.208`
+- `BERT(-1)` vs `TF-IDF` Spearman: `0.125`
+- `BERT` layer agreement Spearman: `0.858`
+
+Current filtered contextual top terms:
+
+- `bloqueio`
+- `típico`
+- `exposição`
+- `salário`
+- `mínimo`
+- `troca`
+- `preço`
+- `voto`
+- `real`
+- `intervenção`
+- `excepcional`
+- `renovação`
+- `eleição`
+- `crítico`
+- `político`
 
 ## Most Important Current Outputs
 
@@ -115,7 +178,9 @@ Progress summary:
 
 The next useful work usually falls into one of these:
 
-1. produce qualitative agreement/disagreement packets from the frozen comparison artifacts
-2. add runtime/cost summary tables across `TF-IDF`, `Word2Vec`, and `BERT`
-3. decide whether the contextual paper-facing list should use only stable-control filtering or one additional lexical cleanup layer
-4. add the `PTPARL-V` validation-table build as a separate pipeline path
+1. continue article writing in `2026S1_STIL_conceptDrift/main.tex`
+2. turn current results into paper tables and tighter result prose
+3. add runtime/cost summary tables across `TF-IDF`, `Word2Vec`, and `BERT`
+4. produce qualitative agreement/disagreement packets from the frozen comparison artifacts
+5. decide whether the contextual paper-facing list should use only stable-control filtering or one additional lexical cleanup layer
+6. add the `PTPARL-V` validation-table build as a separate pipeline path
