@@ -79,7 +79,7 @@ Corpus summary:
 
 - 24 yearly slices
 - 428,366 prepared speeches
-- 63,071,705 retained tokens
+- 63,036,642 retained tokens
 
 Shared comparison panel:
 

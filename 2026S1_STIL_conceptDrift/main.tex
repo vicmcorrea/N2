@@ -50,60 +50,110 @@ University of S\~ao Paulo (USP), S\~ao Carlos, SP, Brazil\\
 We compare three families of diachronic drift signals in Brazilian Portuguese
 political discourse: a lexical-profile baseline based on TF-IDF, a static
 embedding pipeline based on slice-specific Word2Vec models with Orthogonal
-Procrustes alignment, and a contextual analysis based on Portuguese BERT. The
+Procrustes alignment, and a contextual analysis based on a Portuguese BERT
+checkpoint. The
 study uses the floor subset of BrPoliCorpus, covering 24 yearly slices from
-2000 to 2023 with 428{,}366 speeches and 63.1 million retained tokens after
+2000 to 2023 with 428{,}366 speeches and 63.0 million retained tokens after
 preprocessing. To make the methods directly comparable, we build a shared panel
 of 55 lemmas containing method-specific drift candidates, stable controls, and
 theory seeds. The resulting comparison shows strong disagreement between the
-cheap methods, with Spearman correlation of $-0.54$ and zero overlap in their
+lighter baselines, with Spearman correlation of $-0.54$ and zero overlap in their
 top 15 terms, while contextual BERT remains moderately closer to Word2Vec than
 to TF-IDF. A filtered contextual panel reduces stable-control leakage and
 highlights terms such as \textit{bloqueio}, \textit{sal\'ario},
-\textit{interven\c{c}\~ao}, and \textit{reforma}. The paper contributes a
-paper-ready comparative analysis package for Portuguese political diachronic NLP
-and a figure set that makes agreement, disagreement, and term-level trajectories
-directly inspectable.
+\textit{interven\c{c}\~ao}, and \textit{elei\c{c}\~ao}. Rather than treating
+one detector as externally validated ground truth, we frame the study as an
+exploratory comparison of complementary drift sensitivities, interpretability,
+and computational cost in Brazilian Portuguese political discourse.
 \end{abstract}
 
 \section{Introduction}
 \label{sec:introduction}
 
-Political discourse is a useful setting for diachronic NLP because lexical
-choices, evaluative language, and policy framing shift as coalitions,
-administrations, and crises change over time. At the same time, there is no
-reason to expect all drift detectors to capture the same phenomenon. Profile
-methods such as TF-IDF are sensitive to shifting lexical environments, static
-embedding pipelines emphasize local neighborhood movement after alignment, and
-contextual encoders may privilege usage-level distinctions that are invisible to
-lighter approaches. This paper therefore treats method comparison itself as the
-core research object. We ask how strongly the methods agree on a shared set of
-Portuguese political terms, which candidates remain method-specific, and whether
-the expensive contextual layer contributes information beyond cheaper baselines.
+Political discourse is a productive setting for diachronic NLP because shifts in
+agenda, coalition structure, institutional conflict, and policy framing leave
+traces in lexical choice and word usage over time. Recent work has shown that
+distributional models can capture semantic drift at scale, but it has also made
+clear that different modeling choices emphasize different aspects of change
+\cite{hamilton-etal-2016-diachronic,kutuzov-etal-2018-diachronic}. This is
+especially relevant in political corpora, where a term may change because of a
+new policy referent, a rhetorical reframing, a shift in collocational profile,
+or a reorganization of discourse coalitions rather than because of a neatly
+isolated lexical sense change.
+
+That ambiguity matters for evaluation. Shared-task benchmarks have improved
+comparability in lexical semantic change detection, but curated external labels
+remain scarce, particularly outside the few languages and corpora covered by
+standard tasks \cite{schlechtweg-etal-2020-semeval}. At the same time,
+distributional pipelines can react to temporal artifacts, alignment effects, and
+other confounds if their outputs are interpreted too literally
+\cite{dubossarsky-etal-2019-timeout}. For our STIL paper, this means that the
+central question is not which detector is ``correct'' in an absolute sense, but
+what each detector appears to capture when applied to the same Portuguese
+political timeline.
+
+This question is timely for Brazilian Portuguese resources. BrPoliCorpus now
+offers a large political corpus spanning multiple institutional genres, while
+Roda Viva provides a complementary interview corpus with cleaner speaker turns
+and different discourse dynamics
+\cite{lima-lopes-2025-brpolicorpus,de-miranda-jr-etal-2024-roda}. We focus here
+on the floor subset of BrPoliCorpus as the main discovery corpus and compare a
+TF-IDF lexical-profile baseline, a slice-specific aligned Word2Vec baseline, and
+a contextual BERT stage scored on a shared comparison panel. The paper asks
+three concrete questions: how strongly do the methods agree on the same lemmas,
+which candidates remain method-specific, and whether the higher-cost contextual
+stage adds enough interpretive value to justify its cost.
 
 \section{Related Work}
 \label{sec:related_work}
 
-The final version of this section will connect the experiment to work on
-semantic change detection, concept drift, Portuguese political corpora, and the
-evaluation gap between static and contextual methods. For the present draft, the
-main practical point is that the comparison is deliberately method-neutral: all
-three families are constrained to the same corpus slices and the same shared
-candidate panel so that agreement and disagreement can be inspected directly in
-the figures and tables below.
+Distributional semantic change detection has evolved from co-occurrence-profile
+comparisons to aligned embedding spaces and more recent contextual
+representations \cite{hamilton-etal-2016-diachronic,kutuzov-etal-2018-diachronic}.
+Aligned static embeddings remain attractive because they are comparatively
+efficient and produce interpretable neighborhood movements, but they also
+compress all usages of a word into a single representation. This can blur cases
+in which older and newer usages coexist rather than replacing one another
+cleanly.
+
+Evaluation is the harder problem. The field has benefited from standardized
+shared tasks and annotation protocols for lexical semantic change
+\cite{schlechtweg-etal-2020-semeval}, yet many real-world studies still operate
+without external semantic ground truth. In such settings, negative controls,
+corpus-sensitive diagnostics, and cautious interpretation are essential because
+apparent change can emerge from temporal referencing, alignment noise, or shifts
+in genre and discourse structure rather than from semantic drift alone
+\cite{dubossarsky-etal-2019-timeout}. This concern is central to our paper and
+directly motivates the use of stable controls and agreement analysis.
+
+Contextual models offer a partial response to the aggregation problem. By
+encoding token-level usages, BERT-style representations can surface variation
+that static spaces smooth over, and prior work has shown that contextualized
+representations can support meaningful lexical semantic change analysis when
+paired with usage-sensitive comparison procedures
+\cite{giulianelli-etal-2020-analysing,devlin-etal-2019-bert}. Our paper does not
+position contextual BERT as a final arbiter. Instead, we place it beside
+TF-IDF and aligned Word2Vec on the same Portuguese political panel so that
+agreement, disagreement, interpretability, and computational tradeoffs can be
+examined directly.
 
 \section{Corpus and Experimental Setup}
 \label{sec:data_setup}
 
 The experiments use the floor subset of BrPoliCorpus as the main diachronic
 panel. The frozen baseline contains 24 yearly slices from 2000 to 2023, 428{,}366
-prepared speeches, and 63{,}071{,}705 retained tokens after normalization,
+prepared speeches, and 63{,}036{,}642 retained tokens after normalization,
 content-token filtering, and lemma repair. The prepared artifacts preserve
 multiple text views, but the main comparative pipeline operates on the
 \texttt{content\_lemma} representation. Figure~\ref{fig:corpus_profile} shows the
 yearly profile of the corpus. Document volume is high throughout the panel, but
 token volume and vocabulary size vary enough to motivate explicit controls for
 frequency, slice presence, and candidate eligibility.
+
+We deliberately do not merge BrPoliCorpus and Roda Viva into a single
+time-aligned corpus. The present paper uses BrPoliCorpus floor as the sole
+discovery panel, while Roda Viva remains a complementary corpus for later
+triangulation under separate preprocessing and temporal assumptions.
 
 \begin{figure*}[t]
     \centering
@@ -119,17 +169,46 @@ frequency, slice presence, and candidate eligibility.
 \label{sec:methodology}
 
 The comparison begins with a frozen Word2Vec baseline built from yearly slices,
-skip-gram training, and Orthogonal Procrustes alignment across time. We then add
-a lexical baseline based on TF-IDF change between adjacent slices and a
-contextual analysis based on Portuguese BERT over sampled in-slice occurrences.
+skip-gram training, and Orthogonal Procrustes alignment across time, following
+the standard family of aligned diachronic embedding approaches
+\cite{hamilton-etal-2016-diachronic}. We then add a lexical baseline based on
+TF-IDF change between adjacent slices and a contextual stage that embeds sampled
+in-slice occurrences with the Portuguese checkpoint
+\texttt{rufimelo/bert-large-portuguese-cased-sts}. The contextual analysis
+extracts layers $-1$ and $-4$; the agreement layer keeps $-1$ as the preferred
+paper-facing ranking and uses the second layer as a robustness view.
+
 Rather than compare unrestricted vocabularies, we construct a shared panel of 55
 lemmas containing 15 Word2Vec-led drift candidates, 15 TF-IDF-led drift
-candidates, 20 stable controls, and 5 theory seeds. The contextual stage scores
-that shared panel and the post-run agreement layer derives pairwise rank
-correlations, top-$k$ overlaps, stable-control leakage diagnostics, and a
-filtered contextual ranking. Figure~\ref{fig:method_agreement} visualizes the
-pairwise agreement structure, while Figure~\ref{fig:overlap_rank_stats}
-summarizes overlap and rank-distribution statistics.
+candidates, 20 stable controls, and 5 theory seeds. This design keeps the
+comparison method-neutral: all three families observe the same candidate set,
+and disagreement can be interpreted as a property of the signal rather than as
+an artifact of divergent vocabularies. The post-run agreement layer then derives
+pairwise rank correlations, top-$k$ overlaps, stable-control leakage
+diagnostics, and a filtered contextual ranking. Figure~\ref{fig:method_agreement}
+visualizes the pairwise agreement structure, while
+Figure~\ref{fig:overlap_rank_stats} summarizes overlap and rank-distribution
+statistics.
+
+\begin{table*}[t]
+    \centering
+    \small
+    \caption{Compact comparison profile for the three drift families on the frozen
+    baseline. Word2Vec runtime sums the preserved training, alignment, and scoring
+    manifests. The BERT runtime is an approximate wall-clock inferred from the
+    contextual run-log timestamps because no dedicated duration manifest was
+    preserved for that stage.}
+    \label{tab:method_profile}
+    \begin{tabular}{p{2.0cm}p{3.2cm}p{2.2cm}p{2.2cm}p{4.2cm}}
+        \toprule
+        Method & Main signal & Scoring scope & Frozen runtime & Paper-facing role \\
+        \midrule
+        TF-IDF & Change in lexical salience between adjacent yearly slices & 3{,}221 eligible lemmas & 24.7 s & Cheapest lexical baseline; especially sensitive to shifting profile and issue salience \\
+        Word2Vec & Movement in aligned slice-specific skip-gram neighborhoods & 3{,}221 eligible lemmas & 22.9 min & Static-embedding baseline; emphasizes neighborhood displacement across time \\
+        Contextual BERT & Usage-level divergence across sampled occurrences & 55 shared-panel lemmas, 82{,}461 embedded occurrences & \mbox{$\approx 4.12$ h} on CPU & Expensive adjudication layer; most useful for inspecting agreement, disagreement, and method-specific candidates \\
+        \bottomrule
+    \end{tabular}
+\end{table*}
 
 \begin{figure*}[t]
     \centering
@@ -142,27 +221,38 @@ summarizes overlap and rank-distribution statistics.
     \label{fig:method_agreement}
 \end{figure*}
 
-\section{Results and Discussion}
+\section{Results}
 \label{sec:results}
 
-The first result is that the two cheap methods disagree strongly even after they
+The first result is that the two lighter baselines disagree strongly even after they
 are constrained to the same candidate universe. On the shared panel, Word2Vec
 and TF-IDF reach Spearman correlation of $-0.54$ and share zero terms in their
-top 15 rankings. The preferred contextual layer partly mediates this split, but
-it does not collapse onto either baseline. Its correlation with Word2Vec is
-$0.21$, while its correlation with TF-IDF is $0.12$. Figure~\ref{fig:method_agreement}
-shows that the contextual top ranks retain clear support for both method camps.
+top 15 rankings. This inverse association is statistically clear
+($p = 2.1 \times 10^{-5}$), which makes the disagreement hard to dismiss as a
+small-sample accident. The preferred contextual layer partly mediates this split
+without collapsing onto either baseline. Its correlation with Word2Vec is
+$0.21$ ($p = 0.128$), while its correlation with TF-IDF is $0.12$
+($p = 0.365$). These positive associations are directionally informative but not
+strong enough to justify treating contextual BERT as a substitute for one of the
+cheaper methods. Figure~\ref{fig:method_agreement} shows the resulting geometry:
+the contextual top ranks borrow support from both camps, while the two cheap
+methods remain sharply separated.
 
 The second result is that overlap statistics and bucket-level rank distributions
 are more informative than raw top-$k$ lists alone. In the preferred BERT layer,
 the top-15 overlap is 7 terms with Word2Vec and 6 terms with TF-IDF, whereas the
-cheap-method overlap remains zero. Figure~\ref{fig:overlap_rank_stats} also
+baseline-to-baseline overlap remains zero. Figure~\ref{fig:overlap_rank_stats} also
 shows that selected drift terms are ranked significantly above stable controls by
 Word2Vec and TF-IDF ($p < .001$ in both cases), while contextual BERT still
 separates the groups but with weaker margins ($p = .008$). This pattern matches
 the filtered contextual panel: BERT provides useful adjudication, but the raw
 contextual ranking still leaks some stable controls and should not be treated as
-an unrestricted final list.
+an unrestricted final list. The two contextual extraction layers nevertheless
+agree strongly with each other (Spearman $= 0.858$), so the broad comparative
+picture does not depend on a single extraction depth.
+
+\section{Discussion}
+\label{sec:discussion}
 
 The third result is qualitative rather than purely statistical. Representative
 term trajectories show that the methods often disagree about when a term moves,
@@ -173,6 +263,35 @@ illustrates four cases: a Word2Vec-led term with strong contextual support
 static drift (\textit{reforma}), and a stable-control diagnostic term
 (\textit{trabalho}) that reveals where contextual leakage remains. These cases
 show why a comparative analysis is more informative than a single-method ranking.
+
+The disagreement itself is substantively informative. TF-IDF appears most
+sensitive to reweightings in lexical profile: when a term becomes newly central
+to yearly agendas, policy disputes, or formulaic framing, its salience can move
+even if its local semantic neighborhood remains comparatively stable. Word2Vec,
+by contrast, is better positioned to highlight persistent neighborhood
+reorganization across slices. Contextual BERT sits between these views. Because
+it observes token-level usages, it can support either a TF-IDF-led or a
+Word2Vec-led candidate, but the stable-control leakage table shows that greater
+context sensitivity does not automatically produce a cleaner unrestricted ranking.
+
+This interpretation fits the term-level evidence. \textit{Sal\'ario} behaves like
+a lexical-profile case with strong contextual support, suggesting that changes in
+agenda prominence and usage framing are both at work. \textit{Bloqueio} looks
+more like a neighborhood-displacement case, where the contextual layer aligns
+with the embedding-led signal. \textit{Reforma} is useful for a different
+reason: it is not a top filtered contextual term, but as a theory seed it shows
+that politically central vocabulary can display contextual differentiation even
+when it is not the strongest candidate in the cheap rankings. That is precisely
+why the shared panel includes theory seeds and stable controls alongside
+method-led drift terms.
+
+The computational comparison in Table~\ref{tab:method_profile} further sharpens
+the story. TF-IDF is nearly instantaneous on the frozen run, Word2Vec is still
+practical at corpus scale, and contextual BERT is markedly more expensive even
+after being restricted to the shared panel. Given the modest rank correlations,
+the current evidence does not support replacing the cheaper methods with BERT.
+Instead, it supports using contextual modeling selectively as an adjudication and
+interpretation layer when disagreement is substantively interesting.
 
 \begin{figure*}[t]
     \centering
@@ -199,19 +318,25 @@ show why a comparative analysis is more informative than a single-method ranking
 \section{Conclusion}
 \label{sec:conclusion}
 
-The current frozen baseline supports an exploratory comparative paper rather than
-an argument for a single best drift detector. Word2Vec and TF-IDF highlight
-different regions of the candidate space, while contextual BERT adds a useful
-adjudication layer that is closer to Word2Vec than to TF-IDF but still distinct
-from both. The main remaining limitation is that the contextual stage still
-requires filtering to suppress stable-control leakage. The next steps are to add
-qualitative agreement packets, finalize the literature-grounded framing, and
-convert the current figure package into the camera-ready STIL submission.
+The frozen baseline supports an exploratory comparative study rather than an
+argument for a single best detector of semantic change. TF-IDF and Word2Vec
+highlight clearly different regions of the candidate space, and contextual BERT
+adds a useful but higher-cost inspection layer that remains distinct from both.
+For this Portuguese political setting, disagreement is therefore part of the
+result: it suggests that the three families are sensitive to different mixtures
+of lexical salience, neighborhood displacement, and usage-level variation.
 
-\section*{Acknowledgments}
-
-Add funding, institutional support, project grants, or collaboration acknowledgments here.
-If the paper is submitted without acknowledgments at first, this section can remain commented out until the final version.
+The main limitations follow directly from that framing. First, the paper does
+not claim external semantic ground truth for BrPoliCorpus floor. Second, the raw
+contextual ranking still requires filtering because stable controls can leak into
+the top list. Third, the promising \textit{PTPARL-V} resource is not used here
+as validation ground truth because its intervention-level labels still require
+explicit deduplication and aggregation rules before they can function as a
+separate noisy supervision layer. A natural next step is therefore to test the
+current comparison against cleaned \textit{PTPARL-V} supervision while adding a
+symbolic companion layer, for instance selected NILC-Metrix-style features, to
+distinguish lexical-semantic drift from rhetorical, stylistic, or discourse
+organizational change.
 
 \bibliographystyle{sbc}
 \bibliography{bib/bib_main}
