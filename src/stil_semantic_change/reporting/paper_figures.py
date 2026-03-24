@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 from scipy.stats import mannwhitneyu, spearmanr
 
 from stil_semantic_change.utils.artifacts import read_json
@@ -187,6 +188,21 @@ def generate_paper_figures(experiment_root: Path, output_dir: Path) -> dict[str,
         }
     )
 
+    study_design_path = output_dir / "figure_05_study_design"
+    _plot_study_design(output_stem=study_design_path)
+    figure_manifest["figures"].append(
+        {
+            "id": "figure_05",
+            "stem": str(study_design_path),
+            "caption": (
+                "Paper-facing comparative workflow. Cheap baselines nominate "
+                "candidates; the shared panel combines those candidates with "
+                "controls and theory seeds before contextual inspection and "
+                "agreement analysis."
+            ),
+        }
+    )
+
     manifest_path = output_dir / "figure_manifest.json"
     manifest_path.write_text(
         json.dumps(figure_manifest, indent=2, ensure_ascii=False),
@@ -302,41 +318,184 @@ def _plot_corpus_profile(
     vocab["slice_id"] = vocab["slice_id"].astype(str)
     summary = summary.merge(vocab, on="slice_id", how="left")
 
-    fig, axes = plt.subplots(3, 1, figsize=(7.2, 7.8), sharex=True)
+    fig, axes = plt.subplots(
+        3,
+        1,
+        figsize=(7.2, 6.4),
+        sharex=True,
+        gridspec_kw={"hspace": 0.16},
+    )
     years = summary["year"].to_numpy()
 
-    axes[0].bar(years, summary["document_count"], color=OKABE_ITO["blue"], width=0.8)
-    axes[0].set_ylabel("Documents")
-    axes[0].set_title("Floor speeches by year")
+    series_specs = [
+        ("document_count", "Speeches", OKABE_ITO["blue"], "o"),
+        ("token_count", "Tokens (M)", OKABE_ITO["orange"], "D"),
+        ("vocab_size", "Unique lemmas", OKABE_ITO["green"], "s"),
+    ]
 
-    axes[1].plot(
-        years,
-        summary["token_count"] / 1_000_000,
-        color=OKABE_ITO["orange"],
-        marker="o",
-        linewidth=2,
-    )
-    axes[1].fill_between(
-        years,
-        np.zeros_like(years, dtype=float),
-        summary["token_count"] / 1_000_000,
-        color=OKABE_ITO["orange"],
-        alpha=0.15,
-    )
-    axes[1].set_ylabel("Tokens (millions)")
-    axes[1].set_title("Retained token volume by year")
-
-    axes[2].plot(years, summary["vocab_size"], color=OKABE_ITO["green"], marker="s", linewidth=2)
-    axes[2].set_ylabel("Unique lemmas")
-    axes[2].set_xlabel("Year")
-    axes[2].set_title("Vocabulary size by year")
-
-    for axis in axes:
-        axis.grid(axis="y", alpha=0.25)
+    for axis, (column, ylabel, color, marker) in zip(axes, series_specs, strict=False):
+        values = summary[column].to_numpy(dtype=float)
+        if column == "token_count":
+            values = values / 1_000_000
+        axis.plot(
+            years,
+            values,
+            color=color,
+            linewidth=2.0,
+            marker=marker,
+            markersize=4.2,
+            markerfacecolor="white",
+            markeredgewidth=1.1,
+        )
+        axis.fill_between(years, values, values.min(), color=color, alpha=0.08)
+        axis.set_ylabel(ylabel)
+        axis.grid(axis="y", alpha=0.18, linewidth=0.7)
         axis.set_xlim(years.min() - 0.5, years.max() + 0.5)
 
-    axes[2].set_xticks(years[::2])
-    _add_panel_labels(list(axes))
+    axes[2].set_xlabel("Year")
+    axes[2].set_xticks(years[::3])
+    _add_panel_labels(list(axes), x=-0.11, y=1.02)
+    fig.subplots_adjust(left=0.11, right=0.98, top=0.98, bottom=0.08)
+    _save_bundle(fig, output_stem)
+
+
+def _plot_study_design(output_stem: Path) -> None:
+    fig, ax = plt.subplots(figsize=(6.2, 2.15))
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis("off")
+
+    def add_box(
+        x: float,
+        y: float,
+        w: float,
+        h: float,
+        text: str,
+        *,
+        facecolor: str,
+        edgecolor: str,
+        fontsize: float = 9.0,
+    ) -> None:
+        patch = FancyBboxPatch(
+            (x, y),
+            w,
+            h,
+            boxstyle="round,pad=0.012,rounding_size=0.022",
+            linewidth=1.2,
+            facecolor=facecolor,
+            edgecolor=edgecolor,
+        )
+        ax.add_patch(patch)
+        ax.text(
+            x + (w / 2),
+            y + (h / 2),
+            text,
+            ha="center",
+            va="center",
+            fontsize=fontsize,
+            linespacing=1.08,
+        )
+
+    def add_arrow(start: tuple[float, float], end: tuple[float, float], *, color: str) -> None:
+        arrow = FancyArrowPatch(
+            start,
+            end,
+            arrowstyle="-|>",
+            mutation_scale=11,
+            linewidth=1.25,
+            color=color,
+            shrinkA=4,
+            shrinkB=4,
+            connectionstyle="arc3",
+        )
+        ax.add_patch(arrow)
+
+    add_box(
+        0.02,
+        0.35,
+        0.18,
+        0.30,
+        "BrPoliCorpus floor\n24 yearly slices\nmain corpus",
+        facecolor="#F2F2F2",
+        edgecolor=OKABE_ITO["grey"],
+    )
+    add_box(
+        0.26,
+        0.58,
+        0.18,
+        0.22,
+        "TF-IDF\nadjacent-slice\nsalience",
+        facecolor="#FBE5D6",
+        edgecolor=OKABE_ITO["orange"],
+        fontsize=8.4,
+    )
+    add_box(
+        0.26,
+        0.20,
+        0.18,
+        0.22,
+        "Word2Vec\naligned slice\nneighborhoods",
+        facecolor="#DCEAF6",
+        edgecolor=OKABE_ITO["blue"],
+        fontsize=8.4,
+    )
+    add_box(
+        0.50,
+        0.32,
+        0.20,
+        0.36,
+        "Shared panel\n55 lemmas\n15 W2V + 15 TF-IDF\n20 stable + 5 theory",
+        facecolor="#FFF4D0",
+        edgecolor="#B79000",
+        fontsize=8.2,
+    )
+    add_box(
+        0.76,
+        0.56,
+        0.20,
+        0.24,
+        "Contextual BERT\nsampled usages",
+        facecolor="#DDF1E4",
+        edgecolor=OKABE_ITO["green"],
+        fontsize=8.4,
+    )
+    add_box(
+        0.76,
+        0.18,
+        0.20,
+        0.24,
+        "Agreement layer\ncorrelations, overlap,\ntrajectories, cost",
+        facecolor="#F2F2F2",
+        edgecolor=OKABE_ITO["grey"],
+        fontsize=8.2,
+    )
+
+    add_arrow((0.20, 0.56), (0.26, 0.68), color=OKABE_ITO["grey"])
+    add_arrow((0.20, 0.44), (0.26, 0.31), color=OKABE_ITO["grey"])
+    add_arrow((0.44, 0.68), (0.50, 0.58), color=OKABE_ITO["orange"])
+    add_arrow((0.44, 0.31), (0.50, 0.42), color=OKABE_ITO["blue"])
+    add_arrow((0.70, 0.58), (0.76, 0.68), color="#B79000")
+    add_arrow((0.70, 0.42), (0.76, 0.30), color="#B79000")
+    add_arrow((0.86, 0.56), (0.86, 0.42), color=OKABE_ITO["green"])
+
+    ax.text(
+        0.32,
+        0.86,
+        "cheap discovery",
+        color=OKABE_ITO["grey"],
+        fontsize=7.4,
+        ha="center",
+        va="bottom",
+    )
+    ax.text(
+        0.86,
+        0.86,
+        "contextual adjudication",
+        color=OKABE_ITO["grey"],
+        fontsize=7.4,
+        ha="center",
+        va="bottom",
+    )
     _save_bundle(fig, output_stem)
 
 
@@ -375,7 +534,7 @@ def _plot_method_agreement(
         how="left",
     )
 
-    fig, axes = plt.subplots(2, 2, figsize=(7.2, 6.8))
+    fig, axes = plt.subplots(2, 2, figsize=(6.6, 5.9))
     highlight_terms = {"bloqueio", "salário", "reforma", "trabalho"}
 
     metrics: dict[str, dict[str, float]] = {}
@@ -444,7 +603,7 @@ def _plot_method_agreement(
         bbox_to_anchor=(0.5, 1.02),
     )
     _add_panel_labels([axes[0, 0], axes[0, 1], axes[1, 0], axes[1, 1]], x=-0.13, y=1.04)
-    fig.subplots_adjust(top=0.88)
+    fig.subplots_adjust(top=0.85)
     _save_bundle(fig, output_stem)
     return metrics
 
@@ -456,7 +615,7 @@ def _plot_overlap_and_rank_statistics(
     preferred_layer: int,
     output_stem: Path,
 ) -> dict[str, object]:
-    fig, axes = plt.subplots(2, 2, figsize=(7.2, 6.8))
+    fig, axes = plt.subplots(2, 2, figsize=(6.6, 5.7))
 
     overlap = topk_overlap.loc[
         (topk_overlap["layer"] == preferred_layer) & (topk_overlap["subset"] == "all_panel")
@@ -630,7 +789,7 @@ def _plot_representative_trajectories(
     preferred_layer: int,
     output_stem: Path,
 ) -> None:
-    fig, axes = plt.subplots(2, 2, figsize=(7.2, 6.8), sharex=True, sharey=True)
+    fig, axes = plt.subplots(2, 2, figsize=(6.6, 5.7), sharex=True, sharey=True)
     flat_axes = [axes[0, 0], axes[0, 1], axes[1, 0], axes[1, 1]]
 
     for axis, (term, subtitle) in zip(flat_axes, SELECTED_TRAJECTORY_TERMS.items(), strict=False):
@@ -712,7 +871,7 @@ def _plot_representative_trajectories(
         bbox_to_anchor=(0.5, 1.02),
     )
     _add_panel_labels(flat_axes, x=-0.13, y=1.06)
-    fig.subplots_adjust(top=0.9)
+    fig.subplots_adjust(top=0.87)
     _save_bundle(fig, output_stem)
 
 

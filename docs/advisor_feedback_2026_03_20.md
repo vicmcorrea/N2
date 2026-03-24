@@ -126,8 +126,11 @@ A safe and useful working claim is:
 
 After this advisor feedback, the N2 documentation should be interpreted under the new exploratory-comparison framing.
 
-The key planning files that reflect this updated direction are:
+The current live docs that reflect this updated direction are:
 
 - `docs/project_overview.md`
-- `docs/exploratory_drift_comparison_plan.md`
-- `docs/progress_status_2026_03_20.md`
+- `docs/chat_handoff.md`
+- `docs/paper_writing_status_2026_03_23.md`
+
+Older planning files from the transition into this framing were moved to
+`docs/archive/`.

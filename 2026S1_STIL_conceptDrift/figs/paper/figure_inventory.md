@@ -26,3 +26,9 @@ Overlap and rank-distribution summaries on the shared comparison panel. Panel (A
 Stem: `/Users/victor/Dropbox/USP/ResearchThesis/Articles/N2/2026S1_STIL_conceptDrift/figs/paper/figure_04_representative_trajectories`
 
 Representative term trajectories across methods. Each panel shows transition-level scores standardized within term and method to emphasize temporal shape rather than absolute scale. Word2Vec ribbons denote replicate variability; TF-IDF and BERT are single-series estimates.
+
+## figure_05
+
+Stem: `/Users/victor/Dropbox/USP/ResearchThesis/Articles/N2/2026S1_STIL_conceptDrift/figs/paper/figure_05_study_design`
+
+Paper-facing comparative workflow. Cheap baselines nominate candidates; the shared panel combines those candidates with controls and theory seeds before contextual inspection and agreement analysis.

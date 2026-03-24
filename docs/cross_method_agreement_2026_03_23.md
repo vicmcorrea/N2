@@ -160,8 +160,11 @@ For the paper-facing comparison section:
 These frozen agreement artifacts are now already reflected in the paper-facing draft:
 
 - `2026S1_STIL_conceptDrift/main.tex`
+- `2026S1_STIL_conceptDrift/main.pdf`
+- `2026S1_STIL_conceptDrift/figs/paper/figure_05_study_design.pdf`
 - `2026S1_STIL_conceptDrift/figs/paper/figure_02_method_agreement.pdf`
 - `2026S1_STIL_conceptDrift/figs/paper/figure_03_overlap_and_rank_statistics.pdf`
+- `2026S1_STIL_conceptDrift/figs/paper/figure_04_representative_trajectories.pdf`
 
 So this note is no longer only an implementation log. It also serves as the source
 note behind the current agreement/disagreement figures used in the manuscript.
@@ -169,6 +172,6 @@ note behind the current agreement/disagreement figures used in the manuscript.
 ## Next useful work
 
 - produce a qualitative agreement/disagreement packet with nearest neighbors and contexts
-- add a compact runtime/cost comparison table for `TF-IDF`, `Word2Vec`, and `BERT`
-- decide whether the paper-facing contextual list should remain stable-control-filtered
-  only, or also receive a light lexical exclusion pass
+- decide whether a separate `PTPARL-V` validation table is worth adding before submission
+- keep the paper-facing contextual list stable-control-filtered unless there is a
+  clearly justified reason to introduce additional lexical cleanup

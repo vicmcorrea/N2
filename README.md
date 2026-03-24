@@ -31,20 +31,19 @@ solved semantic-change detection.
 
 ## Start here
 
+- `docs/README.md`
 - `docs/chat_handoff.md`
 - `docs/project_overview.md`
 - `docs/advisor_feedback_2026_03_20.md`
 - `docs/paper_writing_status_2026_03_23.md`
-- `docs/article_continuation_prompt_2026_03_23.md`
-- `docs/research_readiness_datasets.md`
-- `docs/ptparl_v_vote_label_note.md`
-- `docs/prepared_artifact_layout_2026_03_21.md`
-- `docs/runtime_config_cleanup_2026_03_21.md`
-- `docs/word2vec_baseline_freeze_2026_03_21.md`
-- `docs/candidate_panel_filter_2026_03_21.md`
-- `docs/tfidf_drift_baseline_2026_03_22.md`
-- `docs/comparison_panel_2026_03_22.md`
 - `docs/cross_method_agreement_2026_03_23.md`
+- `docs/comparison_panel_2026_03_22.md`
+- `docs/tfidf_drift_baseline_2026_03_22.md`
+- `docs/word2vec_baseline_freeze_2026_03_21.md`
+- `docs/ptparl_v_vote_label_note.md`
+- `docs/paper-submission-guidelines-STIL.md`
+- `2026S1_STIL_conceptDrift/main.tex`
+- `2026S1_STIL_conceptDrift/figs/paper/figure_inventory.md`
 
 ## Experiment Quickstart
 
@@ -54,7 +53,7 @@ Install dependencies with `uv`:
 uv sync --group dev
 ```
 
-The prepared-corpus layout and recent runtime/config cleanup are documented here:
+The prepared-corpus layout, frozen baselines, and paper-facing comparison layers are documented here:
 
 - `docs/prepared_artifact_layout_2026_03_21.md`
 - `docs/runtime_config_cleanup_2026_03_21.md`
@@ -64,6 +63,9 @@ The prepared-corpus layout and recent runtime/config cleanup are documented here
 - `docs/comparison_panel_2026_03_22.md`
 - `docs/cross_method_agreement_2026_03_23.md`
 - `docs/paper_writing_status_2026_03_23.md`
+
+Older planning and transition notes that were superseded by the frozen comparative
+baseline or the current manuscript have been moved into `docs/archive/`.
 
 Run the toy end-to-end smoke pipeline:
 

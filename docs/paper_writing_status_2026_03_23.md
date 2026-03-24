@@ -1,17 +1,14 @@
 # Paper Writing Status
 
-Date: 2026-03-23
+Last updated: 2026-03-24
 
 ## Purpose
 
-This note records the current article-writing state after the comparative pipeline,
-shared comparison panel, contextual run, cross-method agreement layer, and
-paper-facing figure package were all completed on top of the frozen baseline:
+This note records the current manuscript state after the comparative pipeline,
+shared panel, contextual run, cross-method agreement layer, and paper-facing
+figure package were all folded into the STIL draft anchored to the frozen run:
 
 - `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce`
-
-The goal is to let a future chat continue writing the paper without re-auditing the
-whole pipeline history first.
 
 ## Current manuscript files
 
@@ -19,67 +16,66 @@ Main manuscript:
 
 - `2026S1_STIL_conceptDrift/main.tex`
 
-Figure package:
+Compiled PDF:
+
+- `2026S1_STIL_conceptDrift/main.pdf`
+
+Paper figure package:
 
 - `2026S1_STIL_conceptDrift/figs/paper/figure_inventory.md`
 - `2026S1_STIL_conceptDrift/figs/paper/figure_manifest.json`
-- `2026S1_STIL_conceptDrift/figs/paper/figure_01_corpus_profile.pdf`
 - `2026S1_STIL_conceptDrift/figs/paper/figure_02_method_agreement.pdf`
 - `2026S1_STIL_conceptDrift/figs/paper/figure_03_overlap_and_rank_statistics.pdf`
 - `2026S1_STIL_conceptDrift/figs/paper/figure_04_representative_trajectories.pdf`
+- `2026S1_STIL_conceptDrift/figs/paper/figure_05_study_design.pdf`
 
-All figures were exported as:
+Exported but not currently used in the manuscript:
 
-- `PDF`
-- `EPS`
-- `PNG`
-- `TIFF`
+- `2026S1_STIL_conceptDrift/figs/paper/figure_01_corpus_profile.pdf`
+
+All figures are exported as `PDF`, `EPS`, `PNG`, and `TIFF`.
 
 ## Current manuscript state
 
-The draft already contains:
+The manuscript is now well past planning and is in polishing mode.
 
-- a concrete working title
-- a full abstract
-- working prose in:
-  - introduction
-  - related work placeholder text
-  - corpus/setup
-  - methodology
-  - results/discussion
-  - conclusion
-- integrated figure environments pointing to the paper figure package
+The draft currently includes:
 
-The draft is therefore past the planning stage and should now be treated as an
-active manuscript that needs refinement, citation support, and table/result polish.
+- title and abstract
+- introduction and related work with verified citations
+- corpus/setup and methodology sections aligned to the frozen run
+- results and discussion organized around the current comparative findings
+- conclusion, limitations, and ethics statement
+- integrated LaTeX tables for dataset summary and method runtime
+- integrated paper-facing figures
+
+The paper compiled successfully on `2026-03-24`.
+
+Current compiled status:
+
+- total PDF pages: `9`
+- main content comfortably within the STIL long-paper limit
 
 ## Current paper framing
 
-The article should be written as:
+The article should be defended as:
 
-- an exploratory comparative study of drift signals in Brazilian Portuguese political discourse
+- an exploratory comparative study of drift techniques in Portuguese political discourse
 - centered on `BrPoliCorpus floor`
 - comparing `TF-IDF`, `Word2Vec`, and contextual `BERT`
-- focused on agreement, disagreement, interpretability, and computational tradeoffs
+- focused on agreement, divergence, interpretability, and computational cost
 
-It should not be written as:
+The paper should not claim externally validated semantic-change detection.
 
-- a claim that one method definitively detects semantic change with external ground truth
-
-That framing change came directly from advisor feedback and remains the key
-motivation behind the current article structure.
-
-## Current results to anchor the paper
-
-Frozen run:
-
-- `ba65fe5b9cce`
+## Frozen results that anchor the draft
 
 Corpus summary:
 
-- 24 yearly slices
-- 428,366 prepared speeches
-- 63,036,642 retained tokens
+- `24` yearly slices
+- `428,366` speeches
+- `63,036,642` retained tokens
+- `538,537,771` `content_lemma` characters
+- `225,484` unique lemmas overall
 
 Shared comparison panel:
 
@@ -120,63 +116,28 @@ Filtered contextual top terms:
 - `crítico`
 - `político`
 
-Important interpretation:
+## Current paper-facing figures and tables
 
-- the cheap methods disagree sharply
-- contextual BERT is closer to `Word2Vec` than to `TF-IDF`, but it is not a copy of either
-- the comparative story is therefore about complementary drift sensitivities, not winner-take-all benchmarking
+Figure sequence in the manuscript:
 
-## Current figures and what they show
+1. study-design workflow
+2. method agreement
+3. overlap and rank summaries
+4. representative trajectories
 
-### Figure 1
+Current table set in the manuscript:
 
-Corpus size profile over time:
+1. corpus summary table with totals and yearly quartiles
+2. runtime/method scope table
 
-- yearly document volume
-- token volume
-- vocabulary size
+## Current writing priorities
 
-### Figure 2
+The highest-value writing work now is:
 
-Pairwise method agreement:
+1. final prose tightening and consistency edits
+2. minor layout cleanup when needed
+3. cautious discussion polish around method-specific drift interpretations
+4. any last citation or wording checks before submission packaging
 
-- `BERT` vs `Word2Vec`
-- `BERT` vs `TF-IDF`
-- `Word2Vec` vs `TF-IDF`
-- BERT layer agreement
-
-### Figure 3
-
-Top-k overlap and rank-distribution tests:
-
-- overlap curves
-- bootstrap confidence intervals
-- Mann-Whitney significance annotations for drift terms vs stable controls
-
-### Figure 4
-
-Representative trajectories:
-
-- `bloqueio`
-- `salário`
-- `reforma`
-- `trabalho`
-
-## Main writing gaps still open
-
-The draft still needs:
-
-- a literature-grounded related-work section with real citations
-- a compact methods table or textual summary with runtime/cost information
-- a sharper discussion of why disagreement is informative rather than a failure
-- one or more concise qualitative agreement/disagreement examples
-- a short limitations paragraph about stable-control leakage and the filtered contextual list
-- a decision on whether to mention `PTPARL-V` only as future validation or as a short current note
-
-## Recommended next writing order
-
-1. finish the related-work section with real citations
-2. tighten the results section around the four figures and the core comparison numbers
-3. add one compact table summarizing methods, cost, and output type
-4. add a short limitations/future-work paragraph on `PTPARL-V` and symbolic analysis
-5. compile and polish the LaTeX manuscript only after the prose is stabilized
+The main job is no longer rebuilding the pipeline. It is turning the frozen
+comparative package into the strongest possible STIL paper.

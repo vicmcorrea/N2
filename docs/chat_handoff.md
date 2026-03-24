@@ -1,108 +1,60 @@
 # Chat Handoff
 
-This note is for any future chat using `Articles/N2` as the main workspace.
+This note is the fastest way to resume work in `Articles/N2`.
 
-## Read First
+## Read first
 
-Please read these files before deciding on the next step:
+Use this order unless the task is very narrow:
 
 1. `README.md`
-2. `docs/project_overview.md`
-3. `docs/advisor_feedback_2026_03_20.md`
-4. `docs/paper_writing_status_2026_03_23.md`
-5. `docs/progress_status_2026_03_20.md`
-6. `docs/comparative_pipeline_readiness_2026_03_21.md`
-7. `docs/exploratory_drift_comparison_plan.md`
-8. `docs/research_readiness_datasets.md`
-9. `docs/semantic_change_literature_guide.md`
-10. `docs/word_selection_protocol.md`
-11. `docs/embedding_strategy_nilc_word2vec.md`
-12. `docs/prepared_artifact_layout_2026_03_21.md`
-13. `docs/runtime_config_cleanup_2026_03_21.md`
-14. `docs/word2vec_baseline_freeze_2026_03_21.md`
-15. `docs/candidate_panel_filter_2026_03_21.md`
-16. `docs/tfidf_drift_baseline_2026_03_22.md`
-17. `docs/comparison_panel_2026_03_22.md`
-18. `docs/cross_method_agreement_2026_03_23.md`
-19. `docs/ptparl_v_vote_label_note.md`
-20. `docs/article_continuation_prompt_2026_03_23.md`
+2. `docs/README.md`
+3. `docs/project_overview.md`
+4. `docs/advisor_feedback_2026_03_20.md`
+5. `docs/paper_writing_status_2026_03_23.md`
+6. `docs/cross_method_agreement_2026_03_23.md`
+7. `docs/comparison_panel_2026_03_22.md`
+8. `docs/tfidf_drift_baseline_2026_03_22.md`
+9. `docs/word2vec_baseline_freeze_2026_03_21.md`
+10. `docs/ptparl_v_vote_label_note.md`
+11. `2026S1_STIL_conceptDrift/main.tex`
+12. `2026S1_STIL_conceptDrift/figs/paper/figure_inventory.md`
 
-## Current Paper Direction
+Do not start with files under `docs/archive/` unless you are chasing project history.
 
-The project is no longer framed as a paper that must prove semantic-change detection with external gold labels.
+## Current paper direction
 
-The current advisor-aligned direction is:
+The paper is now defended as:
 
-- an exploratory comparison of drift techniques in Portuguese political discourse
-- centered on `BrPoliCorpus floor`
-- with `Roda Viva` as a complementary corpus
+- an exploratory comparative study
+- on Portuguese political discourse
+- using `BrPoliCorpus floor` as the main corpus
+- comparing `TF-IDF`, `Word2Vec`, and contextual `BERT`
+- with attention to agreement, divergence, interpretability, and cost
 
-Current method families:
+Do not write the paper as if we have external semantic ground truth for semantic
+change detection. `PTPARL-V` remains a separate noisy supervision source for later
+validation-oriented work, not the main discovery corpus.
 
-- `TF-IDF` baseline drift
-- `Word2Vec` Skip-Gram + Orthogonal Procrustes
-- contextual `BERT`
-- optional symbolic analysis using selected `NILC-Metrix` or related lexical indicators
+## Current frozen source of truth
 
-## Current Paper Status
-
-The project is now beyond method implementation and has an active manuscript draft.
-
-Current manuscript assets:
-
-- `2026S1_STIL_conceptDrift/main.tex`
-- `2026S1_STIL_conceptDrift/figs/paper/figure_inventory.md`
-- `2026S1_STIL_conceptDrift/figs/paper/figure_manifest.json`
-
-Current paper-facing figure package:
-
-- `figure_01_corpus_profile`
-- `figure_02_method_agreement`
-- `figure_03_overlap_and_rank_statistics`
-- `figure_04_representative_trajectories`
-
-Each figure is exported as `PDF`, `EPS`, `PNG`, and `TIFF`.
-
-## Important Constraints
-
-- do **not** merge `BrPoliCorpus` and `Roda Viva` into one raw timeline without genre control
-- keep `BrPoliCorpus floor` as the main experiment
-- treat current quicklook results as exploratory, not final evidence
-- keep the prepared multi-view artifact contract intact unless there is a deliberate migration plan
-- assume `content_lemma` is the default `Word2Vec` representation unless a config explicitly changes `model.text_view`
-- when doing citation work, use `valyu` first and `exa` second
-- use `ml-paper-writing` when drafting paper-facing planning or writing
-
-## Current Implementation Guardrails
-
-- `model.text_view` is validated at config load time
-- `preprocess.preserve_accents` is active and affects normalization
-- contextual `BERT` dependencies are lazy-loaded and should not be pulled into non-BERT runs without a good reason
-- the cleaned `Word2Vec` baseline is frozen at `ba65fe5b9cce`
-- a first-class `tfidf_drift` stage now exists and writes method-local outputs under `scores/tfidf_drift/`
-- a first-class `comparison_panel` stage now exists and writes shared outputs under `scores/comparison_panel/`
-- contextual `BERT` now prefers the shared `comparison_panel` as its term source
-  - fallback to legacy `candidate_sets.json` remains only for backward compatibility
-- a first-class `cross_method_agreement` analysis stage now exists and writes:
-  - rank correlations
-  - top-k overlaps
-  - a filtered contextual drift panel
-  - a stable-control leakage diagnostic table
-- candidate-panel filtering now sits on top of the raw score table rather than mutating the raw ranking
-- candidate-panel filtering is now stricter than the earlier lexical-only pass:
-  - dominant POS gating for drift/stable panels
-  - centralized lexical defaults in `src/stil_semantic_change/selection/lexicons.py`
-  - validated preview drift panel documented in `docs/candidate_panel_filter_2026_03_21.md`
-- TF-IDF candidate-panel filtering now also applies:
-  - a tiny method-local lexical exclusion list for obvious procedural offenders
-  - a high-frequency ceiling at the `0.995` quantile for drift-panel selection
-- preprocessing now also patches residual malformed lemmas such as `vejar`, `teríar`, `enter`, `mantir`, and `ademal`-type cases
-
-## Most Important Current Results
-
-Main frozen experiment root:
+Use:
 
 - `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce`
+
+Do not use:
+
+- `run/outputs/experiments/brpolicorpus_floor_yearly/8e15dc2372c5`
+
+Its prepared root was touched after completion by an aborted forced rerun.
+
+## Current paper-facing results
+
+Corpus summary:
+
+- `24` yearly slices from `2000` to `2023`
+- `428,366` speeches
+- `63,036,642` retained tokens
+- `538,537,771` characters in `content_lemma`
 
 Shared comparison panel:
 
@@ -111,76 +63,71 @@ Shared comparison panel:
 - `15` `TF-IDF` drift terms
 - `20` stable controls
 - `5` theory seeds
-- cheap-method top-15 overlap: `0`
 
-Current cross-method summary:
+Cross-method summary:
 
 - `Word2Vec` vs `TF-IDF` Spearman: `-0.540`
 - `BERT(-1)` vs `Word2Vec` Spearman: `0.208`
 - `BERT(-1)` vs `TF-IDF` Spearman: `0.125`
 - `BERT` layer agreement Spearman: `0.858`
+- top-15 overlap:
+  - `BERT` / `Word2Vec`: `7`
+  - `BERT` / `TF-IDF`: `6`
+  - `Word2Vec` / `TF-IDF`: `0`
 
-Current filtered contextual top terms:
+Filtered contextual top terms:
 
-- `bloqueio`
-- `típico`
-- `exposição`
-- `salário`
-- `mínimo`
-- `troca`
-- `preço`
-- `voto`
-- `real`
-- `intervenção`
-- `excepcional`
-- `renovação`
-- `eleição`
-- `crítico`
-- `político`
+- `bloqueio`, `típico`, `exposição`, `salário`, `mínimo`
+- `troca`, `preço`, `voto`, `real`, `intervenção`
+- `excepcional`, `renovação`, `eleição`, `crítico`, `político`
 
-## Most Important Current Outputs
+## Current manuscript state
 
-Current clean Word2Vec baseline:
+Main files:
 
-- `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce`
-- candidate-panel preview validated on top of that frozen run:
-  - see `docs/candidate_panel_filter_2026_03_21.md`
-- clean TF-IDF baseline on top of the same frozen run:
-  - `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/tfidf_drift`
-  - see `docs/tfidf_drift_baseline_2026_03_22.md`
-- shared comparison panel on top of the same frozen run:
-  - `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/comparison_panel`
-  - see `docs/comparison_panel_2026_03_22.md`
-- cross-method agreement layer on top of the same frozen run:
-  - `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce/scores/cross_method_agreement`
-  - see `docs/cross_method_agreement_2026_03_23.md`
+- `2026S1_STIL_conceptDrift/main.tex`
+- `2026S1_STIL_conceptDrift/main.pdf`
 
-Important integrity note:
+Current paper-facing figure package:
 
-- `run/outputs/experiments/brpolicorpus_floor_yearly/8e15dc2372c5` finished as a clean overnight `Word2Vec` rerun, but its prepared root was later touched by an aborted forced `tfidf_drift` rerun
-- do not use `8e15dc2372c5/prepared` as the frozen source of truth for future method runs
-- keep `ba65fe5b9cce` as the frozen clean baseline source
+- `figure_05_study_design`
+- `figure_02_method_agreement`
+- `figure_03_overlap_and_rank_statistics`
+- `figure_04_representative_trajectories`
 
-Earlier exploratory quicklook:
+Archived but still reproducible:
 
-- `run/outputs/experiments/brpolicorpus_floor_yearly/ae5022228b99/quicklook/yearly_2003_2023_r1`
+- `figure_01_corpus_profile`
 
-Advisor memo:
+Current paper-facing tables in the draft:
 
-- `2026S1_STIL_conceptDrift/advisor_prelim_report_2026_03_17.tex`
-- `2026S1_STIL_conceptDrift/advisor_prelim_report_2026_03_17.pdf`
+- dataset summary table built directly in LaTeX
+- method scope/runtime table built directly in LaTeX
 
-Progress summary:
+The manuscript was compiled successfully on `2026-03-24` and currently fits in
+`9` total PDF pages.
 
-- `docs/progress_status_2026_03_20.md`
+## What is live vs historical
 
-## Likely Next Tasks
+Treat these as live docs:
 
-The next useful work usually falls into one of these:
+- `project_overview.md`
+- `paper_writing_status_2026_03_23.md`
+- `word2vec_baseline_freeze_2026_03_21.md`
+- `tfidf_drift_baseline_2026_03_22.md`
+- `comparison_panel_2026_03_22.md`
+- `cross_method_agreement_2026_03_23.md`
+- `ptparl_v_vote_label_note.md`
+- `paper-submission-guidelines-STIL.md`
 
-1. continue article writing in `2026S1_STIL_conceptDrift/main.tex`
-2. turn current results into paper tables and tighter result prose
-3. add runtime/cost summary tables across `TF-IDF`, `Word2Vec`, and `BERT`
-4. produce qualitative agreement/disagreement packets from the frozen comparison artifacts
-5. decide whether the contextual paper-facing list should use only stable-control filtering or one additional lexical cleanup layer
-6. add the `PTPARL-V` validation-table build as a separate pipeline path
+Treat `docs/archive/` as historical context only.
+
+## Likely next work
+
+The implementation is largely done. The most likely next steps are:
+
+1. final paper polishing in `main.tex`
+2. small visualization or table refinements if the draft still looks crowded
+3. a separate `PTPARL-V` validation table path with explicit aggregation rules
+4. optional symbolic-support analysis described as interpretive future work, not
+   as ground truth

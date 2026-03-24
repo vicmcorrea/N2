@@ -1,242 +1,148 @@
 # Project Overview
 
-## Context
+## Purpose
 
-`Articles/N2` supports a new STIL paper direction that is separate from the already submitted financial-disclosures article in:
+`Articles/N2` is the workspace for the current STIL paper on comparative drift
+analysis in Portuguese political discourse. It is separate from the earlier
+financial-disclosures paper in `Articles/N1` and should be treated as its own
+research line.
 
-- `Articles/N1/2026S1_conceptDrift_financialDisclosures`
+## Current advisor-aligned framing
 
-The main results of that earlier article should not be reused as the core contribution here.
+The paper should be written as an exploratory comparative study, not as a claim
+that one detector has solved semantic-change detection with external ground truth.
 
-## Current Advisor-Aligned Direction
+The current contribution is:
 
-The project is now framed as an **exploratory comparison of drift techniques in Portuguese political discourse**, not as a paper claiming fully validated semantic-change detection.
+- compare `TF-IDF`, `Word2Vec`, and contextual `BERT` on the same political corpus
+- show where they agree and where they diverge
+- interpret what each method seems to capture
+- assess whether the higher-cost contextual layer adds enough value over cheaper methods
 
-The main idea is:
+This framing is especially useful in Portuguese, where comparable large-scale
+political drift studies are still much scarcer than in English-centered work.
 
-- compare several drift-detection families on the same Portuguese political corpus
-- measure how much they agree or disagree
-- identify what kinds of change each method seems to capture
-- evaluate whether heavier methods add enough value over cheaper ones
+## Corpus strategy
 
-This is useful even without labeled ground truth because the contribution becomes comparative and methodological rather than benchmark-style evaluation.
+Main discovery corpus:
 
-## Current Working Paper Framing
+- `BrPoliCorpus floor`
 
-Working framing:
+Complementary corpus:
 
-- exploratory analysis of concept and lexical drift in Brazilian Portuguese political discourse
-- emphasis on agreement, divergence, interpretability, and computational cost across methods
+- `Roda Viva`
 
-The paper should answer questions such as:
+Validation-oriented later corpus:
 
-1. How strongly do different drift techniques correlate on `BrPoliCorpus floor`?
-2. Which candidate terms are stable across methods, and which are method-specific?
-3. Does contextual BERT add enough value over lighter methods such as TF-IDF or Word2Vec?
-4. Can symbolic or rule-based linguistic features help distinguish semantic drift from style, rhetoric, or discourse-structure change?
+- `PTPARL-V`
 
-## Current Frozen Comparative Baseline
+Constraints that still hold:
 
-The current source of truth for the comparative pipeline is:
+- do not merge `BrPoliCorpus` and `Roda Viva` into one uncontrolled timeline
+- keep `BrPoliCorpus floor` as the main discovery corpus
+- treat `PTPARL-V` as a separate noisy supervision source that requires explicit
+  deduplication and aggregation rules
+
+## Current frozen source of truth
+
+The current experiment root for the paper is:
 
 - `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce`
 
-This frozen run now anchors:
+This frozen run anchors:
 
 - the cleaned `Word2Vec` baseline
 - the cleaned `TF-IDF` baseline
 - the shared `comparison_panel`
 - contextual `BERT`
 - the `cross_method_agreement` layer
-- the paper-figure package used by the draft manuscript
+- the paper figure package used by the manuscript
 
-Do not treat `8e15dc2372c5` as the immutable prepared-artifact source because its
-prepared root was touched by an aborted forced rerun attempt after completion.
+Do not use `8e15dc2372c5` as the immutable prepared-artifact source because its
+prepared root was touched after completion by an aborted forced rerun.
 
-## Main Corpus Strategy
+## Current comparative findings
 
-### Main corpus
+Corpus summary:
 
-Use `BrPoliCorpus floor` as the main corpus.
+- `24` yearly slices
+- `428,366` speeches
+- `63,036,642` retained tokens
+- `538,537,771` `content_lemma` characters
 
-Why:
+Shared comparison panel:
 
-- it is the largest and most continuous Portuguese political-discourse panel currently available in N2
-- it has exact dates
-- it supports yearly and semester slicing
-- it stays within a coherent institutional political genre
-
-### Complementary corpus
-
-Use `Roda Viva V0-2` as a complementary corpus.
-
-Why:
-
-- it adds a different but still relevant Portuguese public-discourse genre
-- it is useful for qualitative checks and limited cross-corpus comparisons
-- it should remain separate from `BrPoliCorpus` unless genre is explicitly controlled
-
-### Validation-oriented auxiliary corpus
-
-`PTPARL-V` is promising, but it should currently be treated as a separate
-validation-oriented corpus rather than as a replacement for `BrPoliCorpus floor`.
-
-Current recommendation:
-
-- treat its vote labels as noisy derived political supervision
-- clean them with explicit aggregation and conflict-dropping rules before use
-- use `PTPARL-V` later as a secondary evaluation layer, not as the main discovery corpus
-
-## Method Families To Compare
-
-The new paper should compare at least three families:
-
-1. `TF-IDF`-style contextual/profile drift
-2. `Word2Vec` Skip-Gram by slice with Orthogonal Procrustes alignment
-3. contextual `BERT` drift on sampled usages
-
-Optional fourth family:
-
-4. symbolic or lexical-feature analysis, potentially using selected `NILC-Metrix` measures
-
-The role of the symbolic layer is different from the embedding methods:
-
-- not necessarily to replace them as the main drift detector
-- but to help interpret whether change is more semantic, topical, evaluative, rhetorical, or stylistic
-
-## Current Practical Interpretation Of Methods
-
-- `TF-IDF` is the cheap lexical-profile baseline
-- `Word2Vec` is the main static-embedding drift method
-- `BERT` is the expensive contextual method
-- `NILC-Metrix` or symbolic features are interpretive/supporting signals
-
-The paper does not need one method to “win.” Useful outcomes include:
-
-- high agreement between methods
-- low agreement that reveals different drift types
-- evidence that cheap methods approximate expensive ones
-- evidence that expensive methods detect only a narrower subset of changes
-
-## Current Comparative Findings
-
-Current shared-panel summary on frozen run `ba65fe5b9cce`:
-
-- `55` rows total
+- `55` lemmas
 - `15` `Word2Vec` drift terms
 - `15` `TF-IDF` drift terms
 - `20` stable controls
 - `5` theory seeds
-- cheap-method top-15 overlap: `0`
 
-Current cross-method summary:
+Cross-method summary:
 
 - `Word2Vec` vs `TF-IDF` Spearman: `-0.540`
 - `BERT(-1)` vs `Word2Vec` Spearman: `0.208`
 - `BERT(-1)` vs `TF-IDF` Spearman: `0.125`
 - `BERT` layer agreement Spearman: `0.858`
+- top-15 overlap:
+  - `BERT` / `Word2Vec`: `7`
+  - `BERT` / `TF-IDF`: `6`
+  - `Word2Vec` / `TF-IDF`: `0`
 
-Current filtered contextual top terms:
+Filtered contextual top terms:
 
 - `bloqueio`, `típico`, `exposição`, `salário`, `mínimo`
 - `troca`, `preço`, `voto`, `real`, `intervenção`
 - `excepcional`, `renovação`, `eleição`, `crítico`, `político`
 
-Interpretation:
+## Current interpretation
 
-- the cheap methods identify sharply different candidate sets
-- contextual BERT acts more as an adjudication layer than as a replacement for both
-- the current comparative story is already strong enough for a paper centered on agreement, disagreement, and cost
+The main comparative story is now stable:
 
-## Current Workflow
+- `TF-IDF` behaves as the cheap lexical-profile baseline
+- `Word2Vec` behaves as the aligned static-embedding baseline
+- contextual `BERT` is useful as a higher-cost adjudication layer rather than as
+  a replacement for the cheaper methods
 
-1. keep `BrPoliCorpus floor` as the main yearly panel
-2. define a shared vocabulary panel across methods
-3. compute drift scores for each method family
-4. compare rankings, overlaps, and correlations
-5. inspect representative stable and divergent cases
-6. use symbolic features to interpret change type when useful
-7. write the STIL paper as an exploratory comparative study
+The important result is not that one method wins. The important result is that
+disagreement itself is informative. The three method families appear sensitive to
+different mixtures of lexical salience, neighborhood displacement, and usage-level
+variation.
 
-## Current Implementation Notes
+## Current manuscript state
 
-The experiment package now assumes a multi-view prepared-artifact contract instead of a
-single universal cleaned-text field.
-
-Important current implementation details:
-
-- `Word2Vec` trains from a configurable prepared text view via `model.text_view`
-- the first-class `TF-IDF` drift stage also reads the declared prepared text view, currently `content_lemma`
-- the default training view is `content_lemma`
-- `model.text_view` is validated at config load time
-- `preprocess.preserve_accents` is now an active normalization switch
-- contextual `BERT` dependencies are lazy-loaded so non-BERT runs stay lighter
-- candidate-panel selection now uses:
-  - dominant POS gating for drift/stable panels
-  - centralized lexical exclusions in `src/stil_semantic_change/selection/lexicons.py`
-  - validated preview filtering on frozen run `ba65fe5b9cce`
-- `TF-IDF` drift now writes method-local artifacts under `scores/tfidf_drift/`
-- the clean frozen `TF-IDF` baseline is currently attached to frozen run `ba65fe5b9cce`
-- a first-class shared `comparison_panel` stage now exists under `scores/comparison_panel/`
-- the current shared panel was built directly against frozen run `ba65fe5b9cce`
-- a first-class `cross_method_agreement` analysis stage now exists under `scores/cross_method_agreement/`
-- the current cross-method layer was also built directly against frozen run `ba65fe5b9cce`
-- the current panel contains `55` rows:
-  - `15` `Word2Vec` drift terms
-  - `15` `TF-IDF` drift terms
-  - `20` stable controls
-  - `5` theory seeds
-- the current cheap-method overlap is `0`, so the first panel is primarily a disagreement panel
-- contextual `BERT` now prefers that shared panel as its downstream candidate universe
-- the legacy `candidate_sets.json` path remains as a backward-compatible fallback only
-- the current contextual comparison layer adds:
-  - rank correlations across methods
-  - top-k overlap tables
-  - a filtered contextual drift panel
-  - a stable-control leakage diagnostic table
-- `8e15dc2372c5` should not be treated as the immutable prepared-artifact source after an aborted forced rerun briefly re-entered `prepare_corpus`
-
-## Active Documentation
-
-The main docs to keep current are:
-
-- `project_overview.md`
-- `advisor_feedback_2026_03_20.md`
-- `comparative_pipeline_readiness_2026_03_21.md`
-- `exploratory_drift_comparison_plan.md`
-- `progress_status_2026_03_20.md`
-- `research_readiness_datasets.md`
-- `semantic_change_literature_guide.md`
-- `word_selection_protocol.md`
-- `embedding_strategy_nilc_word2vec.md`
-- `chat_handoff.md`
-- `prepared_artifact_layout_2026_03_21.md`
-- `runtime_config_cleanup_2026_03_21.md`
-- `word2vec_baseline_freeze_2026_03_21.md`
-- `candidate_panel_filter_2026_03_21.md`
-- `tfidf_drift_baseline_2026_03_22.md`
-- `comparison_panel_2026_03_22.md`
-- `cross_method_agreement_2026_03_23.md`
-- `ptparl_v_vote_label_note.md`
-- `paper_writing_status_2026_03_23.md`
-- `article_continuation_prompt_2026_03_23.md`
-
-## Current Manuscript Status
-
-The article draft is now active in:
+Main manuscript:
 
 - `2026S1_STIL_conceptDrift/main.tex`
 
-The current paper-facing figure package is in:
+Compiled paper:
 
-- `2026S1_STIL_conceptDrift/figs/paper/`
+- `2026S1_STIL_conceptDrift/main.pdf`
 
-Current figure inventory:
+Paper-facing figures currently in the manuscript:
 
-- `figure_01_corpus_profile`
+- `figure_05_study_design`
 - `figure_02_method_agreement`
 - `figure_03_overlap_and_rank_statistics`
 - `figure_04_representative_trajectories`
 
-These figures are already integrated into `main.tex` and exported as vector and
-raster publication files.
+The corpus-profile figure `figure_01_corpus_profile` remains in the exported figure
+package but is not currently used in the paper.
+
+## Active docs
+
+The main live docs are:
+
+- `README.md`
+- `docs/README.md`
+- `docs/chat_handoff.md`
+- `docs/advisor_feedback_2026_03_20.md`
+- `docs/paper_writing_status_2026_03_23.md`
+- `docs/word2vec_baseline_freeze_2026_03_21.md`
+- `docs/tfidf_drift_baseline_2026_03_22.md`
+- `docs/comparison_panel_2026_03_22.md`
+- `docs/cross_method_agreement_2026_03_23.md`
+- `docs/ptparl_v_vote_label_note.md`
+- `docs/paper-submission-guidelines-STIL.md`
+
+Older planning and transition notes were moved to `docs/archive/`.
