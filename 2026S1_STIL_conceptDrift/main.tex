@@ -21,26 +21,22 @@
 \usepackage[english]{babel}
 \usepackage[hidelinks]{hyperref}
 
-\newcommand{\citep}{\cite}
-\newcommand{\citet}{\cite}
-
-% ------------------------------------------------------------------
-% Clean STIL/SBC template for the new paper.
-% Submission version notes:
-% - Main bibliography file: bib/bib_main.bib
-% - Suggested figures folder: figs/
-%
-% Replace the placeholders below as the paper evolves.
-% Keep the commented examples at the end of the file for quick reuse.
-% ------------------------------------------------------------------
 
 \title{Comparing Lexical, Static-Embedding, and Contextual Drift Signals in Brazilian Portuguese Political Discourse}
 
-\author{
-Anonymous STIL Submission
-}
 
-\address{}
+\author{Jo\~{a}o Victor M. Correa\inst{1} \and
+        Renato Moraes Silva\inst{2}}
+
+\address{Interinstitutional Center for Computational Linguistics (NILC)\\
+         Institute of Mathematics and Computer Science\\
+         University of S\~{a}o Paulo (USP), S\~{a}o Carlos, Brazil
+\nextinstitute
+         Department of Computer Science\\
+         Federal University of S\~{a}o Carlos (UFSCar)\\
+         Sorocaba, S\~{a}o Paulo, Brazil\\
+\email{victormcorrea@usp.br, renatoms@icmc.usp.br}
+}
 
 \begin{document}
 
@@ -102,7 +98,7 @@ scored on a shared comparison panel of 55 lemmas. The paper asks three concrete
 questions: (i)~how strongly do the methods agree on the same lemmas, (ii)~which
 candidates remain method-specific, and (iii)~whether the higher-cost contextual
 stage adds enough interpretive value to justify its expense. That comparison
-fills a descriptive gap in Portuguese, where paper-ready multi-method drift
+fills a descriptive gap in Portuguese, where published multi-method drift
 analyses are still much scarcer than in the better-studied English-centered
 literature.
 
@@ -187,7 +183,7 @@ slice-presence controls described above.
     \footnotesize
     \setlength{\tabcolsep}{1pt}
     \renewcommand{\arraystretch}{1.08}
-    \caption{Corpus summary for the BrPoliCorpus floor discovery panel,
+    \caption{Corpus summary for the BrPoliCorpus floor subset,
     which contains Brazilian Chamber floor speeches. Yearly slice statistics are
     reported as p25/median/p75 across the 24 yearly files; token and character
     counts are shown in millions.}
@@ -433,103 +429,5 @@ broader discourse change.
 
 \bibliographystyle{sbc}
 \bibliography{bib/bib_main}
-
-% ------------------------------------------------------------------
-% Quick examples for reuse
-% ------------------------------------------------------------------
-% Recommendation:
-% - Prefer PDF for plots, charts, line art, and vector graphics.
-% - Prefer PNG for screenshots or raster images.
-% - Avoid JPG unless the source is a photo and you really need it.
-% The files below show both PDF and PNG usage with real assets in figs/archive/.
-
-% Example of citation usage:
-% Prior work on semantic change in Portuguese remains limited
-% \citep{example_semantic_change_2024}.
-% \citet{example_dataset_2023} provides a useful Portuguese corpus.
-
-% Example of a single image / figure:
-% \begin{figure}[H]
-%     \centering
-%     % Prefer PDF here because this is a vector plot.
-%     \includegraphics[width=0.8\linewidth]{figs/archive/change_point_detection.pdf}
-%     \caption{Example using a PDF figure from the figs/ folder.}
-%     \label{fig:cpd_example}
-% \end{figure}
-
-% Example of two images side by side:
-% \begin{figure}[H]
-%     \centering
-%     \begin{minipage}{0.48\linewidth}
-%         \centering
-%         % PDF is preferred for plots and charts.
-%         \includegraphics[width=\linewidth]{figs/archive/news_per_year.pdf}
-%         \caption{Example left panel using a PDF plot.}
-%         \label{fig:example_left}
-%     \end{minipage}
-%     \hfill
-%     \begin{minipage}{0.48\linewidth}
-%         \centering
-%         % PNG is useful for raster images and screenshots.
-%         \includegraphics[width=\linewidth]{figs/archive/word_mover_distance_comparison_01.png}
-%         \caption{Example right panel using a PNG image.}
-%         \label{fig:example_right}
-%     \end{minipage}
-% \end{figure}
-%
-% If you want one caption for both images, use a single figure environment
-% and write the shared caption after the two minipages.
-
-% Example of table usage:
-% \begin{table}[H]
-%     \centering
-%     \caption{Example table caption.}
-%     \label{tab:example}
-%     \begin{tabular}{lcc}
-%         \toprule
-%         Model / Setting & Value 1 & Value 2 \\
-%         \midrule
-%         Baseline & 0.00 & 0.00 \\
-%         Proposed & 0.00 & 0.00 \\
-%         \bottomrule
-%     \end{tabular}
-% \end{table}
-
-% Example of a wider table with alignment:
-% \begin{table*}[t]
-%     \centering
-%     \caption{Example of a wider comparison table.}
-%     \label{tab:wide_example}
-%     \begin{tabular}{lccc}
-%         \toprule
-%         Period & Documents & Drift score & Notes \\
-%         \midrule
-%         1986--1990 & 120 & 0.18 & Early period \\
-%         1991--1995 & 145 & 0.27 & Transitional period \\
-%         1996--2000 & 162 & 0.34 & Stronger semantic shift \\
-%         \bottomrule
-%     \end{tabular}
-% \end{table*}
-
-% Example of equation usage:
-% \begin{equation}
-%     d_t = 1 - \cos(\mathbf{x}_t, \mathbf{x}_{t-1})
-% \end{equation}
-
-% Example of referring to figures, tables, and sections in text:
-% Figure~\ref{fig:cpd_example} illustrates the temporal pattern.
-% Table~\ref{tab:example} summarizes the main results.
-% Section~\ref{sec:methodology} details the experimental setup.
-
-% Example of subsection usage:
-% \subsection{Temporal aggregation}
-% Describe how documents are grouped by month, quarter, year, or another unit.
-
-% Example of itemized contributions:
-% \begin{itemize}
-%     \item We introduce a Portuguese temporal corpus for [task].
-%     \item We compare [method A] and [method B].
-%     \item We provide an analysis of [main finding].
-% \end{itemize}
 
 \end{document}
