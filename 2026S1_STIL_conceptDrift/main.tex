@@ -296,7 +296,13 @@ the filtered contextual panel: BERT provides useful adjudication, but the raw
 contextual ranking still leaks some stable controls and should not be treated as
 an unrestricted final list. The two contextual extraction layers nevertheless
 agree strongly with each other (Spearman $= 0.858$), so the broad comparative
-picture does not depend on a single extraction depth.
+picture does not depend on a single extraction depth. This high inter-layer
+agreement is consistent with findings that mid-to-upper layers carry most of
+the semantic change signal, while the final layer increasingly encodes
+surface-form information that can bias change
+scores~\cite{laicher-etal-2021-explaining,cassotti-etal-2024-systematic}; the
+stability between layers $-1$ and $-4$ in our setting suggests that
+orthographic bias does not yet dominate, though it does not rule it out.
 
 \begin{figure}[H]
     \centering
@@ -401,17 +407,29 @@ as comparative evidence rather than as proof that one detector is correct. The
 second limitation is methodological: although the filtered contextual list is
 useful for interpretation, the raw contextual ranking still admits some stable
 controls near the top, which means that contextual sensitivity does not
-automatically yield a cleaner unrestricted candidate list. The third limitation
-is temporal granularity: yearly slicing is appropriate for a first comparative
-baseline, but it compresses within-year shocks, campaign cycles, and short-lived
-institutional disputes that may matter for political language.
+automatically yield a cleaner unrestricted candidate list. A third limitation concerns the contextual aggregation
+strategy: we measure BERT drift via cosine distance between slice-level centroid
+embeddings rather than the average pairwise distance (APD) that recent
+benchmarking has shown to be more
+robust~\cite{cassotti-etal-2024-systematic,laicher-etal-2021-explaining}. Centroid
+compression can mask polysemous splits, so the contextual scores reported here
+should be read as conservative estimates of usage divergence. The fourth
+limitation is temporal granularity: yearly slicing is appropriate for a first
+comparative baseline, but it compresses within-year shocks, campaign cycles, and
+short-lived institutional disputes that may matter for political language.
 
 Future work could address the evaluative gap through external annotation layers
 or noisy supervision from labeled parliamentary datasets, though such resources
 still require careful deduplication and aggregation before they can serve as
-reliable comparison targets. A symbolic companion analysis using lexical
-complexity or readability features could also help separate lexical-semantic
-drift from rhetorical or stylistic change.
+reliable comparison targets. On the modeling side, replacing centroid distance
+with APD or newer divergence
+metrics~\cite{rachinskiy-schlechtweg-2025-rethinking} and adopting
+task-specialized models such as XL-LEXEME would bring the contextual stage
+closer to current best practices; orthographic-bias mitigation through
+subword masking~\cite{laicher-etal-2021-explaining} is another targeted
+improvement. A symbolic companion analysis using lexical complexity or
+readability features could also help separate lexical-semantic drift from
+rhetorical or stylistic change.
 
 \section{Ethics Statement}
 \label{sec:ethics}
