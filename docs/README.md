@@ -1,84 +1,102 @@
 # Docs Guide
 
-This folder was consolidated on 2026-03-24 so that the live documentation set
-matches the current frozen experiment and the current STIL draft.
+Last reorganized: 2026-03-24
 
-## Read first
+## Folder Structure
 
-These are the main active docs for future work:
+```
+docs/
+  README.md                  ← you are here
+  personal-notes-dontTouc.txt
+  project/                   ← core project docs
+  paper/                     ← manuscript, submission, literature
+  experiments/               ← frozen experiment logs and results
+  results/                   ← numerical snapshots of all pipeline outputs
+  pipeline/                  ← infrastructure and config notes
+  research/                  ← background literature and datasets
+  archive/                   ← older planning and transition notes
+```
 
-1. `chat_handoff.md`
-2. `project_overview.md`
-3. `advisor_feedback_2026_03_20.md`
-4. `paper_writing_status_2026_03_23.md`
-5. `cross_method_agreement_2026_03_23.md`
-6. `comparison_panel_2026_03_22.md`
-7. `tfidf_drift_baseline_2026_03_22.md`
-8. `word2vec_baseline_freeze_2026_03_21.md`
-9. `ptparl_v_vote_label_note.md`
-10. `paper-submission-guidelines-STIL.md`
+## Read First
 
-## What each live doc is for
+Start with these in order:
 
-- `chat_handoff.md`
-  - quickest orientation for a new chat
-  - current paper framing, frozen run, active figures, and likely next work
-- `project_overview.md`
-  - stable project-level summary
-  - corpora, method families, frozen source of truth, and current interpretation
-- `paper_writing_status_2026_03_23.md`
-  - current manuscript status
-  - paper structure, figure/table package, compile state, and writing priorities
-- `word2vec_baseline_freeze_2026_03_21.md`
-  - frozen static-embedding baseline details
-- `tfidf_drift_baseline_2026_03_22.md`
-  - frozen lexical baseline details
-- `comparison_panel_2026_03_22.md`
-  - shared 55-lemma panel construction and composition
-- `cross_method_agreement_2026_03_23.md`
-  - frozen cross-method correlations, overlap, filtered contextual layer, and diagnostics
-- `ptparl_v_vote_label_note.md`
-  - current rules and caveats for using `PTPARL-V` as a later validation-oriented source
-- `prepared_artifact_layout_2026_03_21.md`
-  - frozen prepared-artifact contract and multi-view layout
-- `runtime_config_cleanup_2026_03_21.md`
-  - implementation-level cleanup notes that still affect reproducibility
-- `semantic_change_literature_guide.md`
-  - literature helper for writing
-- `word_selection_protocol.md`
-  - term-selection rationale and panel terminology
+1. `project/chat_handoff.md` — quickest orientation for a new session
+2. `project/project_overview.md` — stable project-level summary
+3. `project/advisor_feedback_2026_03_20.md` — advisor framing that shaped the paper
 
-## Current source of truth
+## project/
 
-Use this frozen experiment root unless there is an explicit reason not to:
+| File | Purpose |
+|------|---------|
+| `chat_handoff.md` | Quick orientation: framing, frozen run, figures, next work |
+| `project_overview.md` | Corpora, method families, frozen source of truth, interpretation |
+| `advisor_feedback_2026_03_20.md` | Advisor recommendation to shift to exploratory comparison |
+
+## paper/
+
+| File | Purpose |
+|------|---------|
+| `paper_writing_status_2026_03_23.md` | Manuscript status, figures, tables, compile state |
+| `paper-submission-guidelines-STIL.md` | STIL 2026 submission rules (double-blind, page limits) |
+| `literature_comparison_2026_03_24.md` | Systematic comparison of our methodology vs. the field |
+
+## experiments/
+
+| File | Purpose |
+|------|---------|
+| `word2vec_baseline_freeze_2026_03_21.md` | Frozen Word2Vec baseline: hyperparams, alignment, scores |
+| `tfidf_drift_baseline_2026_03_22.md` | Frozen TF-IDF baseline: methodology and scores |
+| `comparison_panel_2026_03_22.md` | Shared 55-lemma panel: construction and composition |
+| `candidate_panel_filter_2026_03_21.md` | Panel filtering rules and eligibility thresholds |
+| `cross_method_agreement_2026_03_23.md` | Cross-method correlations, overlap, filtered BERT panel |
+
+## results/
+
+| File | Purpose |
+|------|---------|
+| `frozen_results_snapshot_2026_03_24.md` | Complete numerical snapshot of all pipeline outputs from run `ba65fe5b9cce` — corpus totals, candidate lists, correlations, overlaps, file inventory, disk sizes. Timestamped for comparison with future runs. |
+
+## pipeline/
+
+| File | Purpose |
+|------|---------|
+| `prepared_artifact_layout_2026_03_21.md` | Frozen prepared-artifact contract and multi-view layout |
+| `runtime_config_cleanup_2026_03_21.md` | Implementation cleanup notes affecting reproducibility |
+
+## research/
+
+| File | Purpose |
+|------|---------|
+| `semantic_change_literature_guide.md` | Literature helper for writing and references |
+| `embedding_strategy_nilc_word2vec.md` | Embedding strategy notes (NILC Word2Vec evaluation) |
+| `research_readiness_datasets.md` | Dataset readiness assessment (BrPoliCorpus, Roda Viva, etc.) |
+| `word_selection_protocol.md` | Term-selection rationale and panel terminology |
+| `ptparl_v_vote_label_note.md` | PTPARL-V caveats for potential future validation |
+
+## Current Source of Truth
+
+Frozen experiment root:
 
 - `run/outputs/experiments/brpolicorpus_floor_yearly/ba65fe5b9cce`
 
-Do not use:
+Do NOT use `8e15dc2372c5` — its prepared root was corrupted by an aborted rerun.
 
-- `run/outputs/experiments/brpolicorpus_floor_yearly/8e15dc2372c5`
+## Current Manuscript Assets
 
-Its prepared root was touched after completion by an aborted forced rerun.
+- Manuscript: `2026S1_STIL_conceptDrift/main.tex`
+- Compiled PDF: `2026S1_STIL_conceptDrift/main.pdf`
+- Figures: `2026S1_STIL_conceptDrift/figs/paper/`
 
-## Current manuscript assets
-
-- manuscript: `2026S1_STIL_conceptDrift/main.tex`
-- compiled PDF: `2026S1_STIL_conceptDrift/main.pdf`
-- figure package: `2026S1_STIL_conceptDrift/figs/paper/`
-- figure inventory: `2026S1_STIL_conceptDrift/figs/paper/figure_inventory.md`
-
-Current paper-facing figures in the manuscript:
-
+Paper figures in the manuscript:
 - `figure_05_study_design`
 - `figure_02_method_agreement`
 - `figure_03_overlap_and_rank_statistics`
 - `figure_04_representative_trajectories`
 
-Archived but still reproducible:
+Archived (not in manuscript): `figure_01_corpus_profile`
 
-- `figure_01_corpus_profile`
+## Archive Policy
 
-## Archive policy
-
-Files in `docs/archive/` are kept for project memory, but they should not be read
-before active work unless there is a specific historical question.
+Files in `archive/` are kept for project memory. Do not read them before active
+docs unless answering a specific historical question.

@@ -6,18 +6,17 @@ This note is the fastest way to resume work in `Articles/N2`.
 
 Use this order unless the task is very narrow:
 
-1. `README.md`
+1. `README.md` (repo root)
 2. `docs/README.md`
-3. `docs/project_overview.md`
-4. `docs/advisor_feedback_2026_03_20.md`
-5. `docs/paper_writing_status_2026_03_23.md`
-6. `docs/cross_method_agreement_2026_03_23.md`
-7. `docs/comparison_panel_2026_03_22.md`
-8. `docs/tfidf_drift_baseline_2026_03_22.md`
-9. `docs/word2vec_baseline_freeze_2026_03_21.md`
-10. `docs/ptparl_v_vote_label_note.md`
+3. `docs/project/project_overview.md`
+4. `docs/project/advisor_feedback_2026_03_20.md`
+5. `docs/paper/paper_writing_status_2026_03_23.md`
+6. `docs/experiments/cross_method_agreement_2026_03_23.md`
+7. `docs/experiments/comparison_panel_2026_03_22.md`
+8. `docs/experiments/tfidf_drift_baseline_2026_03_22.md`
+9. `docs/experiments/word2vec_baseline_freeze_2026_03_21.md`
+10. `docs/research/ptparl_v_vote_label_note.md`
 11. `2026S1_STIL_conceptDrift/main.tex`
-12. `2026S1_STIL_conceptDrift/figs/paper/figure_inventory.md`
 
 Do not start with files under `docs/archive/` unless you are chasing project history.
 
@@ -105,20 +104,34 @@ Current paper-facing tables in the draft:
 - method scope/runtime table built directly in LaTeX
 
 The manuscript was compiled successfully on `2026-03-24` and currently fits in
-`9` total PDF pages.
+`10` total PDF pages.
+
+## Docs folder structure
+
+```
+docs/
+  project/     ← core project docs, advisor feedback
+  paper/       ← manuscript status, submission guidelines, literature comparison
+  experiments/ ← frozen experiment logs (W2V, TF-IDF, panel, agreement)
+  pipeline/    ← artifact layout, runtime config
+  research/    ← literature guides, datasets, word selection, PTPARL-V
+  archive/     ← older planning and transition notes
+```
 
 ## What is live vs historical
 
 Treat these as live docs:
 
-- `project_overview.md`
-- `paper_writing_status_2026_03_23.md`
-- `word2vec_baseline_freeze_2026_03_21.md`
-- `tfidf_drift_baseline_2026_03_22.md`
-- `comparison_panel_2026_03_22.md`
-- `cross_method_agreement_2026_03_23.md`
-- `ptparl_v_vote_label_note.md`
-- `paper-submission-guidelines-STIL.md`
+- `project/project_overview.md`
+- `project/advisor_feedback_2026_03_20.md`
+- `paper/paper_writing_status_2026_03_23.md`
+- `paper/literature_comparison_2026_03_24.md`
+- `experiments/word2vec_baseline_freeze_2026_03_21.md`
+- `experiments/tfidf_drift_baseline_2026_03_22.md`
+- `experiments/comparison_panel_2026_03_22.md`
+- `experiments/cross_method_agreement_2026_03_23.md`
+- `research/ptparl_v_vote_label_note.md`
+- `paper/paper-submission-guidelines-STIL.md`
 
 Treat `docs/archive/` as historical context only.
 
