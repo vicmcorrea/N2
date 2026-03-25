@@ -56,6 +56,7 @@ Start with these in order:
 | File | Purpose |
 |------|---------|
 | `frozen_results_snapshot_2026_03_24.md` | Complete numerical snapshot of all pipeline outputs from run `ba65fe5b9cce` — corpus totals, candidate lists, correlations, overlaps, file inventory, disk sizes. Timestamped for comparison with future runs. |
+| `apd_reanalysis_findings_2026_03_25.md` | APD vs PRT comparison: ρ = 0.79, PRT separates buckets better, robustness validated |
 
 ## pipeline/
 
@@ -63,6 +64,8 @@ Start with these in order:
 |------|---------|
 | `prepared_artifact_layout_2026_03_21.md` | Frozen prepared-artifact contract and multi-view layout |
 | `runtime_config_cleanup_2026_03_21.md` | Implementation cleanup notes affecting reproducibility |
+| `gap_analysis_2026_03_24.md` | Literature gap feasibility analysis: APD, layers, clustering, bias — ranked by effort-to-value |
+| `post_hoc_apd_reanalysis_2026_03_25.md` | APD reanalysis pipeline: architecture, usage, frozen-run guarantee |
 
 ## research/
 

@@ -71,7 +71,7 @@ and word usage over time. Distributional models can capture some of these
 movements at scale, but different modeling choices foreground different aspects
 of change
 \cite{hamilton-etal-2016-diachronic,kutuzov-etal-2018-diachronic,tahmasebi-etal-2021-computational}.
-In political corpora the situation is especially complex: a term may drift
+In political corpora the situation is especially complex, since a term may drift
 because of a new policy referent, a rhetorical reframing, a shift in
 collocational profile, or a reorganization of discourse coalitions---none of
 which reduces neatly to a single lexical sense change.
@@ -268,13 +268,12 @@ The two lighter baselines disagree strongly even after they are constrained to
 the same candidate universe. On the shared panel, Word2Vec and TF-IDF reach
 Spearman $\rho = -0.54$ ($p = 2.1 \times 10^{-5}$) and share zero terms in
 their top 15 rankings. The preferred contextual layer partly mediates this
-split without collapsing onto either baseline: its correlation with Word2Vec is
+split without collapsing onto either baseline. Its correlation with Word2Vec is
 $\rho = 0.21$ ($p = 0.128$) and with TF-IDF $\rho = 0.12$ ($p = 0.365$).
 These positive associations are directionally informative but not strong enough
 to justify treating contextual BERT as a substitute for either cheaper method.
-Figure~\ref{fig:method_agreement} shows the resulting geometry: the contextual
-top ranks draw support from both camps, while the two cheap methods remain
-sharply separated.
+Figure~\ref{fig:method_agreement} shows that contextual top ranks draw support
+from both camps, while the two cheap methods remain sharply separated.
 
 \begin{figure}[H]
     \centering
@@ -292,7 +291,7 @@ baseline-to-baseline overlap remains zero. Figure~\ref{fig:overlap_rank_stats} a
 shows that selected drift terms are ranked significantly above stable controls by
 Word2Vec and TF-IDF ($p < .001$ in both cases), while contextual BERT still
 separates the groups but with weaker margins ($p = .008$). This pattern matches
-the filtered contextual panel: BERT provides useful adjudication, but the raw
+the filtered contextual panel. BERT provides useful adjudication, but the raw
 contextual ranking still leaks some stable controls and should not be treated as
 an unrestricted final list. The two contextual extraction layers nevertheless
 agree strongly with each other (Spearman $= 0.858$), so the broad comparative
@@ -303,6 +302,23 @@ surface-form information that can bias change
 scores~\cite{laicher-etal-2021-explaining,cassotti-etal-2024-systematic}; the
 stability between layers $-1$ and $-4$ in our setting suggests that
 orthographic bias does not yet dominate, though it does not rule it out.
+
+As a robustness check, we recomputed contextual scores using average pairwise
+distance (APD)~\cite{giulianelli-etal-2020-analysing} instead of the centroid-based
+metric. APD operates on all individual occurrence embeddings rather than on
+slice-level centroids, giving equal influence to each usage regardless of
+embedding magnitude. On the preferred layer, APD and centroid rankings
+correlate at Spearman $\rho = 0.79$ ($p < 10^{-12}$), with 7 of 15 top terms
+shared. The two metrics foreground different properties: APD promotes
+high-frequency polysemous terms whose embedding clouds are broad (e.g.\
+\textit{trabalho}, \textit{p\'ublico}), while the centroid metric favours
+terms with coherent directional shifts (\textit{bloqueio},
+\textit{sal\'ario}). Notably, the centroid metric separates method-nominated
+drift candidates from stable controls more cleanly than APD ($p = .008$ vs.\
+$p = .081$, Mann--Whitney). The strong overall correlation confirms that the
+comparative conclusions are robust to the choice of contextual aggregation,
+while the separation difference suggests that centroid distance is a less
+noisy signal for this panel-based comparison.
 
 \begin{figure}[H]
     \centering
@@ -317,9 +333,8 @@ orthographic bias does not yet dominate, though it does not rule it out.
 \section{Discussion}
 \label{sec:discussion}
 
-Beyond the statistical summaries, representative term trajectories show that the
-methods often disagree about \emph{when} a term moves, not only whether it moves
-at all. Figure~\ref{fig:representative_trajectories}
+Representative term trajectories show that the methods often disagree about
+\emph{when} a term moves, not only whether it moves at all. Figure~\ref{fig:representative_trajectories}
 illustrates four cases: a Word2Vec-led term with strong contextual support
 (\textit{bloqueio}), a TF-IDF-led term with strong contextual support
 (\textit{sal\'ario}), a theory seed whose contextual rank rises despite modest
@@ -337,13 +352,13 @@ show why a comparative analysis is more informative than a single-method ranking
 \end{figure}
 
 The disagreement itself is substantively informative. TF-IDF appears most
-sensitive to reweightings in lexical profile: when a term becomes newly central
+sensitive to lexical-profile reweightings. When a term becomes newly central
 to yearly agendas, policy disputes, or formulaic framing, its salience can move
 even if its local semantic neighborhood remains comparatively stable. Word2Vec,
 by contrast, is better positioned to highlight persistent neighborhood
 reorganization across slices. Contextual BERT sits between these views. Because
 it observes token-level usages, it can support either a TF-IDF-led or a
-Word2Vec-led candidate, but the stable-control leakage table shows that greater
+Word2Vec-led candidate, but the stable-control leakage analysis shows that greater
 context sensitivity does not automatically produce a cleaner unrestricted ranking.
 
 This interpretation fits the term-level evidence. \textit{Sal\'ario} behaves like
@@ -353,9 +368,8 @@ more like a neighborhood-displacement case, where the contextual layer aligns
 with the embedding-led signal. \textit{Reforma} is useful for a different
 reason: it is not a top filtered contextual term, but as a theory seed it shows
 that politically central vocabulary can display contextual differentiation even
-when it is not the strongest candidate in the cheap rankings. That is precisely
-why the shared panel includes theory seeds and stable controls alongside
-method-led drift terms.
+when it is not the strongest candidate in the cheap rankings. The shared panel includes theory seeds and stable controls alongside
+method-led drift terms for this reason.
 
 \begin{table}[!t]
     \centering
@@ -395,7 +409,7 @@ a single best detector of semantic change. TF-IDF and Word2Vec
 highlight clearly different regions of the candidate space, and contextual BERT
 adds a useful but higher-cost inspection layer that remains distinct from both.
 For this Portuguese political setting, disagreement is therefore part of the
-result: it suggests that the three families are sensitive to different mixtures
+result, suggesting that the three families are sensitive to different mixtures
 of lexical salience, neighborhood displacement, and usage-level variation.
 
 \section{Limitations}
@@ -404,32 +418,33 @@ of lexical salience, neighborhood displacement, and usage-level variation.
 The first limitation is evaluative. This paper does not claim external semantic
 ground truth for BrPoliCorpus floor, so agreement and disagreement are analyzed
 as comparative evidence rather than as proof that one detector is correct. The
-second limitation is methodological: although the filtered contextual list is
+second limitation is methodological. Although the filtered contextual list is
 useful for interpretation, the raw contextual ranking still admits some stable
 controls near the top, which means that contextual sensitivity does not
-automatically yield a cleaner unrestricted candidate list. A third limitation concerns the contextual aggregation
-strategy: we measure BERT drift via cosine distance between slice-level centroid
-embeddings rather than the average pairwise distance (APD) that recent
-benchmarking has shown to be more
-robust~\cite{cassotti-etal-2024-systematic,laicher-etal-2021-explaining}. Centroid
-compression can mask polysemous splits, so the contextual scores reported here
-should be read as conservative estimates of usage divergence. The fourth
-limitation is temporal granularity: yearly slicing is appropriate for a first
+automatically yield a cleaner unrestricted candidate list. A third
+consideration is the contextual aggregation strategy. We report centroid-based
+drift as the primary contextual metric and verify it against
+APD~\cite{giulianelli-etal-2020-analysing,cassotti-etal-2024-systematic}
+(Section~\ref{sec:results}); the strong correlation and the centroid metric's
+tighter bucket separation support this choice, though APD captures
+complementary embedding-cloud variance. Sense-based clustering
+methods~\cite{montariol-etal-2021-scalable} were not attempted here. The fourth limitation is
+temporal granularity. Yearly slicing is appropriate for a first
 comparative baseline, but it compresses within-year shocks, campaign cycles, and
 short-lived institutional disputes that may matter for political language.
 
 Future work could address the evaluative gap through external annotation layers
 or noisy supervision from labeled parliamentary datasets, though such resources
 still require careful deduplication and aggregation before they can serve as
-reliable comparison targets. On the modeling side, replacing centroid distance
-with APD or newer divergence
-metrics~\cite{rachinskiy-schlechtweg-2025-rethinking} and adopting
-task-specialized models such as XL-LEXEME would bring the contextual stage
-closer to current best practices; orthographic-bias mitigation through
-subword masking~\cite{laicher-etal-2021-explaining} is another targeted
-improvement. A symbolic companion analysis using lexical complexity or
-readability features could also help separate lexical-semantic drift from
-rhetorical or stylistic change.
+reliable comparison targets. On the modeling side, adopting task-specialized
+models such as
+XL-LEXEME~\cite{cassotti-etal-2024-systematic}, exploring newer divergence
+metrics~\cite{rachinskiy-schlechtweg-2025-rethinking}, and applying
+orthographic-bias mitigation through subword
+masking~\cite{laicher-etal-2021-explaining} would bring the contextual stage
+closer to current best practices. A symbolic companion analysis using lexical
+complexity or readability features could also help separate lexical-semantic
+drift from rhetorical or stylistic change.
 
 \section{Ethics Statement}
 \label{sec:ethics}
