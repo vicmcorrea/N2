@@ -181,7 +181,7 @@ slice-presence controls described above.
 \begin{table*}[!t]
     \centering
     \footnotesize
-    \setlength{\tabcolsep}{1pt}
+    \setlength{\tabcolsep}{2pt}
     \renewcommand{\arraystretch}{1.08}
     \caption{Corpus summary for the BrPoliCorpus floor subset,
     which contains Brazilian Chamber floor speeches. Yearly slice statistics are
@@ -228,7 +228,7 @@ captures persistent neighborhood reorganization.
 \subsection{Contextual BERT}
 
 We embed sampled in-context occurrences with a Portuguese
-BERT checkpoint,\footnote{\texttt{rufimelo/bert-large-portuguese-cased-sts}}
+BERT checkpoint (BERTimbau Large~\cite{souza-etal-2020-bertimbau}),
 extracting hidden-state layers $-1$ and~$-4$. For each lemma and slice, up to 64 occurrences are sampled within a
 48-token context window; the contextual drift score is the mean cosine distance
 between slice-level centroid embeddings in consecutive slices. The agreement
