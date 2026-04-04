@@ -6,12 +6,13 @@
 
 \usepackage{graphicx,url}
 \usepackage{amsmath,amssymb}
+\usepackage{bm} % bold math
+
 \usepackage{microtype}
 \usepackage{booktabs}
 \usepackage{dblfloatfix}
 \usepackage{multirow}
 \usepackage[section]{placeins}
-\usepackage{tabularx}
 \usepackage{float}
 \makeatletter
 \AddToHook{begindocument/before}[normalsfcodes-init]{%
@@ -21,38 +22,40 @@
 \usepackage[english]{babel}
 \usepackage[hidelinks]{hyperref}
 
+\usepackage{tabularx}
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}} %coluna invisivel
 
 \title{Comparing Lexical, Static-Embedding, and Contextual Drift Signals in Brazilian Portuguese Political Discourse}
 
+\author{}
+\address{}
 
-\author{Jo\~{a}o Victor M. Correa\inst{1} \and
-        Renato Moraes Silva\inst{1}}
+% \author{Jo\~{a}o Victor M. Correa\inst{1} \and
+%         Renato Moraes Silva\inst{1}}
 
-\address{Interinstitutional Center for Computational Linguistics (NILC)\\
-         Institute of Mathematics and Computer Science\\
-         University of S\~{a}o Paulo (USP), S\~{a}o Carlos, Brazil\\
-\email{victormcorrea@usp.br, renatoms@icmc.usp.br}
-}
+% \address{Interinstitutional Center for Computational Linguistics (NILC)\\
+%          Institute of Mathematics and Computer Science\\
+%          University of S\~{a}o Paulo (USP), S\~{a}o Carlos, Brazil\\
+% \email{victormcorrea@usp.br, renatoms@icmc.usp.br}
+% }
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-We compare three families of diachronic drift signals in Brazilian Portuguese
+The shift in political discourse often reflects deeper societal changes, but quantifying how specific terms evolve semantically over decades remains a significant challenge for computational linguistics. In this study, we compare three families of diachronic drift signals in Brazilian Portuguese
 political discourse: a lexical-profile baseline based on TF-IDF, a static
 embedding pipeline based on slice-specific Word2Vec models with Orthogonal
 Procrustes alignment, and a contextual analysis based on a Portuguese BERT
-checkpoint. The study uses the floor subset of BrPoliCorpus, covering 24 yearly slices from
-2000 to 2023 with 428{,}366 speeches and 63.0 million retained tokens after
-preprocessing. To make the methods directly comparable, we build a shared panel
-of 55 lemmas containing method-specific drift candidates, stable controls, and
-theory seeds. The resulting comparison shows strong disagreement between the
+checkpoint. %The study uses the floor subset of BrPoliCorpus, covering 24 yearly slices from 2000 to 2023 with 428{,}366 speeches and 63.0 million retained tokens after preprocessing. To make the methods directly comparable, we build a shared panel of 55 lemmas containing method-specific drift candidates, stable controls, and theory seeds. 
+Using a BrPoliCorpus subset (428k speeches from 2000-2023), to make the methods directly comparable, we build a shared panel of 55 lemmas containing method-specific drift candidates, stable controls, and theory seeds. 
+The resulting comparison shows strong disagreement between the
 lighter baselines, with Spearman correlation of $-0.54$ and zero overlap in their
 top 15 terms, while contextual BERT remains moderately closer to Word2Vec than
 to TF-IDF. A filtered contextual panel reduces stable-control leakage and
-highlights terms such as \textit{bloqueio}, \textit{sal\'ario},
-\textit{interven\c{c}\~ao}, and \textit{elei\c{c}\~ao}. Rather than treating
+highlights terms such as ``\textit{bloqueio}'', ``\textit{sal\'ario}'',
+``\textit{interven\c{c}\~ao}'', and ``\textit{elei\c{c}\~ao}''. Rather than treating
 one detector as externally validated ground truth, we frame the study as an
 exploratory comparison of complementary drift sensitivities, interpretability,
 and computational cost in Brazilian Portuguese political discourse.
@@ -61,10 +64,8 @@ and computational cost in Brazilian Portuguese political discourse.
 \section{Introduction}
 \label{sec:introduction}
 
-Political discourse is a productive setting for diachronic NLP because shifts in
-agenda, coalition structure, and policy framing leave traces in lexical choice
-and word usage over time. Distributional models can capture some of these
-movements at scale, but different modeling choices foreground different aspects
+% Political discourse is a productive setting for diachronic NLP because shifts in agenda, coalition structure, and policy framing leave traces in lexical choice and word usage over time. 
+The language of politics reflects historical change, as shifts in ideological agendas, coalition structures, and policy framing become observable in patterns of lexical choice and word usage over time. However, manually analyzing large-scale and evolving patterns in political discourse is challenging. Diachronic natural language processing (NLP) methods offer promising avenues for analysis. Among these, distributional models can capture some of these movements at scale, but different modeling choices foreground different aspects
 of change
 \cite{hamilton-etal-2016-diachronic,kutuzov-etal-2018-diachronic,tahmasebi-etal-2021-computational}.
 In political corpora the situation is especially complex, since a term may drift
@@ -90,12 +91,20 @@ side by side on the same Portuguese political material remain rare. We use the
 floor subset of BrPoliCorpus, which covers 24 yearly slices of Chamber speeches
 from 2000 to 2023, and compare a TF-IDF lexical-profile baseline, a
 slice-specific aligned Word2Vec pipeline, and a contextual BERT stage, all
-scored on a shared comparison panel of 55 lemmas. The paper asks three concrete
-questions: (i)~how strongly do the methods agree on the same lemmas, (ii)~which
-candidates remain method-specific, and (iii)~whether the higher-cost contextual
-stage adds enough interpretive value to justify its expense. That comparison
-fills a descriptive gap in Portuguese, where published multi-method drift
-analyses are still much scarcer than in the better-studied English-centered
+scored on a shared comparison panel of 55 lemmas. The paper addresses the following questions: 
+
+\begin{enumerate}
+    \item How strongly do the methods agree on the same lemmas? 
+
+    \item Which candidates remain method-specific?
+
+    \item Does the higher-cost contextual
+stage add enough interpretive value to justify its expense?
+\end{enumerate}
+
+The comparisons conducted to address these research questions
+fill a descriptive gap in Portuguese, where published multi-method drift
+analyses remain much scarcer than in the better-studied English-centered
 literature.
 
 \section{Related Work}
@@ -131,8 +140,8 @@ beside TF-IDF and aligned Word2Vec on the same
 political panel so that agreement, disagreement, and computational tradeoffs
 can be examined directly.
 
-Diachronic analysis of political language has gained traction through
-parliamentary corpora. Hofmann et al.~\cite{hofmann-etal-2020-comparing}
+Diachronic analysis of political language has gained traction through 
+parliamentary corpora. The study of \cite{hofmann-etal-2020-comparing}
 compared lexical usage in Austrian political discourse across time, but
 comparable multi-method studies on Brazilian Portuguese political speech remain
 scarce. BrPoliCorpus \cite{lima-lopes-2025-brpolicorpus} now provides the scale
@@ -140,6 +149,7 @@ needed for this kind of controlled comparative work.
 
 \section{Corpus and Experimental Setup}
 \label{sec:data_setup}
+
 
 The experiments use the floor subset of BrPoliCorpus
 \cite{lima-lopes-2025-brpolicorpus}, which contains Brazilian Chamber floor
@@ -172,23 +182,57 @@ retained token volume from 630K to 4.2M (median 2.6M). Document volume is high
 throughout, but token and vocabulary variation across slices motivates the
 frequency and slice-presence controls described above.
 
-\begin{table*}[!t]
+\begin{table*}[!htb]
     \centering
     \footnotesize
-    \setlength{\tabcolsep}{2pt}
+    \setlength{\tabcolsep}{5pt}
     \renewcommand{\arraystretch}{1.08}
-    \caption{Corpus summary for the BrPoliCorpus floor subset,
-    which contains Brazilian Chamber floor speeches. Yearly slice statistics are
-    reported as p25/median/p75 across the 24 yearly files; token and character
+    \caption{Corpus summary for the BrPoliCorpus floor subset. Yearly slice statistics are
+    reported as the 25th percentile (Q1), median, and 75th percentile (Q3) across the 24 yearly files; token and character
     counts are shown in millions.}
     \label{tab:dataset_summary}
-    \begin{tabularx}{\textwidth}{@{}lcc>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
-        \toprule
-        Dataset & Period & Slices & Corpus totals & Yearly slices (Q1/Med/Q3) \\
-        \midrule
-        BrPoliCorpus floor & 2000--2023 & 24 & \shortstack[l]{428{,}366 speeches\\63.0M tokens\\538.5M chars\\225{,}484 lemmas} & \shortstack[l]{14{,}648 / 16{,}752 / 21{,}987 speeches\\2.00 / 2.62 / 3.45M tokens\\16.9 / 22.3 / 29.7M chars\\39{,}456 / 50{,}269 / 58{,}637 lemmas} \\
-        \bottomrule
-    \end{tabularx}
+%
+\begin{tabularx}{\textwidth}{@{}c c l 
+>{\raggedleft\arraybackslash}X 
+>{\raggedleft\arraybackslash}X
+>{\raggedleft\arraybackslash}X
+>{\raggedleft\arraybackslash}X@{}}
+\toprule
+
+\multirow{2}{*}{Period} & \multirow{2}{*}{Slices} & \multirow{2}{*}{Measure} & \multirow{2}{*}{Corpus total} & \multicolumn{3}{c}{Yearly slices} \\ \cmidrule(lr){5-7}
+
+ &  &  &  & Q1 & Median & Q3 \\
+\midrule
+
+\multirow{4}{*}{2000--2023} 
+& \multirow{4}{*}{24} 
+& Speeches 
+& 428{,}366 
+& 14{,}648 
+& 16{,}752 
+& 21{,}987 \\
+
+& & Tokens 
+& 63.0M 
+& 2.00 
+& 2.62 
+& 3.45 \\
+
+& & Characters 
+& 538.5M 
+& 16.9 
+& 22.3 
+& 29.7 \\
+
+& & Lemmas 
+& 225{,}484 
+& 39{,}456 
+& 50{,}269 
+& 58{,}637 \\
+
+\bottomrule
+\end{tabularx}
+
 \end{table*}
 
 \FloatBarrier
@@ -246,7 +290,7 @@ Figure~\ref{fig:method_agreement} visualizes the pairwise agreement structure,
 while Figure~\ref{fig:overlap_rank_stats} summarizes overlap and
 rank-distribution statistics.
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=0.86\linewidth]{figs/paper/figure_05_study_design.pdf}
     \caption{Comparative workflow. The two cheaper baselines nominate
@@ -269,12 +313,12 @@ to justify treating contextual BERT as a substitute for either cheaper method.
 Figure~\ref{fig:method_agreement} shows that contextual top ranks draw support
 from both camps, while the two cheap methods remain sharply separated.
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \centering
-    \includegraphics[width=0.90\linewidth]{figs/paper/figure_02_method_agreement.pdf}
+    \includegraphics[width=1.0\linewidth]{figs/paper/figure_02_method_agreement.pdf}
     \caption{Agreement on the shared panel across TF-IDF, Word2Vec, and the
-    preferred BERT layer; panel (D) compares BERT layers $-4$ and $-1$.
-    Annotations report Spearman $\rho$ and two-sided p-values.}
+    preferred BERT layer; panel (D) compares BERT layers -4 and -1.
+    Annotations report Spearman $\bm{\rho}$ and two-sided p-values.}
     \label{fig:method_agreement}
 \end{figure}
 
@@ -314,11 +358,11 @@ comparative conclusions are robust to the choice of contextual aggregation,
 while the separation difference suggests that centroid distance is a less
 noisy signal for this panel-based comparison.
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=0.90\linewidth]{figs/paper/figure_03_overlap_and_rank_statistics.pdf}
     \caption{Overlap and rank-distribution summaries on the shared comparison
-    panel. Panel (A) traces top-$k$ overlap; panels (B) through (D) compare
+    panel. Panel (A) traces top-$\bm{k}$ overlap; panels (B) through (D) compare
     rank-percentile distributions for selected drift terms, theory seeds, and
     stable controls.}
     \label{fig:overlap_rank_stats}
@@ -335,7 +379,7 @@ illustrates four cases: a Word2Vec-led term with strong contextual support
 static drift (\textit{reforma}), and a stable-control diagnostic term
 (\textit{trabalho}) that reveals where contextual leakage remains.
 
-\begin{figure}[!t]
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=0.92\linewidth]{figs/paper/figure_04_representative_trajectories.pdf}
     \caption{Representative term trajectories across methods. Scores are
@@ -365,7 +409,7 @@ contextual differentiation despite ranking modestly in the cheaper methods. The
 shared panel includes theory seeds and stable controls alongside method-led
 drift terms to make such distinctions recoverable.
 
-\begin{table}[!t]
+\begin{table}[!htb]
     \centering
     \footnotesize
     \caption{Method scope and relative computational cost. The cost column
