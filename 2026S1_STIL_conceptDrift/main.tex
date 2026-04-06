@@ -140,12 +140,15 @@ beside TF-IDF and aligned Word2Vec on the same
 political panel so that agreement, disagreement, and computational tradeoffs
 can be examined directly.
 
-Diachronic analysis of political language has gained traction through 
+Diachronic analysis of political language has gained traction through
 parliamentary corpora. The study of \cite{hofmann-etal-2020-comparing}
 compared lexical usage in Austrian political discourse across time, but
 comparable multi-method studies on Brazilian Portuguese political speech remain
-scarce. BrPoliCorpus \cite{lima-lopes-2025-brpolicorpus} now provides the scale
-needed for this kind of controlled comparative work.
+scarce. Existing Portuguese diachronic
+resources~\cite{osorio-cardoso-2025-historical} have focused primarily on
+historical and literary material rather than political discourse, leaving a
+gap that BrPoliCorpus \cite{lima-lopes-2025-brpolicorpus} now fills with the
+scale needed for controlled comparative work.
 
 \section{Corpus and Experimental Setup}
 \label{sec:data_setup}
@@ -153,7 +156,20 @@ needed for this kind of controlled comparative work.
 
 The experiments use the floor subset of BrPoliCorpus
 \cite{lima-lopes-2025-brpolicorpus}, which contains Brazilian Chamber floor
-speeches from 2000 to 2023 organized into 24 yearly slices.
+speeches from 2000 to 2023 organized into 24 yearly slices. A growing number of diachronic Portuguese resources are now
+available~\cite{osorio-cardoso-2025-historical}, ranging from syntactically
+annotated literary collections such as the Tycho Brahe Parsed
+Corpus~\cite{galves-faria-2017-tycho} to large multi-genre repositories such
+as the Corpus do
+Portugu\^es~\cite{davies-ferreira-2006-corpusdoportugues}. These resources
+target historical-linguistic research across broad periods rather than
+domain-specific political analysis with continuous yearly slices. Within
+BrPoliCorpus itself, the inaugural-speech subset reaches back to 1889 but
+contains only 35 documents, too few for stable distributional estimation. The
+floor subset offers the largest contiguous yearly coverage (428{,}366 speeches
+across 24 slices), a uniform parliamentary register, and exact date metadata,
+making it the most suitable segment for a year-by-year comparative drift study
+in the political domain.
 
 \subsection{Preprocessing}
 
@@ -172,10 +188,17 @@ structure of yearly variation.
 
 A lemma enters the scored vocabulary only if
 it appears at least 50 times per slice, in at least 5 documents per slice, and
-in at least 80\% of the 24 slices. Drift and stable-control candidates are
-further restricted to dominant part-of-speech classes (nouns and adjectives), and
-a small set of procedural high-frequency terms is excluded. These thresholds
-reduce the scored vocabulary to 3{,}221 lemmas for the two cheaper methods.
+in at least 80\% of the 24 slices. These thresholds were fixed as practical
+corpus-stability defaults rather than tuned to optimize any particular method.
+The frequency floor ensures sufficient token mass for reliable embedding
+training in each yearly slice; the document-dispersion requirement prevents a
+single speaker or parliamentary session from inflating a lemma's apparent
+salience; and the slice-presence constraint restricts attention to lemmas that
+are genuinely diachronic rather than episodic. Drift and stable-control
+candidates are further restricted to dominant part-of-speech classes (nouns and
+adjectives), and a small set of procedural high-frequency terms is excluded.
+These filters reduce the scored vocabulary to 3{,}221 lemmas for the two
+cheaper methods.
 
 Yearly document counts range from 3{,}041 to 26{,}868 (median 16{,}752) and
 retained token volume from 630K to 4.2M (median 2.6M). Document volume is high
@@ -240,10 +263,19 @@ frequency and slice-presence controls described above.
 \section{Methodology}
 \label{sec:methodology}
 
-Figure~\ref{fig:study_design} summarizes the workflow. The preprocessed
-discovery corpus feeds two cheaper baselines; their method-led candidates are then
-combined with stable controls and theory seeds to create the shared panel used
-for contextual inspection and agreement analysis.
+Figure~\ref{fig:study_design} summarizes the workflow, which was designed for
+this study rather than adopted from a single prior work. Each
+component, from TF-IDF lexical profiles and slice-aligned Word2Vec to
+contextual BERT inspection, is individually grounded in the
+literature~\cite{hamilton-etal-2016-diachronic,giulianelli-etal-2020-analysing},
+but their orchestration into a cost-aware comparative pipeline is ours. The
+sequence follows a deliberate logic in which two cheaper baselines first
+screen the full scored vocabulary, and their method-led candidates are then
+combined with
+stable controls and theory seeds to create the shared panel used for
+contextual inspection and agreement analysis. This design concentrates the
+more expensive contextual stage on the subset where inter-method disagreement
+makes adjudication most informative.
 
 \subsection{TF-IDF Baseline}
 
@@ -310,8 +342,15 @@ split without collapsing onto either baseline. Its correlation with Word2Vec is
 $\rho = 0.21$ ($p = 0.128$) and with TF-IDF $\rho = 0.12$ ($p = 0.365$).
 These positive associations are directionally informative but not strong enough
 to justify treating contextual BERT as a substitute for either cheaper method.
-Figure~\ref{fig:method_agreement} shows that contextual top ranks draw support
-from both camps, while the two cheap methods remain sharply separated.
+Figure~\ref{fig:method_agreement} visualizes this pairwise rank structure.
+Each panel plots the drift scores of the 55 lemmas under two methods, with
+Spearman $\rho$ and $p$-values annotated. Panel~(A) reveals the strong
+negative trend between Word2Vec and TF-IDF, where terms ranked highly by one
+baseline tend to be ranked low by the other, confirming that they capture
+fundamentally different facets of change. Panels~(B) and~(C) show that
+contextual BERT draws partial support from both camps without collapsing onto
+either, while Panel~(D) confirms that the two BERT extraction layers agree
+closely with each other.
 
 \begin{figure}[!htb]
     \centering
@@ -442,13 +481,28 @@ interesting.
 \section{Conclusion}
 \label{sec:conclusion}
 
-The results support an exploratory comparative study rather than an argument for
-a single best detector of semantic change. TF-IDF and Word2Vec
-highlight clearly different regions of the candidate space, and contextual BERT
-adds a useful but higher-cost inspection layer that remains distinct from both.
-For this Portuguese political setting, disagreement is therefore part of the
-result, suggesting that the three families are sensitive to different mixtures
-of lexical salience, neighborhood displacement, and usage-level variation.
+Returning to the research questions posed in the introduction, the evidence
+supports three answers. First, regarding the strength of inter-method
+agreement, TF-IDF and Word2Vec disagree strongly on the shared panel (Spearman
+$\rho = -0.54$, zero top-15 overlap), and contextual BERT remains only weakly
+correlated with either baseline ($\rho = 0.21$ with Word2Vec, $\rho = 0.12$
+with TF-IDF), so the three families do not converge on a single ranking.
+Second, regarding method-specific candidates, all 30 drift terms nominated by
+the two cheaper methods are exclusive to one baseline; BERT partially bridges
+this split by placing candidates from both camps among its top-ranked terms,
+but it also retains some stable controls in high positions, so its raw ranking
+should not be treated as an unrestricted candidate list. Third, regarding the
+cost--benefit of the contextual stage, BERT provides useful adjudication when
+inter-method disagreement is substantively interesting, as illustrated by
+terms such as \textit{bloqueio}, \textit{sal\'ario}, and \textit{reforma}.
+At roughly $600{\times}$ the cost of TF-IDF, though, the current evidence
+favors using it selectively rather than as a replacement for the cheaper
+methods. Taken
+together, these results frame disagreement itself as part of the
+contribution, suggesting that the three method families are sensitive to
+different mixtures of lexical
+salience, neighborhood displacement, and usage-level variation in Brazilian
+Portuguese political discourse.
 
 \section{Limitations}
 \label{sec:limitations}
