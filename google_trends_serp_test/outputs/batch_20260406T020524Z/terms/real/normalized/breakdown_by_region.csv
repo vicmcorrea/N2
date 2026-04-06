@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+TD,Chad,0,real
+GN,Guinea,0,real
+HT,Haiti,100,real
+CD,Congo - Kinshasa,99,real
+LR,Liberia,0,real
+CF,Central African Republic,0,real
+CG,Congo - Brazzaville,0,real
+DO,Dominican Republic,69,real
+GQ,Equatorial Guinea,0,real
+GM,Gambia,0,real
+KM,Comoros,0,real
+ML,Mali,0,real
+BF,Burkina Faso,0,real
+BI,Burundi,0,real
+NE,Niger,0,real
+CU,Cuba,0,real
+SL,Sierra Leone,0,real
+MZ,Mozambique,0,real
+SS,South Sudan,0,real
+BJ,Benin,0,real
+SN,Senegal,44,real
+TG,Togo,0,real
+HN,Honduras,41,real
+SV,El Salvador,40,real
+NI,Nicaragua,40,real
+DJ,Djibouti,0,real
+AI,Anguilla,0,real
+SO,Somalia,0,real
+GT,Guatemala,36,real
+SR,Suriname,0,real
+NF,Norfolk Island,0,real
+GW,Guinea-Bissau,0,real
+ES,Spain,35,real
+GA,Gabon,0,real
+TL,Timor-Leste,0,real
+CM,Cameroon,0,real
+AU,Australia,31,real
+TC,Turks & Caicos Islands,0,real
+CI,Côte d’Ivoire,0,real
+AO,Angola,0,real
+BZ,Belize,0,real
+SZ,Eswatini,0,real
+NG,Nigeria,30,real
+ZM,Zambia,0,real
+VU,Vanuatu,0,real
+ZW,Zimbabwe,0,real
+KI,Kiribati,0,real
+GH,Ghana,27,real
+VC,St. Vincent & Grenadines,0,real
+PA,Panama,27,real
+MR,Mauritania,0,real
+AW,Aruba,0,real
+VI,U.S. Virgin Islands,0,real
+CW,Curaçao,0,real
+CX,Christmas Island,0,real
+BM,Bermuda,0,real
+SX,Sint Maarten,0,real
+UG,Uganda,0,real
+GD,Grenada,0,real
+PG,Papua New Guinea,0,real
+BO,Bolivia,22,real
+LC,St. Lucia,0,real
+NA,Namibia,0,real
+JM,Jamaica,0,real
+SB,Solomon Islands,0,real
+BT,Bhutan,0,real
+VG,British Virgin Islands,0,real
+NP,Nepal,21,real
+NR,Nauru,0,real
+KY,Cayman Islands,0,real
+CV,Cape Verde,0,real
+MS,Montserrat,0,real
+BQ,Caribbean Netherlands,0,real
+DM,Dominica,0,real
+TT,Trinidad & Tobago,0,real
+KN,St. Kitts & Nevis,0,real
+BW,Botswana,0,real
+RW,Rwanda,0,real
+LS,Lesotho,0,real
+KE,Kenya,20,real
+CR,Costa Rica,20,real
+PY,Paraguay,19,real
+PE,Peru,19,real
+PT,Portugal,19,real
+AG,Antigua & Barbuda,0,real
+MW,Malawi,0,real
+GY,Guyana,0,real
+BB,Barbados,0,real
+GI,Gibraltar,0,real
+FJ,Fiji,0,real
+ET,Ethiopia,0,real
+MV,Maldives,0,real
+FM,Micronesia,0,real
+MH,Marshall Islands,0,real
+TO,Tonga,0,real
+BS,Bahamas,0,real
+BD,Bangladesh,17,real
+AD,Andorra,0,real
+CO,Colombia,17,real
+NZ,New Zealand,17,real
+LB,Lebanon,17,real
+GF,French Guiana,0,real
+SC,Seychelles,0,real
+WS,Samoa,0,real
+US,United States,17,real
+YT,Mayotte,0,real
+CA,Canada,16,real
+CK,Cook Islands,0,real
+MF,St. Martin,0,real
+ZA,South Africa,15,real
+PW,Palau,0,real
+GU,Guam,0,real
+MX,Mexico,15,real
+UY,Uruguay,15,real
+TM,Turkmenistan,0,real
+KP,North Korea,0,real
+MA,Morocco,15,real
+EC,Ecuador,14,real
+MP,Northern Mariana Islands,0,real
+ST,São Tomé & Príncipe,0,real
+TN,Tunisia,14,real
+VE,Venezuela,14,real
+MG,Madagascar,0,real
+MU,Mauritius,0,real
+ER,Eritrea,0,real
+AS,American Samoa,0,real
+AE,United Arab Emirates,14,real
+BR,Brazil,14,real
+PK,Pakistan,13,real
+EH,Western Sahara,0,real
+XK,Kosovo,0,real
+TZ,Tanzania,0,real
+QA,Qatar,0,real
+DZ,Algeria,12,real
+PR,Puerto Rico,0,real
+PH,Philippines,12,real
+AL,Albania,0,real
+IN,India,12,real
+FK,Falkland Islands (Islas Malvinas),0,real
+AF,Afghanistan,0,real
+TV,Tuvalu,0,real
+SH,St. Helena,0,real
+BN,Brunei,0,real
+BL,St. Barthélemy,0,real
+MT,Malta,0,real
+IO,British Indian Ocean Territory,0,real
+CL,Chile,11,real
+AM,Armenia,0,real
+LK,Sri Lanka,11,real
+BH,Bahrain,0,real
+IE,Ireland,10,real
+GL,Greenland,0,real
+AR,Argentina,10,real
+MK,North Macedonia,0,real
+MC,Monaco,0,real
+GR,Greece,10,real
+JE,Jersey,0,real
+SG,Singapore,9,real
+MM,Myanmar (Burma),0,real
+CY,Cyprus,0,real
+GG,Guernsey,0,real
+GB,United Kingdom,9,real
+IM,Isle of Man,0,real
+FO,Faroe Islands,0,real
+AZ,Azerbaijan,0,real
+OM,Oman,0,real
+MY,Malaysia,8,real
+RO,Romania,8,real
+LU,Luxembourg,0,real
+KH,Cambodia,0,real
+ID,Indonesia,7,real
+KW,Kuwait,0,real
+UZ,Uzbekistan,0,real
+IS,Iceland,0,real
+GP,Guadeloupe,0,real
+ME,Montenegro,0,real
+MQ,Martinique,0,real
+DE,Germany,7,real
+SJ,Svalbard & Jan Mayen,0,real
+NO,Norway,7,real
+BA,Bosnia & Herzegovina,0,real
+PL,Poland,6,real
+HR,Croatia,6,real
+BE,Belgium,6,real
+GE,Georgia,0,real
+PF,French Polynesia,0,real
+MN,Mongolia,0,real
+LI,Liechtenstein,0,real
+SE,Sweden,5,real
+CH,Switzerland,5,real
+JO,Jordan,0,real
+SI,Slovenia,0,real
+IT,Italy,5,real
+DK,Denmark,5,real
+RE,Réunion,0,real
+RS,Serbia,5,real
+WF,Wallis & Futuna,0,real
+NL,Netherlands,5,real
+NC,New Caledonia,0,real
+AT,Austria,5,real
+HU,Hungary,5,real
+SM,San Marino,0,real
+MD,Moldova,0,real
+SK,Slovakia,0,real
+HK,Hong Kong,4,real
+FR,France,4,real
+IQ,Iraq,0,real
+EE,Estonia,0,real
+AX,Åland Islands,0,real
+EG,Egypt,4,real
+BG,Bulgaria,0,real
+LA,Laos,0,real
+SD,Sudan,0,real
+PM,St. Pierre & Miquelon,0,real
+VN,Vietnam,4,real
+PS,Palestine,0,real
+IL,Israel,4,real
+TR,Türkiye,4,real
+FI,Finland,4,real
+CZ,Czechia,3,real
+LV,Latvia,0,real
+LY,Libya,0,real
+MO,Macao,0,real
+TJ,Tajikistan,0,real
+LT,Lithuania,0,real
+SA,Saudi Arabia,3,real
+SY,Syria,0,real
+KG,Kyrgyzstan,0,real
+KR,South Korea,2,real
+TH,Thailand,2,real
+YE,Yemen,0,real
+KZ,Kazakhstan,0,real
+CN,China,0,real
+IR,Iran,1,real
+TW,Taiwan,0,real
+UA,Ukraine,0,real
+RU,Russia,1,real
+BY,Belarus,0,real
+JP,Japan,0,real
+UM,U.S. Outlying Islands,0,real
+VA,Vatican City,0,real
+TK,Tokelau,0,real
+AQ,Antarctica,0,real
+TF,French Southern Territories,0,real
+HM,Heard & McDonald Islands,0,real
+GS,South Georgia & South Sandwich Islands,0,real
+BV,Bouvet Island,0,real
+NU,Niue,0,real
+CC,Cocos (Keeling) Islands,0,real
+PN,Pitcairn Islands,0,real

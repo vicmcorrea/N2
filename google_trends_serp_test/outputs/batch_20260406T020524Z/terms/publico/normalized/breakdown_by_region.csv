@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+AO,Angola,100,público
+ST,São Tomé & Príncipe,0,público
+BR,Brazil,36,público
+PT,Portugal,24,público
+MZ,Mozambique,20,público
+GW,Guinea-Bissau,0,público
+CV,Cape Verde,0,público
+PE,Peru,17,público
+GT,Guatemala,16,público
+PA,Panama,15,público
+EC,Ecuador,15,público
+ES,Spain,15,público
+PY,Paraguay,12,público
+MX,Mexico,12,público
+CR,Costa Rica,12,público
+GQ,Equatorial Guinea,0,público
+CO,Colombia,11,público
+BO,Bolivia,10,público
+DO,Dominican Republic,9,público
+NI,Nicaragua,9,público
+CU,Cuba,0,público
+HN,Honduras,8,público
+SV,El Salvador,8,público
+VE,Venezuela,8,público
+AR,Argentina,7,público
+CL,Chile,7,público
+TL,Timor-Leste,0,público
+UY,Uruguay,5,público
+AD,Andorra,0,público
+PR,Puerto Rico,0,público
+MO,Macao,0,público
+LU,Luxembourg,0,público
+SH,St. Helena,0,público
+AW,Aruba,0,público
+GI,Gibraltar,0,público
+CW,Curaçao,0,público
+BZ,Belize,0,público
+VI,U.S. Virgin Islands,0,público
+GF,French Guiana,0,público
+NA,Namibia,0,público
+SR,Suriname,0,público
+US,United States,0,público
+GB,United Kingdom,0,público
+DE,Germany,0,público
+HT,Haiti,0,público
+GY,Guyana,0,público
+MT,Malta,0,público
+CH,Switzerland,0,público
+SN,Senegal,0,público
+ET,Ethiopia,0,público
+BJ,Benin,0,público
+BE,Belgium,0,público
+MR,Mauritania,0,público
+MV,Maldives,0,público
+IS,Iceland,0,público
+IE,Ireland,0,público
+BB,Barbados,0,público
+TT,Trinidad & Tobago,0,público
+MA,Morocco,0,público
+LA,Laos,0,público
+ML,Mali,0,público
+CD,Congo - Kinshasa,0,público
+FR,France,0,público
+BS,Bahamas,0,público
+CZ,Czechia,0,público
+PS,Palestine,0,público
+KR,South Korea,0,público
+NL,Netherlands,0,público
+KH,Cambodia,0,público
+AT,Austria,0,público
+IT,Italy,0,público
+JP,Japan,0,público
+CM,Cameroon,0,público
+RW,Rwanda,0,público
+CI,Côte d’Ivoire,0,público
+SE,Sweden,0,público
+AL,Albania,0,público
+MG,Madagascar,0,público
+CA,Canada,0,público
+DK,Denmark,0,público
+JM,Jamaica,0,público
+NO,Norway,0,público
+AF,Afghanistan,0,público
+HU,Hungary,0,público
+AE,United Arab Emirates,0,público
+LB,Lebanon,0,público
+ZW,Zimbabwe,0,público
+BD,Bangladesh,0,público
+MM,Myanmar (Burma),0,público
+KE,Kenya,0,público
+VN,Vietnam,0,público
+RO,Romania,0,público
+DZ,Algeria,0,público
+QA,Qatar,0,público
+GH,Ghana,0,público
+LV,Latvia,0,público
+MU,Mauritius,0,público
+BG,Bulgaria,0,público
+IQ,Iraq,0,público
+IN,India,0,público
+EG,Egypt,0,público
+MD,Moldova,0,público
+IL,Israel,0,público
+MN,Mongolia,0,público
+XK,Kosovo,0,público
+GE,Georgia,0,público
+NP,Nepal,0,público
+RU,Russia,0,público
+FI,Finland,0,público
+TZ,Tanzania,0,público
+SI,Slovenia,0,público
+EE,Estonia,0,público
+GR,Greece,0,público
+HK,Hong Kong,0,público
+MK,North Macedonia,0,público
+HR,Croatia,0,público
+ZA,South Africa,0,público
+CN,China,0,público
+CY,Cyprus,0,público
+TN,Tunisia,0,público
+SG,Singapore,0,público
+RE,Réunion,0,público
+LY,Libya,0,público
+SK,Slovakia,0,público
+PK,Pakistan,0,público
+LT,Lithuania,0,público
+TH,Thailand,0,público
+AM,Armenia,0,público
+TW,Taiwan,0,público
+RS,Serbia,0,público
+NZ,New Zealand,0,público
+NG,Nigeria,0,público
+UG,Uganda,0,público
+JO,Jordan,0,público
+YE,Yemen,0,público
+BH,Bahrain,0,público
+PH,Philippines,0,público
+BA,Bosnia & Herzegovina,0,público
+BY,Belarus,0,público
+ID,Indonesia,0,público
+AU,Australia,0,público
+MY,Malaysia,0,público
+AZ,Azerbaijan,0,público
+UA,Ukraine,0,público
+OM,Oman,0,público
+PL,Poland,0,público
+KW,Kuwait,0,público
+SD,Sudan,0,público
+LK,Sri Lanka,0,público
+UZ,Uzbekistan,0,público
+KZ,Kazakhstan,0,público
+SA,Saudi Arabia,0,público
+SY,Syria,0,público
+TR,Türkiye,0,público
+IR,Iran,0,público
+BN,Brunei,0,público
+GM,Gambia,0,público
+MQ,Martinique,0,público
+YT,Mayotte,0,público
+BW,Botswana,0,público
+NC,New Caledonia,0,público
+NE,Niger,0,público
+NF,Norfolk Island,0,público
+MS,Montserrat,0,público
+BV,Bouvet Island,0,público
+NU,Niue,0,público
+BT,Bhutan,0,público
+CF,Central African Republic,0,público
+CC,Cocos (Keeling) Islands,0,público
+NR,Nauru,0,público
+MP,Northern Mariana Islands,0,público
+ME,Montenegro,0,público
+CG,Congo - Brazzaville,0,público
+BM,Bermuda,0,público
+PN,Pitcairn Islands,0,público
+MH,Marshall Islands,0,público
+CK,Cook Islands,0,público
+PW,Palau,0,público
+PG,Papua New Guinea,0,público
+KM,Comoros,0,público
+BL,St. Barthélemy,0,público
+KP,North Korea,0,público
+CX,Christmas Island,0,público
+MC,Monaco,0,público
+KY,Cayman Islands,0,público
+PF,French Polynesia,0,público
+MF,St. Martin,0,público
+DJ,Djibouti,0,público
+LS,Lesotho,0,público
+LI,Liechtenstein,0,público
+LC,St. Lucia,0,público
+DM,Dominica,0,público
+KN,St. Kitts & Nevis,0,público
+BF,Burkina Faso,0,público
+KI,Kiribati,0,público
+GS,South Georgia & South Sandwich Islands,0,público
+BQ,Caribbean Netherlands,0,público
+SJ,Svalbard & Jan Mayen,0,público
+SB,Solomon Islands,0,público
+SL,Sierra Leone,0,público
+BI,Burundi,0,público
+SM,San Marino,0,público
+SO,Somalia,0,público
+PM,St. Pierre & Miquelon,0,público
+ER,Eritrea,0,público
+SS,South Sudan,0,público
+KG,Kyrgyzstan,0,público
+EH,Western Sahara,0,público
+JE,Jersey,0,público
+FJ,Fiji,0,público
+AG,Antigua & Barbuda,0,público
+SZ,Eswatini,0,público
+SX,Sint Maarten,0,público
+SC,Seychelles,0,público
+FK,Falkland Islands (Islas Malvinas),0,público
+TC,Turks & Caicos Islands,0,público
+TD,Chad,0,público
+TG,Togo,0,público
+IO,British Indian Ocean Territory,0,público
+TJ,Tajikistan,0,público
+TK,Tokelau,0,público
+TM,Turkmenistan,0,público
+TF,French Southern Territories,0,público
+TO,Tonga,0,público
+AQ,Antarctica,0,público
+IM,Isle of Man,0,público
+FO,Faroe Islands,0,público
+TV,Tuvalu,0,público
+FM,Micronesia,0,público
+GA,Gabon,0,público
+HM,Heard & McDonald Islands,0,público
+GU,Guam,0,público
+UM,U.S. Outlying Islands,0,público
+AS,American Samoa,0,público
+GG,Guernsey,0,público
+GL,Greenland,0,público
+VA,Vatican City,0,público
+VC,St. Vincent & Grenadines,0,público
+AX,Åland Islands,0,público
+VG,British Virgin Islands,0,público
+AI,Anguilla,0,público
+GD,Grenada,0,público
+VU,Vanuatu,0,público
+WF,Wallis & Futuna,0,público
+WS,Samoa,0,público
+GN,Guinea,0,público
+GP,Guadeloupe,0,público
+LR,Liberia,0,público
+ZM,Zambia,0,público
+MW,Malawi,0,público

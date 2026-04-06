@@ -1,0 +1,6 @@
+group,term_count,ok_count,error_count,mean_year_rows_ok
+Word2Vec Drift Terms,15,15,0,20.0
+TF-IDF Drift Terms,15,15,0,20.0
+Stable Controls,20,20,0,20.0
+Theory Seeds,5,5,0,20.0
+Full Shared Panel,55,55,0,20.0

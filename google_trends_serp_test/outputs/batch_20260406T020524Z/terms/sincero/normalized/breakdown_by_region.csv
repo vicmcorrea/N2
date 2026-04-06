@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+CO,Colombia,100,sincero
+EC,Ecuador,79,sincero
+VE,Venezuela,76,sincero
+BO,Bolivia,73,sincero
+PY,Paraguay,62,sincero
+PA,Panama,58,sincero
+BR,Brazil,58,sincero
+NI,Nicaragua,57,sincero
+GT,Guatemala,57,sincero
+HN,Honduras,55,sincero
+SV,El Salvador,50,sincero
+CR,Costa Rica,43,sincero
+PE,Peru,41,sincero
+CU,Cuba,0,sincero
+MZ,Mozambique,0,sincero
+AO,Angola,0,sincero
+DO,Dominican Republic,34,sincero
+MX,Mexico,33,sincero
+AR,Argentina,28,sincero
+GQ,Equatorial Guinea,0,sincero
+PR,Puerto Rico,26,sincero
+AW,Aruba,0,sincero
+CL,Chile,25,sincero
+UY,Uruguay,24,sincero
+CV,Cape Verde,0,sincero
+BQ,Caribbean Netherlands,0,sincero
+GW,Guinea-Bissau,0,sincero
+IT,Italy,18,sincero
+CW,Curaçao,0,sincero
+SM,San Marino,0,sincero
+LT,Lithuania,14,sincero
+ES,Spain,13,sincero
+PT,Portugal,11,sincero
+AD,Andorra,0,sincero
+BZ,Belize,0,sincero
+MY,Malaysia,7,sincero
+TN,Tunisia,0,sincero
+LV,Latvia,0,sincero
+TL,Timor-Leste,0,sincero
+GF,French Guiana,0,sincero
+US,United States,3,sincero
+KY,Cayman Islands,0,sincero
+SG,Singapore,3,sincero
+HT,Haiti,0,sincero
+LU,Luxembourg,0,sincero
+CH,Switzerland,2,sincero
+EE,Estonia,0,sincero
+GY,Guyana,0,sincero
+SH,St. Helena,0,sincero
+NA,Namibia,0,sincero
+CA,Canada,1,sincero
+AL,Albania,0,sincero
+TT,Trinidad & Tobago,0,sincero
+GB,United Kingdom,1,sincero
+SR,Suriname,0,sincero
+BS,Bahamas,0,sincero
+DE,Germany,1,sincero
+GP,Guadeloupe,0,sincero
+MG,Madagascar,0,sincero
+GH,Ghana,0,sincero
+UZ,Uzbekistan,0,sincero
+MT,Malta,0,sincero
+TM,Turkmenistan,0,sincero
+JM,Jamaica,0,sincero
+NL,Netherlands,0,sincero
+AU,Australia,0,sincero
+IE,Ireland,0,sincero
+UG,Uganda,0,sincero
+RO,Romania,0,sincero
+MK,North Macedonia,0,sincero
+PH,Philippines,0,sincero
+ZW,Zimbabwe,0,sincero
+CI,Côte d’Ivoire,0,sincero
+HR,Croatia,0,sincero
+SI,Slovenia,0,sincero
+BE,Belgium,0,sincero
+KE,Kenya,0,sincero
+MU,Mauritius,0,sincero
+MA,Morocco,0,sincero
+AM,Armenia,0,sincero
+MD,Moldova,0,sincero
+NZ,New Zealand,0,sincero
+NO,Norway,0,sincero
+NG,Nigeria,0,sincero
+FR,France,0,sincero
+SE,Sweden,0,sincero
+ME,Montenegro,0,sincero
+LY,Libya,0,sincero
+AT,Austria,0,sincero
+IS,Iceland,0,sincero
+LB,Lebanon,0,sincero
+ZM,Zambia,0,sincero
+SK,Slovakia,0,sincero
+PL,Poland,0,sincero
+TZ,Tanzania,0,sincero
+AE,United Arab Emirates,0,sincero
+DK,Denmark,0,sincero
+RS,Serbia,0,sincero
+DZ,Algeria,0,sincero
+BG,Bulgaria,0,sincero
+ZA,South Africa,0,sincero
+CZ,Czechia,0,sincero
+RE,Réunion,0,sincero
+CY,Cyprus,0,sincero
+MM,Myanmar (Burma),0,sincero
+FI,Finland,0,sincero
+GE,Georgia,0,sincero
+JP,Japan,0,sincero
+OM,Oman,0,sincero
+QA,Qatar,0,sincero
+GR,Greece,0,sincero
+HU,Hungary,0,sincero
+BA,Bosnia & Herzegovina,0,sincero
+BH,Bahrain,0,sincero
+IL,Israel,0,sincero
+NP,Nepal,0,sincero
+AZ,Azerbaijan,0,sincero
+IN,India,0,sincero
+KW,Kuwait,0,sincero
+KZ,Kazakhstan,0,sincero
+UA,Ukraine,0,sincero
+HK,Hong Kong,0,sincero
+KR,South Korea,0,sincero
+TW,Taiwan,0,sincero
+KG,Kyrgyzstan,0,sincero
+RU,Russia,0,sincero
+JO,Jordan,0,sincero
+BY,Belarus,0,sincero
+EG,Egypt,0,sincero
+BD,Bangladesh,0,sincero
+PK,Pakistan,0,sincero
+LK,Sri Lanka,0,sincero
+TH,Thailand,0,sincero
+ID,Indonesia,0,sincero
+TR,Türkiye,0,sincero
+IQ,Iraq,0,sincero
+CN,China,0,sincero
+VN,Vietnam,0,sincero
+SA,Saudi Arabia,0,sincero
+IR,Iran,0,sincero
+CG,Congo - Brazzaville,0,sincero
+AI,Anguilla,0,sincero
+FK,Falkland Islands (Islas Malvinas),0,sincero
+MH,Marshall Islands,0,sincero
+FJ,Fiji,0,sincero
+ML,Mali,0,sincero
+FO,Faroe Islands,0,sincero
+FM,Micronesia,0,sincero
+ET,Ethiopia,0,sincero
+MN,Mongolia,0,sincero
+MP,Northern Mariana Islands,0,sincero
+EH,Western Sahara,0,sincero
+MR,Mauritania,0,sincero
+MS,Montserrat,0,sincero
+MQ,Martinique,0,sincero
+ER,Eritrea,0,sincero
+MW,Malawi,0,sincero
+MC,Monaco,0,sincero
+YT,Mayotte,0,sincero
+DM,Dominica,0,sincero
+NC,New Caledonia,0,sincero
+NE,Niger,0,sincero
+NF,Norfolk Island,0,sincero
+DJ,Djibouti,0,sincero
+GA,Gabon,0,sincero
+NU,Niue,0,sincero
+MF,St. Martin,0,sincero
+CX,Christmas Island,0,sincero
+MO,Macao,0,sincero
+NR,Nauru,0,sincero
+KM,Comoros,0,sincero
+GG,Guernsey,0,sincero
+GI,Gibraltar,0,sincero
+CK,Cook Islands,0,sincero
+PN,Pitcairn Islands,0,sincero
+LS,Lesotho,0,sincero
+CD,Congo - Kinshasa,0,sincero
+PW,Palau,0,sincero
+PG,Papua New Guinea,0,sincero
+CM,Cameroon,0,sincero
+LI,Liechtenstein,0,sincero
+KP,North Korea,0,sincero
+CC,Cocos (Keeling) Islands,0,sincero
+CF,Central African Republic,0,sincero
+PS,Palestine,0,sincero
+PF,French Polynesia,0,sincero
+LC,St. Lucia,0,sincero
+GN,Guinea,0,sincero
+BW,Botswana,0,sincero
+AF,Afghanistan,0,sincero
+RW,Rwanda,0,sincero
+GM,Gambia,0,sincero
+SD,Sudan,0,sincero
+SN,Senegal,0,sincero
+BV,Bouvet Island,0,sincero
+GS,South Georgia & South Sandwich Islands,0,sincero
+BT,Bhutan,0,sincero
+SJ,Svalbard & Jan Mayen,0,sincero
+SB,Solomon Islands,0,sincero
+SL,Sierra Leone,0,sincero
+BN,Brunei,0,sincero
+BB,Barbados,0,sincero
+SO,Somalia,0,sincero
+PM,St. Pierre & Miquelon,0,sincero
+BM,Bermuda,0,sincero
+SS,South Sudan,0,sincero
+ST,São Tomé & Príncipe,0,sincero
+KN,St. Kitts & Nevis,0,sincero
+BL,St. Barthélemy,0,sincero
+KI,Kiribati,0,sincero
+KH,Cambodia,0,sincero
+SZ,Eswatini,0,sincero
+SX,Sint Maarten,0,sincero
+SC,Seychelles,0,sincero
+SY,Syria,0,sincero
+TC,Turks & Caicos Islands,0,sincero
+TD,Chad,0,sincero
+TG,Togo,0,sincero
+GD,Grenada,0,sincero
+TJ,Tajikistan,0,sincero
+TK,Tokelau,0,sincero
+JE,Jersey,0,sincero
+BF,Burkina Faso,0,sincero
+TO,Tonga,0,sincero
+BJ,Benin,0,sincero
+BI,Burundi,0,sincero
+GL,Greenland,0,sincero
+TV,Tuvalu,0,sincero
+GU,Guam,0,sincero
+HM,Heard & McDonald Islands,0,sincero
+AG,Antigua & Barbuda,0,sincero
+IO,British Indian Ocean Territory,0,sincero
+UM,U.S. Outlying Islands,0,sincero
+TF,French Southern Territories,0,sincero
+AQ,Antarctica,0,sincero
+AS,American Samoa,0,sincero
+VA,Vatican City,0,sincero
+VC,St. Vincent & Grenadines,0,sincero
+AX,Åland Islands,0,sincero
+VG,British Virgin Islands,0,sincero
+VI,U.S. Virgin Islands,0,sincero
+IM,Isle of Man,0,sincero
+VU,Vanuatu,0,sincero
+WF,Wallis & Futuna,0,sincero
+WS,Samoa,0,sincero
+XK,Kosovo,0,sincero
+YE,Yemen,0,sincero
+LR,Liberia,0,sincero
+LA,Laos,0,sincero
+MV,Maldives,0,sincero

@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+BR,Brazil,100,preço
+PT,Portugal,70,preço
+ST,São Tomé & Príncipe,0,preço
+CV,Cape Verde,0,preço
+AO,Angola,38,preço
+GW,Guinea-Bissau,0,preço
+MZ,Mozambique,0,preço
+PY,Paraguay,0,preço
+LU,Luxembourg,0,preço
+GF,French Guiana,0,preço
+AD,Andorra,0,preço
+SR,Suriname,0,preço
+SH,St. Helena,0,preço
+TL,Timor-Leste,0,preço
+BO,Bolivia,0,preço
+CF,Central African Republic,0,preço
+CH,Switzerland,0,preço
+GQ,Equatorial Guinea,0,preço
+UY,Uruguay,0,preço
+BM,Bermuda,0,preço
+GY,Guyana,0,preço
+MF,St. Martin,0,preço
+HT,Haiti,0,preço
+JE,Jersey,0,preço
+LI,Liechtenstein,0,preço
+MO,Macao,0,preço
+BL,St. Barthélemy,0,preço
+MC,Monaco,0,preço
+GI,Gibraltar,0,preço
+AW,Aruba,0,preço
+NA,Namibia,0,preço
+AG,Antigua & Barbuda,0,preço
+SX,Sint Maarten,0,preço
+IE,Ireland,0,preço
+CW,Curaçao,0,preço
+ES,Spain,0,preço
+CG,Congo - Brazzaville,0,preço
+LA,Laos,0,preço
+AR,Argentina,0,preço
+SN,Senegal,0,preço
+GG,Guernsey,0,preço
+GB,United Kingdom,0,preço
+BE,Belgium,0,preço
+CU,Cuba,0,preço
+BQ,Caribbean Netherlands,0,preço
+DE,Germany,0,preço
+US,United States,0,preço
+FR,France,0,preço
+PA,Panama,0,preço
+PS,Palestine,0,preço
+KY,Cayman Islands,0,preço
+BS,Bahamas,0,preço
+MT,Malta,0,preço
+KR,South Korea,0,preço
+MV,Maldives,0,preço
+CL,Chile,0,preço
+VG,British Virgin Islands,0,preço
+MQ,Martinique,0,preço
+GM,Gambia,0,preço
+NC,New Caledonia,0,preço
+TG,Togo,0,preço
+GA,Gabon,0,preço
+BB,Barbados,0,preço
+AE,United Arab Emirates,0,preço
+BZ,Belize,0,preço
+MW,Malawi,0,preço
+LB,Lebanon,0,preço
+TC,Turks & Caicos Islands,0,preço
+GN,Guinea,0,preço
+IS,Iceland,0,preço
+SM,San Marino,0,preço
+VN,Vietnam,0,preço
+SZ,Eswatini,0,preço
+QA,Qatar,0,preço
+AF,Afghanistan,0,preço
+DO,Dominican Republic,0,preço
+SC,Seychelles,0,preço
+GP,Guadeloupe,0,preço
+KH,Cambodia,0,preço
+LC,St. Lucia,0,preço
+KN,St. Kitts & Nevis,0,preço
+NE,Niger,0,preço
+MN,Mongolia,0,preço
+JP,Japan,0,preço
+EH,Western Sahara,0,preço
+IT,Italy,0,preço
+MR,Mauritania,0,preço
+NL,Netherlands,0,preço
+MG,Madagascar,0,preço
+ET,Ethiopia,0,preço
+DM,Dominica,0,preço
+GL,Greenland,0,preço
+NO,Norway,0,preço
+RW,Rwanda,0,preço
+MY,Malaysia,0,preço
+CD,Congo - Kinshasa,0,preço
+GD,Grenada,0,preço
+MD,Moldova,0,preço
+NP,Nepal,0,preço
+XK,Kosovo,0,preço
+GH,Ghana,0,preço
+IM,Isle of Man,0,preço
+AM,Armenia,0,preço
+BJ,Benin,0,preço
+BW,Botswana,0,preço
+CA,Canada,0,preço
+TD,Chad,0,preço
+TT,Trinidad & Tobago,0,preço
+ZA,South Africa,0,preço
+MM,Myanmar (Burma),0,preço
+IQ,Iraq,0,preço
+BD,Bangladesh,0,preço
+MU,Mauritius,0,preço
+AL,Albania,0,preço
+RU,Russia,0,preço
+EG,Egypt,0,preço
+RO,Romania,0,preço
+LY,Libya,0,preço
+PF,French Polynesia,0,preço
+MX,Mexico,0,preço
+CI,Côte d’Ivoire,0,preço
+CO,Colombia,0,preço
+VI,U.S. Virgin Islands,0,preço
+ML,Mali,0,preço
+PE,Peru,0,preço
+ZM,Zambia,0,preço
+MA,Morocco,0,preço
+GE,Georgia,0,preço
+JM,Jamaica,0,preço
+BH,Bahrain,0,preço
+ZW,Zimbabwe,0,preço
+VE,Venezuela,0,preço
+IN,India,0,preço
+TH,Thailand,0,preço
+AZ,Azerbaijan,0,preço
+TW,Taiwan,0,preço
+AU,Australia,0,preço
+NI,Nicaragua,0,preço
+CR,Costa Rica,0,preço
+SS,South Sudan,0,preço
+BY,Belarus,0,preço
+PK,Pakistan,0,preço
+CM,Cameroon,0,preço
+EC,Ecuador,0,preço
+FO,Faroe Islands,0,preço
+YE,Yemen,0,preço
+DZ,Algeria,0,preço
+NZ,New Zealand,0,preço
+HN,Honduras,0,preço
+KE,Kenya,0,preço
+BN,Brunei,0,preço
+TJ,Tajikistan,0,preço
+SE,Sweden,0,preço
+UA,Ukraine,0,preço
+ID,Indonesia,0,preço
+HK,Hong Kong,0,preço
+KZ,Kazakhstan,0,preço
+SO,Somalia,0,preço
+TN,Tunisia,0,preço
+LR,Liberia,0,preço
+SD,Sudan,0,preço
+CY,Cyprus,0,preço
+BT,Bhutan,0,preço
+AT,Austria,0,preço
+DJ,Djibouti,0,preço
+SG,Singapore,0,preço
+PH,Philippines,0,preço
+UZ,Uzbekistan,0,preço
+OM,Oman,0,preço
+BI,Burundi,0,preço
+VC,St. Vincent & Grenadines,0,preço
+MK,North Macedonia,0,preço
+EE,Estonia,0,preço
+CN,China,0,preço
+SL,Sierra Leone,0,preço
+SV,El Salvador,0,preço
+GT,Guatemala,0,preço
+DK,Denmark,0,preço
+LS,Lesotho,0,preço
+FJ,Fiji,0,preço
+KW,Kuwait,0,preço
+IL,Israel,0,preço
+LV,Latvia,0,preço
+BF,Burkina Faso,0,preço
+KG,Kyrgyzstan,0,preço
+CZ,Czechia,0,preço
+PR,Puerto Rico,0,preço
+TZ,Tanzania,0,preço
+SY,Syria,0,preço
+JO,Jordan,0,preço
+ME,Montenegro,0,preço
+PG,Papua New Guinea,0,preço
+RS,Serbia,0,preço
+LK,Sri Lanka,0,preço
+SI,Slovenia,0,preço
+BG,Bulgaria,0,preço
+UG,Uganda,0,preço
+RE,Réunion,0,preço
+GR,Greece,0,preço
+HU,Hungary,0,preço
+GU,Guam,0,preço
+LT,Lithuania,0,preço
+FI,Finland,0,preço
+BA,Bosnia & Herzegovina,0,preço
+SK,Slovakia,0,preço
+NG,Nigeria,0,preço
+SA,Saudi Arabia,0,preço
+HR,Croatia,0,preço
+TM,Turkmenistan,0,preço
+PL,Poland,0,preço
+TR,Türkiye,0,preço
+IR,Iran,0,preço
+PM,St. Pierre & Miquelon,0,preço
+NF,Norfolk Island,0,preço
+PN,Pitcairn Islands,0,preço
+TF,French Southern Territories,0,preço
+NR,Nauru,0,preço
+AQ,Antarctica,0,preço
+NU,Niue,0,preço
+FK,Falkland Islands (Islas Malvinas),0,preço
+TK,Tokelau,0,preço
+KP,North Korea,0,preço
+AS,American Samoa,0,preço
+TO,Tonga,0,preço
+BV,Bouvet Island,0,preço
+YT,Mayotte,0,preço
+GS,South Georgia & South Sandwich Islands,0,preço
+TV,Tuvalu,0,preço
+MS,Montserrat,0,preço
+CC,Cocos (Keeling) Islands,0,preço
+MP,Northern Mariana Islands,0,preço
+MH,Marshall Islands,0,preço
+UM,U.S. Outlying Islands,0,preço
+CK,Cook Islands,0,preço
+KM,Comoros,0,preço
+CX,Christmas Island,0,preço
+VA,Vatican City,0,preço
+KI,Kiribati,0,preço
+SJ,Svalbard & Jan Mayen,0,preço
+AX,Åland Islands,0,preço
+IO,British Indian Ocean Territory,0,preço
+AI,Anguilla,0,preço
+VU,Vanuatu,0,preço
+WF,Wallis & Futuna,0,preço
+WS,Samoa,0,preço
+SB,Solomon Islands,0,preço
+HM,Heard & McDonald Islands,0,preço
+FM,Micronesia,0,preço
+ER,Eritrea,0,preço
+PW,Palau,0,preço

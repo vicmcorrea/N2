@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+ST,São Tomé & Príncipe,0,recurso
+BR,Brazil,100,recurso
+GQ,Equatorial Guinea,0,recurso
+PA,Panama,67,recurso
+NI,Nicaragua,62,recurso
+AO,Angola,61,recurso
+DO,Dominican Republic,59,recurso
+MZ,Mozambique,57,recurso
+PE,Peru,55,recurso
+GT,Guatemala,54,recurso
+EC,Ecuador,52,recurso
+CO,Colombia,52,recurso
+GW,Guinea-Bissau,0,recurso
+CV,Cape Verde,0,recurso
+TL,Timor-Leste,0,recurso
+ES,Spain,46,recurso
+HN,Honduras,46,recurso
+CU,Cuba,0,recurso
+CR,Costa Rica,43,recurso
+SV,El Salvador,42,recurso
+CL,Chile,42,recurso
+MX,Mexico,41,recurso
+VE,Venezuela,41,recurso
+BO,Bolivia,38,recurso
+PY,Paraguay,38,recurso
+AR,Argentina,35,recurso
+PT,Portugal,30,recurso
+UY,Uruguay,23,recurso
+PR,Puerto Rico,19,recurso
+AD,Andorra,0,recurso
+AW,Aruba,0,recurso
+MO,Macao,0,recurso
+SH,St. Helena,0,recurso
+GI,Gibraltar,0,recurso
+BZ,Belize,0,recurso
+CW,Curaçao,0,recurso
+EH,Western Sahara,0,recurso
+LU,Luxembourg,0,recurso
+GD,Grenada,0,recurso
+GB,United Kingdom,0,recurso
+US,United States,0,recurso
+DE,Germany,0,recurso
+SN,Senegal,0,recurso
+NA,Namibia,0,recurso
+MA,Morocco,0,recurso
+MR,Mauritania,0,recurso
+HT,Haiti,0,recurso
+BB,Barbados,0,recurso
+CM,Cameroon,0,recurso
+SR,Suriname,0,recurso
+CH,Switzerland,0,recurso
+BJ,Benin,0,recurso
+BS,Bahamas,0,recurso
+MQ,Martinique,0,recurso
+TT,Trinidad & Tobago,0,recurso
+CA,Canada,0,recurso
+MT,Malta,0,recurso
+IE,Ireland,0,recurso
+BE,Belgium,0,recurso
+JP,Japan,0,recurso
+FR,France,0,recurso
+IT,Italy,0,recurso
+KR,South Korea,0,recurso
+NL,Netherlands,0,recurso
+PS,Palestine,0,recurso
+LA,Laos,0,recurso
+QA,Qatar,0,recurso
+DZ,Algeria,0,recurso
+IS,Iceland,0,recurso
+KH,Cambodia,0,recurso
+RE,Réunion,0,recurso
+MN,Mongolia,0,recurso
+NO,Norway,0,recurso
+ET,Ethiopia,0,recurso
+AE,United Arab Emirates,0,recurso
+KE,Kenya,0,recurso
+RO,Romania,0,recurso
+CI,Côte d’Ivoire,0,recurso
+AM,Armenia,0,recurso
+AL,Albania,0,recurso
+JM,Jamaica,0,recurso
+VN,Vietnam,0,recurso
+EE,Estonia,0,recurso
+BG,Bulgaria,0,recurso
+SE,Sweden,0,recurso
+AT,Austria,0,recurso
+CZ,Czechia,0,recurso
+LB,Lebanon,0,recurso
+IQ,Iraq,0,recurso
+ZA,South Africa,0,recurso
+PH,Philippines,0,recurso
+RU,Russia,0,recurso
+SI,Slovenia,0,recurso
+HK,Hong Kong,0,recurso
+DK,Denmark,0,recurso
+FI,Finland,0,recurso
+CY,Cyprus,0,recurso
+IL,Israel,0,recurso
+LY,Libya,0,recurso
+MY,Malaysia,0,recurso
+LV,Latvia,0,recurso
+BD,Bangladesh,0,recurso
+IN,India,0,recurso
+EG,Egypt,0,recurso
+GE,Georgia,0,recurso
+SG,Singapore,0,recurso
+NG,Nigeria,0,recurso
+BY,Belarus,0,recurso
+MM,Myanmar (Burma),0,recurso
+PK,Pakistan,0,recurso
+SD,Sudan,0,recurso
+OM,Oman,0,recurso
+TW,Taiwan,0,recurso
+LT,Lithuania,0,recurso
+RS,Serbia,0,recurso
+GH,Ghana,0,recurso
+CN,China,0,recurso
+NP,Nepal,0,recurso
+TZ,Tanzania,0,recurso
+AZ,Azerbaijan,0,recurso
+AU,Australia,0,recurso
+UA,Ukraine,0,recurso
+HU,Hungary,0,recurso
+TH,Thailand,0,recurso
+NZ,New Zealand,0,recurso
+PL,Poland,0,recurso
+GR,Greece,0,recurso
+KW,Kuwait,0,recurso
+ID,Indonesia,0,recurso
+KZ,Kazakhstan,0,recurso
+SK,Slovakia,0,recurso
+HR,Croatia,0,recurso
+TN,Tunisia,0,recurso
+UZ,Uzbekistan,0,recurso
+SA,Saudi Arabia,0,recurso
+BA,Bosnia & Herzegovina,0,recurso
+LK,Sri Lanka,0,recurso
+JO,Jordan,0,recurso
+IR,Iran,0,recurso
+TR,Türkiye,0,recurso
+NR,Nauru,0,recurso
+ZW,Zimbabwe,0,recurso
+MG,Madagascar,0,recurso
+MH,Marshall Islands,0,recurso
+MK,North Macedonia,0,recurso
+ML,Mali,0,recurso
+KY,Cayman Islands,0,recurso
+MD,Moldova,0,recurso
+ME,Montenegro,0,recurso
+CX,Christmas Island,0,recurso
+MP,Northern Mariana Islands,0,recurso
+KM,Comoros,0,recurso
+CK,Cook Islands,0,recurso
+MS,Montserrat,0,recurso
+CG,Congo - Brazzaville,0,recurso
+MU,Mauritius,0,recurso
+MW,Malawi,0,recurso
+MC,Monaco,0,recurso
+YT,Mayotte,0,recurso
+CD,Congo - Kinshasa,0,recurso
+NC,New Caledonia,0,recurso
+NE,Niger,0,recurso
+NF,Norfolk Island,0,recurso
+DJ,Djibouti,0,recurso
+MF,St. Martin,0,recurso
+NU,Niue,0,recurso
+CC,Cocos (Keeling) Islands,0,recurso
+CF,Central African Republic,0,recurso
+DM,Dominica,0,recurso
+LS,Lesotho,0,recurso
+LI,Liechtenstein,0,recurso
+GM,Gambia,0,recurso
+LC,St. Lucia,0,recurso
+BW,Botswana,0,recurso
+PN,Pitcairn Islands,0,recurso
+BV,Bouvet Island,0,recurso
+AF,Afghanistan,0,recurso
+PW,Palau,0,recurso
+PG,Papua New Guinea,0,recurso
+ER,Eritrea,0,recurso
+BT,Bhutan,0,recurso
+KP,North Korea,0,recurso
+BN,Brunei,0,recurso
+BM,Bermuda,0,recurso
+KN,St. Kitts & Nevis,0,recurso
+PF,French Polynesia,0,recurso
+BL,St. Barthélemy,0,recurso
+KI,Kiribati,0,recurso
+BH,Bahrain,0,recurso
+FJ,Fiji,0,recurso
+RW,Rwanda,0,recurso
+KG,Kyrgyzstan,0,recurso
+FK,Falkland Islands (Islas Malvinas),0,recurso
+FO,Faroe Islands,0,recurso
+JE,Jersey,0,recurso
+GS,South Georgia & South Sandwich Islands,0,recurso
+BF,Burkina Faso,0,recurso
+SJ,Svalbard & Jan Mayen,0,recurso
+SB,Solomon Islands,0,recurso
+SL,Sierra Leone,0,recurso
+BQ,Caribbean Netherlands,0,recurso
+SM,San Marino,0,recurso
+SO,Somalia,0,recurso
+PM,St. Pierre & Miquelon,0,recurso
+FM,Micronesia,0,recurso
+SS,South Sudan,0,recurso
+BI,Burundi,0,recurso
+GA,Gabon,0,recurso
+GG,Guernsey,0,recurso
+IO,British Indian Ocean Territory,0,recurso
+IM,Isle of Man,0,recurso
+SZ,Eswatini,0,recurso
+SX,Sint Maarten,0,recurso
+SC,Seychelles,0,recurso
+SY,Syria,0,recurso
+TC,Turks & Caicos Islands,0,recurso
+TD,Chad,0,recurso
+TG,Togo,0,recurso
+GN,Guinea,0,recurso
+TJ,Tajikistan,0,recurso
+TK,Tokelau,0,recurso
+TM,Turkmenistan,0,recurso
+AG,Antigua & Barbuda,0,recurso
+TO,Tonga,0,recurso
+TF,French Southern Territories,0,recurso
+GP,Guadeloupe,0,recurso
+HM,Heard & McDonald Islands,0,recurso
+TV,Tuvalu,0,recurso
+GY,Guyana,0,recurso
+GU,Guam,0,recurso
+UG,Uganda,0,recurso
+GF,French Guiana,0,recurso
+UM,U.S. Outlying Islands,0,recurso
+AQ,Antarctica,0,recurso
+AS,American Samoa,0,recurso
+GL,Greenland,0,recurso
+VA,Vatican City,0,recurso
+VC,St. Vincent & Grenadines,0,recurso
+AX,Åland Islands,0,recurso
+VG,British Virgin Islands,0,recurso
+VI,U.S. Virgin Islands,0,recurso
+AI,Anguilla,0,recurso
+VU,Vanuatu,0,recurso
+WF,Wallis & Futuna,0,recurso
+WS,Samoa,0,recurso
+XK,Kosovo,0,recurso
+YE,Yemen,0,recurso
+LR,Liberia,0,recurso
+ZM,Zambia,0,recurso
+MV,Maldives,0,recurso

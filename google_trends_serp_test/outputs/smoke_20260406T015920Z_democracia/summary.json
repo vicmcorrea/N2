@@ -1,0 +1,21 @@
+{
+  "query": "democracia",
+  "credentials_file": "../how-to-scrape-google-trends/SERP-API-CREDENTIALS.txt",
+  "run_dir": "outputs/smoke_20260406T015920Z_democracia",
+  "date_from": "2004-01-01",
+  "date_to": "2023-12-31",
+  "geo_location": "BR",
+  "sections_present": [
+    "breakdown_by_region",
+    "interest_over_time",
+    "related_queries",
+    "related_topics"
+  ],
+  "row_counts": {
+    "interest_over_time": 240,
+    "breakdown_by_region": 250,
+    "related_topics": 0,
+    "related_queries": 50
+  },
+  "works_like_repo_method": true
+}

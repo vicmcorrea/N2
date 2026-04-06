@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+EC,Ecuador,100,crítico
+ST,São Tomé & Príncipe,0,crítico
+CU,Cuba,74,crítico
+PY,Paraguay,69,crítico
+PE,Peru,69,crítico
+BO,Bolivia,68,crítico
+GT,Guatemala,67,crítico
+NI,Nicaragua,59,crítico
+AO,Angola,55,crítico
+DO,Dominican Republic,55,crítico
+CO,Colombia,55,crítico
+MZ,Mozambique,48,crítico
+SV,El Salvador,48,crítico
+HN,Honduras,46,crítico
+PA,Panama,43,crítico
+BR,Brazil,43,crítico
+MX,Mexico,43,crítico
+GQ,Equatorial Guinea,0,crítico
+CV,Cape Verde,0,crítico
+GW,Guinea-Bissau,0,crítico
+VE,Venezuela,30,crítico
+CR,Costa Rica,28,crítico
+CL,Chile,26,crítico
+AR,Argentina,25,crítico
+PR,Puerto Rico,24,crítico
+PT,Portugal,24,crítico
+ES,Spain,22,crítico
+UY,Uruguay,22,crítico
+AD,Andorra,0,crítico
+TL,Timor-Leste,0,crítico
+SH,St. Helena,0,crítico
+LU,Luxembourg,0,crítico
+US,United States,0,crítico
+MA,Morocco,0,crítico
+GB,United Kingdom,0,crítico
+DE,Germany,0,crítico
+CH,Switzerland,0,crítico
+IE,Ireland,0,crítico
+IT,Italy,0,crítico
+BE,Belgium,0,crítico
+FR,France,0,crítico
+DZ,Algeria,0,crítico
+CA,Canada,0,crítico
+AE,United Arab Emirates,0,crítico
+EG,Egypt,0,crítico
+SE,Sweden,0,crítico
+DK,Denmark,0,crítico
+KR,South Korea,0,crítico
+CZ,Czechia,0,crítico
+IQ,Iraq,0,crítico
+FI,Finland,0,crítico
+NL,Netherlands,0,crítico
+NO,Norway,0,crítico
+AT,Austria,0,crítico
+JP,Japan,0,crítico
+HU,Hungary,0,crítico
+CN,China,0,crítico
+VN,Vietnam,0,crítico
+RS,Serbia,0,crítico
+SG,Singapore,0,crítico
+IN,India,0,crítico
+BG,Bulgaria,0,crítico
+BD,Bangladesh,0,crítico
+RU,Russia,0,crítico
+AU,Australia,0,crítico
+GR,Greece,0,crítico
+RO,Romania,0,crítico
+PH,Philippines,0,crítico
+IL,Israel,0,crítico
+PK,Pakistan,0,crítico
+TW,Taiwan,0,crítico
+SA,Saudi Arabia,0,crítico
+MY,Malaysia,0,crítico
+TH,Thailand,0,crítico
+PL,Poland,0,crítico
+UA,Ukraine,0,crítico
+ID,Indonesia,0,crítico
+IR,Iran,0,crítico
+TR,Türkiye,0,crítico
+LB,Lebanon,0,crítico
+ZW,Zimbabwe,0,crítico
+GG,Guernsey,0,crítico
+GH,Ghana,0,crítico
+GI,Gibraltar,0,crítico
+GN,Guinea,0,crítico
+GP,Guadeloupe,0,crítico
+GM,Gambia,0,crítico
+GA,Gabon,0,crítico
+FM,Micronesia,0,crítico
+FO,Faroe Islands,0,crítico
+GD,Grenada,0,crítico
+GL,Greenland,0,crítico
+FK,Falkland Islands (Islas Malvinas),0,crítico
+GF,French Guiana,0,crítico
+GU,Guam,0,crítico
+GY,Guyana,0,crítico
+HK,Hong Kong,0,crítico
+HM,Heard & McDonald Islands,0,crítico
+FJ,Fiji,0,crítico
+HR,Croatia,0,crítico
+HT,Haiti,0,crítico
+ET,Ethiopia,0,crítico
+EE,Estonia,0,crítico
+IM,Isle of Man,0,crítico
+EH,Western Sahara,0,crítico
+IO,British Indian Ocean Territory,0,crítico
+ER,Eritrea,0,crítico
+DM,Dominica,0,crítico
+DJ,Djibouti,0,crítico
+IS,Iceland,0,crítico
+CY,Cyprus,0,crítico
+KY,Cayman Islands,0,crítico
+JM,Jamaica,0,crítico
+JE,Jersey,0,crítico
+JO,Jordan,0,crítico
+CX,Christmas Island,0,crítico
+KZ,Kazakhstan,0,crítico
+KE,Kenya,0,crítico
+KG,Kyrgyzstan,0,crítico
+KH,Cambodia,0,crítico
+KI,Kiribati,0,crítico
+KN,St. Kitts & Nevis,0,crítico
+CW,Curaçao,0,crítico
+KW,Kuwait,0,crítico
+LA,Laos,0,crítico
+AW,Aruba,0,crítico
+LR,Liberia,0,crítico
+LY,Libya,0,crítico
+LC,St. Lucia,0,crítico
+LI,Liechtenstein,0,crítico
+LK,Sri Lanka,0,crítico
+LS,Lesotho,0,crítico
+LT,Lithuania,0,crítico
+KM,Comoros,0,crítico
+LV,Latvia,0,crítico
+MO,Macao,0,crítico
+MF,St. Martin,0,crítico
+CK,Cook Islands,0,crítico
+MC,Monaco,0,crítico
+MD,Moldova,0,crítico
+MG,Madagascar,0,crítico
+MV,Maldives,0,crítico
+CG,Congo - Brazzaville,0,crítico
+MH,Marshall Islands,0,crítico
+MK,North Macedonia,0,crítico
+ML,Mali,0,crítico
+MT,Malta,0,crítico
+MM,Myanmar (Burma),0,crítico
+ME,Montenegro,0,crítico
+MN,Mongolia,0,crítico
+MP,Northern Mariana Islands,0,crítico
+CD,Congo - Kinshasa,0,crítico
+MR,Mauritania,0,crítico
+MS,Montserrat,0,crítico
+MQ,Martinique,0,crítico
+MU,Mauritius,0,crítico
+MW,Malawi,0,crítico
+CM,Cameroon,0,crítico
+YT,Mayotte,0,crítico
+NA,Namibia,0,crítico
+NC,New Caledonia,0,crítico
+NE,Niger,0,crítico
+NF,Norfolk Island,0,crítico
+NG,Nigeria,0,crítico
+CI,Côte d’Ivoire,0,crítico
+GE,Georgia,0,crítico
+CC,Cocos (Keeling) Islands,0,crítico
+CF,Central African Republic,0,crítico
+NP,Nepal,0,crítico
+NR,Nauru,0,crítico
+NZ,New Zealand,0,crítico
+OM,Oman,0,crítico
+BW,Botswana,0,crítico
+BV,Bouvet Island,0,crítico
+PN,Pitcairn Islands,0,crítico
+BT,Bhutan,0,crítico
+BN,Brunei,0,crítico
+PW,Palau,0,crítico
+PG,Papua New Guinea,0,crítico
+BB,Barbados,0,crítico
+BM,Bermuda,0,crítico
+KP,North Korea,0,crítico
+BZ,Belize,0,crítico
+BY,Belarus,0,crítico
+PS,Palestine,0,crítico
+PF,French Polynesia,0,crítico
+QA,Qatar,0,crítico
+RE,Réunion,0,crítico
+BL,St. Barthélemy,0,crítico
+BA,Bosnia & Herzegovina,0,crítico
+RW,Rwanda,0,crítico
+BS,Bahamas,0,crítico
+SD,Sudan,0,crítico
+SN,Senegal,0,crítico
+BH,Bahrain,0,crítico
+GS,South Georgia & South Sandwich Islands,0,crítico
+BF,Burkina Faso,0,crítico
+SJ,Svalbard & Jan Mayen,0,crítico
+SB,Solomon Islands,0,crítico
+SL,Sierra Leone,0,crítico
+BQ,Caribbean Netherlands,0,crítico
+SM,San Marino,0,crítico
+SO,Somalia,0,crítico
+PM,St. Pierre & Miquelon,0,crítico
+BJ,Benin,0,crítico
+SS,South Sudan,0,crítico
+BI,Burundi,0,crítico
+SR,Suriname,0,crítico
+SK,Slovakia,0,crítico
+SI,Slovenia,0,crítico
+AZ,Azerbaijan,0,crítico
+SZ,Eswatini,0,crítico
+SX,Sint Maarten,0,crítico
+SC,Seychelles,0,crítico
+SY,Syria,0,crítico
+TC,Turks & Caicos Islands,0,crítico
+TD,Chad,0,crítico
+TG,Togo,0,crítico
+AG,Antigua & Barbuda,0,crítico
+TJ,Tajikistan,0,crítico
+TK,Tokelau,0,crítico
+TM,Turkmenistan,0,crítico
+TF,French Southern Territories,0,crítico
+TO,Tonga,0,crítico
+TT,Trinidad & Tobago,0,crítico
+TN,Tunisia,0,crítico
+AQ,Antarctica,0,crítico
+TV,Tuvalu,0,crítico
+AS,American Samoa,0,crítico
+TZ,Tanzania,0,crítico
+UG,Uganda,0,crítico
+AM,Armenia,0,crítico
+UM,U.S. Outlying Islands,0,crítico
+AL,Albania,0,crítico
+AX,Åland Islands,0,crítico
+UZ,Uzbekistan,0,crítico
+VA,Vatican City,0,crítico
+VC,St. Vincent & Grenadines,0,crítico
+AI,Anguilla,0,crítico
+VG,British Virgin Islands,0,crítico
+VI,U.S. Virgin Islands,0,crítico
+AF,Afghanistan,0,crítico
+VU,Vanuatu,0,crítico
+WF,Wallis & Futuna,0,crítico
+WS,Samoa,0,crítico
+XK,Kosovo,0,crítico
+YE,Yemen,0,crítico
+ZA,South Africa,0,crítico
+ZM,Zambia,0,crítico
+NU,Niue,0,crítico

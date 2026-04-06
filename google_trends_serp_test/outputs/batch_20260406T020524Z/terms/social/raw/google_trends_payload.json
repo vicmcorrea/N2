@@ -1,0 +1,2539 @@
+{
+  "interest_over_time": [
+    {
+      "keyword": "social",
+      "items": [
+        {
+          "time": "Jan 2004",
+          "value": 81
+        },
+        {
+          "time": "Feb 2004",
+          "value": 86
+        },
+        {
+          "time": "Mar 2004",
+          "value": 87
+        },
+        {
+          "time": "Apr 2004",
+          "value": 83
+        },
+        {
+          "time": "May 2004",
+          "value": 83
+        },
+        {
+          "time": "Jun 2004",
+          "value": 77
+        },
+        {
+          "time": "Jul 2004",
+          "value": 72
+        },
+        {
+          "time": "Aug 2004",
+          "value": 74
+        },
+        {
+          "time": "Sep 2004",
+          "value": 83
+        },
+        {
+          "time": "Oct 2004",
+          "value": 86
+        },
+        {
+          "time": "Nov 2004",
+          "value": 84
+        },
+        {
+          "time": "Dec 2004",
+          "value": 69
+        },
+        {
+          "time": "Jan 2005",
+          "value": 79
+        },
+        {
+          "time": "Feb 2005",
+          "value": 90
+        },
+        {
+          "time": "Mar 2005",
+          "value": 87
+        },
+        {
+          "time": "Apr 2005",
+          "value": 90
+        },
+        {
+          "time": "May 2005",
+          "value": 76
+        },
+        {
+          "time": "Jun 2005",
+          "value": 73
+        },
+        {
+          "time": "Jul 2005",
+          "value": 66
+        },
+        {
+          "time": "Aug 2005",
+          "value": 69
+        },
+        {
+          "time": "Sep 2005",
+          "value": 83
+        },
+        {
+          "time": "Oct 2005",
+          "value": 80
+        },
+        {
+          "time": "Nov 2005",
+          "value": 82
+        },
+        {
+          "time": "Dec 2005",
+          "value": 63
+        },
+        {
+          "time": "Jan 2006",
+          "value": 71
+        },
+        {
+          "time": "Feb 2006",
+          "value": 76
+        },
+        {
+          "time": "Mar 2006",
+          "value": 79
+        },
+        {
+          "time": "Apr 2006",
+          "value": 72
+        },
+        {
+          "time": "May 2006",
+          "value": 74
+        },
+        {
+          "time": "Jun 2006",
+          "value": 71
+        },
+        {
+          "time": "Jul 2006",
+          "value": 62
+        },
+        {
+          "time": "Aug 2006",
+          "value": 66
+        },
+        {
+          "time": "Sep 2006",
+          "value": 75
+        },
+        {
+          "time": "Oct 2006",
+          "value": 74
+        },
+        {
+          "time": "Nov 2006",
+          "value": 74
+        },
+        {
+          "time": "Dec 2006",
+          "value": 56
+        },
+        {
+          "time": "Jan 2007",
+          "value": 69
+        },
+        {
+          "time": "Feb 2007",
+          "value": 69
+        },
+        {
+          "time": "Mar 2007",
+          "value": 71
+        },
+        {
+          "time": "Apr 2007",
+          "value": 70
+        },
+        {
+          "time": "May 2007",
+          "value": 71
+        },
+        {
+          "time": "Jun 2007",
+          "value": 60
+        },
+        {
+          "time": "Jul 2007",
+          "value": 60
+        },
+        {
+          "time": "Aug 2007",
+          "value": 64
+        },
+        {
+          "time": "Sep 2007",
+          "value": 74
+        },
+        {
+          "time": "Oct 2007",
+          "value": 76
+        },
+        {
+          "time": "Nov 2007",
+          "value": 70
+        },
+        {
+          "time": "Dec 2007",
+          "value": 56
+        },
+        {
+          "time": "Jan 2008",
+          "value": 66
+        },
+        {
+          "time": "Feb 2008",
+          "value": 73
+        },
+        {
+          "time": "Mar 2008",
+          "value": 68
+        },
+        {
+          "time": "Apr 2008",
+          "value": 75
+        },
+        {
+          "time": "May 2008",
+          "value": 74
+        },
+        {
+          "time": "Jun 2008",
+          "value": 69
+        },
+        {
+          "time": "Jul 2008",
+          "value": 61
+        },
+        {
+          "time": "Aug 2008",
+          "value": 60
+        },
+        {
+          "time": "Sep 2008",
+          "value": 71
+        },
+        {
+          "time": "Oct 2008",
+          "value": 73
+        },
+        {
+          "time": "Nov 2008",
+          "value": 72
+        },
+        {
+          "time": "Dec 2008",
+          "value": 61
+        },
+        {
+          "time": "Jan 2009",
+          "value": 66
+        },
+        {
+          "time": "Feb 2009",
+          "value": 69
+        },
+        {
+          "time": "Mar 2009",
+          "value": 76
+        },
+        {
+          "time": "Apr 2009",
+          "value": 72
+        },
+        {
+          "time": "May 2009",
+          "value": 71
+        },
+        {
+          "time": "Jun 2009",
+          "value": 67
+        },
+        {
+          "time": "Jul 2009",
+          "value": 64
+        },
+        {
+          "time": "Aug 2009",
+          "value": 67
+        },
+        {
+          "time": "Sep 2009",
+          "value": 75
+        },
+        {
+          "time": "Oct 2009",
+          "value": 76
+        },
+        {
+          "time": "Nov 2009",
+          "value": 77
+        },
+        {
+          "time": "Dec 2009",
+          "value": 58
+        },
+        {
+          "time": "Jan 2010",
+          "value": 69
+        },
+        {
+          "time": "Feb 2010",
+          "value": 75
+        },
+        {
+          "time": "Mar 2010",
+          "value": 75
+        },
+        {
+          "time": "Apr 2010",
+          "value": 76
+        },
+        {
+          "time": "May 2010",
+          "value": 78
+        },
+        {
+          "time": "Jun 2010",
+          "value": 71
+        },
+        {
+          "time": "Jul 2010",
+          "value": 64
+        },
+        {
+          "time": "Aug 2010",
+          "value": 64
+        },
+        {
+          "time": "Sep 2010",
+          "value": 75
+        },
+        {
+          "time": "Oct 2010",
+          "value": 89
+        },
+        {
+          "time": "Nov 2010",
+          "value": 84
+        },
+        {
+          "time": "Dec 2010",
+          "value": 64
+        },
+        {
+          "time": "Jan 2011",
+          "value": 82
+        },
+        {
+          "time": "Feb 2011",
+          "value": 87
+        },
+        {
+          "time": "Mar 2011",
+          "value": 85
+        },
+        {
+          "time": "Apr 2011",
+          "value": 78
+        },
+        {
+          "time": "May 2011",
+          "value": 80
+        },
+        {
+          "time": "Jun 2011",
+          "value": 75
+        },
+        {
+          "time": "Jul 2011",
+          "value": 71
+        },
+        {
+          "time": "Aug 2011",
+          "value": 73
+        },
+        {
+          "time": "Sep 2011",
+          "value": 87
+        },
+        {
+          "time": "Oct 2011",
+          "value": 85
+        },
+        {
+          "time": "Nov 2011",
+          "value": 84
+        },
+        {
+          "time": "Dec 2011",
+          "value": 66
+        },
+        {
+          "time": "Jan 2012",
+          "value": 75
+        },
+        {
+          "time": "Feb 2012",
+          "value": 77
+        },
+        {
+          "time": "Mar 2012",
+          "value": 79
+        },
+        {
+          "time": "Apr 2012",
+          "value": 75
+        },
+        {
+          "time": "May 2012",
+          "value": 79
+        },
+        {
+          "time": "Jun 2012",
+          "value": 75
+        },
+        {
+          "time": "Jul 2012",
+          "value": 72
+        },
+        {
+          "time": "Aug 2012",
+          "value": 72
+        },
+        {
+          "time": "Sep 2012",
+          "value": 79
+        },
+        {
+          "time": "Oct 2012",
+          "value": 81
+        },
+        {
+          "time": "Nov 2012",
+          "value": 72
+        },
+        {
+          "time": "Dec 2012",
+          "value": 60
+        },
+        {
+          "time": "Jan 2013",
+          "value": 72
+        },
+        {
+          "time": "Feb 2013",
+          "value": 78
+        },
+        {
+          "time": "Mar 2013",
+          "value": 74
+        },
+        {
+          "time": "Apr 2013",
+          "value": 78
+        },
+        {
+          "time": "May 2013",
+          "value": 72
+        },
+        {
+          "time": "Jun 2013",
+          "value": 68
+        },
+        {
+          "time": "Jul 2013",
+          "value": 66
+        },
+        {
+          "time": "Aug 2013",
+          "value": 69
+        },
+        {
+          "time": "Sep 2013",
+          "value": 80
+        },
+        {
+          "time": "Oct 2013",
+          "value": 88
+        },
+        {
+          "time": "Nov 2013",
+          "value": 80
+        },
+        {
+          "time": "Dec 2013",
+          "value": 64
+        },
+        {
+          "time": "Jan 2014",
+          "value": 75
+        },
+        {
+          "time": "Feb 2014",
+          "value": 78
+        },
+        {
+          "time": "Mar 2014",
+          "value": 77
+        },
+        {
+          "time": "Apr 2014",
+          "value": 74
+        },
+        {
+          "time": "May 2014",
+          "value": 77
+        },
+        {
+          "time": "Jun 2014",
+          "value": 70
+        },
+        {
+          "time": "Jul 2014",
+          "value": 65
+        },
+        {
+          "time": "Aug 2014",
+          "value": 69
+        },
+        {
+          "time": "Sep 2014",
+          "value": 76
+        },
+        {
+          "time": "Oct 2014",
+          "value": 78
+        },
+        {
+          "time": "Nov 2014",
+          "value": 73
+        },
+        {
+          "time": "Dec 2014",
+          "value": 64
+        },
+        {
+          "time": "Jan 2015",
+          "value": 72
+        },
+        {
+          "time": "Feb 2015",
+          "value": 74
+        },
+        {
+          "time": "Mar 2015",
+          "value": 78
+        },
+        {
+          "time": "Apr 2015",
+          "value": 82
+        },
+        {
+          "time": "May 2015",
+          "value": 71
+        },
+        {
+          "time": "Jun 2015",
+          "value": 74
+        },
+        {
+          "time": "Jul 2015",
+          "value": 70
+        },
+        {
+          "time": "Aug 2015",
+          "value": 69
+        },
+        {
+          "time": "Sep 2015",
+          "value": 80
+        },
+        {
+          "time": "Oct 2015",
+          "value": 80
+        },
+        {
+          "time": "Nov 2015",
+          "value": 77
+        },
+        {
+          "time": "Dec 2015",
+          "value": 65
+        },
+        {
+          "time": "Jan 2016",
+          "value": 67
+        },
+        {
+          "time": "Feb 2016",
+          "value": 77
+        },
+        {
+          "time": "Mar 2016",
+          "value": 76
+        },
+        {
+          "time": "Apr 2016",
+          "value": 75
+        },
+        {
+          "time": "May 2016",
+          "value": 75
+        },
+        {
+          "time": "Jun 2016",
+          "value": 67
+        },
+        {
+          "time": "Jul 2016",
+          "value": 61
+        },
+        {
+          "time": "Aug 2016",
+          "value": 63
+        },
+        {
+          "time": "Sep 2016",
+          "value": 79
+        },
+        {
+          "time": "Oct 2016",
+          "value": 80
+        },
+        {
+          "time": "Nov 2016",
+          "value": 82
+        },
+        {
+          "time": "Dec 2016",
+          "value": 75
+        },
+        {
+          "time": "Jan 2017",
+          "value": 81
+        },
+        {
+          "time": "Feb 2017",
+          "value": 79
+        },
+        {
+          "time": "Mar 2017",
+          "value": 81
+        },
+        {
+          "time": "Apr 2017",
+          "value": 71
+        },
+        {
+          "time": "May 2017",
+          "value": 73
+        },
+        {
+          "time": "Jun 2017",
+          "value": 68
+        },
+        {
+          "time": "Jul 2017",
+          "value": 65
+        },
+        {
+          "time": "Aug 2017",
+          "value": 70
+        },
+        {
+          "time": "Sep 2017",
+          "value": 76
+        },
+        {
+          "time": "Oct 2017",
+          "value": 78
+        },
+        {
+          "time": "Nov 2017",
+          "value": 77
+        },
+        {
+          "time": "Dec 2017",
+          "value": 65
+        },
+        {
+          "time": "Jan 2018",
+          "value": 70
+        },
+        {
+          "time": "Feb 2018",
+          "value": 74
+        },
+        {
+          "time": "Mar 2018",
+          "value": 77
+        },
+        {
+          "time": "Apr 2018",
+          "value": 78
+        },
+        {
+          "time": "May 2018",
+          "value": 73
+        },
+        {
+          "time": "Jun 2018",
+          "value": 68
+        },
+        {
+          "time": "Jul 2018",
+          "value": 68
+        },
+        {
+          "time": "Aug 2018",
+          "value": 71
+        },
+        {
+          "time": "Sep 2018",
+          "value": 75
+        },
+        {
+          "time": "Oct 2018",
+          "value": 78
+        },
+        {
+          "time": "Nov 2018",
+          "value": 75
+        },
+        {
+          "time": "Dec 2018",
+          "value": 61
+        },
+        {
+          "time": "Jan 2019",
+          "value": 71
+        },
+        {
+          "time": "Feb 2019",
+          "value": 78
+        },
+        {
+          "time": "Mar 2019",
+          "value": 73
+        },
+        {
+          "time": "Apr 2019",
+          "value": 74
+        },
+        {
+          "time": "May 2019",
+          "value": 76
+        },
+        {
+          "time": "Jun 2019",
+          "value": 69
+        },
+        {
+          "time": "Jul 2019",
+          "value": 66
+        },
+        {
+          "time": "Aug 2019",
+          "value": 69
+        },
+        {
+          "time": "Sep 2019",
+          "value": 81
+        },
+        {
+          "time": "Oct 2019",
+          "value": 75
+        },
+        {
+          "time": "Nov 2019",
+          "value": 77
+        },
+        {
+          "time": "Dec 2019",
+          "value": 67
+        },
+        {
+          "time": "Jan 2020",
+          "value": 75
+        },
+        {
+          "time": "Feb 2020",
+          "value": 76
+        },
+        {
+          "time": "Mar 2020",
+          "value": 89
+        },
+        {
+          "time": "Apr 2020",
+          "value": 94
+        },
+        {
+          "time": "May 2020",
+          "value": 88
+        },
+        {
+          "time": "Jun 2020",
+          "value": 85
+        },
+        {
+          "time": "Jul 2020",
+          "value": 82
+        },
+        {
+          "time": "Aug 2020",
+          "value": 71
+        },
+        {
+          "time": "Sep 2020",
+          "value": 93
+        },
+        {
+          "time": "Oct 2020",
+          "value": 89
+        },
+        {
+          "time": "Nov 2020",
+          "value": 78
+        },
+        {
+          "time": "Dec 2020",
+          "value": 62
+        },
+        {
+          "time": "Jan 2021",
+          "value": 74
+        },
+        {
+          "time": "Feb 2021",
+          "value": 81
+        },
+        {
+          "time": "Mar 2021",
+          "value": 82
+        },
+        {
+          "time": "Apr 2021",
+          "value": 81
+        },
+        {
+          "time": "May 2021",
+          "value": 86
+        },
+        {
+          "time": "Jun 2021",
+          "value": 86
+        },
+        {
+          "time": "Jul 2021",
+          "value": 78
+        },
+        {
+          "time": "Aug 2021",
+          "value": 73
+        },
+        {
+          "time": "Sep 2021",
+          "value": 87
+        },
+        {
+          "time": "Oct 2021",
+          "value": 86
+        },
+        {
+          "time": "Nov 2021",
+          "value": 82
+        },
+        {
+          "time": "Dec 2021",
+          "value": 73
+        },
+        {
+          "time": "Jan 2022",
+          "value": 85
+        },
+        {
+          "time": "Feb 2022",
+          "value": 97
+        },
+        {
+          "time": "Mar 2022",
+          "value": 100
+        },
+        {
+          "time": "Apr 2022",
+          "value": 97
+        },
+        {
+          "time": "May 2022",
+          "value": 93
+        },
+        {
+          "time": "Jun 2022",
+          "value": 81
+        },
+        {
+          "time": "Jul 2022",
+          "value": 75
+        },
+        {
+          "time": "Aug 2022",
+          "value": 81
+        },
+        {
+          "time": "Sep 2022",
+          "value": 95
+        },
+        {
+          "time": "Oct 2022",
+          "value": 93
+        },
+        {
+          "time": "Nov 2022",
+          "value": 85
+        },
+        {
+          "time": "Dec 2022",
+          "value": 75
+        },
+        {
+          "time": "Jan 2023",
+          "value": 87
+        },
+        {
+          "time": "Feb 2023",
+          "value": 86
+        },
+        {
+          "time": "Mar 2023",
+          "value": 89
+        },
+        {
+          "time": "Apr 2023",
+          "value": 84
+        },
+        {
+          "time": "May 2023",
+          "value": 84
+        },
+        {
+          "time": "Jun 2023",
+          "value": 79
+        },
+        {
+          "time": "Jul 2023",
+          "value": 75
+        },
+        {
+          "time": "Aug 2023",
+          "value": 76
+        },
+        {
+          "time": "Sep 2023",
+          "value": 89
+        },
+        {
+          "time": "Oct 2023",
+          "value": 88
+        },
+        {
+          "time": "Nov 2023",
+          "value": 83
+        },
+        {
+          "time": "Dec 2023",
+          "value": 74
+        }
+      ]
+    }
+  ],
+  "breakdown_by_region": [
+    {
+      "keyword": "social",
+      "items": [
+        {
+          "geo_code": "PT",
+          "geo_name": "Portugal",
+          "value": 100
+        },
+        {
+          "geo_code": "CR",
+          "geo_name": "Costa Rica",
+          "value": 92
+        },
+        {
+          "geo_code": "ZW",
+          "geo_name": "Zimbabwe",
+          "value": 0
+        },
+        {
+          "geo_code": "CO",
+          "geo_name": "Colombia",
+          "value": 43
+        },
+        {
+          "geo_code": "ST",
+          "geo_name": "São Tomé & Príncipe",
+          "value": 0
+        },
+        {
+          "geo_code": "PA",
+          "geo_name": "Panama",
+          "value": 38
+        },
+        {
+          "geo_code": "ES",
+          "geo_name": "Spain",
+          "value": 38
+        },
+        {
+          "geo_code": "SZ",
+          "geo_name": "Eswatini",
+          "value": 0
+        },
+        {
+          "geo_code": "BZ",
+          "geo_name": "Belize",
+          "value": 0
+        },
+        {
+          "geo_code": "VE",
+          "geo_name": "Venezuela",
+          "value": 35
+        },
+        {
+          "geo_code": "MW",
+          "geo_name": "Malawi",
+          "value": 0
+        },
+        {
+          "geo_code": "LS",
+          "geo_name": "Lesotho",
+          "value": 0
+        },
+        {
+          "geo_code": "JM",
+          "geo_name": "Jamaica",
+          "value": 0
+        },
+        {
+          "geo_code": "CL",
+          "geo_name": "Chile",
+          "value": 32
+        },
+        {
+          "geo_code": "BW",
+          "geo_name": "Botswana",
+          "value": 0
+        },
+        {
+          "geo_code": "PH",
+          "geo_name": "Philippines",
+          "value": 32
+        },
+        {
+          "geo_code": "AO",
+          "geo_name": "Angola",
+          "value": 0
+        },
+        {
+          "geo_code": "SL",
+          "geo_name": "Sierra Leone",
+          "value": 0
+        },
+        {
+          "geo_code": "MS",
+          "geo_name": "Montserrat",
+          "value": 0
+        },
+        {
+          "geo_code": "AS",
+          "geo_name": "American Samoa",
+          "value": 0
+        },
+        {
+          "geo_code": "SB",
+          "geo_name": "Solomon Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "KI",
+          "geo_name": "Kiribati",
+          "value": 0
+        },
+        {
+          "geo_code": "NA",
+          "geo_name": "Namibia",
+          "value": 0
+        },
+        {
+          "geo_code": "EC",
+          "geo_name": "Ecuador",
+          "value": 30
+        },
+        {
+          "geo_code": "AR",
+          "geo_name": "Argentina",
+          "value": 30
+        },
+        {
+          "geo_code": "SV",
+          "geo_name": "El Salvador",
+          "value": 29
+        },
+        {
+          "geo_code": "GY",
+          "geo_name": "Guyana",
+          "value": 0
+        },
+        {
+          "geo_code": "IE",
+          "geo_name": "Ireland",
+          "value": 29
+        },
+        {
+          "geo_code": "ZM",
+          "geo_name": "Zambia",
+          "value": 0
+        },
+        {
+          "geo_code": "NP",
+          "geo_name": "Nepal",
+          "value": 28
+        },
+        {
+          "geo_code": "MX",
+          "geo_name": "Mexico",
+          "value": 27
+        },
+        {
+          "geo_code": "CV",
+          "geo_name": "Cape Verde",
+          "value": 0
+        },
+        {
+          "geo_code": "LR",
+          "geo_name": "Liberia",
+          "value": 0
+        },
+        {
+          "geo_code": "FM",
+          "geo_name": "Micronesia",
+          "value": 0
+        },
+        {
+          "geo_code": "DM",
+          "geo_name": "Dominica",
+          "value": 0
+        },
+        {
+          "geo_code": "KN",
+          "geo_name": "St. Kitts & Nevis",
+          "value": 0
+        },
+        {
+          "geo_code": "GT",
+          "geo_name": "Guatemala",
+          "value": 25
+        },
+        {
+          "geo_code": "PR",
+          "geo_name": "Puerto Rico",
+          "value": 25
+        },
+        {
+          "geo_code": "MZ",
+          "geo_name": "Mozambique",
+          "value": 0
+        },
+        {
+          "geo_code": "BR",
+          "geo_name": "Brazil",
+          "value": 25
+        },
+        {
+          "geo_code": "RW",
+          "geo_name": "Rwanda",
+          "value": 0
+        },
+        {
+          "geo_code": "VC",
+          "geo_name": "St. Vincent & Grenadines",
+          "value": 0
+        },
+        {
+          "geo_code": "US",
+          "geo_name": "United States",
+          "value": 25
+        },
+        {
+          "geo_code": "AG",
+          "geo_name": "Antigua & Barbuda",
+          "value": 0
+        },
+        {
+          "geo_code": "ET",
+          "geo_name": "Ethiopia",
+          "value": 0
+        },
+        {
+          "geo_code": "GH",
+          "geo_name": "Ghana",
+          "value": 24
+        },
+        {
+          "geo_code": "GW",
+          "geo_name": "Guinea-Bissau",
+          "value": 0
+        },
+        {
+          "geo_code": "BT",
+          "geo_name": "Bhutan",
+          "value": 0
+        },
+        {
+          "geo_code": "FJ",
+          "geo_name": "Fiji",
+          "value": 0
+        },
+        {
+          "geo_code": "JE",
+          "geo_name": "Jersey",
+          "value": 0
+        },
+        {
+          "geo_code": "PG",
+          "geo_name": "Papua New Guinea",
+          "value": 0
+        },
+        {
+          "geo_code": "GD",
+          "geo_name": "Grenada",
+          "value": 0
+        },
+        {
+          "geo_code": "GU",
+          "geo_name": "Guam",
+          "value": 0
+        },
+        {
+          "geo_code": "NG",
+          "geo_name": "Nigeria",
+          "value": 23
+        },
+        {
+          "geo_code": "VG",
+          "geo_name": "British Virgin Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "WS",
+          "geo_name": "Samoa",
+          "value": 0
+        },
+        {
+          "geo_code": "MP",
+          "geo_name": "Northern Mariana Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "MH",
+          "geo_name": "Marshall Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "TT",
+          "geo_name": "Trinidad & Tobago",
+          "value": 0
+        },
+        {
+          "geo_code": "LC",
+          "geo_name": "St. Lucia",
+          "value": 0
+        },
+        {
+          "geo_code": "UG",
+          "geo_name": "Uganda",
+          "value": 0
+        },
+        {
+          "geo_code": "ZA",
+          "geo_name": "South Africa",
+          "value": 22
+        },
+        {
+          "geo_code": "HN",
+          "geo_name": "Honduras",
+          "value": 0
+        },
+        {
+          "geo_code": "VI",
+          "geo_name": "U.S. Virgin Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "KE",
+          "geo_name": "Kenya",
+          "value": 22
+        },
+        {
+          "geo_code": "AI",
+          "geo_name": "Anguilla",
+          "value": 0
+        },
+        {
+          "geo_code": "NI",
+          "geo_name": "Nicaragua",
+          "value": 0
+        },
+        {
+          "geo_code": "ER",
+          "geo_name": "Eritrea",
+          "value": 0
+        },
+        {
+          "geo_code": "BB",
+          "geo_name": "Barbados",
+          "value": 0
+        },
+        {
+          "geo_code": "SS",
+          "geo_name": "South Sudan",
+          "value": 0
+        },
+        {
+          "geo_code": "PW",
+          "geo_name": "Palau",
+          "value": 0
+        },
+        {
+          "geo_code": "BO",
+          "geo_name": "Bolivia",
+          "value": 20
+        },
+        {
+          "geo_code": "TV",
+          "geo_name": "Tuvalu",
+          "value": 0
+        },
+        {
+          "geo_code": "PE",
+          "geo_name": "Peru",
+          "value": 19
+        },
+        {
+          "geo_code": "CX",
+          "geo_name": "Christmas Island",
+          "value": 0
+        },
+        {
+          "geo_code": "VU",
+          "geo_name": "Vanuatu",
+          "value": 0
+        },
+        {
+          "geo_code": "GG",
+          "geo_name": "Guernsey",
+          "value": 0
+        },
+        {
+          "geo_code": "PY",
+          "geo_name": "Paraguay",
+          "value": 0
+        },
+        {
+          "geo_code": "CU",
+          "geo_name": "Cuba",
+          "value": 0
+        },
+        {
+          "geo_code": "TZ",
+          "geo_name": "Tanzania",
+          "value": 0
+        },
+        {
+          "geo_code": "DO",
+          "geo_name": "Dominican Republic",
+          "value": 19
+        },
+        {
+          "geo_code": "MT",
+          "geo_name": "Malta",
+          "value": 0
+        },
+        {
+          "geo_code": "GQ",
+          "geo_name": "Equatorial Guinea",
+          "value": 0
+        },
+        {
+          "geo_code": "GF",
+          "geo_name": "French Guiana",
+          "value": 0
+        },
+        {
+          "geo_code": "GB",
+          "geo_name": "United Kingdom",
+          "value": 18
+        },
+        {
+          "geo_code": "TO",
+          "geo_name": "Tonga",
+          "value": 0
+        },
+        {
+          "geo_code": "SG",
+          "geo_name": "Singapore",
+          "value": 18
+        },
+        {
+          "geo_code": "SO",
+          "geo_name": "Somalia",
+          "value": 0
+        },
+        {
+          "geo_code": "YT",
+          "geo_name": "Mayotte",
+          "value": 0
+        },
+        {
+          "geo_code": "TL",
+          "geo_name": "Timor-Leste",
+          "value": 0
+        },
+        {
+          "geo_code": "BL",
+          "geo_name": "St. Barthélemy",
+          "value": 0
+        },
+        {
+          "geo_code": "CA",
+          "geo_name": "Canada",
+          "value": 17
+        },
+        {
+          "geo_code": "BS",
+          "geo_name": "Bahamas",
+          "value": 0
+        },
+        {
+          "geo_code": "GM",
+          "geo_name": "Gambia",
+          "value": 0
+        },
+        {
+          "geo_code": "GP",
+          "geo_name": "Guadeloupe",
+          "value": 0
+        },
+        {
+          "geo_code": "BM",
+          "geo_name": "Bermuda",
+          "value": 0
+        },
+        {
+          "geo_code": "MU",
+          "geo_name": "Mauritius",
+          "value": 0
+        },
+        {
+          "geo_code": "BI",
+          "geo_name": "Burundi",
+          "value": 0
+        },
+        {
+          "geo_code": "CM",
+          "geo_name": "Cameroon",
+          "value": 0
+        },
+        {
+          "geo_code": "MQ",
+          "geo_name": "Martinique",
+          "value": 0
+        },
+        {
+          "geo_code": "GI",
+          "geo_name": "Gibraltar",
+          "value": 0
+        },
+        {
+          "geo_code": "AU",
+          "geo_name": "Australia",
+          "value": 15
+        },
+        {
+          "geo_code": "UY",
+          "geo_name": "Uruguay",
+          "value": 14
+        },
+        {
+          "geo_code": "NF",
+          "geo_name": "Norfolk Island",
+          "value": 0
+        },
+        {
+          "geo_code": "KY",
+          "geo_name": "Cayman Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "RE",
+          "geo_name": "Réunion",
+          "value": 0
+        },
+        {
+          "geo_code": "PK",
+          "geo_name": "Pakistan",
+          "value": 14
+        },
+        {
+          "geo_code": "IM",
+          "geo_name": "Isle of Man",
+          "value": 0
+        },
+        {
+          "geo_code": "FK",
+          "geo_name": "Falkland Islands (Islas Malvinas)",
+          "value": 0
+        },
+        {
+          "geo_code": "TC",
+          "geo_name": "Turks & Caicos Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "NZ",
+          "geo_name": "New Zealand",
+          "value": 13
+        },
+        {
+          "geo_code": "BJ",
+          "geo_name": "Benin",
+          "value": 0
+        },
+        {
+          "geo_code": "MV",
+          "geo_name": "Maldives",
+          "value": 0
+        },
+        {
+          "geo_code": "AD",
+          "geo_name": "Andorra",
+          "value": 0
+        },
+        {
+          "geo_code": "SH",
+          "geo_name": "St. Helena",
+          "value": 0
+        },
+        {
+          "geo_code": "IN",
+          "geo_name": "India",
+          "value": 13
+        },
+        {
+          "geo_code": "HT",
+          "geo_name": "Haiti",
+          "value": 0
+        },
+        {
+          "geo_code": "TG",
+          "geo_name": "Togo",
+          "value": 0
+        },
+        {
+          "geo_code": "IO",
+          "geo_name": "British Indian Ocean Territory",
+          "value": 0
+        },
+        {
+          "geo_code": "GA",
+          "geo_name": "Gabon",
+          "value": 0
+        },
+        {
+          "geo_code": "MF",
+          "geo_name": "St. Martin",
+          "value": 0
+        },
+        {
+          "geo_code": "SX",
+          "geo_name": "Sint Maarten",
+          "value": 0
+        },
+        {
+          "geo_code": "SC",
+          "geo_name": "Seychelles",
+          "value": 0
+        },
+        {
+          "geo_code": "FR",
+          "geo_name": "France",
+          "value": 11
+        },
+        {
+          "geo_code": "CK",
+          "geo_name": "Cook Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "SN",
+          "geo_name": "Senegal",
+          "value": 0
+        },
+        {
+          "geo_code": "LU",
+          "geo_name": "Luxembourg",
+          "value": 0
+        },
+        {
+          "geo_code": "MG",
+          "geo_name": "Madagascar",
+          "value": 0
+        },
+        {
+          "geo_code": "BN",
+          "geo_name": "Brunei",
+          "value": 0
+        },
+        {
+          "geo_code": "CF",
+          "geo_name": "Central African Republic",
+          "value": 0
+        },
+        {
+          "geo_code": "HK",
+          "geo_name": "Hong Kong",
+          "value": 10
+        },
+        {
+          "geo_code": "LK",
+          "geo_name": "Sri Lanka",
+          "value": 0
+        },
+        {
+          "geo_code": "BE",
+          "geo_name": "Belgium",
+          "value": 10
+        },
+        {
+          "geo_code": "NE",
+          "geo_name": "Niger",
+          "value": 0
+        },
+        {
+          "geo_code": "BD",
+          "geo_name": "Bangladesh",
+          "value": 10
+        },
+        {
+          "geo_code": "AE",
+          "geo_name": "United Arab Emirates",
+          "value": 10
+        },
+        {
+          "geo_code": "DJ",
+          "geo_name": "Djibouti",
+          "value": 0
+        },
+        {
+          "geo_code": "NR",
+          "geo_name": "Nauru",
+          "value": 0
+        },
+        {
+          "geo_code": "AW",
+          "geo_name": "Aruba",
+          "value": 0
+        },
+        {
+          "geo_code": "LB",
+          "geo_name": "Lebanon",
+          "value": 0
+        },
+        {
+          "geo_code": "CI",
+          "geo_name": "Côte d’Ivoire",
+          "value": 0
+        },
+        {
+          "geo_code": "CW",
+          "geo_name": "Curaçao",
+          "value": 0
+        },
+        {
+          "geo_code": "BF",
+          "geo_name": "Burkina Faso",
+          "value": 0
+        },
+        {
+          "geo_code": "DK",
+          "geo_name": "Denmark",
+          "value": 8
+        },
+        {
+          "geo_code": "NL",
+          "geo_name": "Netherlands",
+          "value": 8
+        },
+        {
+          "geo_code": "MM",
+          "geo_name": "Myanmar (Burma)",
+          "value": 0
+        },
+        {
+          "geo_code": "CY",
+          "geo_name": "Cyprus",
+          "value": 0
+        },
+        {
+          "geo_code": "CD",
+          "geo_name": "Congo - Kinshasa",
+          "value": 0
+        },
+        {
+          "geo_code": "KP",
+          "geo_name": "North Korea",
+          "value": 0
+        },
+        {
+          "geo_code": "MC",
+          "geo_name": "Monaco",
+          "value": 0
+        },
+        {
+          "geo_code": "ML",
+          "geo_name": "Mali",
+          "value": 0
+        },
+        {
+          "geo_code": "IS",
+          "geo_name": "Iceland",
+          "value": 0
+        },
+        {
+          "geo_code": "BQ",
+          "geo_name": "Caribbean Netherlands",
+          "value": 0
+        },
+        {
+          "geo_code": "CG",
+          "geo_name": "Congo - Brazzaville",
+          "value": 0
+        },
+        {
+          "geo_code": "MY",
+          "geo_name": "Malaysia",
+          "value": 7
+        },
+        {
+          "geo_code": "PF",
+          "geo_name": "French Polynesia",
+          "value": 0
+        },
+        {
+          "geo_code": "NC",
+          "geo_name": "New Caledonia",
+          "value": 0
+        },
+        {
+          "geo_code": "TD",
+          "geo_name": "Chad",
+          "value": 0
+        },
+        {
+          "geo_code": "BH",
+          "geo_name": "Bahrain",
+          "value": 0
+        },
+        {
+          "geo_code": "QA",
+          "geo_name": "Qatar",
+          "value": 0
+        },
+        {
+          "geo_code": "PM",
+          "geo_name": "St. Pierre & Miquelon",
+          "value": 0
+        },
+        {
+          "geo_code": "TN",
+          "geo_name": "Tunisia",
+          "value": 0
+        },
+        {
+          "geo_code": "AF",
+          "geo_name": "Afghanistan",
+          "value": 0
+        },
+        {
+          "geo_code": "KM",
+          "geo_name": "Comoros",
+          "value": 0
+        },
+        {
+          "geo_code": "KH",
+          "geo_name": "Cambodia",
+          "value": 0
+        },
+        {
+          "geo_code": "MO",
+          "geo_name": "Macao",
+          "value": 0
+        },
+        {
+          "geo_code": "SR",
+          "geo_name": "Suriname",
+          "value": 0
+        },
+        {
+          "geo_code": "FO",
+          "geo_name": "Faroe Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "AL",
+          "geo_name": "Albania",
+          "value": 0
+        },
+        {
+          "geo_code": "OM",
+          "geo_name": "Oman",
+          "value": 0
+        },
+        {
+          "geo_code": "GL",
+          "geo_name": "Greenland",
+          "value": 0
+        },
+        {
+          "geo_code": "CH",
+          "geo_name": "Switzerland",
+          "value": 5
+        },
+        {
+          "geo_code": "GN",
+          "geo_name": "Guinea",
+          "value": 0
+        },
+        {
+          "geo_code": "RO",
+          "geo_name": "Romania",
+          "value": 5
+        },
+        {
+          "geo_code": "MN",
+          "geo_name": "Mongolia",
+          "value": 0
+        },
+        {
+          "geo_code": "SE",
+          "geo_name": "Sweden",
+          "value": 5
+        },
+        {
+          "geo_code": "MA",
+          "geo_name": "Morocco",
+          "value": 0
+        },
+        {
+          "geo_code": "XK",
+          "geo_name": "Kosovo",
+          "value": 0
+        },
+        {
+          "geo_code": "AX",
+          "geo_name": "Åland Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "EH",
+          "geo_name": "Western Sahara",
+          "value": 0
+        },
+        {
+          "geo_code": "MK",
+          "geo_name": "North Macedonia",
+          "value": 0
+        },
+        {
+          "geo_code": "LA",
+          "geo_name": "Laos",
+          "value": 0
+        },
+        {
+          "geo_code": "SM",
+          "geo_name": "San Marino",
+          "value": 0
+        },
+        {
+          "geo_code": "IT",
+          "geo_name": "Italy",
+          "value": 4
+        },
+        {
+          "geo_code": "KW",
+          "geo_name": "Kuwait",
+          "value": 0
+        },
+        {
+          "geo_code": "ID",
+          "geo_name": "Indonesia",
+          "value": 4
+        },
+        {
+          "geo_code": "MD",
+          "geo_name": "Moldova",
+          "value": 0
+        },
+        {
+          "geo_code": "NO",
+          "geo_name": "Norway",
+          "value": 0
+        },
+        {
+          "geo_code": "EE",
+          "geo_name": "Estonia",
+          "value": 0
+        },
+        {
+          "geo_code": "LI",
+          "geo_name": "Liechtenstein",
+          "value": 0
+        },
+        {
+          "geo_code": "SJ",
+          "geo_name": "Svalbard & Jan Mayen",
+          "value": 0
+        },
+        {
+          "geo_code": "JO",
+          "geo_name": "Jordan",
+          "value": 0
+        },
+        {
+          "geo_code": "KR",
+          "geo_name": "South Korea",
+          "value": 3
+        },
+        {
+          "geo_code": "FI",
+          "geo_name": "Finland",
+          "value": 0
+        },
+        {
+          "geo_code": "GR",
+          "geo_name": "Greece",
+          "value": 3
+        },
+        {
+          "geo_code": "AT",
+          "geo_name": "Austria",
+          "value": 3
+        },
+        {
+          "geo_code": "DE",
+          "geo_name": "Germany",
+          "value": 3
+        },
+        {
+          "geo_code": "LV",
+          "geo_name": "Latvia",
+          "value": 0
+        },
+        {
+          "geo_code": "LT",
+          "geo_name": "Lithuania",
+          "value": 0
+        },
+        {
+          "geo_code": "GE",
+          "geo_name": "Georgia",
+          "value": 0
+        },
+        {
+          "geo_code": "SI",
+          "geo_name": "Slovenia",
+          "value": 0
+        },
+        {
+          "geo_code": "AM",
+          "geo_name": "Armenia",
+          "value": 0
+        },
+        {
+          "geo_code": "MR",
+          "geo_name": "Mauritania",
+          "value": 0
+        },
+        {
+          "geo_code": "DZ",
+          "geo_name": "Algeria",
+          "value": 0
+        },
+        {
+          "geo_code": "PS",
+          "geo_name": "Palestine",
+          "value": 0
+        },
+        {
+          "geo_code": "EG",
+          "geo_name": "Egypt",
+          "value": 3
+        },
+        {
+          "geo_code": "IL",
+          "geo_name": "Israel",
+          "value": 0
+        },
+        {
+          "geo_code": "TH",
+          "geo_name": "Thailand",
+          "value": 2
+        },
+        {
+          "geo_code": "HR",
+          "geo_name": "Croatia",
+          "value": 0
+        },
+        {
+          "geo_code": "SD",
+          "geo_name": "Sudan",
+          "value": 0
+        },
+        {
+          "geo_code": "RS",
+          "geo_name": "Serbia",
+          "value": 0
+        },
+        {
+          "geo_code": "BA",
+          "geo_name": "Bosnia & Herzegovina",
+          "value": 0
+        },
+        {
+          "geo_code": "CZ",
+          "geo_name": "Czechia",
+          "value": 0
+        },
+        {
+          "geo_code": "ME",
+          "geo_name": "Montenegro",
+          "value": 0
+        },
+        {
+          "geo_code": "AZ",
+          "geo_name": "Azerbaijan",
+          "value": 0
+        },
+        {
+          "geo_code": "SA",
+          "geo_name": "Saudi Arabia",
+          "value": 2
+        },
+        {
+          "geo_code": "VN",
+          "geo_name": "Vietnam",
+          "value": 2
+        },
+        {
+          "geo_code": "BG",
+          "geo_name": "Bulgaria",
+          "value": 0
+        },
+        {
+          "geo_code": "UZ",
+          "geo_name": "Uzbekistan",
+          "value": 0
+        },
+        {
+          "geo_code": "HU",
+          "geo_name": "Hungary",
+          "value": 0
+        },
+        {
+          "geo_code": "IQ",
+          "geo_name": "Iraq",
+          "value": 0
+        },
+        {
+          "geo_code": "CN",
+          "geo_name": "China",
+          "value": 0
+        },
+        {
+          "geo_code": "SK",
+          "geo_name": "Slovakia",
+          "value": 0
+        },
+        {
+          "geo_code": "TW",
+          "geo_name": "Taiwan",
+          "value": 1
+        },
+        {
+          "geo_code": "LY",
+          "geo_name": "Libya",
+          "value": 0
+        },
+        {
+          "geo_code": "PL",
+          "geo_name": "Poland",
+          "value": 1
+        },
+        {
+          "geo_code": "YE",
+          "geo_name": "Yemen",
+          "value": 0
+        },
+        {
+          "geo_code": "SY",
+          "geo_name": "Syria",
+          "value": 0
+        },
+        {
+          "geo_code": "KG",
+          "geo_name": "Kyrgyzstan",
+          "value": 0
+        },
+        {
+          "geo_code": "TR",
+          "geo_name": "Türkiye",
+          "value": 1
+        },
+        {
+          "geo_code": "KZ",
+          "geo_name": "Kazakhstan",
+          "value": 0
+        },
+        {
+          "geo_code": "RU",
+          "geo_name": "Russia",
+          "value": 1
+        },
+        {
+          "geo_code": "TJ",
+          "geo_name": "Tajikistan",
+          "value": 0
+        },
+        {
+          "geo_code": "UA",
+          "geo_name": "Ukraine",
+          "value": 0
+        },
+        {
+          "geo_code": "IR",
+          "geo_name": "Iran",
+          "value": 0
+        },
+        {
+          "geo_code": "BY",
+          "geo_name": "Belarus",
+          "value": 0
+        },
+        {
+          "geo_code": "JP",
+          "geo_name": "Japan",
+          "value": 1
+        },
+        {
+          "geo_code": "TM",
+          "geo_name": "Turkmenistan",
+          "value": 0
+        },
+        {
+          "geo_code": "TK",
+          "geo_name": "Tokelau",
+          "value": 0
+        },
+        {
+          "geo_code": "VA",
+          "geo_name": "Vatican City",
+          "value": 0
+        },
+        {
+          "geo_code": "UM",
+          "geo_name": "U.S. Outlying Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "GS",
+          "geo_name": "South Georgia & South Sandwich Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "TF",
+          "geo_name": "French Southern Territories",
+          "value": 0
+        },
+        {
+          "geo_code": "AQ",
+          "geo_name": "Antarctica",
+          "value": 0
+        },
+        {
+          "geo_code": "WF",
+          "geo_name": "Wallis & Futuna",
+          "value": 0
+        },
+        {
+          "geo_code": "HM",
+          "geo_name": "Heard & McDonald Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "PN",
+          "geo_name": "Pitcairn Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "CC",
+          "geo_name": "Cocos (Keeling) Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "NU",
+          "geo_name": "Niue",
+          "value": 0
+        },
+        {
+          "geo_code": "BV",
+          "geo_name": "Bouvet Island",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "related_topics": [
+    {
+      "keyword": "social",
+      "items": []
+    }
+  ],
+  "related_queries": [
+    {
+      "keyword": "social",
+      "items": [
+        {
+          "query": "segurança social direta",
+          "value": 98150,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=seguran%C3%A7a+social+direta&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "rockstar social",
+          "value": 46400,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=rockstar+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "registro social de hogares",
+          "value": 39950,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=registro+social+de+hogares&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "rockstar social club",
+          "value": 34300,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=rockstar+social+club&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social media manager",
+          "value": 19100,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=social+media+manager&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social distancing",
+          "value": 18800,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=social+distancing&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "gta social club",
+          "value": 18300,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=gta+social+club&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "segurança social directa",
+          "value": 17500,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=seguran%C3%A7a+social+directa&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social blade",
+          "value": 16900,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=social+blade&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "seguranca social direta",
+          "value": 16150,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=seguranca+social+direta&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "seguridad social sede electronica",
+          "value": 16100,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=seguridad+social+sede+electronica&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social security office near me",
+          "value": 14200,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=social+security+office+near+me&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "cita seguridad social",
+          "value": 11850,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=cita+seguridad+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "prosperidad social",
+          "value": 11800,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=prosperidad+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social media marketing",
+          "value": 11400,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=social+media+marketing&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social networking,lifestyle_",
+          "value": 11100,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=social+networking,lifestyle_&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "ficha de proteccion social",
+          "value": 10700,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=ficha+de+proteccion+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "conectividade social icp",
+          "value": 10250,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=conectividade+social+icp&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social networking,lifestyle_dating",
+          "value": 9600,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=social+networking,lifestyle_dating&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "cita previa seguridad social",
+          "value": 9400,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=cita+previa+seguridad+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social add world",
+          "value": 8500,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=social+add+world&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "punch bowl social",
+          "value": 7650,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=punch+bowl+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social security login",
+          "value": 6800,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=social+security+login&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social media icons",
+          "value": 6650,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=social+media+icons&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social media",
+          "value": 3700,
+          "formatted_value": "+3,700%",
+          "link": "/trends/explore?q=social+media&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social security",
+          "value": 100,
+          "formatted_value": "100",
+          "link": "/trends/explore?q=social+security&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "the social",
+          "value": 67,
+          "formatted_value": "67",
+          "link": "/trends/explore?q=the+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social media",
+          "value": 62,
+          "formatted_value": "62",
+          "link": "/trends/explore?q=social+media&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "seguridad social",
+          "value": 37,
+          "formatted_value": "37",
+          "link": "/trends/explore?q=seguridad+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social club",
+          "value": 23,
+          "formatted_value": "23",
+          "link": "/trends/explore?q=social+club&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social work",
+          "value": 21,
+          "formatted_value": "21",
+          "link": "/trends/explore?q=social+work&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social security office",
+          "value": 18,
+          "formatted_value": "18",
+          "link": "/trends/explore?q=social+security+office&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "seguro social",
+          "value": 16,
+          "formatted_value": "16",
+          "link": "/trends/explore?q=seguro+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social services",
+          "value": 15,
+          "formatted_value": "15",
+          "link": "/trends/explore?q=social+services&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "segurança social",
+          "value": 15,
+          "formatted_value": "15",
+          "link": "/trends/explore?q=seguran%C3%A7a+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social science",
+          "value": 13,
+          "formatted_value": "13",
+          "link": "/trends/explore?q=social+science&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social network",
+          "value": 11,
+          "formatted_value": "11",
+          "link": "/trends/explore?q=social+network&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social studies",
+          "value": 10,
+          "formatted_value": "10",
+          "link": "/trends/explore?q=social+studies&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "previdencia social",
+          "value": 10,
+          "formatted_value": "10",
+          "link": "/trends/explore?q=previdencia+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "living social",
+          "value": 9,
+          "formatted_value": "9",
+          "link": "/trends/explore?q=living+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social security number",
+          "value": 9,
+          "formatted_value": "9",
+          "link": "/trends/explore?q=social+security+number&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social worker",
+          "value": 9,
+          "formatted_value": "9",
+          "link": "/trends/explore?q=social+worker&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social security card",
+          "value": 8,
+          "formatted_value": "8",
+          "link": "/trends/explore?q=social+security+card&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "segurança social direta",
+          "value": 7,
+          "formatted_value": "7",
+          "link": "/trends/explore?q=seguran%C3%A7a+social+direta&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "caja social",
+          "value": 7,
+          "formatted_value": "7",
+          "link": "/trends/explore?q=caja+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "my social security",
+          "value": 6,
+          "formatted_value": "6",
+          "link": "/trends/explore?q=my+social+security&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social blade",
+          "value": 6,
+          "formatted_value": "6",
+          "link": "/trends/explore?q=social+blade&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "social security benefits",
+          "value": 6,
+          "formatted_value": "6",
+          "link": "/trends/explore?q=social+security+benefits&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "rockstar social",
+          "value": 6,
+          "formatted_value": "6",
+          "link": "/trends/explore?q=rockstar+social&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "rockstar social club",
+          "value": 6,
+          "formatted_value": "6",
+          "link": "/trends/explore?q=rockstar+social+club&date=2004-01-01+2023-12-31"
+        }
+      ]
+    }
+  ]
+}

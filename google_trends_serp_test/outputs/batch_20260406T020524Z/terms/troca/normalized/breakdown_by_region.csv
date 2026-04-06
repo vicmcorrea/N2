@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+BR,Brazil,100,troca
+PT,Portugal,33,troca
+MZ,Mozambique,27,troca
+AO,Angola,0,troca
+CV,Cape Verde,0,troca
+ST,São Tomé & Príncipe,0,troca
+GW,Guinea-Bissau,0,troca
+TL,Timor-Leste,0,troca
+MX,Mexico,4,troca
+PY,Paraguay,0,troca
+BO,Bolivia,0,troca
+NC,New Caledonia,0,troca
+GF,French Guiana,0,troca
+LU,Luxembourg,0,troca
+UY,Uruguay,0,troca
+BQ,Caribbean Netherlands,0,troca
+GT,Guatemala,0,troca
+PF,French Polynesia,0,troca
+SV,El Salvador,0,troca
+HN,Honduras,0,troca
+PE,Peru,1,troca
+US,United States,1,troca
+AD,Andorra,0,troca
+NI,Nicaragua,0,troca
+JE,Jersey,0,troca
+CU,Cuba,0,troca
+SR,Suriname,0,troca
+BM,Bermuda,0,troca
+MO,Macao,0,troca
+SH,St. Helena,0,troca
+CL,Chile,0,troca
+AR,Argentina,0,troca
+DO,Dominican Republic,0,troca
+CR,Costa Rica,0,troca
+EC,Ecuador,0,troca
+CH,Switzerland,0,troca
+ES,Spain,0,troca
+HT,Haiti,0,troca
+IT,Italy,0,troca
+PA,Panama,0,troca
+CW,Curaçao,0,troca
+CO,Colombia,0,troca
+IE,Ireland,0,troca
+BZ,Belize,0,troca
+NA,Namibia,0,troca
+GB,United Kingdom,0,troca
+VE,Venezuela,0,troca
+GY,Guyana,0,troca
+PR,Puerto Rico,0,troca
+RE,Réunion,0,troca
+BE,Belgium,0,troca
+DE,Germany,0,troca
+FR,France,0,troca
+GU,Guam,0,troca
+GP,Guadeloupe,0,troca
+MT,Malta,0,troca
+JP,Japan,0,troca
+SE,Sweden,0,troca
+BS,Bahamas,0,troca
+IS,Iceland,0,troca
+SN,Senegal,0,troca
+LA,Laos,0,troca
+AL,Albania,0,troca
+LB,Lebanon,0,troca
+MQ,Martinique,0,troca
+TT,Trinidad & Tobago,0,troca
+CA,Canada,0,troca
+KR,South Korea,0,troca
+NL,Netherlands,0,troca
+AE,United Arab Emirates,0,troca
+NO,Norway,0,troca
+QA,Qatar,0,troca
+AF,Afghanistan,0,troca
+RO,Romania,0,troca
+NZ,New Zealand,0,troca
+ZA,South Africa,0,troca
+MA,Morocco,0,troca
+MK,North Macedonia,0,troca
+ZW,Zimbabwe,0,troca
+GH,Ghana,0,troca
+KE,Kenya,0,troca
+ZM,Zambia,0,troca
+MY,Malaysia,0,troca
+TZ,Tanzania,0,troca
+IN,India,0,troca
+VN,Vietnam,0,troca
+AU,Australia,0,troca
+DK,Denmark,0,troca
+TN,Tunisia,0,troca
+AT,Austria,0,troca
+GR,Greece,0,troca
+CD,Congo - Kinshasa,0,troca
+PS,Palestine,0,troca
+MN,Mongolia,0,troca
+KH,Cambodia,0,troca
+SD,Sudan,0,troca
+LY,Libya,0,troca
+ET,Ethiopia,0,troca
+IL,Israel,0,troca
+SG,Singapore,0,troca
+MU,Mauritius,0,troca
+RS,Serbia,0,troca
+DZ,Algeria,0,troca
+EE,Estonia,0,troca
+CZ,Czechia,0,troca
+IQ,Iraq,0,troca
+HK,Hong Kong,0,troca
+CN,China,0,troca
+PL,Poland,0,troca
+HR,Croatia,0,troca
+PH,Philippines,0,troca
+AM,Armenia,0,troca
+SI,Slovenia,0,troca
+TW,Taiwan,0,troca
+MD,Moldova,0,troca
+NP,Nepal,0,troca
+EG,Egypt,0,troca
+BG,Bulgaria,0,troca
+HU,Hungary,0,troca
+GE,Georgia,0,troca
+TH,Thailand,0,troca
+UZ,Uzbekistan,0,troca
+OM,Oman,0,troca
+LK,Sri Lanka,0,troca
+NG,Nigeria,0,troca
+ID,Indonesia,0,troca
+BD,Bangladesh,0,troca
+SK,Slovakia,0,troca
+FI,Finland,0,troca
+LV,Latvia,0,troca
+UG,Uganda,0,troca
+RU,Russia,0,troca
+KG,Kyrgyzstan,0,troca
+PK,Pakistan,0,troca
+LT,Lithuania,0,troca
+BA,Bosnia & Herzegovina,0,troca
+AZ,Azerbaijan,0,troca
+KZ,Kazakhstan,0,troca
+BY,Belarus,0,troca
+UA,Ukraine,0,troca
+SA,Saudi Arabia,0,troca
+SY,Syria,0,troca
+JO,Jordan,0,troca
+KW,Kuwait,0,troca
+TR,Türkiye,0,troca
+IR,Iran,0,troca
+FO,Faroe Islands,0,troca
+AW,Aruba,0,troca
+ME,Montenegro,0,troca
+CM,Cameroon,0,troca
+MP,Northern Mariana Islands,0,troca
+CI,Côte d’Ivoire,0,troca
+MR,Mauritania,0,troca
+MS,Montserrat,0,troca
+ML,Mali,0,troca
+MH,Marshall Islands,0,troca
+MW,Malawi,0,troca
+MV,Maldives,0,troca
+YT,Mayotte,0,troca
+CC,Cocos (Keeling) Islands,0,troca
+CF,Central African Republic,0,troca
+NE,Niger,0,troca
+FM,Micronesia,0,troca
+MG,Madagascar,0,troca
+BW,Botswana,0,troca
+NU,Niue,0,troca
+BV,Bouvet Island,0,troca
+BT,Bhutan,0,troca
+MC,Monaco,0,troca
+NR,Nauru,0,troca
+BN,Brunei,0,troca
+MF,St. Martin,0,troca
+CG,Congo - Brazzaville,0,troca
+BB,Barbados,0,troca
+PN,Pitcairn Islands,0,troca
+CK,Cook Islands,0,troca
+LS,Lesotho,0,troca
+PW,Palau,0,troca
+PG,Papua New Guinea,0,troca
+LI,Liechtenstein,0,troca
+BL,St. Barthélemy,0,troca
+KP,North Korea,0,troca
+LC,St. Lucia,0,troca
+BH,Bahrain,0,troca
+KM,Comoros,0,troca
+CX,Christmas Island,0,troca
+KY,Cayman Islands,0,troca
+BF,Burkina Faso,0,troca
+BJ,Benin,0,troca
+KN,St. Kitts & Nevis,0,troca
+RW,Rwanda,0,troca
+KI,Kiribati,0,troca
+CY,Cyprus,0,troca
+BI,Burundi,0,troca
+JM,Jamaica,0,troca
+GS,South Georgia & South Sandwich Islands,0,troca
+DJ,Djibouti,0,troca
+SJ,Svalbard & Jan Mayen,0,troca
+SB,Solomon Islands,0,troca
+SL,Sierra Leone,0,troca
+DM,Dominica,0,troca
+SM,San Marino,0,troca
+SO,Somalia,0,troca
+PM,St. Pierre & Miquelon,0,troca
+IO,British Indian Ocean Territory,0,troca
+SS,South Sudan,0,troca
+IM,Isle of Man,0,troca
+AG,Antigua & Barbuda,0,troca
+HM,Heard & McDonald Islands,0,troca
+ER,Eritrea,0,troca
+TF,French Southern Territories,0,troca
+SZ,Eswatini,0,troca
+SX,Sint Maarten,0,troca
+SC,Seychelles,0,troca
+EH,Western Sahara,0,troca
+TC,Turks & Caicos Islands,0,troca
+TD,Chad,0,troca
+TG,Togo,0,troca
+GL,Greenland,0,troca
+TJ,Tajikistan,0,troca
+TK,Tokelau,0,troca
+TM,Turkmenistan,0,troca
+AQ,Antarctica,0,troca
+TO,Tonga,0,troca
+AS,American Samoa,0,troca
+GD,Grenada,0,troca
+GQ,Equatorial Guinea,0,troca
+TV,Tuvalu,0,troca
+GM,Gambia,0,troca
+FJ,Fiji,0,troca
+GN,Guinea,0,troca
+GI,Gibraltar,0,troca
+UM,U.S. Outlying Islands,0,troca
+GG,Guernsey,0,troca
+AX,Åland Islands,0,troca
+FK,Falkland Islands (Islas Malvinas),0,troca
+VA,Vatican City,0,troca
+VC,St. Vincent & Grenadines,0,troca
+AI,Anguilla,0,troca
+VG,British Virgin Islands,0,troca
+VI,U.S. Virgin Islands,0,troca
+GA,Gabon,0,troca
+VU,Vanuatu,0,troca
+WF,Wallis & Futuna,0,troca
+WS,Samoa,0,troca
+XK,Kosovo,0,troca
+YE,Yemen,0,troca
+LR,Liberia,0,troca
+NF,Norfolk Island,0,troca
+MM,Myanmar (Burma),0,troca

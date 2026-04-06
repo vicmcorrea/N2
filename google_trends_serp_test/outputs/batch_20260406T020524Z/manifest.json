@@ -1,0 +1,9 @@
+{
+  "query_markdown_path": "../docs/google_trends_search_terms.md",
+  "credentials_file": "../how-to-scrape-google-trends/SERP-API-CREDENTIALS.txt",
+  "date_from": "2004-01-01",
+  "date_to": "2023-12-31",
+  "geo_location": "BR",
+  "max_workers": 3,
+  "pause_seconds": 0.2
+}

@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+GT,Guatemala,100,típico
+PA,Panama,99,típico
+NI,Nicaragua,66,típico
+BO,Bolivia,65,típico
+EC,Ecuador,47,típico
+CR,Costa Rica,37,típico
+DO,Dominican Republic,36,típico
+CO,Colombia,32,típico
+ST,São Tomé & Príncipe,0,típico
+HN,Honduras,28,típico
+PE,Peru,27,típico
+SV,El Salvador,27,típico
+VE,Venezuela,22,típico
+MX,Mexico,21,típico
+CV,Cape Verde,0,típico
+PY,Paraguay,15,típico
+ES,Spain,15,típico
+PT,Portugal,13,típico
+CU,Cuba,0,típico
+BR,Brazil,12,típico
+CL,Chile,12,típico
+AO,Angola,0,típico
+PR,Puerto Rico,9,típico
+AD,Andorra,0,típico
+GQ,Equatorial Guinea,0,típico
+MZ,Mozambique,0,típico
+UY,Uruguay,5,típico
+AR,Argentina,4,típico
+AW,Aruba,0,típico
+CW,Curaçao,0,típico
+BZ,Belize,0,típico
+US,United States,0,típico
+MT,Malta,0,típico
+HT,Haiti,0,típico
+SH,St. Helena,0,típico
+MO,Macao,0,típico
+LU,Luxembourg,0,típico
+IS,Iceland,0,típico
+SN,Senegal,0,típico
+TT,Trinidad & Tobago,0,típico
+CH,Switzerland,0,típico
+JM,Jamaica,0,típico
+IE,Ireland,0,típico
+CZ,Czechia,0,típico
+DE,Germany,0,típico
+AT,Austria,0,típico
+BE,Belgium,0,típico
+MA,Morocco,0,típico
+IT,Italy,0,típico
+HU,Hungary,0,típico
+CA,Canada,0,típico
+NO,Norway,0,típico
+CY,Cyprus,0,típico
+BG,Bulgaria,0,típico
+FR,France,0,típico
+GB,United Kingdom,0,típico
+NL,Netherlands,0,típico
+HR,Croatia,0,típico
+GR,Greece,0,típico
+SE,Sweden,0,típico
+SI,Slovenia,0,típico
+AE,United Arab Emirates,0,típico
+DK,Denmark,0,típico
+KR,South Korea,0,típico
+SK,Slovakia,0,típico
+EG,Egypt,0,típico
+RO,Romania,0,típico
+VN,Vietnam,0,típico
+JO,Jordan,0,típico
+IN,India,0,típico
+BY,Belarus,0,típico
+IL,Israel,0,típico
+NZ,New Zealand,0,típico
+KE,Kenya,0,típico
+PL,Poland,0,típico
+DZ,Algeria,0,típico
+IQ,Iraq,0,típico
+BD,Bangladesh,0,típico
+FI,Finland,0,típico
+RU,Russia,0,típico
+RS,Serbia,0,típico
+AU,Australia,0,típico
+TH,Thailand,0,típico
+PH,Philippines,0,típico
+CN,China,0,típico
+SG,Singapore,0,típico
+JP,Japan,0,típico
+HK,Hong Kong,0,típico
+ID,Indonesia,0,típico
+PK,Pakistan,0,típico
+TW,Taiwan,0,típico
+ZA,South Africa,0,típico
+NG,Nigeria,0,típico
+UA,Ukraine,0,típico
+SA,Saudi Arabia,0,típico
+TR,Türkiye,0,típico
+MY,Malaysia,0,típico
+IR,Iran,0,típico
+LA,Laos,0,típico
+ZW,Zimbabwe,0,típico
+GY,Guyana,0,típico
+GU,Guam,0,típico
+GF,French Guiana,0,típico
+IM,Isle of Man,0,típico
+GL,Greenland,0,típico
+IO,British Indian Ocean Territory,0,típico
+GD,Grenada,0,típico
+GW,Guinea-Bissau,0,típico
+GM,Gambia,0,típico
+GP,Guadeloupe,0,típico
+GN,Guinea,0,típico
+GI,Gibraltar,0,típico
+GH,Ghana,0,típico
+JE,Jersey,0,típico
+GG,Guernsey,0,típico
+GE,Georgia,0,típico
+KZ,Kazakhstan,0,típico
+GA,Gabon,0,típico
+KG,Kyrgyzstan,0,típico
+KH,Cambodia,0,típico
+KI,Kiribati,0,típico
+KN,St. Kitts & Nevis,0,típico
+FM,Micronesia,0,típico
+KW,Kuwait,0,típico
+FO,Faroe Islands,0,típico
+FK,Falkland Islands (Islas Malvinas),0,típico
+LB,Lebanon,0,típico
+LY,Libya,0,típico
+LC,St. Lucia,0,típico
+LI,Liechtenstein,0,típico
+LK,Sri Lanka,0,típico
+LS,Lesotho,0,típico
+LT,Lithuania,0,típico
+FJ,Fiji,0,típico
+LV,Latvia,0,típico
+ET,Ethiopia,0,típico
+MF,St. Martin,0,típico
+EE,Estonia,0,típico
+MC,Monaco,0,típico
+MD,Moldova,0,típico
+MG,Madagascar,0,típico
+MV,Maldives,0,típico
+EH,Western Sahara,0,típico
+MH,Marshall Islands,0,típico
+MK,North Macedonia,0,típico
+ML,Mali,0,típico
+ER,Eritrea,0,típico
+MM,Myanmar (Burma),0,típico
+ME,Montenegro,0,típico
+MN,Mongolia,0,típico
+MP,Northern Mariana Islands,0,típico
+DM,Dominica,0,típico
+MR,Mauritania,0,típico
+MS,Montserrat,0,típico
+MQ,Martinique,0,típico
+MU,Mauritius,0,típico
+MW,Malawi,0,típico
+DJ,Djibouti,0,típico
+YT,Mayotte,0,típico
+NA,Namibia,0,típico
+NC,New Caledonia,0,típico
+NE,Niger,0,típico
+NF,Norfolk Island,0,típico
+KY,Cayman Islands,0,típico
+CX,Christmas Island,0,típico
+NU,Niue,0,típico
+KM,Comoros,0,típico
+CK,Cook Islands,0,típico
+NP,Nepal,0,típico
+NR,Nauru,0,típico
+CG,Congo - Brazzaville,0,típico
+OM,Oman,0,típico
+CD,Congo - Kinshasa,0,típico
+CM,Cameroon,0,típico
+HM,Heard & McDonald Islands,0,típico
+CI,Côte d’Ivoire,0,típico
+CC,Cocos (Keeling) Islands,0,típico
+PW,Palau,0,típico
+PG,Papua New Guinea,0,típico
+CF,Central African Republic,0,típico
+BW,Botswana,0,típico
+KP,North Korea,0,típico
+BV,Bouvet Island,0,típico
+BT,Bhutan,0,típico
+PS,Palestine,0,típico
+PF,French Polynesia,0,típico
+QA,Qatar,0,típico
+RE,Réunion,0,típico
+BN,Brunei,0,típico
+BB,Barbados,0,típico
+RW,Rwanda,0,típico
+BM,Bermuda,0,típico
+SD,Sudan,0,típico
+BL,St. Barthélemy,0,típico
+BA,Bosnia & Herzegovina,0,típico
+GS,South Georgia & South Sandwich Islands,0,típico
+BS,Bahamas,0,típico
+SJ,Svalbard & Jan Mayen,0,típico
+SB,Solomon Islands,0,típico
+SL,Sierra Leone,0,típico
+BH,Bahrain,0,típico
+SM,San Marino,0,típico
+SO,Somalia,0,típico
+PM,St. Pierre & Miquelon,0,típico
+BF,Burkina Faso,0,típico
+SS,South Sudan,0,típico
+BQ,Caribbean Netherlands,0,típico
+SR,Suriname,0,típico
+BJ,Benin,0,típico
+BI,Burundi,0,típico
+AZ,Azerbaijan,0,típico
+SZ,Eswatini,0,típico
+SX,Sint Maarten,0,típico
+SC,Seychelles,0,típico
+SY,Syria,0,típico
+TC,Turks & Caicos Islands,0,típico
+TD,Chad,0,típico
+TG,Togo,0,típico
+AG,Antigua & Barbuda,0,típico
+TJ,Tajikistan,0,típico
+TK,Tokelau,0,típico
+TM,Turkmenistan,0,típico
+TL,Timor-Leste,0,típico
+TO,Tonga,0,típico
+TF,French Southern Territories,0,típico
+TN,Tunisia,0,típico
+AQ,Antarctica,0,típico
+TV,Tuvalu,0,típico
+AS,American Samoa,0,típico
+TZ,Tanzania,0,típico
+UG,Uganda,0,típico
+AM,Armenia,0,típico
+UM,U.S. Outlying Islands,0,típico
+AL,Albania,0,típico
+AX,Åland Islands,0,típico
+UZ,Uzbekistan,0,típico
+VA,Vatican City,0,típico
+VC,St. Vincent & Grenadines,0,típico
+AI,Anguilla,0,típico
+VG,British Virgin Islands,0,típico
+VI,U.S. Virgin Islands,0,típico
+AF,Afghanistan,0,típico
+VU,Vanuatu,0,típico
+WF,Wallis & Futuna,0,típico
+WS,Samoa,0,típico
+XK,Kosovo,0,típico
+YE,Yemen,0,típico
+LR,Liberia,0,típico
+ZM,Zambia,0,típico
+PN,Pitcairn Islands,0,típico

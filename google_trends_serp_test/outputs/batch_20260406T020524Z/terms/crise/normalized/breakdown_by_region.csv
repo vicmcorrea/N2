@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+TD,Chad,0,crise
+CF,Central African Republic,0,crise
+BF,Burkina Faso,100,crise
+BI,Burundi,0,crise
+KM,Comoros,0,crise
+CM,Cameroon,92,crise
+GA,Gabon,92,crise
+HT,Haiti,87,crise
+CI,Côte d’Ivoire,86,crise
+TG,Togo,0,crise
+ST,São Tomé & Príncipe,0,crise
+MG,Madagascar,70,crise
+AO,Angola,69,crise
+NE,Niger,0,crise
+CG,Congo - Brazzaville,0,crise
+ML,Mali,64,crise
+GW,Guinea-Bissau,0,crise
+MZ,Mozambique,59,crise
+SN,Senegal,58,crise
+BJ,Benin,57,crise
+BL,St. Barthélemy,0,crise
+YT,Mayotte,0,crise
+GP,Guadeloupe,0,crise
+FR,France,47,crise
+RE,Réunion,47,crise
+MQ,Martinique,45,crise
+GN,Guinea,0,crise
+DJ,Djibouti,0,crise
+BR,Brazil,43,crise
+GF,French Guiana,0,crise
+CD,Congo - Kinshasa,41,crise
+NC,New Caledonia,0,crise
+CV,Cape Verde,0,crise
+PF,French Polynesia,0,crise
+PM,St. Pierre & Miquelon,0,crise
+MF,St. Martin,0,crise
+MC,Monaco,0,crise
+MA,Morocco,23,crise
+PT,Portugal,21,crise
+TN,Tunisia,20,crise
+LU,Luxembourg,19,crise
+MR,Mauritania,0,crise
+BE,Belgium,16,crise
+DZ,Algeria,14,crise
+MU,Mauritius,0,crise
+CH,Switzerland,10,crise
+GQ,Equatorial Guinea,0,crise
+VU,Vanuatu,0,crise
+EH,Western Sahara,0,crise
+LB,Lebanon,8,crise
+RW,Rwanda,0,crise
+CA,Canada,7,crise
+TL,Timor-Leste,0,crise
+SX,Sint Maarten,0,crise
+SL,Sierra Leone,0,crise
+AD,Andorra,0,crise
+ER,Eritrea,0,crise
+GM,Gambia,0,crise
+SH,St. Helena,0,crise
+TO,Tonga,0,crise
+SC,Seychelles,0,crise
+TC,Turks & Caicos Islands,0,crise
+ET,Ethiopia,0,crise
+LR,Liberia,0,crise
+SS,South Sudan,0,crise
+PY,Paraguay,0,crise
+KH,Cambodia,0,crise
+NA,Namibia,0,crise
+BO,Bolivia,0,crise
+DM,Dominica,0,crise
+UG,Uganda,0,crise
+MO,Macao,0,crise
+GH,Ghana,0,crise
+MT,Malta,0,crise
+SR,Suriname,0,crise
+ES,Spain,0,crise
+QA,Qatar,0,crise
+CU,Cuba,0,crise
+SO,Somalia,0,crise
+AE,United Arab Emirates,0,crise
+BM,Bermuda,0,crise
+LI,Liechtenstein,0,crise
+GB,United Kingdom,0,crise
+IE,Ireland,0,crise
+ZM,Zambia,0,crise
+IS,Iceland,0,crise
+LA,Laos,0,crise
+LC,St. Lucia,0,crise
+IT,Italy,0,crise
+GI,Gibraltar,0,crise
+VC,St. Vincent & Grenadines,0,crise
+VI,U.S. Virgin Islands,0,crise
+GD,Grenada,0,crise
+KE,Kenya,0,crise
+KY,Cayman Islands,0,crise
+GG,Guernsey,0,crise
+DO,Dominican Republic,0,crise
+BS,Bahamas,0,crise
+CY,Cyprus,0,crise
+MV,Maldives,0,crise
+TZ,Tanzania,0,crise
+IL,Israel,0,crise
+NG,Nigeria,0,crise
+DE,Germany,0,crise
+AL,Albania,0,crise
+AW,Aruba,0,crise
+JE,Jersey,0,crise
+GR,Greece,0,crise
+BB,Barbados,0,crise
+MD,Moldova,0,crise
+NL,Netherlands,0,crise
+BH,Bahrain,0,crise
+CW,Curaçao,0,crise
+BW,Botswana,0,crise
+MW,Malawi,0,crise
+UY,Uruguay,0,crise
+AG,Antigua & Barbuda,0,crise
+JM,Jamaica,0,crise
+GY,Guyana,0,crise
+US,United States,0,crise
+LY,Libya,0,crise
+NO,Norway,0,crise
+ZA,South Africa,0,crise
+LS,Lesotho,0,crise
+EE,Estonia,0,crise
+AF,Afghanistan,0,crise
+RO,Romania,0,crise
+SG,Singapore,0,crise
+EG,Egypt,0,crise
+BD,Bangladesh,0,crise
+HK,Hong Kong,0,crise
+SZ,Eswatini,0,crise
+ZW,Zimbabwe,0,crise
+XK,Kosovo,0,crise
+NZ,New Zealand,0,crise
+PS,Palestine,0,crise
+ME,Montenegro,0,crise
+SE,Sweden,0,crise
+AU,Australia,0,crise
+AT,Austria,0,crise
+FJ,Fiji,0,crise
+KW,Kuwait,0,crise
+PA,Panama,0,crise
+AM,Armenia,0,crise
+BZ,Belize,0,crise
+CR,Costa Rica,0,crise
+CZ,Czechia,0,crise
+SD,Sudan,0,crise
+ID,Indonesia,0,crise
+LK,Sri Lanka,0,crise
+DK,Denmark,0,crise
+OM,Oman,0,crise
+KR,South Korea,0,crise
+BG,Bulgaria,0,crise
+CN,China,0,crise
+SY,Syria,0,crise
+MM,Myanmar (Burma),0,crise
+MK,North Macedonia,0,crise
+LT,Lithuania,0,crise
+SI,Slovenia,0,crise
+TT,Trinidad & Tobago,0,crise
+NP,Nepal,0,crise
+NI,Nicaragua,0,crise
+JO,Jordan,0,crise
+HR,Croatia,0,crise
+LV,Latvia,0,crise
+FI,Finland,0,crise
+AR,Argentina,0,crise
+HU,Hungary,0,crise
+PK,Pakistan,0,crise
+PG,Papua New Guinea,0,crise
+CL,Chile,0,crise
+GE,Georgia,0,crise
+RS,Serbia,0,crise
+HN,Honduras,0,crise
+SV,El Salvador,0,crise
+JP,Japan,0,crise
+IN,India,0,crise
+PR,Puerto Rico,0,crise
+BA,Bosnia & Herzegovina,0,crise
+MN,Mongolia,0,crise
+SA,Saudi Arabia,0,crise
+YE,Yemen,0,crise
+SK,Slovakia,0,crise
+IQ,Iraq,0,crise
+VN,Vietnam,0,crise
+TH,Thailand,0,crise
+PE,Peru,0,crise
+EC,Ecuador,0,crise
+RU,Russia,0,crise
+TM,Turkmenistan,0,crise
+CO,Colombia,0,crise
+TR,Türkiye,0,crise
+MY,Malaysia,0,crise
+BN,Brunei,0,crise
+MX,Mexico,0,crise
+AZ,Azerbaijan,0,crise
+PH,Philippines,0,crise
+GT,Guatemala,0,crise
+VE,Venezuela,0,crise
+PL,Poland,0,crise
+TW,Taiwan,0,crise
+BY,Belarus,0,crise
+UA,Ukraine,0,crise
+IR,Iran,0,crise
+KG,Kyrgyzstan,0,crise
+UZ,Uzbekistan,0,crise
+KZ,Kazakhstan,0,crise
+SJ,Svalbard & Jan Mayen,0,crise
+NF,Norfolk Island,0,crise
+BT,Bhutan,0,crise
+BV,Bouvet Island,0,crise
+MS,Montserrat,0,crise
+KP,North Korea,0,crise
+MH,Marshall Islands,0,crise
+TF,French Southern Territories,0,crise
+AQ,Antarctica,0,crise
+AS,American Samoa,0,crise
+BQ,Caribbean Netherlands,0,crise
+TJ,Tajikistan,0,crise
+TK,Tokelau,0,crise
+PW,Palau,0,crise
+MP,Northern Mariana Islands,0,crise
+PN,Pitcairn Islands,0,crise
+FK,Falkland Islands (Islas Malvinas),0,crise
+HM,Heard & McDonald Islands,0,crise
+CC,Cocos (Keeling) Islands,0,crise
+TV,Tuvalu,0,crise
+CX,Christmas Island,0,crise
+KI,Kiribati,0,crise
+AX,Åland Islands,0,crise
+SM,San Marino,0,crise
+UM,U.S. Outlying Islands,0,crise
+GU,Guam,0,crise
+FO,Faroe Islands,0,crise
+GS,South Georgia & South Sandwich Islands,0,crise
+VA,Vatican City,0,crise
+FM,Micronesia,0,crise
+SB,Solomon Islands,0,crise
+VG,British Virgin Islands,0,crise
+GL,Greenland,0,crise
+IM,Isle of Man,0,crise
+AI,Anguilla,0,crise
+WF,Wallis & Futuna,0,crise
+WS,Samoa,0,crise
+KN,St. Kitts & Nevis,0,crise
+NU,Niue,0,crise
+NR,Nauru,0,crise
+IO,British Indian Ocean Territory,0,crise
+CK,Cook Islands,0,crise

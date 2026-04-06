@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+PT,Portugal,100,social
+CR,Costa Rica,92,social
+ZW,Zimbabwe,0,social
+CO,Colombia,43,social
+ST,São Tomé & Príncipe,0,social
+PA,Panama,38,social
+ES,Spain,38,social
+SZ,Eswatini,0,social
+BZ,Belize,0,social
+VE,Venezuela,35,social
+MW,Malawi,0,social
+LS,Lesotho,0,social
+JM,Jamaica,0,social
+CL,Chile,32,social
+BW,Botswana,0,social
+PH,Philippines,32,social
+AO,Angola,0,social
+SL,Sierra Leone,0,social
+MS,Montserrat,0,social
+AS,American Samoa,0,social
+SB,Solomon Islands,0,social
+KI,Kiribati,0,social
+NA,Namibia,0,social
+EC,Ecuador,30,social
+AR,Argentina,30,social
+SV,El Salvador,29,social
+GY,Guyana,0,social
+IE,Ireland,29,social
+ZM,Zambia,0,social
+NP,Nepal,28,social
+MX,Mexico,27,social
+CV,Cape Verde,0,social
+LR,Liberia,0,social
+FM,Micronesia,0,social
+DM,Dominica,0,social
+KN,St. Kitts & Nevis,0,social
+GT,Guatemala,25,social
+PR,Puerto Rico,25,social
+MZ,Mozambique,0,social
+BR,Brazil,25,social
+RW,Rwanda,0,social
+VC,St. Vincent & Grenadines,0,social
+US,United States,25,social
+AG,Antigua & Barbuda,0,social
+ET,Ethiopia,0,social
+GH,Ghana,24,social
+GW,Guinea-Bissau,0,social
+BT,Bhutan,0,social
+FJ,Fiji,0,social
+JE,Jersey,0,social
+PG,Papua New Guinea,0,social
+GD,Grenada,0,social
+GU,Guam,0,social
+NG,Nigeria,23,social
+VG,British Virgin Islands,0,social
+WS,Samoa,0,social
+MP,Northern Mariana Islands,0,social
+MH,Marshall Islands,0,social
+TT,Trinidad & Tobago,0,social
+LC,St. Lucia,0,social
+UG,Uganda,0,social
+ZA,South Africa,22,social
+HN,Honduras,0,social
+VI,U.S. Virgin Islands,0,social
+KE,Kenya,22,social
+AI,Anguilla,0,social
+NI,Nicaragua,0,social
+ER,Eritrea,0,social
+BB,Barbados,0,social
+SS,South Sudan,0,social
+PW,Palau,0,social
+BO,Bolivia,20,social
+TV,Tuvalu,0,social
+PE,Peru,19,social
+CX,Christmas Island,0,social
+VU,Vanuatu,0,social
+GG,Guernsey,0,social
+PY,Paraguay,0,social
+CU,Cuba,0,social
+TZ,Tanzania,0,social
+DO,Dominican Republic,19,social
+MT,Malta,0,social
+GQ,Equatorial Guinea,0,social
+GF,French Guiana,0,social
+GB,United Kingdom,18,social
+TO,Tonga,0,social
+SG,Singapore,18,social
+SO,Somalia,0,social
+YT,Mayotte,0,social
+TL,Timor-Leste,0,social
+BL,St. Barthélemy,0,social
+CA,Canada,17,social
+BS,Bahamas,0,social
+GM,Gambia,0,social
+GP,Guadeloupe,0,social
+BM,Bermuda,0,social
+MU,Mauritius,0,social
+BI,Burundi,0,social
+CM,Cameroon,0,social
+MQ,Martinique,0,social
+GI,Gibraltar,0,social
+AU,Australia,15,social
+UY,Uruguay,14,social
+NF,Norfolk Island,0,social
+KY,Cayman Islands,0,social
+RE,Réunion,0,social
+PK,Pakistan,14,social
+IM,Isle of Man,0,social
+FK,Falkland Islands (Islas Malvinas),0,social
+TC,Turks & Caicos Islands,0,social
+NZ,New Zealand,13,social
+BJ,Benin,0,social
+MV,Maldives,0,social
+AD,Andorra,0,social
+SH,St. Helena,0,social
+IN,India,13,social
+HT,Haiti,0,social
+TG,Togo,0,social
+IO,British Indian Ocean Territory,0,social
+GA,Gabon,0,social
+MF,St. Martin,0,social
+SX,Sint Maarten,0,social
+SC,Seychelles,0,social
+FR,France,11,social
+CK,Cook Islands,0,social
+SN,Senegal,0,social
+LU,Luxembourg,0,social
+MG,Madagascar,0,social
+BN,Brunei,0,social
+CF,Central African Republic,0,social
+HK,Hong Kong,10,social
+LK,Sri Lanka,0,social
+BE,Belgium,10,social
+NE,Niger,0,social
+BD,Bangladesh,10,social
+AE,United Arab Emirates,10,social
+DJ,Djibouti,0,social
+NR,Nauru,0,social
+AW,Aruba,0,social
+LB,Lebanon,0,social
+CI,Côte d’Ivoire,0,social
+CW,Curaçao,0,social
+BF,Burkina Faso,0,social
+DK,Denmark,8,social
+NL,Netherlands,8,social
+MM,Myanmar (Burma),0,social
+CY,Cyprus,0,social
+CD,Congo - Kinshasa,0,social
+KP,North Korea,0,social
+MC,Monaco,0,social
+ML,Mali,0,social
+IS,Iceland,0,social
+BQ,Caribbean Netherlands,0,social
+CG,Congo - Brazzaville,0,social
+MY,Malaysia,7,social
+PF,French Polynesia,0,social
+NC,New Caledonia,0,social
+TD,Chad,0,social
+BH,Bahrain,0,social
+QA,Qatar,0,social
+PM,St. Pierre & Miquelon,0,social
+TN,Tunisia,0,social
+AF,Afghanistan,0,social
+KM,Comoros,0,social
+KH,Cambodia,0,social
+MO,Macao,0,social
+SR,Suriname,0,social
+FO,Faroe Islands,0,social
+AL,Albania,0,social
+OM,Oman,0,social
+GL,Greenland,0,social
+CH,Switzerland,5,social
+GN,Guinea,0,social
+RO,Romania,5,social
+MN,Mongolia,0,social
+SE,Sweden,5,social
+MA,Morocco,0,social
+XK,Kosovo,0,social
+AX,Åland Islands,0,social
+EH,Western Sahara,0,social
+MK,North Macedonia,0,social
+LA,Laos,0,social
+SM,San Marino,0,social
+IT,Italy,4,social
+KW,Kuwait,0,social
+ID,Indonesia,4,social
+MD,Moldova,0,social
+NO,Norway,0,social
+EE,Estonia,0,social
+LI,Liechtenstein,0,social
+SJ,Svalbard & Jan Mayen,0,social
+JO,Jordan,0,social
+KR,South Korea,3,social
+FI,Finland,0,social
+GR,Greece,3,social
+AT,Austria,3,social
+DE,Germany,3,social
+LV,Latvia,0,social
+LT,Lithuania,0,social
+GE,Georgia,0,social
+SI,Slovenia,0,social
+AM,Armenia,0,social
+MR,Mauritania,0,social
+DZ,Algeria,0,social
+PS,Palestine,0,social
+EG,Egypt,3,social
+IL,Israel,0,social
+TH,Thailand,2,social
+HR,Croatia,0,social
+SD,Sudan,0,social
+RS,Serbia,0,social
+BA,Bosnia & Herzegovina,0,social
+CZ,Czechia,0,social
+ME,Montenegro,0,social
+AZ,Azerbaijan,0,social
+SA,Saudi Arabia,2,social
+VN,Vietnam,2,social
+BG,Bulgaria,0,social
+UZ,Uzbekistan,0,social
+HU,Hungary,0,social
+IQ,Iraq,0,social
+CN,China,0,social
+SK,Slovakia,0,social
+TW,Taiwan,1,social
+LY,Libya,0,social
+PL,Poland,1,social
+YE,Yemen,0,social
+SY,Syria,0,social
+KG,Kyrgyzstan,0,social
+TR,Türkiye,1,social
+KZ,Kazakhstan,0,social
+RU,Russia,1,social
+TJ,Tajikistan,0,social
+UA,Ukraine,0,social
+IR,Iran,0,social
+BY,Belarus,0,social
+JP,Japan,1,social
+TM,Turkmenistan,0,social
+TK,Tokelau,0,social
+VA,Vatican City,0,social
+UM,U.S. Outlying Islands,0,social
+GS,South Georgia & South Sandwich Islands,0,social
+TF,French Southern Territories,0,social
+AQ,Antarctica,0,social
+WF,Wallis & Futuna,0,social
+HM,Heard & McDonald Islands,0,social
+PN,Pitcairn Islands,0,social
+CC,Cocos (Keeling) Islands,0,social
+NU,Niue,0,social
+BV,Bouvet Island,0,social

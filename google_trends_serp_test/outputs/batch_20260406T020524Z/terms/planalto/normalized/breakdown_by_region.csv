@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+BR,Brazil,100,planalto
+AO,Angola,0,planalto
+PT,Portugal,10,planalto
+MZ,Mozambique,0,planalto
+CV,Cape Verde,0,planalto
+GW,Guinea-Bissau,0,planalto
+TL,Timor-Leste,0,planalto
+UY,Uruguay,0,planalto
+PY,Paraguay,0,planalto
+GF,French Guiana,0,planalto
+GD,Grenada,0,planalto
+SH,St. Helena,0,planalto
+BO,Bolivia,0,planalto
+LU,Luxembourg,0,planalto
+AR,Argentina,0,planalto
+CU,Cuba,0,planalto
+HT,Haiti,0,planalto
+SR,Suriname,0,planalto
+MO,Macao,0,planalto
+ES,Spain,0,planalto
+GB,United Kingdom,0,planalto
+NA,Namibia,0,planalto
+DE,Germany,0,planalto
+CH,Switzerland,0,planalto
+US,United States,0,planalto
+HU,Hungary,0,planalto
+IE,Ireland,0,planalto
+PA,Panama,0,planalto
+CL,Chile,0,planalto
+PE,Peru,0,planalto
+IS,Iceland,0,planalto
+CA,Canada,0,planalto
+EC,Ecuador,0,planalto
+JP,Japan,0,planalto
+VE,Venezuela,0,planalto
+DO,Dominican Republic,0,planalto
+CR,Costa Rica,0,planalto
+CO,Colombia,0,planalto
+BE,Belgium,0,planalto
+NO,Norway,0,planalto
+SN,Senegal,0,planalto
+NI,Nicaragua,0,planalto
+NL,Netherlands,0,planalto
+HN,Honduras,0,planalto
+KH,Cambodia,0,planalto
+IT,Italy,0,planalto
+FR,France,0,planalto
+KR,South Korea,0,planalto
+QA,Qatar,0,planalto
+SV,El Salvador,0,planalto
+EE,Estonia,0,planalto
+LB,Lebanon,0,planalto
+GT,Guatemala,0,planalto
+JM,Jamaica,0,planalto
+MX,Mexico,0,planalto
+AE,United Arab Emirates,0,planalto
+AM,Armenia,0,planalto
+AT,Austria,0,planalto
+DK,Denmark,0,planalto
+ZA,South Africa,0,planalto
+SE,Sweden,0,planalto
+AU,Australia,0,planalto
+PR,Puerto Rico,0,planalto
+NZ,New Zealand,0,planalto
+SG,Singapore,0,planalto
+MD,Moldova,0,planalto
+CN,China,0,planalto
+GE,Georgia,0,planalto
+VN,Vietnam,0,planalto
+BD,Bangladesh,0,planalto
+CZ,Czechia,0,planalto
+KE,Kenya,0,planalto
+IL,Israel,0,planalto
+NP,Nepal,0,planalto
+NG,Nigeria,0,planalto
+MY,Malaysia,0,planalto
+KZ,Kazakhstan,0,planalto
+HK,Hong Kong,0,planalto
+IN,India,0,planalto
+PK,Pakistan,0,planalto
+FI,Finland,0,planalto
+RU,Russia,0,planalto
+MA,Morocco,0,planalto
+RO,Romania,0,planalto
+EG,Egypt,0,planalto
+PH,Philippines,0,planalto
+BY,Belarus,0,planalto
+UA,Ukraine,0,planalto
+TW,Taiwan,0,planalto
+DZ,Algeria,0,planalto
+TN,Tunisia,0,planalto
+GR,Greece,0,planalto
+HR,Croatia,0,planalto
+PL,Poland,0,planalto
+RS,Serbia,0,planalto
+SI,Slovenia,0,planalto
+JO,Jordan,0,planalto
+IQ,Iraq,0,planalto
+TH,Thailand,0,planalto
+BG,Bulgaria,0,planalto
+ID,Indonesia,0,planalto
+SA,Saudi Arabia,0,planalto
+TR,Türkiye,0,planalto
+IR,Iran,0,planalto
+LA,Laos,0,planalto
+ZW,Zimbabwe,0,planalto
+IM,Isle of Man,0,planalto
+HM,Heard & McDonald Islands,0,planalto
+GY,Guyana,0,planalto
+GU,Guam,0,planalto
+GL,Greenland,0,planalto
+GQ,Equatorial Guinea,0,planalto
+GM,Gambia,0,planalto
+JE,Jersey,0,planalto
+GP,Guadeloupe,0,planalto
+GN,Guinea,0,planalto
+GI,Gibraltar,0,planalto
+GH,Ghana,0,planalto
+KG,Kyrgyzstan,0,planalto
+GG,Guernsey,0,planalto
+KI,Kiribati,0,planalto
+KN,St. Kitts & Nevis,0,planalto
+GA,Gabon,0,planalto
+KW,Kuwait,0,planalto
+FM,Micronesia,0,planalto
+FO,Faroe Islands,0,planalto
+AW,Aruba,0,planalto
+LY,Libya,0,planalto
+LC,St. Lucia,0,planalto
+LI,Liechtenstein,0,planalto
+LK,Sri Lanka,0,planalto
+LS,Lesotho,0,planalto
+LT,Lithuania,0,planalto
+FK,Falkland Islands (Islas Malvinas),0,planalto
+LV,Latvia,0,planalto
+FJ,Fiji,0,planalto
+MF,St. Martin,0,planalto
+ET,Ethiopia,0,planalto
+MC,Monaco,0,planalto
+EH,Western Sahara,0,planalto
+MG,Madagascar,0,planalto
+MV,Maldives,0,planalto
+ER,Eritrea,0,planalto
+MH,Marshall Islands,0,planalto
+MK,North Macedonia,0,planalto
+ML,Mali,0,planalto
+MT,Malta,0,planalto
+MM,Myanmar (Burma),0,planalto
+ME,Montenegro,0,planalto
+MN,Mongolia,0,planalto
+MP,Northern Mariana Islands,0,planalto
+DM,Dominica,0,planalto
+MR,Mauritania,0,planalto
+MS,Montserrat,0,planalto
+MQ,Martinique,0,planalto
+MU,Mauritius,0,planalto
+MW,Malawi,0,planalto
+DJ,Djibouti,0,planalto
+YT,Mayotte,0,planalto
+CY,Cyprus,0,planalto
+NC,New Caledonia,0,planalto
+NE,Niger,0,planalto
+NF,Norfolk Island,0,planalto
+KY,Cayman Islands,0,planalto
+CX,Christmas Island,0,planalto
+NU,Niue,0,planalto
+CW,Curaçao,0,planalto
+KM,Comoros,0,planalto
+CK,Cook Islands,0,planalto
+NR,Nauru,0,planalto
+CG,Congo - Brazzaville,0,planalto
+OM,Oman,0,planalto
+CD,Congo - Kinshasa,0,planalto
+CM,Cameroon,0,planalto
+PN,Pitcairn Islands,0,planalto
+CI,Côte d’Ivoire,0,planalto
+CC,Cocos (Keeling) Islands,0,planalto
+IO,British Indian Ocean Territory,0,planalto
+PG,Papua New Guinea,0,planalto
+CF,Central African Republic,0,planalto
+BW,Botswana,0,planalto
+KP,North Korea,0,planalto
+BV,Bouvet Island,0,planalto
+BT,Bhutan,0,planalto
+PS,Palestine,0,planalto
+PF,French Polynesia,0,planalto
+BN,Brunei,0,planalto
+RE,Réunion,0,planalto
+BB,Barbados,0,planalto
+BM,Bermuda,0,planalto
+RW,Rwanda,0,planalto
+BZ,Belize,0,planalto
+SD,Sudan,0,planalto
+BL,St. Barthélemy,0,planalto
+BA,Bosnia & Herzegovina,0,planalto
+GS,South Georgia & South Sandwich Islands,0,planalto
+BS,Bahamas,0,planalto
+SJ,Svalbard & Jan Mayen,0,planalto
+SB,Solomon Islands,0,planalto
+SL,Sierra Leone,0,planalto
+BH,Bahrain,0,planalto
+SM,San Marino,0,planalto
+SO,Somalia,0,planalto
+PM,St. Pierre & Miquelon,0,planalto
+BF,Burkina Faso,0,planalto
+SS,South Sudan,0,planalto
+ST,São Tomé & Príncipe,0,planalto
+BQ,Caribbean Netherlands,0,planalto
+SK,Slovakia,0,planalto
+BJ,Benin,0,planalto
+BI,Burundi,0,planalto
+SZ,Eswatini,0,planalto
+SX,Sint Maarten,0,planalto
+SC,Seychelles,0,planalto
+SY,Syria,0,planalto
+TC,Turks & Caicos Islands,0,planalto
+TD,Chad,0,planalto
+TG,Togo,0,planalto
+AZ,Azerbaijan,0,planalto
+TJ,Tajikistan,0,planalto
+TK,Tokelau,0,planalto
+TM,Turkmenistan,0,planalto
+AG,Antigua & Barbuda,0,planalto
+TO,Tonga,0,planalto
+TT,Trinidad & Tobago,0,planalto
+TF,French Southern Territories,0,planalto
+AQ,Antarctica,0,planalto
+TV,Tuvalu,0,planalto
+AS,American Samoa,0,planalto
+TZ,Tanzania,0,planalto
+UG,Uganda,0,planalto
+AD,Andorra,0,planalto
+UM,U.S. Outlying Islands,0,planalto
+AL,Albania,0,planalto
+AX,Åland Islands,0,planalto
+UZ,Uzbekistan,0,planalto
+VA,Vatican City,0,planalto
+VC,St. Vincent & Grenadines,0,planalto
+AI,Anguilla,0,planalto
+VG,British Virgin Islands,0,planalto
+VI,U.S. Virgin Islands,0,planalto
+AF,Afghanistan,0,planalto
+VU,Vanuatu,0,planalto
+WF,Wallis & Futuna,0,planalto
+WS,Samoa,0,planalto
+XK,Kosovo,0,planalto
+YE,Yemen,0,planalto
+LR,Liberia,0,planalto
+ZM,Zambia,0,planalto
+PW,Palau,0,planalto

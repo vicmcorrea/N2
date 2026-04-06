@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+BR,Brazil,100,alvo
+MZ,Mozambique,82,alvo
+AO,Angola,71,alvo
+ST,São Tomé & Príncipe,0,alvo
+CV,Cape Verde,0,alvo
+GW,Guinea-Bissau,0,alvo
+PT,Portugal,43,alvo
+BE,Belgium,34,alvo
+TL,Timor-Leste,0,alvo
+HU,Hungary,9,alvo
+CL,Chile,5,alvo
+PY,Paraguay,0,alvo
+IS,Iceland,0,alvo
+IT,Italy,4,alvo
+GF,French Guiana,0,alvo
+LT,Lithuania,0,alvo
+BO,Bolivia,0,alvo
+LU,Luxembourg,0,alvo
+AD,Andorra,0,alvo
+SR,Suriname,0,alvo
+LV,Latvia,0,alvo
+EE,Estonia,0,alvo
+ES,Spain,1,alvo
+SH,St. Helena,0,alvo
+UY,Uruguay,0,alvo
+PL,Poland,1,alvo
+SK,Slovakia,0,alvo
+MO,Macao,0,alvo
+RO,Romania,0,alvo
+GY,Guyana,0,alvo
+GU,Guam,0,alvo
+NA,Namibia,0,alvo
+CH,Switzerland,0,alvo
+KE,Kenya,0,alvo
+DE,Germany,0,alvo
+CO,Colombia,0,alvo
+NO,Norway,0,alvo
+AR,Argentina,0,alvo
+GB,United Kingdom,0,alvo
+NL,Netherlands,0,alvo
+QA,Qatar,0,alvo
+IE,Ireland,0,alvo
+UG,Uganda,0,alvo
+MX,Mexico,0,alvo
+CZ,Czechia,0,alvo
+HN,Honduras,0,alvo
+PA,Panama,0,alvo
+DO,Dominican Republic,0,alvo
+CU,Cuba,0,alvo
+US,United States,0,alvo
+MT,Malta,0,alvo
+EC,Ecuador,0,alvo
+SE,Sweden,0,alvo
+PE,Peru,0,alvo
+BN,Brunei,0,alvo
+HT,Haiti,0,alvo
+GT,Guatemala,0,alvo
+VE,Venezuela,0,alvo
+SV,El Salvador,0,alvo
+SN,Senegal,0,alvo
+AL,Albania,0,alvo
+NI,Nicaragua,0,alvo
+FI,Finland,0,alvo
+AT,Austria,0,alvo
+SI,Slovenia,0,alvo
+CR,Costa Rica,0,alvo
+CA,Canada,0,alvo
+NZ,New Zealand,0,alvo
+DK,Denmark,0,alvo
+IN,India,0,alvo
+RS,Serbia,0,alvo
+TZ,Tanzania,0,alvo
+FR,France,0,alvo
+PS,Palestine,0,alvo
+KR,South Korea,0,alvo
+ZW,Zimbabwe,0,alvo
+AU,Australia,0,alvo
+ZM,Zambia,0,alvo
+MU,Mauritius,0,alvo
+CD,Congo - Kinshasa,0,alvo
+AE,United Arab Emirates,0,alvo
+LY,Libya,0,alvo
+BD,Bangladesh,0,alvo
+MY,Malaysia,0,alvo
+ZA,South Africa,0,alvo
+SG,Singapore,0,alvo
+ID,Indonesia,0,alvo
+PR,Puerto Rico,0,alvo
+CY,Cyprus,0,alvo
+PK,Pakistan,0,alvo
+JP,Japan,0,alvo
+HK,Hong Kong,0,alvo
+ET,Ethiopia,0,alvo
+JM,Jamaica,0,alvo
+PH,Philippines,0,alvo
+NP,Nepal,0,alvo
+GR,Greece,0,alvo
+GE,Georgia,0,alvo
+KW,Kuwait,0,alvo
+GH,Ghana,0,alvo
+MD,Moldova,0,alvo
+IL,Israel,0,alvo
+AZ,Azerbaijan,0,alvo
+HR,Croatia,0,alvo
+MK,North Macedonia,0,alvo
+MA,Morocco,0,alvo
+MM,Myanmar (Burma),0,alvo
+JO,Jordan,0,alvo
+LB,Lebanon,0,alvo
+YE,Yemen,0,alvo
+DZ,Algeria,0,alvo
+RU,Russia,0,alvo
+TN,Tunisia,0,alvo
+TR,Türkiye,0,alvo
+BG,Bulgaria,0,alvo
+SD,Sudan,0,alvo
+IQ,Iraq,0,alvo
+KZ,Kazakhstan,0,alvo
+AM,Armenia,0,alvo
+EG,Egypt,0,alvo
+VN,Vietnam,0,alvo
+OM,Oman,0,alvo
+UA,Ukraine,0,alvo
+LK,Sri Lanka,0,alvo
+NG,Nigeria,0,alvo
+TW,Taiwan,0,alvo
+BY,Belarus,0,alvo
+SA,Saudi Arabia,0,alvo
+BA,Bosnia & Herzegovina,0,alvo
+CN,China,0,alvo
+UZ,Uzbekistan,0,alvo
+TH,Thailand,0,alvo
+IR,Iran,0,alvo
+BW,Botswana,0,alvo
+AW,Aruba,0,alvo
+FO,Faroe Islands,0,alvo
+MF,St. Martin,0,alvo
+FK,Falkland Islands (Islas Malvinas),0,alvo
+MC,Monaco,0,alvo
+FJ,Fiji,0,alvo
+MG,Madagascar,0,alvo
+MV,Maldives,0,alvo
+EH,Western Sahara,0,alvo
+MH,Marshall Islands,0,alvo
+ER,Eritrea,0,alvo
+ML,Mali,0,alvo
+GA,Gabon,0,alvo
+GG,Guernsey,0,alvo
+ME,Montenegro,0,alvo
+MN,Mongolia,0,alvo
+MP,Northern Mariana Islands,0,alvo
+DM,Dominica,0,alvo
+MR,Mauritania,0,alvo
+MS,Montserrat,0,alvo
+MQ,Martinique,0,alvo
+DJ,Djibouti,0,alvo
+MW,Malawi,0,alvo
+KY,Cayman Islands,0,alvo
+YT,Mayotte,0,alvo
+CX,Christmas Island,0,alvo
+NC,New Caledonia,0,alvo
+NE,Niger,0,alvo
+NF,Norfolk Island,0,alvo
+LS,Lesotho,0,alvo
+CW,Curaçao,0,alvo
+NU,Niue,0,alvo
+KM,Comoros,0,alvo
+CK,Cook Islands,0,alvo
+CG,Congo - Brazzaville,0,alvo
+NR,Nauru,0,alvo
+CM,Cameroon,0,alvo
+LI,Liechtenstein,0,alvo
+CI,Côte d’Ivoire,0,alvo
+LC,St. Lucia,0,alvo
+PN,Pitcairn Islands,0,alvo
+CC,Cocos (Keeling) Islands,0,alvo
+CF,Central African Republic,0,alvo
+PW,Palau,0,alvo
+PG,Papua New Guinea,0,alvo
+GI,Gibraltar,0,alvo
+BV,Bouvet Island,0,alvo
+KP,North Korea,0,alvo
+BT,Bhutan,0,alvo
+BB,Barbados,0,alvo
+BM,Bermuda,0,alvo
+PF,French Polynesia,0,alvo
+BZ,Belize,0,alvo
+RE,Réunion,0,alvo
+AF,Afghanistan,0,alvo
+GN,Guinea,0,alvo
+RW,Rwanda,0,alvo
+GP,Guadeloupe,0,alvo
+GM,Gambia,0,alvo
+BL,St. Barthélemy,0,alvo
+GQ,Equatorial Guinea,0,alvo
+GS,South Georgia & South Sandwich Islands,0,alvo
+BS,Bahamas,0,alvo
+SJ,Svalbard & Jan Mayen,0,alvo
+SB,Solomon Islands,0,alvo
+SL,Sierra Leone,0,alvo
+BH,Bahrain,0,alvo
+SM,San Marino,0,alvo
+SO,Somalia,0,alvo
+PM,St. Pierre & Miquelon,0,alvo
+KN,St. Kitts & Nevis,0,alvo
+SS,South Sudan,0,alvo
+BF,Burkina Faso,0,alvo
+BQ,Caribbean Netherlands,0,alvo
+BJ,Benin,0,alvo
+BI,Burundi,0,alvo
+AG,Antigua & Barbuda,0,alvo
+SZ,Eswatini,0,alvo
+SX,Sint Maarten,0,alvo
+SC,Seychelles,0,alvo
+SY,Syria,0,alvo
+TC,Turks & Caicos Islands,0,alvo
+TD,Chad,0,alvo
+TG,Togo,0,alvo
+KI,Kiribati,0,alvo
+TJ,Tajikistan,0,alvo
+TK,Tokelau,0,alvo
+TM,Turkmenistan,0,alvo
+TF,French Southern Territories,0,alvo
+TO,Tonga,0,alvo
+TT,Trinidad & Tobago,0,alvo
+KH,Cambodia,0,alvo
+KG,Kyrgyzstan,0,alvo
+TV,Tuvalu,0,alvo
+GD,Grenada,0,alvo
+AQ,Antarctica,0,alvo
+AS,American Samoa,0,alvo
+GL,Greenland,0,alvo
+UM,U.S. Outlying Islands,0,alvo
+HM,Heard & McDonald Islands,0,alvo
+AX,Åland Islands,0,alvo
+JE,Jersey,0,alvo
+VA,Vatican City,0,alvo
+VC,St. Vincent & Grenadines,0,alvo
+AI,Anguilla,0,alvo
+VG,British Virgin Islands,0,alvo
+VI,U.S. Virgin Islands,0,alvo
+IM,Isle of Man,0,alvo
+VU,Vanuatu,0,alvo
+WF,Wallis & Futuna,0,alvo
+WS,Samoa,0,alvo
+XK,Kosovo,0,alvo
+IO,British Indian Ocean Territory,0,alvo
+LR,Liberia,0,alvo
+LA,Laos,0,alvo
+FM,Micronesia,0,alvo
