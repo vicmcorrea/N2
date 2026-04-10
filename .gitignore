@@ -28,6 +28,8 @@ build/
 
 # Raw datasets (too heavy for git)
 RawDatasets/
+how-to-scrape-google-trends/*
+how-to-scrape-google-trends/
 
 # Run artifacts (experiments, data, cache, models - all regenerable)
 run/outputs/

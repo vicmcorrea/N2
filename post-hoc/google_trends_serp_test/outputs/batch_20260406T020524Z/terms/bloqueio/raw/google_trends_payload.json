@@ -1,0 +1,2539 @@
+{
+  "interest_over_time": [
+    {
+      "keyword": "bloqueio",
+      "items": [
+        {
+          "time": "Jan 2004",
+          "value": 6
+        },
+        {
+          "time": "Feb 2004",
+          "value": 8
+        },
+        {
+          "time": "Mar 2004",
+          "value": 8
+        },
+        {
+          "time": "Apr 2004",
+          "value": 8
+        },
+        {
+          "time": "May 2004",
+          "value": 9
+        },
+        {
+          "time": "Jun 2004",
+          "value": 9
+        },
+        {
+          "time": "Jul 2004",
+          "value": 10
+        },
+        {
+          "time": "Aug 2004",
+          "value": 11
+        },
+        {
+          "time": "Sep 2004",
+          "value": 11
+        },
+        {
+          "time": "Oct 2004",
+          "value": 10
+        },
+        {
+          "time": "Nov 2004",
+          "value": 11
+        },
+        {
+          "time": "Dec 2004",
+          "value": 8
+        },
+        {
+          "time": "Jan 2005",
+          "value": 9
+        },
+        {
+          "time": "Feb 2005",
+          "value": 9
+        },
+        {
+          "time": "Mar 2005",
+          "value": 10
+        },
+        {
+          "time": "Apr 2005",
+          "value": 11
+        },
+        {
+          "time": "May 2005",
+          "value": 12
+        },
+        {
+          "time": "Jun 2005",
+          "value": 13
+        },
+        {
+          "time": "Jul 2005",
+          "value": 11
+        },
+        {
+          "time": "Aug 2005",
+          "value": 13
+        },
+        {
+          "time": "Sep 2005",
+          "value": 14
+        },
+        {
+          "time": "Oct 2005",
+          "value": 11
+        },
+        {
+          "time": "Nov 2005",
+          "value": 13
+        },
+        {
+          "time": "Dec 2005",
+          "value": 10
+        },
+        {
+          "time": "Jan 2006",
+          "value": 12
+        },
+        {
+          "time": "Feb 2006",
+          "value": 12
+        },
+        {
+          "time": "Mar 2006",
+          "value": 15
+        },
+        {
+          "time": "Apr 2006",
+          "value": 13
+        },
+        {
+          "time": "May 2006",
+          "value": 15
+        },
+        {
+          "time": "Jun 2006",
+          "value": 15
+        },
+        {
+          "time": "Jul 2006",
+          "value": 14
+        },
+        {
+          "time": "Aug 2006",
+          "value": 15
+        },
+        {
+          "time": "Sep 2006",
+          "value": 15
+        },
+        {
+          "time": "Oct 2006",
+          "value": 14
+        },
+        {
+          "time": "Nov 2006",
+          "value": 13
+        },
+        {
+          "time": "Dec 2006",
+          "value": 10
+        },
+        {
+          "time": "Jan 2007",
+          "value": 16
+        },
+        {
+          "time": "Feb 2007",
+          "value": 11
+        },
+        {
+          "time": "Mar 2007",
+          "value": 14
+        },
+        {
+          "time": "Apr 2007",
+          "value": 14
+        },
+        {
+          "time": "May 2007",
+          "value": 17
+        },
+        {
+          "time": "Jun 2007",
+          "value": 17
+        },
+        {
+          "time": "Jul 2007",
+          "value": 18
+        },
+        {
+          "time": "Aug 2007",
+          "value": 20
+        },
+        {
+          "time": "Sep 2007",
+          "value": 18
+        },
+        {
+          "time": "Oct 2007",
+          "value": 18
+        },
+        {
+          "time": "Nov 2007",
+          "value": 17
+        },
+        {
+          "time": "Dec 2007",
+          "value": 16
+        },
+        {
+          "time": "Jan 2008",
+          "value": 17
+        },
+        {
+          "time": "Feb 2008",
+          "value": 20
+        },
+        {
+          "time": "Mar 2008",
+          "value": 20
+        },
+        {
+          "time": "Apr 2008",
+          "value": 20
+        },
+        {
+          "time": "May 2008",
+          "value": 20
+        },
+        {
+          "time": "Jun 2008",
+          "value": 22
+        },
+        {
+          "time": "Jul 2008",
+          "value": 18
+        },
+        {
+          "time": "Aug 2008",
+          "value": 23
+        },
+        {
+          "time": "Sep 2008",
+          "value": 22
+        },
+        {
+          "time": "Oct 2008",
+          "value": 22
+        },
+        {
+          "time": "Nov 2008",
+          "value": 19
+        },
+        {
+          "time": "Dec 2008",
+          "value": 17
+        },
+        {
+          "time": "Jan 2009",
+          "value": 18
+        },
+        {
+          "time": "Feb 2009",
+          "value": 17
+        },
+        {
+          "time": "Mar 2009",
+          "value": 22
+        },
+        {
+          "time": "Apr 2009",
+          "value": 25
+        },
+        {
+          "time": "May 2009",
+          "value": 22
+        },
+        {
+          "time": "Jun 2009",
+          "value": 21
+        },
+        {
+          "time": "Jul 2009",
+          "value": 20
+        },
+        {
+          "time": "Aug 2009",
+          "value": 23
+        },
+        {
+          "time": "Sep 2009",
+          "value": 25
+        },
+        {
+          "time": "Oct 2009",
+          "value": 20
+        },
+        {
+          "time": "Nov 2009",
+          "value": 20
+        },
+        {
+          "time": "Dec 2009",
+          "value": 18
+        },
+        {
+          "time": "Jan 2010",
+          "value": 17
+        },
+        {
+          "time": "Feb 2010",
+          "value": 17
+        },
+        {
+          "time": "Mar 2010",
+          "value": 19
+        },
+        {
+          "time": "Apr 2010",
+          "value": 19
+        },
+        {
+          "time": "May 2010",
+          "value": 21
+        },
+        {
+          "time": "Jun 2010",
+          "value": 21
+        },
+        {
+          "time": "Jul 2010",
+          "value": 19
+        },
+        {
+          "time": "Aug 2010",
+          "value": 20
+        },
+        {
+          "time": "Sep 2010",
+          "value": 18
+        },
+        {
+          "time": "Oct 2010",
+          "value": 18
+        },
+        {
+          "time": "Nov 2010",
+          "value": 19
+        },
+        {
+          "time": "Dec 2010",
+          "value": 15
+        },
+        {
+          "time": "Jan 2011",
+          "value": 16
+        },
+        {
+          "time": "Feb 2011",
+          "value": 16
+        },
+        {
+          "time": "Mar 2011",
+          "value": 17
+        },
+        {
+          "time": "Apr 2011",
+          "value": 17
+        },
+        {
+          "time": "May 2011",
+          "value": 18
+        },
+        {
+          "time": "Jun 2011",
+          "value": 18
+        },
+        {
+          "time": "Jul 2011",
+          "value": 20
+        },
+        {
+          "time": "Aug 2011",
+          "value": 18
+        },
+        {
+          "time": "Sep 2011",
+          "value": 17
+        },
+        {
+          "time": "Oct 2011",
+          "value": 18
+        },
+        {
+          "time": "Nov 2011",
+          "value": 16
+        },
+        {
+          "time": "Dec 2011",
+          "value": 15
+        },
+        {
+          "time": "Jan 2012",
+          "value": 15
+        },
+        {
+          "time": "Feb 2012",
+          "value": 17
+        },
+        {
+          "time": "Mar 2012",
+          "value": 14
+        },
+        {
+          "time": "Apr 2012",
+          "value": 17
+        },
+        {
+          "time": "May 2012",
+          "value": 19
+        },
+        {
+          "time": "Jun 2012",
+          "value": 20
+        },
+        {
+          "time": "Jul 2012",
+          "value": 19
+        },
+        {
+          "time": "Aug 2012",
+          "value": 22
+        },
+        {
+          "time": "Sep 2012",
+          "value": 21
+        },
+        {
+          "time": "Oct 2012",
+          "value": 23
+        },
+        {
+          "time": "Nov 2012",
+          "value": 21
+        },
+        {
+          "time": "Dec 2012",
+          "value": 17
+        },
+        {
+          "time": "Jan 2013",
+          "value": 18
+        },
+        {
+          "time": "Feb 2013",
+          "value": 17
+        },
+        {
+          "time": "Mar 2013",
+          "value": 21
+        },
+        {
+          "time": "Apr 2013",
+          "value": 24
+        },
+        {
+          "time": "May 2013",
+          "value": 24
+        },
+        {
+          "time": "Jun 2013",
+          "value": 28
+        },
+        {
+          "time": "Jul 2013",
+          "value": 31
+        },
+        {
+          "time": "Aug 2013",
+          "value": 28
+        },
+        {
+          "time": "Sep 2013",
+          "value": 26
+        },
+        {
+          "time": "Oct 2013",
+          "value": 26
+        },
+        {
+          "time": "Nov 2013",
+          "value": 25
+        },
+        {
+          "time": "Dec 2013",
+          "value": 23
+        },
+        {
+          "time": "Jan 2014",
+          "value": 23
+        },
+        {
+          "time": "Feb 2014",
+          "value": 26
+        },
+        {
+          "time": "Mar 2014",
+          "value": 27
+        },
+        {
+          "time": "Apr 2014",
+          "value": 29
+        },
+        {
+          "time": "May 2014",
+          "value": 30
+        },
+        {
+          "time": "Jun 2014",
+          "value": 31
+        },
+        {
+          "time": "Jul 2014",
+          "value": 31
+        },
+        {
+          "time": "Aug 2014",
+          "value": 32
+        },
+        {
+          "time": "Sep 2014",
+          "value": 34
+        },
+        {
+          "time": "Oct 2014",
+          "value": 34
+        },
+        {
+          "time": "Nov 2014",
+          "value": 32
+        },
+        {
+          "time": "Dec 2014",
+          "value": 31
+        },
+        {
+          "time": "Jan 2015",
+          "value": 30
+        },
+        {
+          "time": "Feb 2015",
+          "value": 45
+        },
+        {
+          "time": "Mar 2015",
+          "value": 38
+        },
+        {
+          "time": "Apr 2015",
+          "value": 35
+        },
+        {
+          "time": "May 2015",
+          "value": 35
+        },
+        {
+          "time": "Jun 2015",
+          "value": 35
+        },
+        {
+          "time": "Jul 2015",
+          "value": 36
+        },
+        {
+          "time": "Aug 2015",
+          "value": 38
+        },
+        {
+          "time": "Sep 2015",
+          "value": 38
+        },
+        {
+          "time": "Oct 2015",
+          "value": 36
+        },
+        {
+          "time": "Nov 2015",
+          "value": 36
+        },
+        {
+          "time": "Dec 2015",
+          "value": 73
+        },
+        {
+          "time": "Jan 2016",
+          "value": 29
+        },
+        {
+          "time": "Feb 2016",
+          "value": 30
+        },
+        {
+          "time": "Mar 2016",
+          "value": 35
+        },
+        {
+          "time": "Apr 2016",
+          "value": 33
+        },
+        {
+          "time": "May 2016",
+          "value": 69
+        },
+        {
+          "time": "Jun 2016",
+          "value": 37
+        },
+        {
+          "time": "Jul 2016",
+          "value": 56
+        },
+        {
+          "time": "Aug 2016",
+          "value": 35
+        },
+        {
+          "time": "Sep 2016",
+          "value": 39
+        },
+        {
+          "time": "Oct 2016",
+          "value": 34
+        },
+        {
+          "time": "Nov 2016",
+          "value": 34
+        },
+        {
+          "time": "Dec 2016",
+          "value": 32
+        },
+        {
+          "time": "Jan 2017",
+          "value": 31
+        },
+        {
+          "time": "Feb 2017",
+          "value": 33
+        },
+        {
+          "time": "Mar 2017",
+          "value": 36
+        },
+        {
+          "time": "Apr 2017",
+          "value": 35
+        },
+        {
+          "time": "May 2017",
+          "value": 39
+        },
+        {
+          "time": "Jun 2017",
+          "value": 36
+        },
+        {
+          "time": "Jul 2017",
+          "value": 36
+        },
+        {
+          "time": "Aug 2017",
+          "value": 40
+        },
+        {
+          "time": "Sep 2017",
+          "value": 35
+        },
+        {
+          "time": "Oct 2017",
+          "value": 34
+        },
+        {
+          "time": "Nov 2017",
+          "value": 36
+        },
+        {
+          "time": "Dec 2017",
+          "value": 33
+        },
+        {
+          "time": "Jan 2018",
+          "value": 32
+        },
+        {
+          "time": "Feb 2018",
+          "value": 32
+        },
+        {
+          "time": "Mar 2018",
+          "value": 36
+        },
+        {
+          "time": "Apr 2018",
+          "value": 35
+        },
+        {
+          "time": "May 2018",
+          "value": 57
+        },
+        {
+          "time": "Jun 2018",
+          "value": 38
+        },
+        {
+          "time": "Jul 2018",
+          "value": 34
+        },
+        {
+          "time": "Aug 2018",
+          "value": 37
+        },
+        {
+          "time": "Sep 2018",
+          "value": 33
+        },
+        {
+          "time": "Oct 2018",
+          "value": 33
+        },
+        {
+          "time": "Nov 2018",
+          "value": 33
+        },
+        {
+          "time": "Dec 2018",
+          "value": 30
+        },
+        {
+          "time": "Jan 2019",
+          "value": 30
+        },
+        {
+          "time": "Feb 2019",
+          "value": 32
+        },
+        {
+          "time": "Mar 2019",
+          "value": 32
+        },
+        {
+          "time": "Apr 2019",
+          "value": 32
+        },
+        {
+          "time": "May 2019",
+          "value": 34
+        },
+        {
+          "time": "Jun 2019",
+          "value": 34
+        },
+        {
+          "time": "Jul 2019",
+          "value": 36
+        },
+        {
+          "time": "Aug 2019",
+          "value": 37
+        },
+        {
+          "time": "Sep 2019",
+          "value": 37
+        },
+        {
+          "time": "Oct 2019",
+          "value": 32
+        },
+        {
+          "time": "Nov 2019",
+          "value": 35
+        },
+        {
+          "time": "Dec 2019",
+          "value": 28
+        },
+        {
+          "time": "Jan 2020",
+          "value": 31
+        },
+        {
+          "time": "Feb 2020",
+          "value": 32
+        },
+        {
+          "time": "Mar 2020",
+          "value": 37
+        },
+        {
+          "time": "Apr 2020",
+          "value": 34
+        },
+        {
+          "time": "May 2020",
+          "value": 42
+        },
+        {
+          "time": "Jun 2020",
+          "value": 38
+        },
+        {
+          "time": "Jul 2020",
+          "value": 39
+        },
+        {
+          "time": "Aug 2020",
+          "value": 36
+        },
+        {
+          "time": "Sep 2020",
+          "value": 36
+        },
+        {
+          "time": "Oct 2020",
+          "value": 35
+        },
+        {
+          "time": "Nov 2020",
+          "value": 34
+        },
+        {
+          "time": "Dec 2020",
+          "value": 33
+        },
+        {
+          "time": "Jan 2021",
+          "value": 30
+        },
+        {
+          "time": "Feb 2021",
+          "value": 33
+        },
+        {
+          "time": "Mar 2021",
+          "value": 36
+        },
+        {
+          "time": "Apr 2021",
+          "value": 40
+        },
+        {
+          "time": "May 2021",
+          "value": 42
+        },
+        {
+          "time": "Jun 2021",
+          "value": 44
+        },
+        {
+          "time": "Jul 2021",
+          "value": 43
+        },
+        {
+          "time": "Aug 2021",
+          "value": 44
+        },
+        {
+          "time": "Sep 2021",
+          "value": 50
+        },
+        {
+          "time": "Oct 2021",
+          "value": 39
+        },
+        {
+          "time": "Nov 2021",
+          "value": 38
+        },
+        {
+          "time": "Dec 2021",
+          "value": 38
+        },
+        {
+          "time": "Jan 2022",
+          "value": 38
+        },
+        {
+          "time": "Feb 2022",
+          "value": 45
+        },
+        {
+          "time": "Mar 2022",
+          "value": 52
+        },
+        {
+          "time": "Apr 2022",
+          "value": 45
+        },
+        {
+          "time": "May 2022",
+          "value": 51
+        },
+        {
+          "time": "Jun 2022",
+          "value": 48
+        },
+        {
+          "time": "Jul 2022",
+          "value": 47
+        },
+        {
+          "time": "Aug 2022",
+          "value": 47
+        },
+        {
+          "time": "Sep 2022",
+          "value": 52
+        },
+        {
+          "time": "Oct 2022",
+          "value": 58
+        },
+        {
+          "time": "Nov 2022",
+          "value": 100
+        },
+        {
+          "time": "Dec 2022",
+          "value": 44
+        },
+        {
+          "time": "Jan 2023",
+          "value": 47
+        },
+        {
+          "time": "Feb 2023",
+          "value": 48
+        },
+        {
+          "time": "Mar 2023",
+          "value": 47
+        },
+        {
+          "time": "Apr 2023",
+          "value": 43
+        },
+        {
+          "time": "May 2023",
+          "value": 48
+        },
+        {
+          "time": "Jun 2023",
+          "value": 48
+        },
+        {
+          "time": "Jul 2023",
+          "value": 44
+        },
+        {
+          "time": "Aug 2023",
+          "value": 47
+        },
+        {
+          "time": "Sep 2023",
+          "value": 44
+        },
+        {
+          "time": "Oct 2023",
+          "value": 42
+        },
+        {
+          "time": "Nov 2023",
+          "value": 41
+        },
+        {
+          "time": "Dec 2023",
+          "value": 39
+        }
+      ]
+    }
+  ],
+  "breakdown_by_region": [
+    {
+      "keyword": "bloqueio",
+      "items": [
+        {
+          "geo_code": "BR",
+          "geo_name": "Brazil",
+          "value": 100
+        },
+        {
+          "geo_code": "ST",
+          "geo_name": "São Tomé & Príncipe",
+          "value": 0
+        },
+        {
+          "geo_code": "AO",
+          "geo_name": "Angola",
+          "value": 50
+        },
+        {
+          "geo_code": "MZ",
+          "geo_name": "Mozambique",
+          "value": 47
+        },
+        {
+          "geo_code": "CV",
+          "geo_name": "Cape Verde",
+          "value": 0
+        },
+        {
+          "geo_code": "PT",
+          "geo_name": "Portugal",
+          "value": 40
+        },
+        {
+          "geo_code": "GW",
+          "geo_name": "Guinea-Bissau",
+          "value": 0
+        },
+        {
+          "geo_code": "PY",
+          "geo_name": "Paraguay",
+          "value": 0
+        },
+        {
+          "geo_code": "BO",
+          "geo_name": "Bolivia",
+          "value": 0
+        },
+        {
+          "geo_code": "LU",
+          "geo_name": "Luxembourg",
+          "value": 0
+        },
+        {
+          "geo_code": "AD",
+          "geo_name": "Andorra",
+          "value": 0
+        },
+        {
+          "geo_code": "GF",
+          "geo_name": "French Guiana",
+          "value": 0
+        },
+        {
+          "geo_code": "SH",
+          "geo_name": "St. Helena",
+          "value": 0
+        },
+        {
+          "geo_code": "SR",
+          "geo_name": "Suriname",
+          "value": 0
+        },
+        {
+          "geo_code": "MO",
+          "geo_name": "Macao",
+          "value": 0
+        },
+        {
+          "geo_code": "UY",
+          "geo_name": "Uruguay",
+          "value": 0
+        },
+        {
+          "geo_code": "NA",
+          "geo_name": "Namibia",
+          "value": 0
+        },
+        {
+          "geo_code": "CH",
+          "geo_name": "Switzerland",
+          "value": 0
+        },
+        {
+          "geo_code": "HT",
+          "geo_name": "Haiti",
+          "value": 0
+        },
+        {
+          "geo_code": "CU",
+          "geo_name": "Cuba",
+          "value": 0
+        },
+        {
+          "geo_code": "IE",
+          "geo_name": "Ireland",
+          "value": 0
+        },
+        {
+          "geo_code": "SN",
+          "geo_name": "Senegal",
+          "value": 0
+        },
+        {
+          "geo_code": "ES",
+          "geo_name": "Spain",
+          "value": 0
+        },
+        {
+          "geo_code": "GB",
+          "geo_name": "United Kingdom",
+          "value": 0
+        },
+        {
+          "geo_code": "MT",
+          "geo_name": "Malta",
+          "value": 0
+        },
+        {
+          "geo_code": "AR",
+          "geo_name": "Argentina",
+          "value": 0
+        },
+        {
+          "geo_code": "US",
+          "geo_name": "United States",
+          "value": 0
+        },
+        {
+          "geo_code": "AE",
+          "geo_name": "United Arab Emirates",
+          "value": 0
+        },
+        {
+          "geo_code": "PA",
+          "geo_name": "Panama",
+          "value": 0
+        },
+        {
+          "geo_code": "DE",
+          "geo_name": "Germany",
+          "value": 0
+        },
+        {
+          "geo_code": "PS",
+          "geo_name": "Palestine",
+          "value": 0
+        },
+        {
+          "geo_code": "QA",
+          "geo_name": "Qatar",
+          "value": 0
+        },
+        {
+          "geo_code": "CL",
+          "geo_name": "Chile",
+          "value": 0
+        },
+        {
+          "geo_code": "AM",
+          "geo_name": "Armenia",
+          "value": 0
+        },
+        {
+          "geo_code": "JP",
+          "geo_name": "Japan",
+          "value": 0
+        },
+        {
+          "geo_code": "BE",
+          "geo_name": "Belgium",
+          "value": 0
+        },
+        {
+          "geo_code": "NI",
+          "geo_name": "Nicaragua",
+          "value": 0
+        },
+        {
+          "geo_code": "OM",
+          "geo_name": "Oman",
+          "value": 0
+        },
+        {
+          "geo_code": "KR",
+          "geo_name": "South Korea",
+          "value": 0
+        },
+        {
+          "geo_code": "FR",
+          "geo_name": "France",
+          "value": 0
+        },
+        {
+          "geo_code": "PE",
+          "geo_name": "Peru",
+          "value": 0
+        },
+        {
+          "geo_code": "VN",
+          "geo_name": "Vietnam",
+          "value": 0
+        },
+        {
+          "geo_code": "LB",
+          "geo_name": "Lebanon",
+          "value": 0
+        },
+        {
+          "geo_code": "CR",
+          "geo_name": "Costa Rica",
+          "value": 0
+        },
+        {
+          "geo_code": "NL",
+          "geo_name": "Netherlands",
+          "value": 0
+        },
+        {
+          "geo_code": "IN",
+          "geo_name": "India",
+          "value": 0
+        },
+        {
+          "geo_code": "EC",
+          "geo_name": "Ecuador",
+          "value": 0
+        },
+        {
+          "geo_code": "CA",
+          "geo_name": "Canada",
+          "value": 0
+        },
+        {
+          "geo_code": "CO",
+          "geo_name": "Colombia",
+          "value": 0
+        },
+        {
+          "geo_code": "DO",
+          "geo_name": "Dominican Republic",
+          "value": 0
+        },
+        {
+          "geo_code": "NO",
+          "geo_name": "Norway",
+          "value": 0
+        },
+        {
+          "geo_code": "VE",
+          "geo_name": "Venezuela",
+          "value": 0
+        },
+        {
+          "geo_code": "ZA",
+          "geo_name": "South Africa",
+          "value": 0
+        },
+        {
+          "geo_code": "SG",
+          "geo_name": "Singapore",
+          "value": 0
+        },
+        {
+          "geo_code": "IT",
+          "geo_name": "Italy",
+          "value": 0
+        },
+        {
+          "geo_code": "KZ",
+          "geo_name": "Kazakhstan",
+          "value": 0
+        },
+        {
+          "geo_code": "IL",
+          "geo_name": "Israel",
+          "value": 0
+        },
+        {
+          "geo_code": "SV",
+          "geo_name": "El Salvador",
+          "value": 0
+        },
+        {
+          "geo_code": "MX",
+          "geo_name": "Mexico",
+          "value": 0
+        },
+        {
+          "geo_code": "NZ",
+          "geo_name": "New Zealand",
+          "value": 0
+        },
+        {
+          "geo_code": "UZ",
+          "geo_name": "Uzbekistan",
+          "value": 0
+        },
+        {
+          "geo_code": "IQ",
+          "geo_name": "Iraq",
+          "value": 0
+        },
+        {
+          "geo_code": "MY",
+          "geo_name": "Malaysia",
+          "value": 0
+        },
+        {
+          "geo_code": "MA",
+          "geo_name": "Morocco",
+          "value": 0
+        },
+        {
+          "geo_code": "CN",
+          "geo_name": "China",
+          "value": 0
+        },
+        {
+          "geo_code": "AU",
+          "geo_name": "Australia",
+          "value": 0
+        },
+        {
+          "geo_code": "TH",
+          "geo_name": "Thailand",
+          "value": 0
+        },
+        {
+          "geo_code": "BD",
+          "geo_name": "Bangladesh",
+          "value": 0
+        },
+        {
+          "geo_code": "KE",
+          "geo_name": "Kenya",
+          "value": 0
+        },
+        {
+          "geo_code": "RO",
+          "geo_name": "Romania",
+          "value": 0
+        },
+        {
+          "geo_code": "DK",
+          "geo_name": "Denmark",
+          "value": 0
+        },
+        {
+          "geo_code": "SE",
+          "geo_name": "Sweden",
+          "value": 0
+        },
+        {
+          "geo_code": "EG",
+          "geo_name": "Egypt",
+          "value": 0
+        },
+        {
+          "geo_code": "PK",
+          "geo_name": "Pakistan",
+          "value": 0
+        },
+        {
+          "geo_code": "AT",
+          "geo_name": "Austria",
+          "value": 0
+        },
+        {
+          "geo_code": "RU",
+          "geo_name": "Russia",
+          "value": 0
+        },
+        {
+          "geo_code": "TN",
+          "geo_name": "Tunisia",
+          "value": 0
+        },
+        {
+          "geo_code": "ID",
+          "geo_name": "Indonesia",
+          "value": 0
+        },
+        {
+          "geo_code": "GT",
+          "geo_name": "Guatemala",
+          "value": 0
+        },
+        {
+          "geo_code": "FI",
+          "geo_name": "Finland",
+          "value": 0
+        },
+        {
+          "geo_code": "UA",
+          "geo_name": "Ukraine",
+          "value": 0
+        },
+        {
+          "geo_code": "BG",
+          "geo_name": "Bulgaria",
+          "value": 0
+        },
+        {
+          "geo_code": "HK",
+          "geo_name": "Hong Kong",
+          "value": 0
+        },
+        {
+          "geo_code": "CZ",
+          "geo_name": "Czechia",
+          "value": 0
+        },
+        {
+          "geo_code": "TW",
+          "geo_name": "Taiwan",
+          "value": 0
+        },
+        {
+          "geo_code": "NG",
+          "geo_name": "Nigeria",
+          "value": 0
+        },
+        {
+          "geo_code": "PH",
+          "geo_name": "Philippines",
+          "value": 0
+        },
+        {
+          "geo_code": "HU",
+          "geo_name": "Hungary",
+          "value": 0
+        },
+        {
+          "geo_code": "BY",
+          "geo_name": "Belarus",
+          "value": 0
+        },
+        {
+          "geo_code": "HR",
+          "geo_name": "Croatia",
+          "value": 0
+        },
+        {
+          "geo_code": "GR",
+          "geo_name": "Greece",
+          "value": 0
+        },
+        {
+          "geo_code": "RS",
+          "geo_name": "Serbia",
+          "value": 0
+        },
+        {
+          "geo_code": "DZ",
+          "geo_name": "Algeria",
+          "value": 0
+        },
+        {
+          "geo_code": "SA",
+          "geo_name": "Saudi Arabia",
+          "value": 0
+        },
+        {
+          "geo_code": "TR",
+          "geo_name": "Türkiye",
+          "value": 0
+        },
+        {
+          "geo_code": "PL",
+          "geo_name": "Poland",
+          "value": 0
+        },
+        {
+          "geo_code": "IR",
+          "geo_name": "Iran",
+          "value": 0
+        },
+        {
+          "geo_code": "LA",
+          "geo_name": "Laos",
+          "value": 0
+        },
+        {
+          "geo_code": "ZW",
+          "geo_name": "Zimbabwe",
+          "value": 0
+        },
+        {
+          "geo_code": "HM",
+          "geo_name": "Heard & McDonald Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "GY",
+          "geo_name": "Guyana",
+          "value": 0
+        },
+        {
+          "geo_code": "GU",
+          "geo_name": "Guam",
+          "value": 0
+        },
+        {
+          "geo_code": "GL",
+          "geo_name": "Greenland",
+          "value": 0
+        },
+        {
+          "geo_code": "IM",
+          "geo_name": "Isle of Man",
+          "value": 0
+        },
+        {
+          "geo_code": "GD",
+          "geo_name": "Grenada",
+          "value": 0
+        },
+        {
+          "geo_code": "IO",
+          "geo_name": "British Indian Ocean Territory",
+          "value": 0
+        },
+        {
+          "geo_code": "GQ",
+          "geo_name": "Equatorial Guinea",
+          "value": 0
+        },
+        {
+          "geo_code": "GM",
+          "geo_name": "Gambia",
+          "value": 0
+        },
+        {
+          "geo_code": "GP",
+          "geo_name": "Guadeloupe",
+          "value": 0
+        },
+        {
+          "geo_code": "IS",
+          "geo_name": "Iceland",
+          "value": 0
+        },
+        {
+          "geo_code": "GN",
+          "geo_name": "Guinea",
+          "value": 0
+        },
+        {
+          "geo_code": "GI",
+          "geo_name": "Gibraltar",
+          "value": 0
+        },
+        {
+          "geo_code": "JM",
+          "geo_name": "Jamaica",
+          "value": 0
+        },
+        {
+          "geo_code": "JE",
+          "geo_name": "Jersey",
+          "value": 0
+        },
+        {
+          "geo_code": "JO",
+          "geo_name": "Jordan",
+          "value": 0
+        },
+        {
+          "geo_code": "GH",
+          "geo_name": "Ghana",
+          "value": 0
+        },
+        {
+          "geo_code": "GG",
+          "geo_name": "Guernsey",
+          "value": 0
+        },
+        {
+          "geo_code": "GE",
+          "geo_name": "Georgia",
+          "value": 0
+        },
+        {
+          "geo_code": "KG",
+          "geo_name": "Kyrgyzstan",
+          "value": 0
+        },
+        {
+          "geo_code": "KH",
+          "geo_name": "Cambodia",
+          "value": 0
+        },
+        {
+          "geo_code": "KI",
+          "geo_name": "Kiribati",
+          "value": 0
+        },
+        {
+          "geo_code": "KN",
+          "geo_name": "St. Kitts & Nevis",
+          "value": 0
+        },
+        {
+          "geo_code": "GA",
+          "geo_name": "Gabon",
+          "value": 0
+        },
+        {
+          "geo_code": "KW",
+          "geo_name": "Kuwait",
+          "value": 0
+        },
+        {
+          "geo_code": "FM",
+          "geo_name": "Micronesia",
+          "value": 0
+        },
+        {
+          "geo_code": "FO",
+          "geo_name": "Faroe Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "AW",
+          "geo_name": "Aruba",
+          "value": 0
+        },
+        {
+          "geo_code": "LY",
+          "geo_name": "Libya",
+          "value": 0
+        },
+        {
+          "geo_code": "LC",
+          "geo_name": "St. Lucia",
+          "value": 0
+        },
+        {
+          "geo_code": "LI",
+          "geo_name": "Liechtenstein",
+          "value": 0
+        },
+        {
+          "geo_code": "LK",
+          "geo_name": "Sri Lanka",
+          "value": 0
+        },
+        {
+          "geo_code": "LS",
+          "geo_name": "Lesotho",
+          "value": 0
+        },
+        {
+          "geo_code": "LT",
+          "geo_name": "Lithuania",
+          "value": 0
+        },
+        {
+          "geo_code": "FK",
+          "geo_name": "Falkland Islands (Islas Malvinas)",
+          "value": 0
+        },
+        {
+          "geo_code": "LV",
+          "geo_name": "Latvia",
+          "value": 0
+        },
+        {
+          "geo_code": "FJ",
+          "geo_name": "Fiji",
+          "value": 0
+        },
+        {
+          "geo_code": "MF",
+          "geo_name": "St. Martin",
+          "value": 0
+        },
+        {
+          "geo_code": "ET",
+          "geo_name": "Ethiopia",
+          "value": 0
+        },
+        {
+          "geo_code": "MC",
+          "geo_name": "Monaco",
+          "value": 0
+        },
+        {
+          "geo_code": "MD",
+          "geo_name": "Moldova",
+          "value": 0
+        },
+        {
+          "geo_code": "MG",
+          "geo_name": "Madagascar",
+          "value": 0
+        },
+        {
+          "geo_code": "MV",
+          "geo_name": "Maldives",
+          "value": 0
+        },
+        {
+          "geo_code": "EE",
+          "geo_name": "Estonia",
+          "value": 0
+        },
+        {
+          "geo_code": "MH",
+          "geo_name": "Marshall Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "MK",
+          "geo_name": "North Macedonia",
+          "value": 0
+        },
+        {
+          "geo_code": "ML",
+          "geo_name": "Mali",
+          "value": 0
+        },
+        {
+          "geo_code": "EH",
+          "geo_name": "Western Sahara",
+          "value": 0
+        },
+        {
+          "geo_code": "MM",
+          "geo_name": "Myanmar (Burma)",
+          "value": 0
+        },
+        {
+          "geo_code": "ME",
+          "geo_name": "Montenegro",
+          "value": 0
+        },
+        {
+          "geo_code": "MN",
+          "geo_name": "Mongolia",
+          "value": 0
+        },
+        {
+          "geo_code": "MP",
+          "geo_name": "Northern Mariana Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "ER",
+          "geo_name": "Eritrea",
+          "value": 0
+        },
+        {
+          "geo_code": "MR",
+          "geo_name": "Mauritania",
+          "value": 0
+        },
+        {
+          "geo_code": "MS",
+          "geo_name": "Montserrat",
+          "value": 0
+        },
+        {
+          "geo_code": "MQ",
+          "geo_name": "Martinique",
+          "value": 0
+        },
+        {
+          "geo_code": "MU",
+          "geo_name": "Mauritius",
+          "value": 0
+        },
+        {
+          "geo_code": "MW",
+          "geo_name": "Malawi",
+          "value": 0
+        },
+        {
+          "geo_code": "DM",
+          "geo_name": "Dominica",
+          "value": 0
+        },
+        {
+          "geo_code": "YT",
+          "geo_name": "Mayotte",
+          "value": 0
+        },
+        {
+          "geo_code": "DJ",
+          "geo_name": "Djibouti",
+          "value": 0
+        },
+        {
+          "geo_code": "NC",
+          "geo_name": "New Caledonia",
+          "value": 0
+        },
+        {
+          "geo_code": "NE",
+          "geo_name": "Niger",
+          "value": 0
+        },
+        {
+          "geo_code": "NF",
+          "geo_name": "Norfolk Island",
+          "value": 0
+        },
+        {
+          "geo_code": "CY",
+          "geo_name": "Cyprus",
+          "value": 0
+        },
+        {
+          "geo_code": "KY",
+          "geo_name": "Cayman Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "NU",
+          "geo_name": "Niue",
+          "value": 0
+        },
+        {
+          "geo_code": "CX",
+          "geo_name": "Christmas Island",
+          "value": 0
+        },
+        {
+          "geo_code": "CW",
+          "geo_name": "Curaçao",
+          "value": 0
+        },
+        {
+          "geo_code": "NP",
+          "geo_name": "Nepal",
+          "value": 0
+        },
+        {
+          "geo_code": "NR",
+          "geo_name": "Nauru",
+          "value": 0
+        },
+        {
+          "geo_code": "KM",
+          "geo_name": "Comoros",
+          "value": 0
+        },
+        {
+          "geo_code": "CK",
+          "geo_name": "Cook Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "CG",
+          "geo_name": "Congo - Brazzaville",
+          "value": 0
+        },
+        {
+          "geo_code": "CD",
+          "geo_name": "Congo - Kinshasa",
+          "value": 0
+        },
+        {
+          "geo_code": "HN",
+          "geo_name": "Honduras",
+          "value": 0
+        },
+        {
+          "geo_code": "CM",
+          "geo_name": "Cameroon",
+          "value": 0
+        },
+        {
+          "geo_code": "CI",
+          "geo_name": "Côte d’Ivoire",
+          "value": 0
+        },
+        {
+          "geo_code": "PW",
+          "geo_name": "Palau",
+          "value": 0
+        },
+        {
+          "geo_code": "PG",
+          "geo_name": "Papua New Guinea",
+          "value": 0
+        },
+        {
+          "geo_code": "CC",
+          "geo_name": "Cocos (Keeling) Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "PR",
+          "geo_name": "Puerto Rico",
+          "value": 0
+        },
+        {
+          "geo_code": "KP",
+          "geo_name": "North Korea",
+          "value": 0
+        },
+        {
+          "geo_code": "CF",
+          "geo_name": "Central African Republic",
+          "value": 0
+        },
+        {
+          "geo_code": "BW",
+          "geo_name": "Botswana",
+          "value": 0
+        },
+        {
+          "geo_code": "BV",
+          "geo_name": "Bouvet Island",
+          "value": 0
+        },
+        {
+          "geo_code": "PF",
+          "geo_name": "French Polynesia",
+          "value": 0
+        },
+        {
+          "geo_code": "BT",
+          "geo_name": "Bhutan",
+          "value": 0
+        },
+        {
+          "geo_code": "RE",
+          "geo_name": "Réunion",
+          "value": 0
+        },
+        {
+          "geo_code": "BN",
+          "geo_name": "Brunei",
+          "value": 0
+        },
+        {
+          "geo_code": "BB",
+          "geo_name": "Barbados",
+          "value": 0
+        },
+        {
+          "geo_code": "RW",
+          "geo_name": "Rwanda",
+          "value": 0
+        },
+        {
+          "geo_code": "BM",
+          "geo_name": "Bermuda",
+          "value": 0
+        },
+        {
+          "geo_code": "SD",
+          "geo_name": "Sudan",
+          "value": 0
+        },
+        {
+          "geo_code": "BZ",
+          "geo_name": "Belize",
+          "value": 0
+        },
+        {
+          "geo_code": "BL",
+          "geo_name": "St. Barthélemy",
+          "value": 0
+        },
+        {
+          "geo_code": "GS",
+          "geo_name": "South Georgia & South Sandwich Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "BA",
+          "geo_name": "Bosnia & Herzegovina",
+          "value": 0
+        },
+        {
+          "geo_code": "SJ",
+          "geo_name": "Svalbard & Jan Mayen",
+          "value": 0
+        },
+        {
+          "geo_code": "SB",
+          "geo_name": "Solomon Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "SL",
+          "geo_name": "Sierra Leone",
+          "value": 0
+        },
+        {
+          "geo_code": "BS",
+          "geo_name": "Bahamas",
+          "value": 0
+        },
+        {
+          "geo_code": "SM",
+          "geo_name": "San Marino",
+          "value": 0
+        },
+        {
+          "geo_code": "SO",
+          "geo_name": "Somalia",
+          "value": 0
+        },
+        {
+          "geo_code": "PM",
+          "geo_name": "St. Pierre & Miquelon",
+          "value": 0
+        },
+        {
+          "geo_code": "BH",
+          "geo_name": "Bahrain",
+          "value": 0
+        },
+        {
+          "geo_code": "SS",
+          "geo_name": "South Sudan",
+          "value": 0
+        },
+        {
+          "geo_code": "BF",
+          "geo_name": "Burkina Faso",
+          "value": 0
+        },
+        {
+          "geo_code": "BQ",
+          "geo_name": "Caribbean Netherlands",
+          "value": 0
+        },
+        {
+          "geo_code": "SK",
+          "geo_name": "Slovakia",
+          "value": 0
+        },
+        {
+          "geo_code": "SI",
+          "geo_name": "Slovenia",
+          "value": 0
+        },
+        {
+          "geo_code": "BJ",
+          "geo_name": "Benin",
+          "value": 0
+        },
+        {
+          "geo_code": "SZ",
+          "geo_name": "Eswatini",
+          "value": 0
+        },
+        {
+          "geo_code": "SX",
+          "geo_name": "Sint Maarten",
+          "value": 0
+        },
+        {
+          "geo_code": "SC",
+          "geo_name": "Seychelles",
+          "value": 0
+        },
+        {
+          "geo_code": "SY",
+          "geo_name": "Syria",
+          "value": 0
+        },
+        {
+          "geo_code": "TC",
+          "geo_name": "Turks & Caicos Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "TD",
+          "geo_name": "Chad",
+          "value": 0
+        },
+        {
+          "geo_code": "TG",
+          "geo_name": "Togo",
+          "value": 0
+        },
+        {
+          "geo_code": "BI",
+          "geo_name": "Burundi",
+          "value": 0
+        },
+        {
+          "geo_code": "TJ",
+          "geo_name": "Tajikistan",
+          "value": 0
+        },
+        {
+          "geo_code": "TK",
+          "geo_name": "Tokelau",
+          "value": 0
+        },
+        {
+          "geo_code": "TM",
+          "geo_name": "Turkmenistan",
+          "value": 0
+        },
+        {
+          "geo_code": "TL",
+          "geo_name": "Timor-Leste",
+          "value": 0
+        },
+        {
+          "geo_code": "TO",
+          "geo_name": "Tonga",
+          "value": 0
+        },
+        {
+          "geo_code": "TT",
+          "geo_name": "Trinidad & Tobago",
+          "value": 0
+        },
+        {
+          "geo_code": "AZ",
+          "geo_name": "Azerbaijan",
+          "value": 0
+        },
+        {
+          "geo_code": "AG",
+          "geo_name": "Antigua & Barbuda",
+          "value": 0
+        },
+        {
+          "geo_code": "TV",
+          "geo_name": "Tuvalu",
+          "value": 0
+        },
+        {
+          "geo_code": "TF",
+          "geo_name": "French Southern Territories",
+          "value": 0
+        },
+        {
+          "geo_code": "TZ",
+          "geo_name": "Tanzania",
+          "value": 0
+        },
+        {
+          "geo_code": "UG",
+          "geo_name": "Uganda",
+          "value": 0
+        },
+        {
+          "geo_code": "AQ",
+          "geo_name": "Antarctica",
+          "value": 0
+        },
+        {
+          "geo_code": "UM",
+          "geo_name": "U.S. Outlying Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "AS",
+          "geo_name": "American Samoa",
+          "value": 0
+        },
+        {
+          "geo_code": "AL",
+          "geo_name": "Albania",
+          "value": 0
+        },
+        {
+          "geo_code": "AX",
+          "geo_name": "Åland Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "VA",
+          "geo_name": "Vatican City",
+          "value": 0
+        },
+        {
+          "geo_code": "VC",
+          "geo_name": "St. Vincent & Grenadines",
+          "value": 0
+        },
+        {
+          "geo_code": "AI",
+          "geo_name": "Anguilla",
+          "value": 0
+        },
+        {
+          "geo_code": "VG",
+          "geo_name": "British Virgin Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "VI",
+          "geo_name": "U.S. Virgin Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "AF",
+          "geo_name": "Afghanistan",
+          "value": 0
+        },
+        {
+          "geo_code": "VU",
+          "geo_name": "Vanuatu",
+          "value": 0
+        },
+        {
+          "geo_code": "WF",
+          "geo_name": "Wallis & Futuna",
+          "value": 0
+        },
+        {
+          "geo_code": "WS",
+          "geo_name": "Samoa",
+          "value": 0
+        },
+        {
+          "geo_code": "XK",
+          "geo_name": "Kosovo",
+          "value": 0
+        },
+        {
+          "geo_code": "YE",
+          "geo_name": "Yemen",
+          "value": 0
+        },
+        {
+          "geo_code": "LR",
+          "geo_name": "Liberia",
+          "value": 0
+        },
+        {
+          "geo_code": "ZM",
+          "geo_name": "Zambia",
+          "value": 0
+        },
+        {
+          "geo_code": "PN",
+          "geo_name": "Pitcairn Islands",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "related_topics": [
+    {
+      "keyword": "bloqueio",
+      "items": []
+    }
+  ],
+  "related_queries": [
+    {
+      "keyword": "bloqueio",
+      "items": [
+        {
+          "query": "tela de bloqueio",
+          "value": 2243550,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "whatsapp bloqueio",
+          "value": 471400,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=whatsapp+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio do whatsapp",
+          "value": 212050,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=bloqueio+do+whatsapp&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "tela de bloqueio iphone",
+          "value": 196200,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=tela+de+bloqueio+iphone&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio emocional",
+          "value": 192400,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=bloqueio+emocional&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio facebook",
+          "value": 173200,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=bloqueio+facebook&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "foto de tela de bloqueio",
+          "value": 171500,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=foto+de+tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio de whatsapp",
+          "value": 160550,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=bloqueio+de+whatsapp&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "como tirar bloqueio de tela",
+          "value": 157200,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=como+tirar+bloqueio+de+tela&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "papel de parede tela de bloqueio",
+          "value": 119950,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=papel+de+parede+tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio no whatsapp",
+          "value": 119750,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=bloqueio+no+whatsapp&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "tela de bloqueio android",
+          "value": 116950,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=tela+de+bloqueio+android&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "imagens de tela de bloqueio",
+          "value": 111350,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=imagens+de+tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "o que foi o bloqueio continental",
+          "value": 92650,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=o+que+foi+o+bloqueio+continental&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio telemarketing",
+          "value": 89200,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=bloqueio+telemarketing&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "imagens para tela de bloqueio",
+          "value": 83300,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=imagens+para+tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "foto para tela de bloqueio",
+          "value": 71100,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=foto+para+tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio renajud",
+          "value": 70650,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=bloqueio+renajud&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio judicial de conta",
+          "value": 70300,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=bloqueio+judicial+de+conta&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "papel de parede para tela de bloqueio",
+          "value": 68300,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=papel+de+parede+para+tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "tela de bloqueio tumblr",
+          "value": 60300,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=tela+de+bloqueio+tumblr&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio de ativação",
+          "value": 57400,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=bloqueio+de+ativa%C3%A7%C3%A3o&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio de imei",
+          "value": 55200,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=bloqueio+de+imei&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "fotos de tela de bloqueio",
+          "value": 700,
+          "formatted_value": "+700%",
+          "link": "/trends/explore?q=fotos+de+tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "fotos para tela de bloqueio",
+          "value": 350,
+          "formatted_value": "+350%",
+          "link": "/trends/explore?q=fotos+para+tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "tela de bloqueio",
+          "value": 100,
+          "formatted_value": "100",
+          "link": "/trends/explore?q=tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio de celular",
+          "value": 23,
+          "formatted_value": "23",
+          "link": "/trends/explore?q=bloqueio+de+celular&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "whatsapp bloqueio",
+          "value": 21,
+          "formatted_value": "21",
+          "link": "/trends/explore?q=whatsapp+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio judicial",
+          "value": 19,
+          "formatted_value": "19",
+          "link": "/trends/explore?q=bloqueio+judicial&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio continental",
+          "value": 13,
+          "formatted_value": "13",
+          "link": "/trends/explore?q=bloqueio+continental&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio do whatsapp",
+          "value": 9,
+          "formatted_value": "9",
+          "link": "/trends/explore?q=bloqueio+do+whatsapp&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "o bloqueio continental",
+          "value": 9,
+          "formatted_value": "9",
+          "link": "/trends/explore?q=o+bloqueio+continental&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "tela de bloqueio iphone",
+          "value": 9,
+          "formatted_value": "9",
+          "link": "/trends/explore?q=tela+de+bloqueio+iphone&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio emocional",
+          "value": 9,
+          "formatted_value": "9",
+          "link": "/trends/explore?q=bloqueio+emocional&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio de ramo",
+          "value": 8,
+          "formatted_value": "8",
+          "link": "/trends/explore?q=bloqueio+de+ramo&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "fotos de tela de bloqueio",
+          "value": 8,
+          "formatted_value": "8",
+          "link": "/trends/explore?q=fotos+de+tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio facebook",
+          "value": 8,
+          "formatted_value": "8",
+          "link": "/trends/explore?q=bloqueio+facebook&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "foto de tela de bloqueio",
+          "value": 8,
+          "formatted_value": "8",
+          "link": "/trends/explore?q=foto+de+tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio de whatsapp",
+          "value": 7,
+          "formatted_value": "7",
+          "link": "/trends/explore?q=bloqueio+de+whatsapp&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "como tirar bloqueio de tela",
+          "value": 7,
+          "formatted_value": "7",
+          "link": "/trends/explore?q=como+tirar+bloqueio+de+tela&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio ramo direito",
+          "value": 7,
+          "formatted_value": "7",
+          "link": "/trends/explore?q=bloqueio+ramo+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "fotos para tela de bloqueio",
+          "value": 6,
+          "formatted_value": "6",
+          "link": "/trends/explore?q=fotos+para+tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "papel de parede tela de bloqueio",
+          "value": 5,
+          "formatted_value": "5",
+          "link": "/trends/explore?q=papel+de+parede+tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio no whatsapp",
+          "value": 5,
+          "formatted_value": "5",
+          "link": "/trends/explore?q=bloqueio+no+whatsapp&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "tela de bloqueio android",
+          "value": 5,
+          "formatted_value": "5",
+          "link": "/trends/explore?q=tela+de+bloqueio+android&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "tela de bloqueio para celular",
+          "value": 5,
+          "formatted_value": "5",
+          "link": "/trends/explore?q=tela+de+bloqueio+para+celular&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "imagens de tela de bloqueio",
+          "value": 5,
+          "formatted_value": "5",
+          "link": "/trends/explore?q=imagens+de+tela+de+bloqueio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio ramo esquerdo",
+          "value": 5,
+          "formatted_value": "5",
+          "link": "/trends/explore?q=bloqueio+ramo+esquerdo&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bloqueio de ramo direito",
+          "value": 4,
+          "formatted_value": "4",
+          "link": "/trends/explore?q=bloqueio+de+ramo+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "o que foi bloqueio continental",
+          "value": 4,
+          "formatted_value": "4",
+          "link": "/trends/explore?q=o+que+foi+bloqueio+continental&date=2004-01-01+2023-12-31"
+        }
+      ]
+    }
+  ]
+}

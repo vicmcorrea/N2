@@ -11,7 +11,12 @@ import torch
 from transformers import AutoModel, AutoTokenizer
 
 from stil_semantic_change.preprocessing.text import PortuguesePreprocessor
-from stil_semantic_change.utils.artifacts import write_dataframe, write_json, write_npz
+from stil_semantic_change.preprocessing.views import (
+    prepared_content_tokens_dir,
+    prepared_doc_metadata_dir,
+    prepared_doc_raw_text_dir,
+)
+from stil_semantic_change.utils.artifacts import read_json, write_dataframe, write_json, write_npz
 from stil_semantic_change.utils.config.schema import ExperimentConfig
 
 logger = logging.getLogger(__name__)
@@ -39,6 +44,15 @@ def select_confirmatory_terms(candidate_sets: dict[str, object]) -> list[str]:
             normalized = str(term)
             if normalized and normalized not in terms:
                 terms.append(normalized)
+    return terms
+
+
+def select_confirmatory_terms_from_panel(panel: pd.DataFrame) -> list[str]:
+    terms: list[str] = []
+    for term in panel.get("lemma", pd.Series(dtype=object)).tolist():
+        normalized = str(term)
+        if normalized and normalized not in terms:
+            terms.append(normalized)
     return terms
 
 
@@ -123,12 +137,11 @@ def run_bert_confirmatory(
     bert_root = scores_root / "bert_confirmatory"
     bert_root.mkdir(parents=True, exist_ok=True)
 
-    candidate_sets = _load_candidate_sets(scores_root)
-    selected_terms = select_confirmatory_terms(candidate_sets)
+    selected_terms, slice_order, selection_source, comparison_panel = _load_confirmatory_inputs(
+        scores_root
+    )
     if not selected_terms:
-        raise ValueError("No confirmatory terms were found in candidate_sets.json")
-
-    slice_order = [str(slice_id) for slice_id in candidate_sets["slice_order"]]
+        raise ValueError("No confirmatory terms were found for the BERT stage")
     samples = _sample_occurrences(
         prepared_root=prepared_root,
         selected_terms=selected_terms,
@@ -145,7 +158,7 @@ def run_bert_confirmatory(
     if not examples:
         raise ValueError("Could not build any token-aligned BERT contexts for sampled occurrences")
 
-    device = _resolve_device()
+    device = _resolve_device(cfg.model.bert_device)
     logger.info("Running BERT confirmatory analysis on device %s", device)
     tokenizer = AutoTokenizer.from_pretrained(cfg.model.bert_model_name, use_fast=True)
     model = AutoModel.from_pretrained(cfg.model.bert_model_name)
@@ -173,20 +186,7 @@ def run_bert_confirmatory(
         write_npz(bert_root / f"prototype_embeddings_layer_{layer}.npz", embeddings=matrix)
 
     bert_scores, bert_trajectory = score_prototype_distances(prototypes, slice_order)
-    word2vec_scores = pd.read_parquet(scores_root / "scores_aggregated.parquet")
-    comparison = bert_scores.merge(
-        word2vec_scores[["lemma", "primary_drift_mean", "first_last_drift_mean"]],
-        on="lemma",
-        how="left",
-    ).rename(
-        columns={
-            "primary_drift_mean": "word2vec_primary_drift_mean",
-            "first_last_drift_mean": "word2vec_first_last_drift_mean",
-        }
-    )
-    comparison["bert_word2vec_gap"] = (
-        comparison["primary_drift"] - comparison["word2vec_primary_drift_mean"]
-    )
+    comparison = _build_comparison_frame(bert_scores, scores_root, comparison_panel)
 
     write_dataframe(bert_root / "scores.parquet", bert_scores)
     write_dataframe(bert_root / "trajectory.parquet", bert_trajectory)
@@ -197,6 +197,7 @@ def run_bert_confirmatory(
             "model_name": cfg.model.bert_model_name,
             "device": device,
             "layers": list(cfg.model.bert_layers),
+            "selection_source": selection_source,
             "selected_terms": selected_terms,
             "sampled_occurrences": int(len(samples)),
             "embedded_occurrences": int(len(occurrence_meta)),
@@ -217,6 +218,77 @@ def _load_candidate_sets(scores_root: Path) -> dict[str, object]:
     return pd.read_json(path, typ="series").to_dict()
 
 
+def _load_confirmatory_inputs(
+    scores_root: Path,
+) -> tuple[list[str], list[str], str, pd.DataFrame | None]:
+    panel_root = scores_root / "comparison_panel"
+    panel_path = panel_root / "comparison_panel.parquet"
+    summary_path = panel_root / "summary.json"
+    if panel_path.exists() and summary_path.exists():
+        panel = pd.read_parquet(panel_path)
+        summary = read_json(summary_path)
+        selected_terms = select_confirmatory_terms_from_panel(panel)
+        slice_order = [str(slice_id) for slice_id in summary["slice_order"]]
+        return selected_terms, slice_order, "comparison_panel", panel
+
+    candidate_sets = _load_candidate_sets(scores_root)
+    selected_terms = select_confirmatory_terms(candidate_sets)
+    slice_order = [str(slice_id) for slice_id in candidate_sets["slice_order"]]
+    return selected_terms, slice_order, "candidate_sets", None
+
+
+def _build_comparison_frame(
+    bert_scores: pd.DataFrame,
+    scores_root: Path,
+    comparison_panel: pd.DataFrame | None,
+) -> pd.DataFrame:
+    if comparison_panel is None:
+        word2vec_scores = pd.read_parquet(scores_root / "scores_aggregated.parquet")
+        comparison = bert_scores.merge(
+            word2vec_scores[["lemma", "primary_drift_mean", "first_last_drift_mean"]],
+            on="lemma",
+            how="left",
+        ).rename(
+            columns={
+                "primary_drift_mean": "word2vec_primary_drift",
+                "first_last_drift_mean": "word2vec_first_last_drift",
+            }
+        )
+    else:
+        comparison_columns = [
+            "lemma",
+            "bucket",
+            "word2vec_rank",
+            "word2vec_primary_drift",
+            "word2vec_first_last_drift",
+            "tfidf_rank",
+            "tfidf_primary_drift",
+            "tfidf_first_last_drift",
+            "selected_by_word2vec",
+            "selected_by_tfidf",
+            "selected_as_stable_control",
+            "selected_as_theory_seed",
+            "selected_as_disagreement_case",
+        ]
+        available_columns = [
+            column for column in comparison_columns if column in comparison_panel.columns
+        ]
+        comparison = bert_scores.merge(
+            comparison_panel[available_columns].drop_duplicates(subset=["lemma"]),
+            on="lemma",
+            how="left",
+        )
+
+    comparison["bert_word2vec_gap"] = (
+        comparison["primary_drift"] - comparison["word2vec_primary_drift"]
+    )
+    if "tfidf_primary_drift" in comparison.columns:
+        comparison["bert_tfidf_gap"] = (
+            comparison["primary_drift"] - comparison["tfidf_primary_drift"]
+        )
+    return comparison
+
+
 def _sample_occurrences(
     prepared_root: Path,
     selected_terms: list[str],
@@ -225,10 +297,10 @@ def _sample_occurrences(
 ) -> pd.DataFrame:
     term_set = set(selected_terms)
     token_frames: list[pd.DataFrame] = []
-    for shard_path in sorted((prepared_root / "tokens").glob("*.parquet")):
+    for shard_path in sorted(prepared_content_tokens_dir(prepared_root).glob("*.parquet")):
         frame = pd.read_parquet(
             shard_path,
-            columns=["doc_id", "slice_id", "lemma", "token_index", "token"],
+            columns=["doc_id", "slice_id", "lemma", "token_index"],
         )
         shard = frame.loc[frame["lemma"].isin(term_set)].copy()
         if not shard.empty:
@@ -259,7 +331,7 @@ def _sample_occurrences(
 
 def _load_document_metadata(prepared_root: Path, doc_ids: set[str]) -> pd.DataFrame:
     rows: list[pd.DataFrame] = []
-    for shard_path in sorted((prepared_root / "docs").glob("*.parquet")):
+    for shard_path in sorted(prepared_doc_metadata_dir(prepared_root).glob("*.parquet")):
         frame = pd.read_parquet(shard_path, columns=["doc_id", "date", "source_file"])
         shard = frame.loc[frame["doc_id"].isin(doc_ids)].copy()
         if not shard.empty:
@@ -271,11 +343,11 @@ def _load_document_metadata(prepared_root: Path, doc_ids: set[str]) -> pd.DataFr
 
 def _load_document_texts(prepared_root: Path, doc_ids: set[str]) -> dict[str, str]:
     document_texts: dict[str, str] = {}
-    for shard_path in sorted((prepared_root / "docs").glob("*.parquet")):
-        frame = pd.read_parquet(shard_path, columns=["doc_id", "text"])
+    for shard_path in sorted(prepared_doc_raw_text_dir(prepared_root).glob("*.parquet")):
+        frame = pd.read_parquet(shard_path, columns=["doc_id", "raw_text"])
         shard = frame.loc[frame["doc_id"].isin(doc_ids)]
         for row in shard.itertuples(index=False):
-            document_texts[str(row.doc_id)] = str(row.text)
+            document_texts[str(row.doc_id)] = str(row.raw_text)
     return document_texts
 
 
@@ -310,7 +382,22 @@ def _build_context_examples(
     return examples
 
 
-def _resolve_device() -> str:
+def _resolve_device(preferred_device: str = "auto") -> str:
+    normalized = preferred_device.strip().lower()
+    if normalized not in {"auto", "cpu", "cuda", "mps"}:
+        raise ValueError(
+            f"Invalid model.bert_device '{preferred_device}'. Expected one of: auto, cpu, cuda, mps"
+        )
+    if normalized == "cpu":
+        return "cpu"
+    if normalized == "cuda":
+        if torch.cuda.is_available():
+            return "cuda"
+        raise ValueError("model.bert_device='cuda' was requested but CUDA is not available")
+    if normalized == "mps":
+        if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+            return "mps"
+        raise ValueError("model.bert_device='mps' was requested but MPS is not available")
     if torch.cuda.is_available():
         return "cuda"
     if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():

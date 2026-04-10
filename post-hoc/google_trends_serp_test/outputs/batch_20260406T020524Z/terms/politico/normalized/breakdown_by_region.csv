@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+CU,Cuba,100,político
+GW,Guinea-Bissau,0,político
+ST,São Tomé & Príncipe,0,político
+EC,Ecuador,50,político
+GQ,Equatorial Guinea,0,político
+BO,Bolivia,43,político
+AO,Angola,42,político
+MZ,Mozambique,40,político
+NI,Nicaragua,40,político
+CO,Colombia,34,político
+HN,Honduras,34,político
+PY,Paraguay,33,político
+BR,Brazil,29,político
+DO,Dominican Republic,29,político
+AR,Argentina,29,político
+SV,El Salvador,27,político
+MX,Mexico,26,político
+CR,Costa Rica,26,político
+PE,Peru,26,político
+GT,Guatemala,26,político
+PA,Panama,24,político
+CV,Cape Verde,0,político
+UY,Uruguay,23,político
+VE,Venezuela,18,político
+CL,Chile,16,político
+ES,Spain,15,político
+PR,Puerto Rico,8,político
+PT,Portugal,8,político
+TL,Timor-Leste,0,político
+AD,Andorra,0,político
+GA,Gabon,0,político
+CW,Curaçao,0,político
+AW,Aruba,0,político
+SR,Suriname,0,político
+MO,Macao,0,político
+GF,French Guiana,0,político
+SS,South Sudan,0,político
+BZ,Belize,0,político
+SH,St. Helena,0,político
+HT,Haiti,0,político
+SN,Senegal,0,político
+LU,Luxembourg,0,político
+NA,Namibia,0,político
+CI,Côte d’Ivoire,0,político
+CM,Cameroon,0,político
+GY,Guyana,0,político
+US,United States,0,político
+TT,Trinidad & Tobago,0,político
+ML,Mali,0,político
+MT,Malta,0,político
+IS,Iceland,0,político
+DE,Germany,0,político
+CH,Switzerland,0,político
+BE,Belgium,0,político
+GB,United Kingdom,0,político
+MA,Morocco,0,político
+IT,Italy,0,político
+IE,Ireland,0,político
+CA,Canada,0,político
+CD,Congo - Kinshasa,0,político
+FR,France,0,político
+LB,Lebanon,0,político
+CZ,Czechia,0,político
+LY,Libya,0,político
+SE,Sweden,0,político
+DK,Denmark,0,político
+NL,Netherlands,0,político
+NO,Norway,0,político
+AT,Austria,0,político
+KR,South Korea,0,político
+PS,Palestine,0,político
+DZ,Algeria,0,político
+KE,Kenya,0,político
+AL,Albania,0,político
+QA,Qatar,0,político
+TN,Tunisia,0,político
+AE,United Arab Emirates,0,político
+IL,Israel,0,político
+AM,Armenia,0,político
+IQ,Iraq,0,político
+HU,Hungary,0,político
+GR,Greece,0,político
+JP,Japan,0,político
+EG,Egypt,0,político
+MD,Moldova,0,político
+RU,Russia,0,político
+IN,India,0,político
+VN,Vietnam,0,político
+BD,Bangladesh,0,político
+FI,Finland,0,político
+CN,China,0,político
+BG,Bulgaria,0,político
+GE,Georgia,0,político
+SK,Slovakia,0,político
+BY,Belarus,0,político
+RO,Romania,0,político
+JO,Jordan,0,político
+NZ,New Zealand,0,político
+ZA,South Africa,0,político
+NG,Nigeria,0,político
+AZ,Azerbaijan,0,político
+HR,Croatia,0,político
+NP,Nepal,0,político
+GH,Ghana,0,político
+TW,Taiwan,0,político
+SG,Singapore,0,político
+PK,Pakistan,0,político
+RS,Serbia,0,político
+SI,Slovenia,0,político
+AU,Australia,0,político
+PL,Poland,0,político
+MY,Malaysia,0,político
+PH,Philippines,0,político
+HK,Hong Kong,0,político
+UA,Ukraine,0,político
+TH,Thailand,0,político
+ID,Indonesia,0,político
+LT,Lithuania,0,político
+IR,Iran,0,político
+KZ,Kazakhstan,0,político
+SA,Saudi Arabia,0,político
+TR,Türkiye,0,político
+PN,Pitcairn Islands,0,político
+ZW,Zimbabwe,0,político
+FO,Faroe Islands,0,político
+FK,Falkland Islands (Islas Malvinas),0,político
+LA,Laos,0,político
+FJ,Fiji,0,político
+LC,St. Lucia,0,político
+LI,Liechtenstein,0,político
+LK,Sri Lanka,0,político
+LS,Lesotho,0,político
+FM,Micronesia,0,político
+ET,Ethiopia,0,político
+LV,Latvia,0,político
+EE,Estonia,0,político
+MF,St. Martin,0,político
+EH,Western Sahara,0,político
+MC,Monaco,0,político
+ER,Eritrea,0,político
+MG,Madagascar,0,político
+MV,Maldives,0,político
+DM,Dominica,0,político
+MH,Marshall Islands,0,político
+MK,North Macedonia,0,político
+DJ,Djibouti,0,político
+CY,Cyprus,0,político
+MM,Myanmar (Burma),0,político
+ME,Montenegro,0,político
+MN,Mongolia,0,político
+MP,Northern Mariana Islands,0,político
+KY,Cayman Islands,0,político
+MR,Mauritania,0,político
+MS,Montserrat,0,político
+MQ,Martinique,0,político
+MU,Mauritius,0,político
+MW,Malawi,0,político
+KN,St. Kitts & Nevis,0,político
+YT,Mayotte,0,político
+CX,Christmas Island,0,político
+NC,New Caledonia,0,político
+NE,Niger,0,político
+NF,Norfolk Island,0,político
+KI,Kiribati,0,político
+KM,Comoros,0,político
+NU,Niue,0,político
+CK,Cook Islands,0,político
+CG,Congo - Brazzaville,0,político
+KH,Cambodia,0,político
+NR,Nauru,0,político
+CC,Cocos (Keeling) Islands,0,político
+OM,Oman,0,político
+KG,Kyrgyzstan,0,político
+CF,Central African Republic,0,político
+GG,Guernsey,0,político
+BW,Botswana,0,político
+GI,Gibraltar,0,político
+PW,Palau,0,político
+PG,Papua New Guinea,0,político
+JE,Jersey,0,político
+BV,Bouvet Island,0,político
+KP,North Korea,0,político
+BT,Bhutan,0,político
+BN,Brunei,0,político
+BB,Barbados,0,político
+PF,French Polynesia,0,político
+BM,Bermuda,0,político
+RE,Réunion,0,político
+BL,St. Barthélemy,0,político
+BA,Bosnia & Herzegovina,0,político
+RW,Rwanda,0,político
+JM,Jamaica,0,político
+SD,Sudan,0,político
+BS,Bahamas,0,político
+GN,Guinea,0,político
+GS,South Georgia & South Sandwich Islands,0,político
+BH,Bahrain,0,político
+SJ,Svalbard & Jan Mayen,0,político
+SB,Solomon Islands,0,político
+SL,Sierra Leone,0,político
+BF,Burkina Faso,0,político
+SM,San Marino,0,político
+SO,Somalia,0,político
+PM,St. Pierre & Miquelon,0,político
+GP,Guadeloupe,0,político
+BQ,Caribbean Netherlands,0,político
+BJ,Benin,0,político
+BI,Burundi,0,político
+GM,Gambia,0,político
+GD,Grenada,0,político
+GL,Greenland,0,político
+SZ,Eswatini,0,político
+SX,Sint Maarten,0,político
+SC,Seychelles,0,político
+SY,Syria,0,político
+TC,Turks & Caicos Islands,0,político
+TD,Chad,0,político
+TG,Togo,0,político
+IO,British Indian Ocean Territory,0,político
+TJ,Tajikistan,0,político
+TK,Tokelau,0,político
+TM,Turkmenistan,0,político
+AG,Antigua & Barbuda,0,político
+TO,Tonga,0,político
+TF,French Southern Territories,0,político
+AQ,Antarctica,0,político
+GU,Guam,0,político
+TV,Tuvalu,0,político
+IM,Isle of Man,0,político
+TZ,Tanzania,0,político
+UG,Uganda,0,político
+HM,Heard & McDonald Islands,0,político
+UM,U.S. Outlying Islands,0,político
+AS,American Samoa,0,político
+AX,Åland Islands,0,político
+UZ,Uzbekistan,0,político
+VA,Vatican City,0,político
+VC,St. Vincent & Grenadines,0,político
+AI,Anguilla,0,político
+VG,British Virgin Islands,0,político
+VI,U.S. Virgin Islands,0,político
+AF,Afghanistan,0,político
+VU,Vanuatu,0,político
+WF,Wallis & Futuna,0,político
+WS,Samoa,0,político
+XK,Kosovo,0,político
+YE,Yemen,0,político
+LR,Liberia,0,político
+ZM,Zambia,0,político
+KW,Kuwait,0,político

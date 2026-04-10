@@ -38,23 +38,26 @@ class PreprocessConfig:
     remove_punctuation: bool = True
     remove_numeric: bool = True
     min_token_length: int = 2
-    batch_size: int = 128
+    batch_size: int = 512
+    n_process: int = 6
 
 
 @dataclass(frozen=True)
 class ModelConfig:
     kind: str
     name: str
+    text_view: str = "content_lemma"
     vector_size: int = 300
     window: int = 5
-    negative: int = 10
+    negative: int = 5
     min_count: int = 5
-    epochs: int = 10
+    epochs: int = 5
     sg: int = 1
-    workers: int = 1
+    workers: int = 6
     seed: int = 13
-    replicates: int = 3
+    replicates: int = 2
     bert_model_name: str = "rufimelo/bert-large-portuguese-cased-sts"
+    bert_device: str = "auto"
     bert_batch_size: int = 8
     bert_layers: tuple[int, ...] = (-1, -4)
     bert_max_contexts_per_slice: int = 64
@@ -72,6 +75,11 @@ class SelectionConfig:
     min_occurrences_per_slice: int = 50
     min_documents_per_slice: int = 5
     min_slice_presence_ratio: float = 0.8
+    exclude_lemmas: tuple[str, ...] = ()
+    drift_candidate_allowed_pos: tuple[str, ...] = ()
+    drift_candidate_exclude_lemmas: tuple[str, ...] = ()
+    stable_control_allowed_pos: tuple[str, ...] = ()
+    stable_control_exclude_lemmas: tuple[str, ...] = ()
     top_drift_candidates: int = 15
     top_stable_controls: int = 10
     top_seed_terms: int = 5

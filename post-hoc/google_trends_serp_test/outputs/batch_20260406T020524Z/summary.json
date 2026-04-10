@@ -1,0 +1,11 @@
+{
+  "run_dir": "outputs/batch_20260406T020524Z",
+  "total_terms": 55,
+  "ok_terms": 55,
+  "error_terms": 0,
+  "date_from": "2004-01-01",
+  "date_to": "2023-12-31",
+  "geo_location": "BR",
+  "max_workers": 3,
+  "pause_seconds": 0.2
+}

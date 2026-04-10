@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+SM,San Marino,0,vento
+IT,Italy,100,vento
+BR,Brazil,86,vento
+MX,Mexico,68,vento
+CV,Cape Verde,0,vento
+MZ,Mozambique,0,vento
+ST,São Tomé & Príncipe,0,vento
+PT,Portugal,50,vento
+AR,Argentina,35,vento
+AO,Angola,0,vento
+GW,Guinea-Bissau,0,vento
+VG,British Virgin Islands,0,vento
+UY,Uruguay,18,vento
+MC,Monaco,0,vento
+MD,Moldova,0,vento
+PR,Puerto Rico,0,vento
+AM,Armenia,0,vento
+BN,Brunei,0,vento
+MT,Malta,0,vento
+CU,Cuba,0,vento
+FI,Finland,8,vento
+CH,Switzerland,8,vento
+IN,India,8,vento
+TL,Timor-Leste,0,vento
+ME,Montenegro,0,vento
+CL,Chile,6,vento
+AL,Albania,0,vento
+GT,Guatemala,0,vento
+PY,Paraguay,0,vento
+HU,Hungary,6,vento
+PL,Poland,5,vento
+HR,Croatia,0,vento
+NI,Nicaragua,0,vento
+LU,Luxembourg,0,vento
+IS,Iceland,0,vento
+ES,Spain,5,vento
+LI,Liechtenstein,0,vento
+BO,Bolivia,0,vento
+RO,Romania,4,vento
+PE,Peru,4,vento
+LV,Latvia,0,vento
+AX,Åland Islands,0,vento
+BG,Bulgaria,0,vento
+SH,St. Helena,0,vento
+GR,Greece,4,vento
+CZ,Czechia,4,vento
+EE,Estonia,0,vento
+AT,Austria,3,vento
+DE,Germany,3,vento
+CR,Costa Rica,0,vento
+BA,Bosnia & Herzegovina,0,vento
+EC,Ecuador,0,vento
+SC,Seychelles,0,vento
+MK,North Macedonia,0,vento
+DZ,Algeria,0,vento
+LT,Lithuania,0,vento
+HN,Honduras,0,vento
+AD,Andorra,0,vento
+BY,Belarus,0,vento
+SV,El Salvador,0,vento
+TN,Tunisia,0,vento
+AG,Antigua & Barbuda,0,vento
+KZ,Kazakhstan,0,vento
+NL,Netherlands,3,vento
+BE,Belgium,3,vento
+GF,French Guiana,0,vento
+KG,Kyrgyzstan,0,vento
+DK,Denmark,0,vento
+CO,Colombia,3,vento
+PA,Panama,0,vento
+SK,Slovakia,0,vento
+RS,Serbia,0,vento
+MY,Malaysia,2,vento
+XK,Kosovo,0,vento
+SX,Sint Maarten,0,vento
+BM,Bermuda,0,vento
+VI,U.S. Virgin Islands,0,vento
+MF,St. Martin,0,vento
+SI,Slovenia,0,vento
+SE,Sweden,2,vento
+UA,Ukraine,2,vento
+DO,Dominican Republic,0,vento
+CW,Curaçao,0,vento
+VN,Vietnam,2,vento
+GE,Georgia,0,vento
+NP,Nepal,0,vento
+AW,Aruba,0,vento
+MV,Maldives,0,vento
+MG,Madagascar,0,vento
+FR,France,2,vento
+SG,Singapore,0,vento
+TR,Türkiye,2,vento
+KN,St. Kitts & Nevis,0,vento
+IE,Ireland,0,vento
+BZ,Belize,0,vento
+TC,Turks & Caicos Islands,0,vento
+AE,United Arab Emirates,0,vento
+RU,Russia,2,vento
+VE,Venezuela,0,vento
+NO,Norway,0,vento
+KY,Cayman Islands,0,vento
+GI,Gibraltar,0,vento
+MO,Macao,0,vento
+QA,Qatar,0,vento
+MU,Mauritius,0,vento
+JE,Jersey,0,vento
+US,United States,1,vento
+AZ,Azerbaijan,0,vento
+GB,United Kingdom,1,vento
+GA,Gabon,0,vento
+OM,Oman,0,vento
+BH,Bahrain,0,vento
+GG,Guernsey,0,vento
+CY,Cyprus,0,vento
+PF,French Polynesia,0,vento
+CG,Congo - Brazzaville,0,vento
+IM,Isle of Man,0,vento
+VC,St. Vincent & Grenadines,0,vento
+NG,Nigeria,0,vento
+SR,Suriname,0,vento
+FO,Faroe Islands,0,vento
+AU,Australia,1,vento
+TW,Taiwan,0,vento
+KW,Kuwait,0,vento
+MA,Morocco,0,vento
+BS,Bahamas,0,vento
+AF,Afghanistan,0,vento
+TM,Turkmenistan,0,vento
+EH,Western Sahara,0,vento
+NC,New Caledonia,0,vento
+BB,Barbados,0,vento
+GD,Grenada,0,vento
+LA,Laos,0,vento
+MQ,Martinique,0,vento
+GP,Guadeloupe,0,vento
+LS,Lesotho,0,vento
+LB,Lebanon,0,vento
+CA,Canada,0,vento
+BW,Botswana,0,vento
+NE,Niger,0,vento
+HK,Hong Kong,0,vento
+TG,Togo,0,vento
+TH,Thailand,0,vento
+NZ,New Zealand,0,vento
+PH,Philippines,0,vento
+NA,Namibia,0,vento
+GU,Guam,0,vento
+DJ,Djibouti,0,vento
+LY,Libya,0,vento
+BT,Bhutan,0,vento
+BJ,Benin,0,vento
+JM,Jamaica,0,vento
+LC,St. Lucia,0,vento
+SN,Senegal,0,vento
+GN,Guinea,0,vento
+JP,Japan,0,vento
+IL,Israel,0,vento
+SZ,Eswatini,0,vento
+FJ,Fiji,0,vento
+GH,Ghana,0,vento
+RE,Réunion,0,vento
+HT,Haiti,0,vento
+ZA,South Africa,0,vento
+UG,Uganda,0,vento
+MM,Myanmar (Burma),0,vento
+TT,Trinidad & Tobago,0,vento
+EG,Egypt,0,vento
+GM,Gambia,0,vento
+GY,Guyana,0,vento
+PS,Palestine,0,vento
+MN,Mongolia,0,vento
+ML,Mali,0,vento
+KH,Cambodia,0,vento
+SS,South Sudan,0,vento
+LR,Liberia,0,vento
+KR,South Korea,0,vento
+RW,Rwanda,0,vento
+ET,Ethiopia,0,vento
+MR,Mauritania,0,vento
+TJ,Tajikistan,0,vento
+TZ,Tanzania,0,vento
+UZ,Uzbekistan,0,vento
+SA,Saudi Arabia,0,vento
+MW,Malawi,0,vento
+PK,Pakistan,0,vento
+CD,Congo - Kinshasa,0,vento
+ZM,Zambia,0,vento
+CI,Côte d’Ivoire,0,vento
+LK,Sri Lanka,0,vento
+BD,Bangladesh,0,vento
+SO,Somalia,0,vento
+KE,Kenya,0,vento
+IQ,Iraq,0,vento
+JO,Jordan,0,vento
+ID,Indonesia,0,vento
+CN,China,0,vento
+CM,Cameroon,0,vento
+SY,Syria,0,vento
+ZW,Zimbabwe,0,vento
+SD,Sudan,0,vento
+YE,Yemen,0,vento
+IR,Iran,0,vento
+NF,Norfolk Island,0,vento
+FK,Falkland Islands (Islas Malvinas),0,vento
+CX,Christmas Island,0,vento
+GL,Greenland,0,vento
+KM,Comoros,0,vento
+CK,Cook Islands,0,vento
+PN,Pitcairn Islands,0,vento
+PW,Palau,0,vento
+NR,Nauru,0,vento
+HM,Heard & McDonald Islands,0,vento
+DM,Dominica,0,vento
+CC,Cocos (Keeling) Islands,0,vento
+SL,Sierra Leone,0,vento
+NU,Niue,0,vento
+TD,Chad,0,vento
+SB,Solomon Islands,0,vento
+IO,British Indian Ocean Territory,0,vento
+SJ,Svalbard & Jan Mayen,0,vento
+TK,Tokelau,0,vento
+CF,Central African Republic,0,vento
+PG,Papua New Guinea,0,vento
+TO,Tonga,0,vento
+YT,Mayotte,0,vento
+BV,Bouvet Island,0,vento
+GS,South Georgia & South Sandwich Islands,0,vento
+TV,Tuvalu,0,vento
+BL,St. Barthélemy,0,vento
+MS,Montserrat,0,vento
+ER,Eritrea,0,vento
+GQ,Equatorial Guinea,0,vento
+UM,U.S. Outlying Islands,0,vento
+BF,Burkina Faso,0,vento
+BQ,Caribbean Netherlands,0,vento
+MP,Northern Mariana Islands,0,vento
+VA,Vatican City,0,vento
+KP,North Korea,0,vento
+BI,Burundi,0,vento
+TF,French Southern Territories,0,vento
+AQ,Antarctica,0,vento
+AS,American Samoa,0,vento
+VU,Vanuatu,0,vento
+WF,Wallis & Futuna,0,vento
+WS,Samoa,0,vento
+AI,Anguilla,0,vento
+FM,Micronesia,0,vento
+MH,Marshall Islands,0,vento
+KI,Kiribati,0,vento
+PM,St. Pierre & Miquelon,0,vento

@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+MZ,Mozambique,100,ensino
+AO,Angola,75,ensino
+ST,São Tomé & Príncipe,0,ensino
+GW,Guinea-Bissau,0,ensino
+BR,Brazil,55,ensino
+CV,Cape Verde,0,ensino
+PT,Portugal,38,ensino
+TL,Timor-Leste,0,ensino
+MO,Macao,0,ensino
+GF,French Guiana,0,ensino
+PY,Paraguay,0,ensino
+ES,Spain,0,ensino
+SH,St. Helena,0,ensino
+BO,Bolivia,0,ensino
+LU,Luxembourg,0,ensino
+HT,Haiti,0,ensino
+AD,Andorra,0,ensino
+NA,Namibia,0,ensino
+UY,Uruguay,0,ensino
+SR,Suriname,0,ensino
+SN,Senegal,0,ensino
+MW,Malawi,0,ensino
+GB,United Kingdom,0,ensino
+DE,Germany,0,ensino
+GY,Guyana,0,ensino
+SZ,Eswatini,0,ensino
+JE,Jersey,0,ensino
+CU,Cuba,0,ensino
+KE,Kenya,0,ensino
+US,United States,0,ensino
+CH,Switzerland,0,ensino
+JP,Japan,0,ensino
+CG,Congo - Brazzaville,0,ensino
+MQ,Martinique,0,ensino
+ZW,Zimbabwe,0,ensino
+LA,Laos,0,ensino
+IE,Ireland,0,ensino
+AR,Argentina,0,ensino
+GN,Guinea,0,ensino
+PA,Panama,0,ensino
+MT,Malta,0,ensino
+MG,Madagascar,0,ensino
+IS,Iceland,0,ensino
+ET,Ethiopia,0,ensino
+BE,Belgium,0,ensino
+MX,Mexico,0,ensino
+BJ,Benin,0,ensino
+NI,Nicaragua,0,ensino
+PE,Peru,0,ensino
+CO,Colombia,0,ensino
+KR,South Korea,0,ensino
+BB,Barbados,0,ensino
+CL,Chile,0,ensino
+HN,Honduras,0,ensino
+ZM,Zambia,0,ensino
+KH,Cambodia,0,ensino
+VE,Venezuela,0,ensino
+GT,Guatemala,0,ensino
+CD,Congo - Kinshasa,0,ensino
+NL,Netherlands,0,ensino
+EC,Ecuador,0,ensino
+CR,Costa Rica,0,ensino
+TT,Trinidad & Tobago,0,ensino
+ZA,South Africa,0,ensino
+FR,France,0,ensino
+GP,Guadeloupe,0,ensino
+AM,Armenia,0,ensino
+VN,Vietnam,0,ensino
+PS,Palestine,0,ensino
+UG,Uganda,0,ensino
+AE,United Arab Emirates,0,ensino
+SV,El Salvador,0,ensino
+GH,Ghana,0,ensino
+IT,Italy,0,ensino
+LB,Lebanon,0,ensino
+DO,Dominican Republic,0,ensino
+MN,Mongolia,0,ensino
+NO,Norway,0,ensino
+BS,Bahamas,0,ensino
+CI,Côte d’Ivoire,0,ensino
+QA,Qatar,0,ensino
+NG,Nigeria,0,ensino
+RO,Romania,0,ensino
+IN,India,0,ensino
+TZ,Tanzania,0,ensino
+MD,Moldova,0,ensino
+BD,Bangladesh,0,ensino
+BN,Brunei,0,ensino
+IQ,Iraq,0,ensino
+CA,Canada,0,ensino
+MA,Morocco,0,ensino
+NP,Nepal,0,ensino
+JM,Jamaica,0,ensino
+RU,Russia,0,ensino
+MY,Malaysia,0,ensino
+SE,Sweden,0,ensino
+PK,Pakistan,0,ensino
+CN,China,0,ensino
+SG,Singapore,0,ensino
+AL,Albania,0,ensino
+MU,Mauritius,0,ensino
+EG,Egypt,0,ensino
+DK,Denmark,0,ensino
+LY,Libya,0,ensino
+HK,Hong Kong,0,ensino
+MM,Myanmar (Burma),0,ensino
+TN,Tunisia,0,ensino
+NZ,New Zealand,0,ensino
+GE,Georgia,0,ensino
+SI,Slovenia,0,ensino
+IL,Israel,0,ensino
+DZ,Algeria,0,ensino
+CZ,Czechia,0,ensino
+PH,Philippines,0,ensino
+AU,Australia,0,ensino
+EE,Estonia,0,ensino
+TW,Taiwan,0,ensino
+UZ,Uzbekistan,0,ensino
+CM,Cameroon,0,ensino
+TH,Thailand,0,ensino
+BY,Belarus,0,ensino
+KZ,Kazakhstan,0,ensino
+LT,Lithuania,0,ensino
+UA,Ukraine,0,ensino
+LV,Latvia,0,ensino
+RE,Réunion,0,ensino
+ID,Indonesia,0,ensino
+KG,Kyrgyzstan,0,ensino
+PR,Puerto Rico,0,ensino
+AT,Austria,0,ensino
+SD,Sudan,0,ensino
+FI,Finland,0,ensino
+BG,Bulgaria,0,ensino
+BH,Bahrain,0,ensino
+MK,North Macedonia,0,ensino
+LK,Sri Lanka,0,ensino
+HU,Hungary,0,ensino
+AZ,Azerbaijan,0,ensino
+RS,Serbia,0,ensino
+OM,Oman,0,ensino
+PL,Poland,0,ensino
+GR,Greece,0,ensino
+HR,Croatia,0,ensino
+CY,Cyprus,0,ensino
+BA,Bosnia & Herzegovina,0,ensino
+JO,Jordan,0,ensino
+YE,Yemen,0,ensino
+SY,Syria,0,ensino
+SA,Saudi Arabia,0,ensino
+KW,Kuwait,0,ensino
+SK,Slovakia,0,ensino
+TR,Türkiye,0,ensino
+IR,Iran,0,ensino
+LS,Lesotho,0,ensino
+AW,Aruba,0,ensino
+BW,Botswana,0,ensino
+KN,St. Kitts & Nevis,0,ensino
+KI,Kiribati,0,ensino
+YT,Mayotte,0,ensino
+CF,Central African Republic,0,ensino
+NC,New Caledonia,0,ensino
+NE,Niger,0,ensino
+NF,Norfolk Island,0,ensino
+CC,Cocos (Keeling) Islands,0,ensino
+MR,Mauritania,0,ensino
+NU,Niue,0,ensino
+BF,Burkina Faso,0,ensino
+MP,Northern Mariana Islands,0,ensino
+IO,British Indian Ocean Territory,0,ensino
+NR,Nauru,0,ensino
+IM,Isle of Man,0,ensino
+BV,Bouvet Island,0,ensino
+ME,Montenegro,0,ensino
+BQ,Caribbean Netherlands,0,ensino
+PN,Pitcairn Islands,0,ensino
+BI,Burundi,0,ensino
+CK,Cook Islands,0,ensino
+PW,Palau,0,ensino
+PG,Papua New Guinea,0,ensino
+BT,Bhutan,0,ensino
+BL,St. Barthélemy,0,ensino
+KP,North Korea,0,ensino
+ML,Mali,0,ensino
+KM,Comoros,0,ensino
+HM,Heard & McDonald Islands,0,ensino
+PF,French Polynesia,0,ensino
+CW,Curaçao,0,ensino
+GU,Guam,0,ensino
+CX,Christmas Island,0,ensino
+KY,Cayman Islands,0,ensino
+RW,Rwanda,0,ensino
+MH,Marshall Islands,0,ensino
+GL,Greenland,0,ensino
+GD,Grenada,0,ensino
+LC,St. Lucia,0,ensino
+GS,South Georgia & South Sandwich Islands,0,ensino
+AG,Antigua & Barbuda,0,ensino
+SJ,Svalbard & Jan Mayen,0,ensino
+SB,Solomon Islands,0,ensino
+SL,Sierra Leone,0,ensino
+GQ,Equatorial Guinea,0,ensino
+SM,San Marino,0,ensino
+SO,Somalia,0,ensino
+PM,St. Pierre & Miquelon,0,ensino
+MV,Maldives,0,ensino
+SS,South Sudan,0,ensino
+TF,French Southern Territories,0,ensino
+AQ,Antarctica,0,ensino
+BZ,Belize,0,ensino
+LI,Liechtenstein,0,ensino
+GM,Gambia,0,ensino
+AS,American Samoa,0,ensino
+SX,Sint Maarten,0,ensino
+SC,Seychelles,0,ensino
+MC,Monaco,0,ensino
+TC,Turks & Caicos Islands,0,ensino
+TD,Chad,0,ensino
+TG,Togo,0,ensino
+GI,Gibraltar,0,ensino
+TJ,Tajikistan,0,ensino
+TK,Tokelau,0,ensino
+TM,Turkmenistan,0,ensino
+GG,Guernsey,0,ensino
+TO,Tonga,0,ensino
+DJ,Djibouti,0,ensino
+GA,Gabon,0,ensino
+MF,St. Martin,0,ensino
+TV,Tuvalu,0,ensino
+FM,Micronesia,0,ensino
+FO,Faroe Islands,0,ensino
+FK,Falkland Islands (Islas Malvinas),0,ensino
+FJ,Fiji,0,ensino
+UM,U.S. Outlying Islands,0,ensino
+DM,Dominica,0,ensino
+AX,Åland Islands,0,ensino
+EH,Western Sahara,0,ensino
+VA,Vatican City,0,ensino
+VC,St. Vincent & Grenadines,0,ensino
+AI,Anguilla,0,ensino
+VG,British Virgin Islands,0,ensino
+VI,U.S. Virgin Islands,0,ensino
+ER,Eritrea,0,ensino
+VU,Vanuatu,0,ensino
+WF,Wallis & Futuna,0,ensino
+WS,Samoa,0,ensino
+XK,Kosovo,0,ensino
+BM,Bermuda,0,ensino
+LR,Liberia,0,ensino
+AF,Afghanistan,0,ensino
+MS,Montserrat,0,ensino

@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+MX,Mexico,100,reforma
+PR,Puerto Rico,41,reforma
+GT,Guatemala,39,reforma
+SV,El Salvador,36,reforma
+BR,Brazil,34,reforma
+CO,Colombia,30,reforma
+ST,São Tomé & Príncipe,0,reforma
+PT,Portugal,25,reforma
+AO,Angola,0,reforma
+NI,Nicaragua,24,reforma
+HN,Honduras,22,reforma
+MZ,Mozambique,0,reforma
+CL,Chile,19,reforma
+AR,Argentina,19,reforma
+ES,Spain,19,reforma
+CR,Costa Rica,18,reforma
+EC,Ecuador,18,reforma
+DO,Dominican Republic,18,reforma
+UY,Uruguay,17,reforma
+PA,Panama,17,reforma
+BO,Bolivia,16,reforma
+VE,Venezuela,16,reforma
+CU,Cuba,0,reforma
+GW,Guinea-Bissau,0,reforma
+PE,Peru,14,reforma
+CV,Cape Verde,0,reforma
+GQ,Equatorial Guinea,0,reforma
+PY,Paraguay,10,reforma
+AD,Andorra,0,reforma
+TL,Timor-Leste,0,reforma
+RS,Serbia,5,reforma
+AL,Albania,0,reforma
+MD,Moldova,0,reforma
+LV,Latvia,0,reforma
+HR,Croatia,4,reforma
+LT,Lithuania,4,reforma
+CZ,Czechia,4,reforma
+XK,Kosovo,0,reforma
+PL,Poland,3,reforma
+SI,Slovenia,0,reforma
+BA,Bosnia & Herzegovina,0,reforma
+RO,Romania,2,reforma
+SK,Slovakia,0,reforma
+ME,Montenegro,0,reforma
+BZ,Belize,0,reforma
+SH,St. Helena,0,reforma
+LU,Luxembourg,0,reforma
+CW,Curaçao,0,reforma
+AW,Aruba,0,reforma
+US,United States,1,reforma
+GF,French Guiana,0,reforma
+GI,Gibraltar,0,reforma
+SE,Sweden,1,reforma
+MK,North Macedonia,0,reforma
+MO,Macao,0,reforma
+VI,U.S. Virgin Islands,0,reforma
+AG,Antigua & Barbuda,0,reforma
+MC,Monaco,0,reforma
+LI,Liechtenstein,0,reforma
+CH,Switzerland,0,reforma
+BL,St. Barthélemy,0,reforma
+KY,Cayman Islands,0,reforma
+GE,Georgia,0,reforma
+CA,Canada,0,reforma
+GB,United Kingdom,0,reforma
+JE,Jersey,0,reforma
+DE,Germany,0,reforma
+SR,Suriname,0,reforma
+BB,Barbados,0,reforma
+HT,Haiti,0,reforma
+BG,Bulgaria,0,reforma
+GA,Gabon,0,reforma
+LA,Laos,0,reforma
+BS,Bahamas,0,reforma
+NO,Norway,0,reforma
+BM,Bermuda,0,reforma
+FR,France,0,reforma
+IE,Ireland,0,reforma
+IS,Iceland,0,reforma
+BE,Belgium,0,reforma
+MT,Malta,0,reforma
+GY,Guyana,0,reforma
+NA,Namibia,0,reforma
+PF,French Polynesia,0,reforma
+JM,Jamaica,0,reforma
+ID,Indonesia,0,reforma
+MR,Mauritania,0,reforma
+GP,Guadeloupe,0,reforma
+AT,Austria,0,reforma
+TT,Trinidad & Tobago,0,reforma
+SN,Senegal,0,reforma
+UA,Ukraine,0,reforma
+KR,South Korea,0,reforma
+NC,New Caledonia,0,reforma
+NL,Netherlands,0,reforma
+IT,Italy,0,reforma
+PS,Palestine,0,reforma
+DK,Denmark,0,reforma
+AE,United Arab Emirates,0,reforma
+RE,Réunion,0,reforma
+MG,Madagascar,0,reforma
+MQ,Martinique,0,reforma
+SL,Sierra Leone,0,reforma
+IL,Israel,0,reforma
+SG,Singapore,0,reforma
+MV,Maldives,0,reforma
+JP,Japan,0,reforma
+QA,Qatar,0,reforma
+CY,Cyprus,0,reforma
+UZ,Uzbekistan,0,reforma
+ML,Mali,0,reforma
+BY,Belarus,0,reforma
+GN,Guinea,0,reforma
+KG,Kyrgyzstan,0,reforma
+RU,Russia,0,reforma
+LB,Lebanon,0,reforma
+TG,Togo,0,reforma
+EE,Estonia,0,reforma
+AU,Australia,0,reforma
+NZ,New Zealand,0,reforma
+MA,Morocco,0,reforma
+KH,Cambodia,0,reforma
+PH,Philippines,0,reforma
+AM,Armenia,0,reforma
+CI,Côte d’Ivoire,0,reforma
+BJ,Benin,0,reforma
+ET,Ethiopia,0,reforma
+BW,Botswana,0,reforma
+HK,Hong Kong,0,reforma
+AZ,Azerbaijan,0,reforma
+FI,Finland,0,reforma
+GR,Greece,0,reforma
+MM,Myanmar (Burma),0,reforma
+VN,Vietnam,0,reforma
+MU,Mauritius,0,reforma
+HU,Hungary,0,reforma
+GU,Guam,0,reforma
+RW,Rwanda,0,reforma
+MN,Mongolia,0,reforma
+CM,Cameroon,0,reforma
+KE,Kenya,0,reforma
+NP,Nepal,0,reforma
+BH,Bahrain,0,reforma
+MY,Malaysia,0,reforma
+AF,Afghanistan,0,reforma
+IN,India,0,reforma
+ZW,Zimbabwe,0,reforma
+ZA,South Africa,0,reforma
+CN,China,0,reforma
+KZ,Kazakhstan,0,reforma
+TJ,Tajikistan,0,reforma
+GH,Ghana,0,reforma
+PK,Pakistan,0,reforma
+IQ,Iraq,0,reforma
+KW,Kuwait,0,reforma
+EG,Egypt,0,reforma
+CD,Congo - Kinshasa,0,reforma
+TN,Tunisia,0,reforma
+OM,Oman,0,reforma
+BN,Brunei,0,reforma
+TW,Taiwan,0,reforma
+DZ,Algeria,0,reforma
+BD,Bangladesh,0,reforma
+TZ,Tanzania,0,reforma
+TH,Thailand,0,reforma
+LY,Libya,0,reforma
+NG,Nigeria,0,reforma
+SD,Sudan,0,reforma
+UG,Uganda,0,reforma
+JO,Jordan,0,reforma
+YE,Yemen,0,reforma
+LK,Sri Lanka,0,reforma
+ZM,Zambia,0,reforma
+TR,Türkiye,0,reforma
+SA,Saudi Arabia,0,reforma
+SY,Syria,0,reforma
+IR,Iran,0,reforma
+SJ,Svalbard & Jan Mayen,0,reforma
+MH,Marshall Islands,0,reforma
+GM,Gambia,0,reforma
+PW,Palau,0,reforma
+KP,North Korea,0,reforma
+GG,Guernsey,0,reforma
+FM,Micronesia,0,reforma
+FO,Faroe Islands,0,reforma
+FK,Falkland Islands (Islas Malvinas),0,reforma
+FJ,Fiji,0,reforma
+EH,Western Sahara,0,reforma
+ER,Eritrea,0,reforma
+GD,Grenada,0,reforma
+GL,Greenland,0,reforma
+PN,Pitcairn Islands,0,reforma
+HM,Heard & McDonald Islands,0,reforma
+DM,Dominica,0,reforma
+DJ,Djibouti,0,reforma
+GS,South Georgia & South Sandwich Islands,0,reforma
+CX,Christmas Island,0,reforma
+IM,Isle of Man,0,reforma
+SB,Solomon Islands,0,reforma
+KM,Comoros,0,reforma
+CK,Cook Islands,0,reforma
+SM,San Marino,0,reforma
+SO,Somalia,0,reforma
+PM,St. Pierre & Miquelon,0,reforma
+CG,Congo - Brazzaville,0,reforma
+SS,South Sudan,0,reforma
+NR,Nauru,0,reforma
+IO,British Indian Ocean Territory,0,reforma
+CC,Cocos (Keeling) Islands,0,reforma
+CF,Central African Republic,0,reforma
+BV,Bouvet Island,0,reforma
+SZ,Eswatini,0,reforma
+SX,Sint Maarten,0,reforma
+SC,Seychelles,0,reforma
+NU,Niue,0,reforma
+TC,Turks & Caicos Islands,0,reforma
+TD,Chad,0,reforma
+BT,Bhutan,0,reforma
+NF,Norfolk Island,0,reforma
+NE,Niger,0,reforma
+TK,Tokelau,0,reforma
+TM,Turkmenistan,0,reforma
+YT,Mayotte,0,reforma
+TO,Tonga,0,reforma
+KI,Kiribati,0,reforma
+MW,Malawi,0,reforma
+KN,St. Kitts & Nevis,0,reforma
+TV,Tuvalu,0,reforma
+MS,Montserrat,0,reforma
+MP,Northern Mariana Islands,0,reforma
+LC,St. Lucia,0,reforma
+BF,Burkina Faso,0,reforma
+UM,U.S. Outlying Islands,0,reforma
+BQ,Caribbean Netherlands,0,reforma
+BI,Burundi,0,reforma
+TF,French Southern Territories,0,reforma
+VA,Vatican City,0,reforma
+VC,St. Vincent & Grenadines,0,reforma
+AQ,Antarctica,0,reforma
+VG,British Virgin Islands,0,reforma
+AS,American Samoa,0,reforma
+AX,Åland Islands,0,reforma
+VU,Vanuatu,0,reforma
+WF,Wallis & Futuna,0,reforma
+WS,Samoa,0,reforma
+AI,Anguilla,0,reforma
+LS,Lesotho,0,reforma
+LR,Liberia,0,reforma
+MF,St. Martin,0,reforma
+PG,Papua New Guinea,0,reforma

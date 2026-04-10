@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+GD,Grenada,0,posterior
+DM,Dominica,0,posterior
+KN,St. Kitts & Nevis,0,posterior
+AI,Anguilla,0,posterior
+EC,Ecuador,100,posterior
+AG,Antigua & Barbuda,0,posterior
+SX,Sint Maarten,0,posterior
+PE,Peru,78,posterior
+BO,Bolivia,71,posterior
+VC,St. Vincent & Grenadines,0,posterior
+PY,Paraguay,64,posterior
+ZM,Zambia,0,posterior
+CO,Colombia,56,posterior
+CL,Chile,54,posterior
+CU,Cuba,0,posterior
+UY,Uruguay,47,posterior
+NI,Nicaragua,0,posterior
+AR,Argentina,46,posterior
+GQ,Equatorial Guinea,0,posterior
+CR,Costa Rica,46,posterior
+PR,Puerto Rico,45,posterior
+SO,Somalia,0,posterior
+BR,Brazil,45,posterior
+GY,Guyana,0,posterior
+SV,El Salvador,43,posterior
+PA,Panama,43,posterior
+FJ,Fiji,0,posterior
+GT,Guatemala,42,posterior
+DO,Dominican Republic,42,posterior
+BB,Barbados,0,posterior
+NP,Nepal,42,posterior
+ES,Spain,42,posterior
+MX,Mexico,41,posterior
+PH,Philippines,40,posterior
+HN,Honduras,40,posterior
+ET,Ethiopia,0,posterior
+SD,Sudan,0,posterior
+PK,Pakistan,39,posterior
+GH,Ghana,39,posterior
+AU,Australia,37,posterior
+US,United States,37,posterior
+NZ,New Zealand,36,posterior
+MF,St. Martin,0,posterior
+JM,Jamaica,0,posterior
+VE,Venezuela,33,posterior
+AD,Andorra,0,posterior
+KY,Cayman Islands,0,posterior
+LC,St. Lucia,0,posterior
+SB,Solomon Islands,0,posterior
+TT,Trinidad & Tobago,0,posterior
+WS,Samoa,0,posterior
+PT,Portugal,30,posterior
+MP,Northern Mariana Islands,0,posterior
+BT,Bhutan,0,posterior
+MV,Maldives,0,posterior
+KE,Kenya,29,posterior
+NA,Namibia,0,posterior
+NG,Nigeria,28,posterior
+CK,Cook Islands,0,posterior
+MW,Malawi,0,posterior
+TZ,Tanzania,0,posterior
+BW,Botswana,0,posterior
+LK,Sri Lanka,27,posterior
+LR,Liberia,0,posterior
+GU,Guam,0,posterior
+GG,Guernsey,0,posterior
+IQ,Iraq,26,posterior
+GI,Gibraltar,0,posterior
+SG,Singapore,26,posterior
+IM,Isle of Man,0,posterior
+AO,Angola,0,posterior
+IE,Ireland,26,posterior
+BZ,Belize,0,posterior
+MZ,Mozambique,0,posterior
+IN,India,26,posterior
+JO,Jordan,25,posterior
+CA,Canada,25,posterior
+UG,Uganda,0,posterior
+VI,U.S. Virgin Islands,0,posterior
+CV,Cape Verde,0,posterior
+PG,Papua New Guinea,0,posterior
+MT,Malta,0,posterior
+LY,Libya,0,posterior
+BM,Bermuda,0,posterior
+FM,Micronesia,0,posterior
+VG,British Virgin Islands,0,posterior
+GB,United Kingdom,22,posterior
+BQ,Caribbean Netherlands,0,posterior
+RW,Rwanda,0,posterior
+AE,United Arab Emirates,21,posterior
+MY,Malaysia,21,posterior
+CW,Curaçao,0,posterior
+LB,Lebanon,0,posterior
+MM,Myanmar (Burma),0,posterior
+BH,Bahrain,0,posterior
+EG,Egypt,20,posterior
+GW,Guinea-Bissau,0,posterior
+HK,Hong Kong,20,posterior
+JE,Jersey,0,posterior
+IS,Iceland,0,posterior
+AS,American Samoa,0,posterior
+ZW,Zimbabwe,0,posterior
+BS,Bahamas,0,posterior
+KR,South Korea,19,posterior
+PS,Palestine,0,posterior
+OM,Oman,0,posterior
+ZA,South Africa,18,posterior
+TO,Tonga,0,posterior
+SS,South Sudan,0,posterior
+AW,Aruba,0,posterior
+TC,Turks & Caicos Islands,0,posterior
+BD,Bangladesh,17,posterior
+SZ,Eswatini,0,posterior
+QA,Qatar,0,posterior
+AF,Afghanistan,0,posterior
+LS,Lesotho,0,posterior
+SL,Sierra Leone,0,posterior
+GM,Gambia,0,posterior
+MU,Mauritius,0,posterior
+TL,Timor-Leste,0,posterior
+CY,Cyprus,0,posterior
+YE,Yemen,0,posterior
+SA,Saudi Arabia,15,posterior
+AX,Åland Islands,0,posterior
+SC,Seychelles,0,posterior
+FO,Faroe Islands,0,posterior
+RO,Romania,13,posterior
+KW,Kuwait,0,posterior
+SH,St. Helena,0,posterior
+BN,Brunei,0,posterior
+KG,Kyrgyzstan,0,posterior
+GE,Georgia,0,posterior
+NO,Norway,11,posterior
+IL,Israel,11,posterior
+CH,Switzerland,10,posterior
+TR,Türkiye,9,posterior
+NL,Netherlands,9,posterior
+TW,Taiwan,9,posterior
+MK,North Macedonia,0,posterior
+DK,Denmark,9,posterior
+AT,Austria,9,posterior
+MN,Mongolia,0,posterior
+CM,Cameroon,0,posterior
+ID,Indonesia,9,posterior
+AL,Albania,0,posterior
+TH,Thailand,9,posterior
+SE,Sweden,8,posterior
+XK,Kosovo,0,posterior
+MO,Macao,0,posterior
+GL,Greenland,0,posterior
+LV,Latvia,0,posterior
+BE,Belgium,8,posterior
+FI,Finland,7,posterior
+LI,Liechtenstein,0,posterior
+SI,Slovenia,0,posterior
+SR,Suriname,0,posterior
+MD,Moldova,0,posterior
+AM,Armenia,0,posterior
+EE,Estonia,0,posterior
+SY,Syria,0,posterior
+DE,Germany,6,posterior
+KH,Cambodia,0,posterior
+CZ,Czechia,6,posterior
+HU,Hungary,6,posterior
+IR,Iran,6,posterior
+HR,Croatia,0,posterior
+BA,Bosnia & Herzegovina,0,posterior
+LU,Luxembourg,0,posterior
+DJ,Djibouti,0,posterior
+BG,Bulgaria,0,posterior
+LT,Lithuania,0,posterior
+SK,Slovakia,0,posterior
+LA,Laos,0,posterior
+GR,Greece,0,posterior
+RS,Serbia,0,posterior
+AZ,Azerbaijan,0,posterior
+ME,Montenegro,0,posterior
+CN,China,0,posterior
+HT,Haiti,0,posterior
+PL,Poland,2,posterior
+BI,Burundi,0,posterior
+UA,Ukraine,0,posterior
+TJ,Tajikistan,0,posterior
+IT,Italy,2,posterior
+UZ,Uzbekistan,0,posterior
+PF,French Polynesia,0,posterior
+BY,Belarus,0,posterior
+KZ,Kazakhstan,0,posterior
+RU,Russia,1,posterior
+BJ,Benin,0,posterior
+TN,Tunisia,0,posterior
+TG,Togo,0,posterior
+MA,Morocco,0,posterior
+MR,Mauritania,0,posterior
+JP,Japan,1,posterior
+MG,Madagascar,0,posterior
+VN,Vietnam,0,posterior
+GA,Gabon,0,posterior
+CD,Congo - Kinshasa,0,posterior
+FR,France,1,posterior
+DZ,Algeria,0,posterior
+RE,Réunion,0,posterior
+SN,Senegal,0,posterior
+ML,Mali,0,posterior
+NC,New Caledonia,0,posterior
+BF,Burkina Faso,0,posterior
+GP,Guadeloupe,0,posterior
+GN,Guinea,0,posterior
+TM,Turkmenistan,0,posterior
+CI,Côte d’Ivoire,0,posterior
+MQ,Martinique,0,posterior
+EH,Western Sahara,0,posterior
+IO,British Indian Ocean Territory,0,posterior
+ER,Eritrea,0,posterior
+MC,Monaco,0,posterior
+ST,São Tomé & Príncipe,0,posterior
+TD,Chad,0,posterior
+PM,St. Pierre & Miquelon,0,posterior
+FK,Falkland Islands (Islas Malvinas),0,posterior
+SM,San Marino,0,posterior
+TK,Tokelau,0,posterior
+MS,Montserrat,0,posterior
+YT,Mayotte,0,posterior
+SJ,Svalbard & Jan Mayen,0,posterior
+GS,South Georgia & South Sandwich Islands,0,posterior
+NE,Niger,0,posterior
+BL,St. Barthélemy,0,posterior
+TV,Tuvalu,0,posterior
+KI,Kiribati,0,posterior
+NF,Norfolk Island,0,posterior
+CX,Christmas Island,0,posterior
+KM,Comoros,0,posterior
+UM,U.S. Outlying Islands,0,posterior
+NU,Niue,0,posterior
+CG,Congo - Brazzaville,0,posterior
+BV,Bouvet Island,0,posterior
+VA,Vatican City,0,posterior
+TF,French Southern Territories,0,posterior
+AQ,Antarctica,0,posterior
+KP,North Korea,0,posterior
+CF,Central African Republic,0,posterior
+CC,Cocos (Keeling) Islands,0,posterior
+VU,Vanuatu,0,posterior
+WF,Wallis & Futuna,0,posterior
+NR,Nauru,0,posterior
+GF,French Guiana,0,posterior
+HM,Heard & McDonald Islands,0,posterior
+PW,Palau,0,posterior
+PN,Pitcairn Islands,0,posterior
+MH,Marshall Islands,0,posterior

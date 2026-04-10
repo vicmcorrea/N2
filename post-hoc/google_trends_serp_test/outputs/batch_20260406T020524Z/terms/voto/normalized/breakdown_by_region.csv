@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+AR,Argentina,100,voto
+UY,Uruguay,49,voto
+CL,Chile,33,voto
+PE,Peru,30,voto
+EC,Ecuador,29,voto
+IT,Italy,25,voto
+BR,Brazil,21,voto
+GT,Guatemala,16,voto
+SM,San Marino,0,voto
+CO,Colombia,16,voto
+PY,Paraguay,15,voto
+ES,Spain,14,voto
+AO,Angola,0,voto
+BO,Bolivia,13,voto
+GW,Guinea-Bissau,0,voto
+CR,Costa Rica,12,voto
+PT,Portugal,11,voto
+PR,Puerto Rico,11,voto
+DO,Dominican Republic,10,voto
+CV,Cape Verde,0,voto
+MZ,Mozambique,0,voto
+SV,El Salvador,9,voto
+VE,Venezuela,9,voto
+PA,Panama,9,voto
+ST,São Tomé & Príncipe,0,voto
+MX,Mexico,8,voto
+HN,Honduras,0,voto
+CU,Cuba,0,voto
+AD,Andorra,0,voto
+ID,Indonesia,5,voto
+GQ,Equatorial Guinea,0,voto
+NI,Nicaragua,0,voto
+AL,Albania,0,voto
+TL,Timor-Leste,0,voto
+AW,Aruba,0,voto
+CW,Curaçao,0,voto
+MC,Monaco,0,voto
+XK,Kosovo,0,voto
+SH,St. Helena,0,voto
+CH,Switzerland,1,voto
+LU,Luxembourg,0,voto
+CI,Côte d’Ivoire,0,voto
+BQ,Caribbean Netherlands,0,voto
+GI,Gibraltar,0,voto
+GF,French Guiana,0,voto
+MT,Malta,0,voto
+BN,Brunei,0,voto
+SR,Suriname,0,voto
+KG,Kyrgyzstan,0,voto
+BZ,Belize,0,voto
+SX,Sint Maarten,0,voto
+MR,Mauritania,0,voto
+BL,St. Barthélemy,0,voto
+LI,Liechtenstein,0,voto
+CG,Congo - Brazzaville,0,voto
+MM,Myanmar (Burma),0,voto
+DJ,Djibouti,0,voto
+FR,France,0,voto
+AG,Antigua & Barbuda,0,voto
+BE,Belgium,0,voto
+GA,Gabon,0,voto
+MO,Macao,0,voto
+US,United States,0,voto
+MG,Madagascar,0,voto
+AM,Armenia,0,voto
+HT,Haiti,0,voto
+CZ,Czechia,0,voto
+SN,Senegal,0,voto
+IE,Ireland,0,voto
+GB,United Kingdom,0,voto
+DE,Germany,0,voto
+NE,Niger,0,voto
+MK,North Macedonia,0,voto
+IN,India,0,voto
+NP,Nepal,0,voto
+KY,Cayman Islands,0,voto
+GY,Guyana,0,voto
+GN,Guinea,0,voto
+PF,French Polynesia,0,voto
+GP,Guadeloupe,0,voto
+TG,Togo,0,voto
+CA,Canada,0,voto
+CD,Congo - Kinshasa,0,voto
+EE,Estonia,0,voto
+PL,Poland,0,voto
+MY,Malaysia,0,voto
+NL,Netherlands,0,voto
+TZ,Tanzania,0,voto
+MW,Malawi,0,voto
+AT,Austria,0,voto
+RE,Réunion,0,voto
+IS,Iceland,0,voto
+SO,Somalia,0,voto
+NC,New Caledonia,0,voto
+MV,Maldives,0,voto
+TW,Taiwan,0,voto
+SI,Slovenia,0,voto
+UZ,Uzbekistan,0,voto
+MQ,Martinique,0,voto
+NA,Namibia,0,voto
+TM,Turkmenistan,0,voto
+HR,Croatia,0,voto
+BJ,Benin,0,voto
+MA,Morocco,0,voto
+ML,Mali,0,voto
+GH,Ghana,0,voto
+ME,Montenegro,0,voto
+CN,China,0,voto
+NO,Norway,0,voto
+TT,Trinidad & Tobago,0,voto
+BS,Bahamas,0,voto
+RS,Serbia,0,voto
+SE,Sweden,0,voto
+SG,Singapore,0,voto
+GE,Georgia,0,voto
+QA,Qatar,0,voto
+LB,Lebanon,0,voto
+HK,Hong Kong,0,voto
+BD,Bangladesh,0,voto
+DK,Denmark,0,voto
+MD,Moldova,0,voto
+CM,Cameroon,0,voto
+SK,Slovakia,0,voto
+GR,Greece,0,voto
+TN,Tunisia,0,voto
+AE,United Arab Emirates,0,voto
+KZ,Kazakhstan,0,voto
+RO,Romania,0,voto
+BG,Bulgaria,0,voto
+AF,Afghanistan,0,voto
+LV,Latvia,0,voto
+JE,Jersey,0,voto
+DZ,Algeria,0,voto
+RW,Rwanda,0,voto
+NZ,New Zealand,0,voto
+AZ,Azerbaijan,0,voto
+CY,Cyprus,0,voto
+LA,Laos,0,voto
+AU,Australia,0,voto
+LT,Lithuania,0,voto
+ZM,Zambia,0,voto
+BF,Burkina Faso,0,voto
+LY,Libya,0,voto
+FI,Finland,0,voto
+VN,Vietnam,0,voto
+KR,South Korea,0,voto
+PS,Palestine,0,voto
+MU,Mauritius,0,voto
+ET,Ethiopia,0,voto
+BW,Botswana,0,voto
+TJ,Tajikistan,0,voto
+BB,Barbados,0,voto
+UA,Ukraine,0,voto
+HU,Hungary,0,voto
+IL,Israel,0,voto
+BA,Bosnia & Herzegovina,0,voto
+KH,Cambodia,0,voto
+SY,Syria,0,voto
+UG,Uganda,0,voto
+KE,Kenya,0,voto
+YE,Yemen,0,voto
+RU,Russia,0,voto
+BH,Bahrain,0,voto
+JM,Jamaica,0,voto
+ZA,South Africa,0,voto
+KW,Kuwait,0,voto
+JP,Japan,0,voto
+EG,Egypt,0,voto
+SD,Sudan,0,voto
+OM,Oman,0,voto
+IQ,Iraq,0,voto
+NG,Nigeria,0,voto
+JO,Jordan,0,voto
+BY,Belarus,0,voto
+LK,Sri Lanka,0,voto
+ZW,Zimbabwe,0,voto
+PK,Pakistan,0,voto
+PH,Philippines,0,voto
+SA,Saudi Arabia,0,voto
+MN,Mongolia,0,voto
+TR,Türkiye,0,voto
+TH,Thailand,0,voto
+IR,Iran,0,voto
+ER,Eritrea,0,voto
+MF,St. Martin,0,voto
+FO,Faroe Islands,0,voto
+FK,Falkland Islands (Islas Malvinas),0,voto
+FJ,Fiji,0,voto
+GG,Guernsey,0,voto
+KP,North Korea,0,voto
+GM,Gambia,0,voto
+GD,Grenada,0,voto
+PG,Papua New Guinea,0,voto
+EH,Western Sahara,0,voto
+PW,Palau,0,voto
+GS,South Georgia & South Sandwich Islands,0,voto
+GL,Greenland,0,voto
+SJ,Svalbard & Jan Mayen,0,voto
+SB,Solomon Islands,0,voto
+SL,Sierra Leone,0,voto
+DM,Dominica,0,voto
+CX,Christmas Island,0,voto
+KM,Comoros,0,voto
+PM,St. Pierre & Miquelon,0,voto
+CK,Cook Islands,0,voto
+SS,South Sudan,0,voto
+CC,Cocos (Keeling) Islands,0,voto
+CF,Central African Republic,0,voto
+PN,Pitcairn Islands,0,voto
+BV,Bouvet Island,0,voto
+BT,Bhutan,0,voto
+SZ,Eswatini,0,voto
+GU,Guam,0,voto
+SC,Seychelles,0,voto
+HM,Heard & McDonald Islands,0,voto
+TC,Turks & Caicos Islands,0,voto
+TD,Chad,0,voto
+BM,Bermuda,0,voto
+NR,Nauru,0,voto
+IM,Isle of Man,0,voto
+TK,Tokelau,0,voto
+IO,British Indian Ocean Territory,0,voto
+NU,Niue,0,voto
+TO,Tonga,0,voto
+NF,Norfolk Island,0,voto
+YT,Mayotte,0,voto
+MS,Montserrat,0,voto
+TV,Tuvalu,0,voto
+BI,Burundi,0,voto
+KI,Kiribati,0,voto
+MP,Northern Mariana Islands,0,voto
+KN,St. Kitts & Nevis,0,voto
+UM,U.S. Outlying Islands,0,voto
+TF,French Southern Territories,0,voto
+AQ,Antarctica,0,voto
+AS,American Samoa,0,voto
+VA,Vatican City,0,voto
+VC,St. Vincent & Grenadines,0,voto
+AX,Åland Islands,0,voto
+VG,British Virgin Islands,0,voto
+VI,U.S. Virgin Islands,0,voto
+MH,Marshall Islands,0,voto
+VU,Vanuatu,0,voto
+WF,Wallis & Futuna,0,voto
+WS,Samoa,0,voto
+AI,Anguilla,0,voto
+LC,St. Lucia,0,voto
+LR,Liberia,0,voto
+LS,Lesotho,0,voto
+FM,Micronesia,0,voto

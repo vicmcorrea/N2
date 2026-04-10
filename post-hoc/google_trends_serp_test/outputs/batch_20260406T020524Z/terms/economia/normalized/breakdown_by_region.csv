@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+ST,São Tomé & Príncipe,0,economia
+AO,Angola,100,economia
+GQ,Equatorial Guinea,0,economia
+MZ,Mozambique,82,economia
+GW,Guinea-Bissau,0,economia
+CV,Cape Verde,0,economia
+CO,Colombia,52,economia
+TL,Timor-Leste,0,economia
+BO,Bolivia,50,economia
+SV,El Salvador,48,economia
+GT,Guatemala,47,economia
+PE,Peru,44,economia
+NI,Nicaragua,43,economia
+EC,Ecuador,42,economia
+PA,Panama,42,economia
+VE,Venezuela,41,economia
+HN,Honduras,38,economia
+IT,Italy,36,economia
+CU,Cuba,35,economia
+DO,Dominican Republic,35,economia
+MX,Mexico,32,economia
+SM,San Marino,0,economia
+BR,Brazil,29,economia
+PY,Paraguay,28,economia
+AR,Argentina,26,economia
+UY,Uruguay,25,economia
+PT,Portugal,23,economia
+CL,Chile,22,economia
+ES,Spain,19,economia
+PR,Puerto Rico,17,economia
+CR,Costa Rica,17,economia
+AD,Andorra,0,economia
+MD,Moldova,0,economia
+AW,Aruba,0,economia
+RO,Romania,3,economia
+ER,Eritrea,0,economia
+SH,St. Helena,0,economia
+MC,Monaco,0,economia
+CW,Curaçao,0,economia
+MO,Macao,0,economia
+AL,Albania,0,economia
+LU,Luxembourg,0,economia
+CH,Switzerland,1,economia
+BZ,Belize,0,economia
+GI,Gibraltar,0,economia
+BQ,Caribbean Netherlands,0,economia
+CG,Congo - Brazzaville,0,economia
+MT,Malta,0,economia
+NA,Namibia,0,economia
+GF,French Guiana,0,economia
+SN,Senegal,0,economia
+SC,Seychelles,0,economia
+AG,Antigua & Barbuda,0,economia
+CZ,Czechia,0,economia
+HT,Haiti,0,economia
+SX,Sint Maarten,0,economia
+TC,Turks & Caicos Islands,0,economia
+GA,Gabon,0,economia
+GB,United Kingdom,0,economia
+SR,Suriname,0,economia
+DE,Germany,0,economia
+US,United States,0,economia
+KN,St. Kitts & Nevis,0,economia
+KY,Cayman Islands,0,economia
+VG,British Virgin Islands,0,economia
+DM,Dominica,0,economia
+BB,Barbados,0,economia
+GY,Guyana,0,economia
+BS,Bahamas,0,economia
+BE,Belgium,0,economia
+CM,Cameroon,0,economia
+VI,U.S. Virgin Islands,0,economia
+IE,Ireland,0,economia
+VC,St. Vincent & Grenadines,0,economia
+TT,Trinidad & Tobago,0,economia
+MA,Morocco,0,economia
+IS,Iceland,0,economia
+TG,Togo,0,economia
+LI,Liechtenstein,0,economia
+CI,Côte d’Ivoire,0,economia
+CA,Canada,0,economia
+LC,St. Lucia,0,economia
+GM,Gambia,0,economia
+BM,Bermuda,0,economia
+FR,France,0,economia
+ME,Montenegro,0,economia
+PF,French Polynesia,0,economia
+MG,Madagascar,0,economia
+SI,Slovenia,0,economia
+AT,Austria,0,economia
+LA,Laos,0,economia
+GP,Guadeloupe,0,economia
+MQ,Martinique,0,economia
+MV,Maldives,0,economia
+TN,Tunisia,0,economia
+MR,Mauritania,0,economia
+LB,Lebanon,0,economia
+NL,Netherlands,0,economia
+HR,Croatia,0,economia
+CY,Cyprus,0,economia
+ET,Ethiopia,0,economia
+SE,Sweden,0,economia
+XK,Kosovo,0,economia
+KE,Kenya,0,economia
+GR,Greece,0,economia
+JP,Japan,0,economia
+NO,Norway,0,economia
+AE,United Arab Emirates,0,economia
+KR,South Korea,0,economia
+PS,Palestine,0,economia
+JM,Jamaica,0,economia
+BJ,Benin,0,economia
+RW,Rwanda,0,economia
+ZW,Zimbabwe,0,economia
+NC,New Caledonia,0,economia
+DK,Denmark,0,economia
+TZ,Tanzania,0,economia
+JE,Jersey,0,economia
+MU,Mauritius,0,economia
+NE,Niger,0,economia
+QA,Qatar,0,economia
+MK,North Macedonia,0,economia
+IL,Israel,0,economia
+AF,Afghanistan,0,economia
+HU,Hungary,0,economia
+EE,Estonia,0,economia
+FI,Finland,0,economia
+IM,Isle of Man,0,economia
+GG,Guernsey,0,economia
+KH,Cambodia,0,economia
+MN,Mongolia,0,economia
+SK,Slovakia,0,economia
+GH,Ghana,0,economia
+ZA,South Africa,0,economia
+GN,Guinea,0,economia
+AM,Armenia,0,economia
+BF,Burkina Faso,0,economia
+BG,Bulgaria,0,economia
+CN,China,0,economia
+AU,Australia,0,economia
+MW,Malawi,0,economia
+BW,Botswana,0,economia
+LV,Latvia,0,economia
+LT,Lithuania,0,economia
+DZ,Algeria,0,economia
+RU,Russia,0,economia
+PH,Philippines,0,economia
+ML,Mali,0,economia
+VN,Vietnam,0,economia
+HK,Hong Kong,0,economia
+SG,Singapore,0,economia
+RS,Serbia,0,economia
+GE,Georgia,0,economia
+SL,Sierra Leone,0,economia
+ZM,Zambia,0,economia
+NZ,New Zealand,0,economia
+EG,Egypt,0,economia
+JO,Jordan,0,economia
+BA,Bosnia & Herzegovina,0,economia
+CD,Congo - Kinshasa,0,economia
+BY,Belarus,0,economia
+NG,Nigeria,0,economia
+PL,Poland,0,economia
+AZ,Azerbaijan,0,economia
+NP,Nepal,0,economia
+MY,Malaysia,0,economia
+LY,Libya,0,economia
+MM,Myanmar (Burma),0,economia
+PK,Pakistan,0,economia
+RE,Réunion,0,economia
+KW,Kuwait,0,economia
+UG,Uganda,0,economia
+BH,Bahrain,0,economia
+IN,India,0,economia
+IQ,Iraq,0,economia
+OM,Oman,0,economia
+UA,Ukraine,0,economia
+TW,Taiwan,0,economia
+KZ,Kazakhstan,0,economia
+UZ,Uzbekistan,0,economia
+KG,Kyrgyzstan,0,economia
+BD,Bangladesh,0,economia
+FJ,Fiji,0,economia
+SO,Somalia,0,economia
+SY,Syria,0,economia
+BN,Brunei,0,economia
+TH,Thailand,0,economia
+LK,Sri Lanka,0,economia
+SD,Sudan,0,economia
+ID,Indonesia,0,economia
+TJ,Tajikistan,0,economia
+YE,Yemen,0,economia
+SA,Saudi Arabia,0,economia
+TR,Türkiye,0,economia
+IR,Iran,0,economia
+CX,Christmas Island,0,economia
+AI,Anguilla,0,economia
+SJ,Svalbard & Jan Mayen,0,economia
+SB,Solomon Islands,0,economia
+HM,Heard & McDonald Islands,0,economia
+CC,Cocos (Keeling) Islands,0,economia
+CF,Central African Republic,0,economia
+DJ,Djibouti,0,economia
+PM,St. Pierre & Miquelon,0,economia
+MH,Marshall Islands,0,economia
+SS,South Sudan,0,economia
+GS,South Georgia & South Sandwich Islands,0,economia
+BV,Bouvet Island,0,economia
+YT,Mayotte,0,economia
+BT,Bhutan,0,economia
+NF,Norfolk Island,0,economia
+SZ,Eswatini,0,economia
+IO,British Indian Ocean Territory,0,economia
+BL,St. Barthélemy,0,economia
+EH,Western Sahara,0,economia
+GU,Guam,0,economia
+TD,Chad,0,economia
+KP,North Korea,0,economia
+GL,Greenland,0,economia
+CK,Cook Islands,0,economia
+TK,Tokelau,0,economia
+TM,Turkmenistan,0,economia
+FM,Micronesia,0,economia
+TO,Tonga,0,economia
+NU,Niue,0,economia
+MF,St. Martin,0,economia
+MS,Montserrat,0,economia
+TV,Tuvalu,0,economia
+PG,Papua New Guinea,0,economia
+BI,Burundi,0,economia
+PW,Palau,0,economia
+FO,Faroe Islands,0,economia
+UM,U.S. Outlying Islands,0,economia
+FK,Falkland Islands (Islas Malvinas),0,economia
+LS,Lesotho,0,economia
+PN,Pitcairn Islands,0,economia
+VA,Vatican City,0,economia
+TF,French Southern Territories,0,economia
+AQ,Antarctica,0,economia
+AS,American Samoa,0,economia
+KM,Comoros,0,economia
+NR,Nauru,0,economia
+VU,Vanuatu,0,economia
+WF,Wallis & Futuna,0,economia
+WS,Samoa,0,economia
+AX,Åland Islands,0,economia
+GD,Grenada,0,economia
+LR,Liberia,0,economia
+KI,Kiribati,0,economia
+MP,Northern Mariana Islands,0,economia

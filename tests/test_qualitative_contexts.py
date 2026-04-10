@@ -5,6 +5,10 @@ from pathlib import Path
 
 import pandas as pd
 
+from stil_semantic_change.preprocessing.views import (
+    prepared_content_tokens_dir,
+    prepared_doc_metadata_dir,
+)
 from stil_semantic_change.reporting.qualitative import (
     collect_context_samples,
     write_context_reports,
@@ -13,8 +17,9 @@ from stil_semantic_change.reporting.qualitative import (
 
 def test_context_sampling_roundtrip(tmp_path: Path) -> None:
     run_root = tmp_path / "run"
-    (run_root / "prepared" / "docs").mkdir(parents=True, exist_ok=True)
-    (run_root / "prepared" / "tokens").mkdir(parents=True, exist_ok=True)
+    prepared_root = run_root / "prepared"
+    prepared_doc_metadata_dir(prepared_root).mkdir(parents=True, exist_ok=True)
+    prepared_content_tokens_dir(prepared_root).mkdir(parents=True, exist_ok=True)
     (run_root / "scores").mkdir(parents=True, exist_ok=True)
     (run_root / "reports").mkdir(parents=True, exist_ok=True)
 
@@ -34,7 +39,7 @@ def test_context_sampling_roundtrip(tmp_path: Path) -> None:
             },
         ]
     )
-    docs.to_parquet(run_root / "prepared" / "docs" / "shard.parquet", index=False)
+    docs.to_parquet(prepared_doc_metadata_dir(prepared_root) / "shard.parquet", index=False)
 
     tokens = pd.DataFrame(
         [
@@ -96,7 +101,7 @@ def test_context_sampling_roundtrip(tmp_path: Path) -> None:
             },
         ]
     )
-    tokens.to_parquet(run_root / "prepared" / "tokens" / "shard.parquet", index=False)
+    tokens.to_parquet(prepared_content_tokens_dir(prepared_root) / "shard.parquet", index=False)
 
     candidate_sets = {
         "drift_candidates": ["democracia"],

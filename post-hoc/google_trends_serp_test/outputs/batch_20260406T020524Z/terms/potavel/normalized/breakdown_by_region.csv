@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+ST,São Tomé & Príncipe,0,potável
+AO,Angola,100,potável
+GW,Guinea-Bissau,0,potável
+MZ,Mozambique,75,potável
+CV,Cape Verde,0,potável
+BR,Brazil,47,potável
+PT,Portugal,26,potável
+TL,Timor-Leste,0,potável
+PY,Paraguay,0,potável
+BO,Bolivia,0,potável
+UY,Uruguay,0,potável
+KE,Kenya,0,potável
+IE,Ireland,0,potável
+ES,Spain,0,potável
+CH,Switzerland,0,potável
+GB,United Kingdom,0,potável
+BD,Bangladesh,0,potável
+DE,Germany,0,potável
+AR,Argentina,0,potável
+CL,Chile,0,potável
+US,United States,0,potável
+VN,Vietnam,0,potável
+KR,South Korea,0,potável
+IT,Italy,0,potável
+EG,Egypt,0,potável
+BE,Belgium,0,potável
+FR,France,0,potável
+SE,Sweden,0,potável
+NL,Netherlands,0,potável
+JP,Japan,0,potável
+PH,Philippines,0,potável
+RU,Russia,0,potável
+ID,Indonesia,0,potável
+TH,Thailand,0,potável
+CA,Canada,0,potável
+AU,Australia,0,potável
+IN,India,0,potável
+MX,Mexico,0,potável
+LB,Lebanon,0,potável
+ZW,Zimbabwe,0,potável
+CC,Cocos (Keeling) Islands,0,potável
+BW,Botswana,0,potável
+BV,Bouvet Island,0,potável
+CN,China,0,potável
+CI,Côte d’Ivoire,0,potável
+CM,Cameroon,0,potável
+CD,Congo - Kinshasa,0,potável
+CG,Congo - Brazzaville,0,potável
+CK,Cook Islands,0,potável
+CO,Colombia,0,potável
+KM,Comoros,0,potável
+BT,Bhutan,0,potável
+CR,Costa Rica,0,potável
+CU,Cuba,0,potável
+CW,Curaçao,0,potável
+CX,Christmas Island,0,potável
+KY,Cayman Islands,0,potável
+CY,Cyprus,0,potável
+CZ,Czechia,0,potável
+BN,Brunei,0,potável
+DJ,Djibouti,0,potável
+DM,Dominica,0,potável
+DK,Denmark,0,potável
+DO,Dominican Republic,0,potável
+DZ,Algeria,0,potável
+EC,Ecuador,0,potável
+BB,Barbados,0,potável
+ER,Eritrea,0,potável
+EH,Western Sahara,0,potável
+BM,Bermuda,0,potável
+EE,Estonia,0,potável
+ET,Ethiopia,0,potável
+FI,Finland,0,potável
+FJ,Fiji,0,potável
+FK,Falkland Islands (Islas Malvinas),0,potável
+BZ,Belize,0,potável
+FO,Faroe Islands,0,potável
+FM,Micronesia,0,potável
+GA,Gabon,0,potável
+BY,Belarus,0,potável
+GE,Georgia,0,potável
+GG,Guernsey,0,potável
+GH,Ghana,0,potável
+GI,Gibraltar,0,potável
+GN,Guinea,0,potável
+GP,Guadeloupe,0,potável
+GM,Gambia,0,potável
+BL,St. Barthélemy,0,potável
+GQ,Equatorial Guinea,0,potável
+GR,Greece,0,potável
+GD,Grenada,0,potável
+GL,Greenland,0,potável
+GT,Guatemala,0,potável
+GF,French Guiana,0,potável
+GU,Guam,0,potável
+GY,Guyana,0,potável
+HK,Hong Kong,0,potável
+HM,Heard & McDonald Islands,0,potável
+HN,Honduras,0,potável
+HR,Croatia,0,potável
+HT,Haiti,0,potável
+HU,Hungary,0,potável
+BA,Bosnia & Herzegovina,0,potável
+IM,Isle of Man,0,potável
+BS,Bahamas,0,potável
+IO,British Indian Ocean Territory,0,potável
+BH,Bahrain,0,potável
+IR,Iran,0,potável
+IQ,Iraq,0,potável
+IS,Iceland,0,potável
+IL,Israel,0,potável
+BG,Bulgaria,0,potável
+JM,Jamaica,0,potável
+JE,Jersey,0,potável
+JO,Jordan,0,potável
+BF,Burkina Faso,0,potável
+KZ,Kazakhstan,0,potável
+BQ,Caribbean Netherlands,0,potável
+KG,Kyrgyzstan,0,potável
+KH,Cambodia,0,potável
+KI,Kiribati,0,potável
+KN,St. Kitts & Nevis,0,potável
+BJ,Benin,0,potável
+KW,Kuwait,0,potável
+LA,Laos,0,potável
+AW,Aruba,0,potável
+LR,Liberia,0,potável
+LY,Libya,0,potável
+LC,St. Lucia,0,potável
+LI,Liechtenstein,0,potável
+LK,Sri Lanka,0,potável
+LS,Lesotho,0,potável
+LT,Lithuania,0,potável
+LU,Luxembourg,0,potável
+LV,Latvia,0,potável
+MO,Macao,0,potável
+MF,St. Martin,0,potável
+MA,Morocco,0,potável
+MC,Monaco,0,potável
+MD,Moldova,0,potável
+MG,Madagascar,0,potável
+MV,Maldives,0,potável
+BI,Burundi,0,potável
+MH,Marshall Islands,0,potável
+CF,Central African Republic,0,potável
+ML,Mali,0,potável
+MT,Malta,0,potável
+MM,Myanmar (Burma),0,potável
+ME,Montenegro,0,potável
+MN,Mongolia,0,potável
+MP,Northern Mariana Islands,0,potável
+AZ,Azerbaijan,0,potável
+MR,Mauritania,0,potável
+MS,Montserrat,0,potável
+MQ,Martinique,0,potável
+MU,Mauritius,0,potável
+MW,Malawi,0,potável
+MY,Malaysia,0,potável
+YT,Mayotte,0,potável
+NA,Namibia,0,potável
+NC,New Caledonia,0,potável
+NE,Niger,0,potável
+NF,Norfolk Island,0,potável
+NG,Nigeria,0,potável
+NI,Nicaragua,0,potável
+NU,Niue,0,potável
+AT,Austria,0,potável
+NO,Norway,0,potável
+NP,Nepal,0,potável
+NR,Nauru,0,potável
+NZ,New Zealand,0,potável
+OM,Oman,0,potável
+PK,Pakistan,0,potável
+PA,Panama,0,potável
+PN,Pitcairn Islands,0,potável
+PE,Peru,0,potável
+AG,Antigua & Barbuda,0,potável
+PW,Palau,0,potável
+PG,Papua New Guinea,0,potável
+PL,Poland,0,potável
+PR,Puerto Rico,0,potável
+KP,North Korea,0,potável
+TF,French Southern Territories,0,potável
+AQ,Antarctica,0,potável
+PS,Palestine,0,potável
+PF,French Polynesia,0,potável
+QA,Qatar,0,potável
+RE,Réunion,0,potável
+RO,Romania,0,potável
+AS,American Samoa,0,potável
+RW,Rwanda,0,potável
+SA,Saudi Arabia,0,potável
+SD,Sudan,0,potável
+SN,Senegal,0,potável
+SG,Singapore,0,potável
+GS,South Georgia & South Sandwich Islands,0,potável
+SH,St. Helena,0,potável
+SJ,Svalbard & Jan Mayen,0,potável
+SB,Solomon Islands,0,potável
+SL,Sierra Leone,0,potável
+SV,El Salvador,0,potável
+SM,San Marino,0,potável
+SO,Somalia,0,potável
+PM,St. Pierre & Miquelon,0,potável
+RS,Serbia,0,potável
+SS,South Sudan,0,potável
+AM,Armenia,0,potável
+SR,Suriname,0,potável
+SK,Slovakia,0,potável
+SI,Slovenia,0,potável
+AE,United Arab Emirates,0,potável
+SZ,Eswatini,0,potável
+SX,Sint Maarten,0,potável
+SC,Seychelles,0,potável
+SY,Syria,0,potável
+TC,Turks & Caicos Islands,0,potável
+TD,Chad,0,potável
+TG,Togo,0,potável
+AD,Andorra,0,potável
+TJ,Tajikistan,0,potável
+TK,Tokelau,0,potável
+TM,Turkmenistan,0,potável
+AL,Albania,0,potável
+TO,Tonga,0,potável
+TT,Trinidad & Tobago,0,potável
+TN,Tunisia,0,potável
+TR,Türkiye,0,potável
+TV,Tuvalu,0,potável
+TW,Taiwan,0,potável
+TZ,Tanzania,0,potável
+UG,Uganda,0,potável
+UA,Ukraine,0,potável
+UM,U.S. Outlying Islands,0,potável
+AX,Åland Islands,0,potável
+AI,Anguilla,0,potável
+UZ,Uzbekistan,0,potável
+VA,Vatican City,0,potável
+VC,St. Vincent & Grenadines,0,potável
+VE,Venezuela,0,potável
+VG,British Virgin Islands,0,potável
+VI,U.S. Virgin Islands,0,potável
+AF,Afghanistan,0,potável
+VU,Vanuatu,0,potável
+WF,Wallis & Futuna,0,potável
+WS,Samoa,0,potável
+XK,Kosovo,0,potável
+YE,Yemen,0,potável
+ZA,South Africa,0,potável
+ZM,Zambia,0,potável
+MK,North Macedonia,0,potável

@@ -1,0 +1,5 @@
+name: tfidf_drift
+pipeline:
+  - prepare_corpus
+  - tfidf_drift
+fail_fast: true

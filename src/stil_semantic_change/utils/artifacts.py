@@ -83,6 +83,13 @@ def stage_manifest_path(stage_root: Path, stage_name: str) -> Path:
     return stage_root / f"{stage_name}_manifest.json"
 
 
+def update_stage_manifest(stage_root: Path, stage_name: str, updates: dict[str, Any]) -> None:
+    path = stage_manifest_path(stage_root, stage_name)
+    payload = read_json(path) if path.exists() else {}
+    payload.update(updates)
+    write_json(path, payload)
+
+
 def stage_complete(stage_root: Path, stage_name: str) -> bool:
     return stage_manifest_path(stage_root, stage_name).exists()
 

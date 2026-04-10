@@ -1,0 +1,9 @@
+name: comparison_panel
+pipeline:
+  - prepare_corpus
+  - train_word2vec
+  - align_embeddings
+  - score_candidates
+  - tfidf_drift
+  - comparison_panel
+fail_fast: true

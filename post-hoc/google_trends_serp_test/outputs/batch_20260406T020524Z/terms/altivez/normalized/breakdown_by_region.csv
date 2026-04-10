@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+NI,Nicaragua,100,altivez
+CO,Colombia,96,altivez
+HN,Honduras,92,altivez
+PA,Panama,84,altivez
+PR,Puerto Rico,80,altivez
+VE,Venezuela,73,altivez
+DO,Dominican Republic,73,altivez
+SV,El Salvador,69,altivez
+AO,Angola,65,altivez
+BO,Bolivia,65,altivez
+BR,Brazil,65,altivez
+GT,Guatemala,61,altivez
+EC,Ecuador,57,altivez
+CR,Costa Rica,53,altivez
+CU,Cuba,50,altivez
+PY,Paraguay,46,altivez
+PE,Peru,38,altivez
+MX,Mexico,34,altivez
+MZ,Mozambique,0,altivez
+CL,Chile,26,altivez
+PT,Portugal,23,altivez
+AR,Argentina,23,altivez
+UY,Uruguay,15,altivez
+ES,Spain,11,altivez
+JM,Jamaica,0,altivez
+US,United States,0,altivez
+CH,Switzerland,0,altivez
+CA,Canada,0,altivez
+GB,United Kingdom,0,altivez
+IT,Italy,0,altivez
+DE,Germany,0,altivez
+FR,France,0,altivez
+AU,Australia,0,altivez
+JP,Japan,0,altivez
+NL,Netherlands,0,altivez
+VN,Vietnam,0,altivez
+IN,India,0,altivez
+LB,Lebanon,0,altivez
+ZW,Zimbabwe,0,altivez
+BW,Botswana,0,altivez
+CC,Cocos (Keeling) Islands,0,altivez
+BV,Bouvet Island,0,altivez
+BT,Bhutan,0,altivez
+CN,China,0,altivez
+CI,Côte d’Ivoire,0,altivez
+CM,Cameroon,0,altivez
+CD,Congo - Kinshasa,0,altivez
+CG,Congo - Brazzaville,0,altivez
+CK,Cook Islands,0,altivez
+BN,Brunei,0,altivez
+KM,Comoros,0,altivez
+CV,Cape Verde,0,altivez
+BB,Barbados,0,altivez
+BM,Bermuda,0,altivez
+CW,Curaçao,0,altivez
+CX,Christmas Island,0,altivez
+KY,Cayman Islands,0,altivez
+CY,Cyprus,0,altivez
+CZ,Czechia,0,altivez
+BZ,Belize,0,altivez
+DJ,Djibouti,0,altivez
+DM,Dominica,0,altivez
+DK,Denmark,0,altivez
+BY,Belarus,0,altivez
+DZ,Algeria,0,altivez
+BL,St. Barthélemy,0,altivez
+EG,Egypt,0,altivez
+ER,Eritrea,0,altivez
+EH,Western Sahara,0,altivez
+BA,Bosnia & Herzegovina,0,altivez
+EE,Estonia,0,altivez
+ET,Ethiopia,0,altivez
+FI,Finland,0,altivez
+FJ,Fiji,0,altivez
+FK,Falkland Islands (Islas Malvinas),0,altivez
+BS,Bahamas,0,altivez
+FO,Faroe Islands,0,altivez
+FM,Micronesia,0,altivez
+GA,Gabon,0,altivez
+BH,Bahrain,0,altivez
+GE,Georgia,0,altivez
+GG,Guernsey,0,altivez
+GH,Ghana,0,altivez
+GI,Gibraltar,0,altivez
+GN,Guinea,0,altivez
+GP,Guadeloupe,0,altivez
+GM,Gambia,0,altivez
+GW,Guinea-Bissau,0,altivez
+GQ,Equatorial Guinea,0,altivez
+GR,Greece,0,altivez
+GD,Grenada,0,altivez
+GL,Greenland,0,altivez
+BG,Bulgaria,0,altivez
+GF,French Guiana,0,altivez
+GU,Guam,0,altivez
+GY,Guyana,0,altivez
+HK,Hong Kong,0,altivez
+HM,Heard & McDonald Islands,0,altivez
+BD,Bangladesh,0,altivez
+HR,Croatia,0,altivez
+HT,Haiti,0,altivez
+HU,Hungary,0,altivez
+ID,Indonesia,0,altivez
+IM,Isle of Man,0,altivez
+BF,Burkina Faso,0,altivez
+IO,British Indian Ocean Territory,0,altivez
+IE,Ireland,0,altivez
+IR,Iran,0,altivez
+IQ,Iraq,0,altivez
+IS,Iceland,0,altivez
+IL,Israel,0,altivez
+BQ,Caribbean Netherlands,0,altivez
+BJ,Benin,0,altivez
+JE,Jersey,0,altivez
+JO,Jordan,0,altivez
+BE,Belgium,0,altivez
+KZ,Kazakhstan,0,altivez
+KE,Kenya,0,altivez
+KG,Kyrgyzstan,0,altivez
+KH,Cambodia,0,altivez
+KI,Kiribati,0,altivez
+KN,St. Kitts & Nevis,0,altivez
+KR,South Korea,0,altivez
+KW,Kuwait,0,altivez
+LA,Laos,0,altivez
+AW,Aruba,0,altivez
+LR,Liberia,0,altivez
+LY,Libya,0,altivez
+LC,St. Lucia,0,altivez
+LI,Liechtenstein,0,altivez
+LK,Sri Lanka,0,altivez
+LS,Lesotho,0,altivez
+LT,Lithuania,0,altivez
+LU,Luxembourg,0,altivez
+LV,Latvia,0,altivez
+MO,Macao,0,altivez
+MF,St. Martin,0,altivez
+MA,Morocco,0,altivez
+MC,Monaco,0,altivez
+MD,Moldova,0,altivez
+MG,Madagascar,0,altivez
+MV,Maldives,0,altivez
+BI,Burundi,0,altivez
+MH,Marshall Islands,0,altivez
+CF,Central African Republic,0,altivez
+ML,Mali,0,altivez
+MT,Malta,0,altivez
+MM,Myanmar (Burma),0,altivez
+ME,Montenegro,0,altivez
+MN,Mongolia,0,altivez
+MP,Northern Mariana Islands,0,altivez
+AZ,Azerbaijan,0,altivez
+MR,Mauritania,0,altivez
+MS,Montserrat,0,altivez
+MQ,Martinique,0,altivez
+MU,Mauritius,0,altivez
+MW,Malawi,0,altivez
+MY,Malaysia,0,altivez
+YT,Mayotte,0,altivez
+NA,Namibia,0,altivez
+NC,New Caledonia,0,altivez
+NE,Niger,0,altivez
+NF,Norfolk Island,0,altivez
+NG,Nigeria,0,altivez
+AT,Austria,0,altivez
+NU,Niue,0,altivez
+AG,Antigua & Barbuda,0,altivez
+NO,Norway,0,altivez
+NP,Nepal,0,altivez
+NR,Nauru,0,altivez
+NZ,New Zealand,0,altivez
+OM,Oman,0,altivez
+PK,Pakistan,0,altivez
+TF,French Southern Territories,0,altivez
+PN,Pitcairn Islands,0,altivez
+AQ,Antarctica,0,altivez
+PH,Philippines,0,altivez
+PW,Palau,0,altivez
+PG,Papua New Guinea,0,altivez
+PL,Poland,0,altivez
+AS,American Samoa,0,altivez
+KP,North Korea,0,altivez
+AM,Armenia,0,altivez
+AE,United Arab Emirates,0,altivez
+PS,Palestine,0,altivez
+PF,French Polynesia,0,altivez
+QA,Qatar,0,altivez
+RE,Réunion,0,altivez
+RO,Romania,0,altivez
+RU,Russia,0,altivez
+RW,Rwanda,0,altivez
+SA,Saudi Arabia,0,altivez
+SD,Sudan,0,altivez
+SN,Senegal,0,altivez
+SG,Singapore,0,altivez
+GS,South Georgia & South Sandwich Islands,0,altivez
+SH,St. Helena,0,altivez
+SJ,Svalbard & Jan Mayen,0,altivez
+SB,Solomon Islands,0,altivez
+SL,Sierra Leone,0,altivez
+AD,Andorra,0,altivez
+SM,San Marino,0,altivez
+SO,Somalia,0,altivez
+PM,St. Pierre & Miquelon,0,altivez
+RS,Serbia,0,altivez
+SS,South Sudan,0,altivez
+ST,São Tomé & Príncipe,0,altivez
+SR,Suriname,0,altivez
+SK,Slovakia,0,altivez
+SI,Slovenia,0,altivez
+SE,Sweden,0,altivez
+SZ,Eswatini,0,altivez
+SX,Sint Maarten,0,altivez
+SC,Seychelles,0,altivez
+SY,Syria,0,altivez
+TC,Turks & Caicos Islands,0,altivez
+TD,Chad,0,altivez
+TG,Togo,0,altivez
+TH,Thailand,0,altivez
+TJ,Tajikistan,0,altivez
+TK,Tokelau,0,altivez
+TM,Turkmenistan,0,altivez
+TL,Timor-Leste,0,altivez
+TO,Tonga,0,altivez
+TT,Trinidad & Tobago,0,altivez
+TN,Tunisia,0,altivez
+TR,Türkiye,0,altivez
+TV,Tuvalu,0,altivez
+TW,Taiwan,0,altivez
+TZ,Tanzania,0,altivez
+UG,Uganda,0,altivez
+UA,Ukraine,0,altivez
+UM,U.S. Outlying Islands,0,altivez
+AL,Albania,0,altivez
+AX,Åland Islands,0,altivez
+UZ,Uzbekistan,0,altivez
+VA,Vatican City,0,altivez
+VC,St. Vincent & Grenadines,0,altivez
+AI,Anguilla,0,altivez
+VG,British Virgin Islands,0,altivez
+VI,U.S. Virgin Islands,0,altivez
+AF,Afghanistan,0,altivez
+VU,Vanuatu,0,altivez
+WF,Wallis & Futuna,0,altivez
+WS,Samoa,0,altivez
+XK,Kosovo,0,altivez
+YE,Yemen,0,altivez
+ZA,South Africa,0,altivez
+ZM,Zambia,0,altivez
+MK,North Macedonia,0,altivez

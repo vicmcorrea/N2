@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+CU,Cuba,100,inteligente
+AO,Angola,90,inteligente
+ST,São Tomé & Príncipe,0,inteligente
+BR,Brazil,58,inteligente
+CO,Colombia,57,inteligente
+MZ,Mozambique,56,inteligente
+MX,Mexico,51,inteligente
+CR,Costa Rica,51,inteligente
+PY,Paraguay,50,inteligente
+GW,Guinea-Bissau,0,inteligente
+GQ,Equatorial Guinea,0,inteligente
+UY,Uruguay,47,inteligente
+CL,Chile,43,inteligente
+HN,Honduras,42,inteligente
+PA,Panama,41,inteligente
+NI,Nicaragua,41,inteligente
+ES,Spain,39,inteligente
+EC,Ecuador,39,inteligente
+VE,Venezuela,38,inteligente
+BO,Bolivia,38,inteligente
+CV,Cape Verde,0,inteligente
+GT,Guatemala,35,inteligente
+PE,Peru,35,inteligente
+DO,Dominican Republic,35,inteligente
+AR,Argentina,34,inteligente
+SV,El Salvador,33,inteligente
+PT,Portugal,30,inteligente
+AD,Andorra,0,inteligente
+PR,Puerto Rico,17,inteligente
+RO,Romania,11,inteligente
+AW,Aruba,0,inteligente
+AI,Anguilla,0,inteligente
+BZ,Belize,0,inteligente
+CW,Curaçao,0,inteligente
+BQ,Caribbean Netherlands,0,inteligente
+MD,Moldova,0,inteligente
+GI,Gibraltar,0,inteligente
+TL,Timor-Leste,0,inteligente
+TC,Turks & Caicos Islands,0,inteligente
+SH,St. Helena,0,inteligente
+VG,British Virgin Islands,0,inteligente
+SX,Sint Maarten,0,inteligente
+GF,French Guiana,0,inteligente
+AG,Antigua & Barbuda,0,inteligente
+KY,Cayman Islands,0,inteligente
+GY,Guyana,0,inteligente
+LU,Luxembourg,0,inteligente
+HT,Haiti,0,inteligente
+VI,U.S. Virgin Islands,0,inteligente
+SR,Suriname,0,inteligente
+US,United States,1,inteligente
+MG,Madagascar,0,inteligente
+IT,Italy,1,inteligente
+CH,Switzerland,0,inteligente
+GN,Guinea,0,inteligente
+TT,Trinidad & Tobago,0,inteligente
+GA,Gabon,0,inteligente
+CG,Congo - Brazzaville,0,inteligente
+MO,Macao,0,inteligente
+NE,Niger,0,inteligente
+CD,Congo - Kinshasa,0,inteligente
+NA,Namibia,0,inteligente
+CI,Côte d’Ivoire,0,inteligente
+BS,Bahamas,0,inteligente
+SN,Senegal,0,inteligente
+BJ,Benin,0,inteligente
+JM,Jamaica,0,inteligente
+MA,Morocco,0,inteligente
+AL,Albania,0,inteligente
+TG,Togo,0,inteligente
+BB,Barbados,0,inteligente
+DE,Germany,0,inteligente
+LA,Laos,0,inteligente
+JE,Jersey,0,inteligente
+NC,New Caledonia,0,inteligente
+CM,Cameroon,0,inteligente
+MT,Malta,0,inteligente
+BF,Burkina Faso,0,inteligente
+CA,Canada,0,inteligente
+GP,Guadeloupe,0,inteligente
+MR,Mauritania,0,inteligente
+BE,Belgium,0,inteligente
+ML,Mali,0,inteligente
+IE,Ireland,0,inteligente
+MQ,Martinique,0,inteligente
+KR,South Korea,0,inteligente
+FR,France,0,inteligente
+AT,Austria,0,inteligente
+GB,United Kingdom,0,inteligente
+DK,Denmark,0,inteligente
+PF,French Polynesia,0,inteligente
+PS,Palestine,0,inteligente
+TN,Tunisia,0,inteligente
+NO,Norway,0,inteligente
+NL,Netherlands,0,inteligente
+DZ,Algeria,0,inteligente
+IS,Iceland,0,inteligente
+LB,Lebanon,0,inteligente
+RE,Réunion,0,inteligente
+CY,Cyprus,0,inteligente
+KH,Cambodia,0,inteligente
+AF,Afghanistan,0,inteligente
+AE,United Arab Emirates,0,inteligente
+ET,Ethiopia,0,inteligente
+MU,Mauritius,0,inteligente
+IL,Israel,0,inteligente
+QA,Qatar,0,inteligente
+GE,Georgia,0,inteligente
+VN,Vietnam,0,inteligente
+PL,Poland,0,inteligente
+SI,Slovenia,0,inteligente
+ME,Montenegro,0,inteligente
+LY,Libya,0,inteligente
+MK,North Macedonia,0,inteligente
+SE,Sweden,0,inteligente
+BD,Bangladesh,0,inteligente
+MN,Mongolia,0,inteligente
+NP,Nepal,0,inteligente
+PH,Philippines,0,inteligente
+HR,Croatia,0,inteligente
+MY,Malaysia,0,inteligente
+XK,Kosovo,0,inteligente
+LT,Lithuania,0,inteligente
+IQ,Iraq,0,inteligente
+RS,Serbia,0,inteligente
+AM,Armenia,0,inteligente
+NZ,New Zealand,0,inteligente
+SK,Slovakia,0,inteligente
+EE,Estonia,0,inteligente
+BG,Bulgaria,0,inteligente
+GH,Ghana,0,inteligente
+CZ,Czechia,0,inteligente
+ZA,South Africa,0,inteligente
+JP,Japan,0,inteligente
+HK,Hong Kong,0,inteligente
+GR,Greece,0,inteligente
+RU,Russia,0,inteligente
+TW,Taiwan,0,inteligente
+KE,Kenya,0,inteligente
+LV,Latvia,0,inteligente
+ZW,Zimbabwe,0,inteligente
+BA,Bosnia & Herzegovina,0,inteligente
+EG,Egypt,0,inteligente
+IN,India,0,inteligente
+UG,Uganda,0,inteligente
+PK,Pakistan,0,inteligente
+TZ,Tanzania,0,inteligente
+OM,Oman,0,inteligente
+AU,Australia,0,inteligente
+JO,Jordan,0,inteligente
+TH,Thailand,0,inteligente
+CN,China,0,inteligente
+NG,Nigeria,0,inteligente
+HU,Hungary,0,inteligente
+SY,Syria,0,inteligente
+BY,Belarus,0,inteligente
+AZ,Azerbaijan,0,inteligente
+LK,Sri Lanka,0,inteligente
+SG,Singapore,0,inteligente
+SD,Sudan,0,inteligente
+BH,Bahrain,0,inteligente
+UZ,Uzbekistan,0,inteligente
+KZ,Kazakhstan,0,inteligente
+UA,Ukraine,0,inteligente
+FI,Finland,0,inteligente
+ID,Indonesia,0,inteligente
+ZM,Zambia,0,inteligente
+YE,Yemen,0,inteligente
+MM,Myanmar (Burma),0,inteligente
+KW,Kuwait,0,inteligente
+KG,Kyrgyzstan,0,inteligente
+SA,Saudi Arabia,0,inteligente
+IR,Iran,0,inteligente
+TR,Türkiye,0,inteligente
+IM,Isle of Man,0,inteligente
+IO,British Indian Ocean Territory,0,inteligente
+KM,Comoros,0,inteligente
+PW,Palau,0,inteligente
+PG,Papua New Guinea,0,inteligente
+NR,Nauru,0,inteligente
+CX,Christmas Island,0,inteligente
+KP,North Korea,0,inteligente
+CC,Cocos (Keeling) Islands,0,inteligente
+CF,Central African Republic,0,inteligente
+BW,Botswana,0,inteligente
+BV,Bouvet Island,0,inteligente
+NU,Niue,0,inteligente
+BT,Bhutan,0,inteligente
+BN,Brunei,0,inteligente
+DJ,Djibouti,0,inteligente
+RW,Rwanda,0,inteligente
+NF,Norfolk Island,0,inteligente
+DM,Dominica,0,inteligente
+BM,Bermuda,0,inteligente
+ER,Eritrea,0,inteligente
+GS,South Georgia & South Sandwich Islands,0,inteligente
+YT,Mayotte,0,inteligente
+SJ,Svalbard & Jan Mayen,0,inteligente
+SB,Solomon Islands,0,inteligente
+SL,Sierra Leone,0,inteligente
+BL,St. Barthélemy,0,inteligente
+SM,San Marino,0,inteligente
+SO,Somalia,0,inteligente
+PM,St. Pierre & Miquelon,0,inteligente
+MW,Malawi,0,inteligente
+SS,South Sudan,0,inteligente
+EH,Western Sahara,0,inteligente
+MS,Montserrat,0,inteligente
+MP,Northern Mariana Islands,0,inteligente
+FJ,Fiji,0,inteligente
+MH,Marshall Islands,0,inteligente
+SZ,Eswatini,0,inteligente
+FK,Falkland Islands (Islas Malvinas),0,inteligente
+SC,Seychelles,0,inteligente
+MV,Maldives,0,inteligente
+FO,Faroe Islands,0,inteligente
+TD,Chad,0,inteligente
+BI,Burundi,0,inteligente
+FM,Micronesia,0,inteligente
+TJ,Tajikistan,0,inteligente
+TK,Tokelau,0,inteligente
+TM,Turkmenistan,0,inteligente
+MC,Monaco,0,inteligente
+TO,Tonga,0,inteligente
+MF,St. Martin,0,inteligente
+TF,French Southern Territories,0,inteligente
+GG,Guernsey,0,inteligente
+TV,Tuvalu,0,inteligente
+LS,Lesotho,0,inteligente
+LI,Liechtenstein,0,inteligente
+LC,St. Lucia,0,inteligente
+GM,Gambia,0,inteligente
+UM,U.S. Outlying Islands,0,inteligente
+AQ,Antarctica,0,inteligente
+AS,American Samoa,0,inteligente
+GD,Grenada,0,inteligente
+VA,Vatican City,0,inteligente
+VC,St. Vincent & Grenadines,0,inteligente
+KN,St. Kitts & Nevis,0,inteligente
+KI,Kiribati,0,inteligente
+AX,Åland Islands,0,inteligente
+GL,Greenland,0,inteligente
+VU,Vanuatu,0,inteligente
+WF,Wallis & Futuna,0,inteligente
+WS,Samoa,0,inteligente
+GU,Guam,0,inteligente
+HM,Heard & McDonald Islands,0,inteligente
+LR,Liberia,0,inteligente
+CK,Cook Islands,0,inteligente
+PN,Pitcairn Islands,0,inteligente

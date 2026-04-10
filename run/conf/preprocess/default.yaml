@@ -12,4 +12,5 @@ remove_stopwords: true
 remove_punctuation: true
 remove_numeric: true
 min_token_length: 2
-batch_size: 128
+batch_size: 512
+n_process: 6

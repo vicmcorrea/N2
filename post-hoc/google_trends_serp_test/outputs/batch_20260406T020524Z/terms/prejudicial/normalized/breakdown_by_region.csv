@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+MZ,Mozambique,100,prejudicial
+AO,Angola,78,prejudicial
+ST,São Tomé & Príncipe,0,prejudicial
+CV,Cape Verde,0,prejudicial
+BR,Brazil,47,prejudicial
+PT,Portugal,31,prejudicial
+YT,Mayotte,0,prejudicial
+KN,St. Kitts & Nevis,0,prejudicial
+PH,Philippines,12,prejudicial
+BW,Botswana,0,prejudicial
+VC,St. Vincent & Grenadines,0,prejudicial
+GD,Grenada,0,prejudicial
+NA,Namibia,0,prejudicial
+FJ,Fiji,0,prejudicial
+ZM,Zambia,0,prejudicial
+CO,Colombia,7,prejudicial
+LS,Lesotho,0,prejudicial
+LC,St. Lucia,0,prejudicial
+ZW,Zimbabwe,0,prejudicial
+SL,Sierra Leone,0,prejudicial
+SZ,Eswatini,0,prejudicial
+GT,Guatemala,5,prejudicial
+CL,Chile,5,prejudicial
+GY,Guyana,0,prejudicial
+PG,Papua New Guinea,0,prejudicial
+GH,Ghana,5,prejudicial
+BZ,Belize,0,prejudicial
+KY,Cayman Islands,0,prejudicial
+BB,Barbados,0,prejudicial
+JM,Jamaica,0,prejudicial
+GG,Guernsey,0,prejudicial
+BT,Bhutan,0,prejudicial
+PY,Paraguay,0,prejudicial
+ES,Spain,4,prejudicial
+TT,Trinidad & Tobago,0,prejudicial
+MW,Malawi,0,prejudicial
+AR,Argentina,4,prejudicial
+UG,Uganda,0,prejudicial
+LR,Liberia,0,prejudicial
+PE,Peru,4,prejudicial
+KE,Kenya,4,prejudicial
+JE,Jersey,0,prejudicial
+ZA,South Africa,3,prejudicial
+IM,Isle of Man,0,prejudicial
+BO,Bolivia,3,prejudicial
+MU,Mauritius,0,prejudicial
+NG,Nigeria,3,prejudicial
+BS,Bahamas,0,prejudicial
+NI,Nicaragua,0,prejudicial
+HN,Honduras,0,prejudicial
+AU,Australia,2,prejudicial
+LU,Luxembourg,0,prejudicial
+PK,Pakistan,2,prejudicial
+SG,Singapore,2,prejudicial
+RW,Rwanda,0,prejudicial
+EC,Ecuador,2,prejudicial
+NZ,New Zealand,2,prejudicial
+HK,Hong Kong,2,prejudicial
+MV,Maldives,0,prejudicial
+TZ,Tanzania,0,prejudicial
+SH,St. Helena,0,prejudicial
+US,United States,1,prejudicial
+CA,Canada,1,prejudicial
+MX,Mexico,1,prejudicial
+GB,United Kingdom,1,prejudicial
+MT,Malta,0,prejudicial
+IN,India,1,prejudicial
+IE,Ireland,1,prejudicial
+MO,Macao,0,prejudicial
+BD,Bangladesh,1,prejudicial
+NP,Nepal,0,prejudicial
+UY,Uruguay,0,prejudicial
+LK,Sri Lanka,0,prejudicial
+MY,Malaysia,1,prejudicial
+SV,El Salvador,0,prejudicial
+PA,Panama,0,prejudicial
+AE,United Arab Emirates,0,prejudicial
+CM,Cameroon,0,prejudicial
+VE,Venezuela,1,prejudicial
+CU,Cuba,0,prejudicial
+BH,Bahrain,0,prejudicial
+MM,Myanmar (Burma),0,prejudicial
+PR,Puerto Rico,0,prejudicial
+CR,Costa Rica,0,prejudicial
+LB,Lebanon,0,prejudicial
+CY,Cyprus,0,prejudicial
+QA,Qatar,0,prejudicial
+ET,Ethiopia,0,prejudicial
+DO,Dominican Republic,0,prejudicial
+OM,Oman,0,prejudicial
+CH,Switzerland,0,prejudicial
+KH,Cambodia,0,prejudicial
+KW,Kuwait,0,prejudicial
+BE,Belgium,0,prejudicial
+CI,Côte d’Ivoire,0,prejudicial
+NL,Netherlands,0,prejudicial
+MK,North Macedonia,0,prejudicial
+MD,Moldova,0,prejudicial
+KR,South Korea,0,prejudicial
+LV,Latvia,0,prejudicial
+LT,Lithuania,0,prejudicial
+DK,Denmark,0,prejudicial
+EE,Estonia,0,prejudicial
+GE,Georgia,0,prejudicial
+NO,Norway,0,prejudicial
+JO,Jordan,0,prejudicial
+BA,Bosnia & Herzegovina,0,prejudicial
+GR,Greece,0,prejudicial
+TW,Taiwan,0,prejudicial
+DE,Germany,0,prejudicial
+RO,Romania,0,prejudicial
+ID,Indonesia,0,prejudicial
+BG,Bulgaria,0,prejudicial
+SE,Sweden,0,prejudicial
+EG,Egypt,0,prejudicial
+IL,Israel,0,prejudicial
+CN,China,0,prejudicial
+SA,Saudi Arabia,0,prejudicial
+HR,Croatia,0,prejudicial
+AZ,Azerbaijan,0,prejudicial
+SI,Slovenia,0,prejudicial
+JP,Japan,0,prejudicial
+FR,France,0,prejudicial
+FI,Finland,0,prejudicial
+DZ,Algeria,0,prejudicial
+RS,Serbia,0,prejudicial
+AT,Austria,0,prejudicial
+HU,Hungary,0,prejudicial
+VN,Vietnam,0,prejudicial
+IQ,Iraq,0,prejudicial
+SK,Slovakia,0,prejudicial
+TH,Thailand,0,prejudicial
+IT,Italy,0,prejudicial
+MA,Morocco,0,prejudicial
+CZ,Czechia,0,prejudicial
+PL,Poland,0,prejudicial
+KZ,Kazakhstan,0,prejudicial
+RU,Russia,0,prejudicial
+IR,Iran,0,prejudicial
+UA,Ukraine,0,prejudicial
+TR,Türkiye,0,prejudicial
+GP,Guadeloupe,0,prejudicial
+AW,Aruba,0,prejudicial
+MH,Marshall Islands,0,prejudicial
+MC,Monaco,0,prejudicial
+ML,Mali,0,prejudicial
+MF,St. Martin,0,prejudicial
+CX,Christmas Island,0,prejudicial
+ME,Montenegro,0,prejudicial
+MN,Mongolia,0,prejudicial
+MP,Northern Mariana Islands,0,prejudicial
+CW,Curaçao,0,prejudicial
+MR,Mauritania,0,prejudicial
+MS,Montserrat,0,prejudicial
+MQ,Martinique,0,prejudicial
+KM,Comoros,0,prejudicial
+CK,Cook Islands,0,prejudicial
+CG,Congo - Brazzaville,0,prejudicial
+CD,Congo - Kinshasa,0,prejudicial
+DJ,Djibouti,0,prejudicial
+NC,New Caledonia,0,prejudicial
+NE,Niger,0,prejudicial
+NF,Norfolk Island,0,prejudicial
+DM,Dominica,0,prejudicial
+LI,Liechtenstein,0,prejudicial
+NU,Niue,0,prejudicial
+GM,Gambia,0,prejudicial
+LY,Libya,0,prejudicial
+CC,Cocos (Keeling) Islands,0,prejudicial
+NR,Nauru,0,prejudicial
+CF,Central African Republic,0,prejudicial
+AF,Afghanistan,0,prejudicial
+BV,Bouvet Island,0,prejudicial
+BN,Brunei,0,prejudicial
+PN,Pitcairn Islands,0,prejudicial
+BM,Bermuda,0,prejudicial
+BY,Belarus,0,prejudicial
+PW,Palau,0,prejudicial
+BL,St. Barthélemy,0,prejudicial
+ER,Eritrea,0,prejudicial
+EH,Western Sahara,0,prejudicial
+KP,North Korea,0,prejudicial
+KI,Kiribati,0,prejudicial
+BF,Burkina Faso,0,prejudicial
+PS,Palestine,0,prejudicial
+PF,French Polynesia,0,prejudicial
+KG,Kyrgyzstan,0,prejudicial
+RE,Réunion,0,prejudicial
+IS,Iceland,0,prejudicial
+FK,Falkland Islands (Islas Malvinas),0,prejudicial
+BQ,Caribbean Netherlands,0,prejudicial
+IO,British Indian Ocean Territory,0,prejudicial
+SD,Sudan,0,prejudicial
+SN,Senegal,0,prejudicial
+BJ,Benin,0,prejudicial
+GS,South Georgia & South Sandwich Islands,0,prejudicial
+FO,Faroe Islands,0,prejudicial
+SJ,Svalbard & Jan Mayen,0,prejudicial
+SB,Solomon Islands,0,prejudicial
+BI,Burundi,0,prejudicial
+HT,Haiti,0,prejudicial
+SM,San Marino,0,prejudicial
+SO,Somalia,0,prejudicial
+PM,St. Pierre & Miquelon,0,prejudicial
+FM,Micronesia,0,prejudicial
+SS,South Sudan,0,prejudicial
+HM,Heard & McDonald Islands,0,prejudicial
+SR,Suriname,0,prejudicial
+GA,Gabon,0,prejudicial
+GU,Guam,0,prejudicial
+GF,French Guiana,0,prejudicial
+AG,Antigua & Barbuda,0,prejudicial
+SX,Sint Maarten,0,prejudicial
+SC,Seychelles,0,prejudicial
+SY,Syria,0,prejudicial
+TC,Turks & Caicos Islands,0,prejudicial
+TD,Chad,0,prejudicial
+TG,Togo,0,prejudicial
+GI,Gibraltar,0,prejudicial
+TJ,Tajikistan,0,prejudicial
+TK,Tokelau,0,prejudicial
+TM,Turkmenistan,0,prejudicial
+TL,Timor-Leste,0,prejudicial
+TO,Tonga,0,prejudicial
+TF,French Southern Territories,0,prejudicial
+TN,Tunisia,0,prejudicial
+GL,Greenland,0,prejudicial
+TV,Tuvalu,0,prejudicial
+GN,Guinea,0,prejudicial
+AQ,Antarctica,0,prejudicial
+AS,American Samoa,0,prejudicial
+GQ,Equatorial Guinea,0,prejudicial
+UM,U.S. Outlying Islands,0,prejudicial
+AM,Armenia,0,prejudicial
+AD,Andorra,0,prejudicial
+UZ,Uzbekistan,0,prejudicial
+VA,Vatican City,0,prejudicial
+AL,Albania,0,prejudicial
+AX,Åland Islands,0,prejudicial
+VG,British Virgin Islands,0,prejudicial
+VI,U.S. Virgin Islands,0,prejudicial
+GW,Guinea-Bissau,0,prejudicial
+VU,Vanuatu,0,prejudicial
+WF,Wallis & Futuna,0,prejudicial
+WS,Samoa,0,prejudicial
+XK,Kosovo,0,prejudicial
+YE,Yemen,0,prejudicial
+AI,Anguilla,0,prejudicial
+LA,Laos,0,prejudicial
+MG,Madagascar,0,prejudicial

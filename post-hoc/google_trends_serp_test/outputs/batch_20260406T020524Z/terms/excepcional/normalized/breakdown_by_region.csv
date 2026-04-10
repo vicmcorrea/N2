@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+PE,Peru,100,excepcional
+CO,Colombia,76,excepcional
+HN,Honduras,76,excepcional
+EC,Ecuador,72,excepcional
+GT,Guatemala,70,excepcional
+PY,Paraguay,70,excepcional
+CU,Cuba,70,excepcional
+CL,Chile,70,excepcional
+NI,Nicaragua,67,excepcional
+PA,Panama,63,excepcional
+SV,El Salvador,60,excepcional
+MX,Mexico,60,excepcional
+BO,Bolivia,56,excepcional
+PR,Puerto Rico,53,excepcional
+CR,Costa Rica,52,excepcional
+DO,Dominican Republic,51,excepcional
+ES,Spain,41,excepcional
+AR,Argentina,40,excepcional
+UY,Uruguay,39,excepcional
+BR,Brazil,39,excepcional
+AO,Angola,37,excepcional
+VE,Venezuela,36,excepcional
+MZ,Mozambique,0,excepcional
+GQ,Equatorial Guinea,0,excepcional
+AD,Andorra,0,excepcional
+CV,Cape Verde,0,excepcional
+PT,Portugal,23,excepcional
+AW,Aruba,0,excepcional
+BZ,Belize,0,excepcional
+CW,Curaçao,0,excepcional
+MG,Madagascar,0,excepcional
+SH,St. Helena,0,excepcional
+MO,Macao,0,excepcional
+HT,Haiti,0,excepcional
+LU,Luxembourg,0,excepcional
+US,United States,1,excepcional
+IE,Ireland,0,excepcional
+TT,Trinidad & Tobago,0,excepcional
+CH,Switzerland,0,excepcional
+GB,United Kingdom,0,excepcional
+TZ,Tanzania,0,excepcional
+CA,Canada,0,excepcional
+QA,Qatar,0,excepcional
+FR,France,0,excepcional
+MA,Morocco,0,excepcional
+BE,Belgium,0,excepcional
+DE,Germany,0,excepcional
+IT,Italy,0,excepcional
+SE,Sweden,0,excepcional
+IL,Israel,0,excepcional
+NL,Netherlands,0,excepcional
+DZ,Algeria,0,excepcional
+KR,South Korea,0,excepcional
+NO,Norway,0,excepcional
+BG,Bulgaria,0,excepcional
+AU,Australia,0,excepcional
+RO,Romania,0,excepcional
+AT,Austria,0,excepcional
+SG,Singapore,0,excepcional
+AE,United Arab Emirates,0,excepcional
+RS,Serbia,0,excepcional
+CZ,Czechia,0,excepcional
+NZ,New Zealand,0,excepcional
+PL,Poland,0,excepcional
+ZA,South Africa,0,excepcional
+PH,Philippines,0,excepcional
+MY,Malaysia,0,excepcional
+JP,Japan,0,excepcional
+DK,Denmark,0,excepcional
+HU,Hungary,0,excepcional
+RU,Russia,0,excepcional
+HK,Hong Kong,0,excepcional
+GR,Greece,0,excepcional
+NG,Nigeria,0,excepcional
+IN,India,0,excepcional
+FI,Finland,0,excepcional
+VN,Vietnam,0,excepcional
+EG,Egypt,0,excepcional
+TW,Taiwan,0,excepcional
+UA,Ukraine,0,excepcional
+PK,Pakistan,0,excepcional
+SA,Saudi Arabia,0,excepcional
+TH,Thailand,0,excepcional
+ID,Indonesia,0,excepcional
+IR,Iran,0,excepcional
+TR,Türkiye,0,excepcional
+LA,Laos,0,excepcional
+ZW,Zimbabwe,0,excepcional
+GM,Gambia,0,excepcional
+GP,Guadeloupe,0,excepcional
+GD,Grenada,0,excepcional
+GL,Greenland,0,excepcional
+GN,Guinea,0,excepcional
+GF,French Guiana,0,excepcional
+GU,Guam,0,excepcional
+GY,Guyana,0,excepcional
+GI,Gibraltar,0,excepcional
+HM,Heard & McDonald Islands,0,excepcional
+GH,Ghana,0,excepcional
+HR,Croatia,0,excepcional
+GG,Guernsey,0,excepcional
+GE,Georgia,0,excepcional
+GA,Gabon,0,excepcional
+IM,Isle of Man,0,excepcional
+FM,Micronesia,0,excepcional
+IO,British Indian Ocean Territory,0,excepcional
+FO,Faroe Islands,0,excepcional
+FK,Falkland Islands (Islas Malvinas),0,excepcional
+IQ,Iraq,0,excepcional
+IS,Iceland,0,excepcional
+FJ,Fiji,0,excepcional
+ET,Ethiopia,0,excepcional
+JM,Jamaica,0,excepcional
+JE,Jersey,0,excepcional
+JO,Jordan,0,excepcional
+EE,Estonia,0,excepcional
+KZ,Kazakhstan,0,excepcional
+KE,Kenya,0,excepcional
+KG,Kyrgyzstan,0,excepcional
+KH,Cambodia,0,excepcional
+KI,Kiribati,0,excepcional
+KN,St. Kitts & Nevis,0,excepcional
+EH,Western Sahara,0,excepcional
+KW,Kuwait,0,excepcional
+ER,Eritrea,0,excepcional
+DM,Dominica,0,excepcional
+LB,Lebanon,0,excepcional
+LY,Libya,0,excepcional
+LC,St. Lucia,0,excepcional
+LI,Liechtenstein,0,excepcional
+LK,Sri Lanka,0,excepcional
+LS,Lesotho,0,excepcional
+LT,Lithuania,0,excepcional
+DJ,Djibouti,0,excepcional
+LV,Latvia,0,excepcional
+CY,Cyprus,0,excepcional
+MF,St. Martin,0,excepcional
+KY,Cayman Islands,0,excepcional
+MC,Monaco,0,excepcional
+MD,Moldova,0,excepcional
+CX,Christmas Island,0,excepcional
+MV,Maldives,0,excepcional
+KM,Comoros,0,excepcional
+MH,Marshall Islands,0,excepcional
+MK,North Macedonia,0,excepcional
+ML,Mali,0,excepcional
+MT,Malta,0,excepcional
+MM,Myanmar (Burma),0,excepcional
+ME,Montenegro,0,excepcional
+MN,Mongolia,0,excepcional
+MP,Northern Mariana Islands,0,excepcional
+CK,Cook Islands,0,excepcional
+MR,Mauritania,0,excepcional
+MS,Montserrat,0,excepcional
+MQ,Martinique,0,excepcional
+MU,Mauritius,0,excepcional
+MW,Malawi,0,excepcional
+CG,Congo - Brazzaville,0,excepcional
+YT,Mayotte,0,excepcional
+NA,Namibia,0,excepcional
+NC,New Caledonia,0,excepcional
+NE,Niger,0,excepcional
+NF,Norfolk Island,0,excepcional
+CD,Congo - Kinshasa,0,excepcional
+CM,Cameroon,0,excepcional
+NU,Niue,0,excepcional
+CI,Côte d’Ivoire,0,excepcional
+CN,China,0,excepcional
+GW,Guinea-Bissau,0,excepcional
+NR,Nauru,0,excepcional
+CC,Cocos (Keeling) Islands,0,excepcional
+OM,Oman,0,excepcional
+CF,Central African Republic,0,excepcional
+BW,Botswana,0,excepcional
+PN,Pitcairn Islands,0,excepcional
+BV,Bouvet Island,0,excepcional
+BT,Bhutan,0,excepcional
+PW,Palau,0,excepcional
+PG,Papua New Guinea,0,excepcional
+BN,Brunei,0,excepcional
+BB,Barbados,0,excepcional
+KP,North Korea,0,excepcional
+BM,Bermuda,0,excepcional
+BY,Belarus,0,excepcional
+PS,Palestine,0,excepcional
+PF,French Polynesia,0,excepcional
+BL,St. Barthélemy,0,excepcional
+RE,Réunion,0,excepcional
+BA,Bosnia & Herzegovina,0,excepcional
+BS,Bahamas,0,excepcional
+RW,Rwanda,0,excepcional
+BH,Bahrain,0,excepcional
+SD,Sudan,0,excepcional
+SN,Senegal,0,excepcional
+BD,Bangladesh,0,excepcional
+GS,South Georgia & South Sandwich Islands,0,excepcional
+BF,Burkina Faso,0,excepcional
+SJ,Svalbard & Jan Mayen,0,excepcional
+SB,Solomon Islands,0,excepcional
+SL,Sierra Leone,0,excepcional
+BQ,Caribbean Netherlands,0,excepcional
+SM,San Marino,0,excepcional
+SO,Somalia,0,excepcional
+PM,St. Pierre & Miquelon,0,excepcional
+BJ,Benin,0,excepcional
+SS,South Sudan,0,excepcional
+ST,São Tomé & Príncipe,0,excepcional
+SR,Suriname,0,excepcional
+SK,Slovakia,0,excepcional
+SI,Slovenia,0,excepcional
+BI,Burundi,0,excepcional
+SZ,Eswatini,0,excepcional
+SX,Sint Maarten,0,excepcional
+SC,Seychelles,0,excepcional
+SY,Syria,0,excepcional
+TC,Turks & Caicos Islands,0,excepcional
+TD,Chad,0,excepcional
+TG,Togo,0,excepcional
+AZ,Azerbaijan,0,excepcional
+TJ,Tajikistan,0,excepcional
+TK,Tokelau,0,excepcional
+TM,Turkmenistan,0,excepcional
+TL,Timor-Leste,0,excepcional
+TO,Tonga,0,excepcional
+AG,Antigua & Barbuda,0,excepcional
+TN,Tunisia,0,excepcional
+TF,French Southern Territories,0,excepcional
+TV,Tuvalu,0,excepcional
+AQ,Antarctica,0,excepcional
+AS,American Samoa,0,excepcional
+UG,Uganda,0,excepcional
+AM,Armenia,0,excepcional
+UM,U.S. Outlying Islands,0,excepcional
+AL,Albania,0,excepcional
+AX,Åland Islands,0,excepcional
+UZ,Uzbekistan,0,excepcional
+VA,Vatican City,0,excepcional
+VC,St. Vincent & Grenadines,0,excepcional
+AI,Anguilla,0,excepcional
+VG,British Virgin Islands,0,excepcional
+VI,U.S. Virgin Islands,0,excepcional
+AF,Afghanistan,0,excepcional
+VU,Vanuatu,0,excepcional
+WF,Wallis & Futuna,0,excepcional
+WS,Samoa,0,excepcional
+XK,Kosovo,0,excepcional
+YE,Yemen,0,excepcional
+LR,Liberia,0,excepcional
+ZM,Zambia,0,excepcional
+NP,Nepal,0,excepcional

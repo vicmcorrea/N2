@@ -5,6 +5,13 @@ from typing import Any
 
 from omegaconf import DictConfig
 
+from stil_semantic_change.preprocessing.views import TEXT_VIEW_NAMES
+from stil_semantic_change.selection import (
+    DEFAULT_DRIFT_CANDIDATE_ALLOWED_POS,
+    DEFAULT_DRIFT_CANDIDATE_EXCLUDE_LEMMAS,
+    DEFAULT_STABLE_CONTROL_ALLOWED_POS,
+    DEFAULT_STABLE_CONTROL_EXCLUDE_LEMMAS,
+)
 from stil_semantic_change.utils.config.schema import (
     AlignmentConfig,
     DatasetConfig,
@@ -36,6 +43,13 @@ def _tuple_int(values: Any) -> tuple[int, ...]:
     if values is None:
         return ()
     return tuple(int(value) for value in values)
+
+
+def _validate_text_view(value: str) -> str:
+    if value not in TEXT_VIEW_NAMES:
+        expected = ", ".join(TEXT_VIEW_NAMES)
+        raise ValueError(f"Invalid model.text_view '{value}'. Expected one of: {expected}")
+    return value
 
 
 def build_experiment_config(cfg: DictConfig) -> ExperimentConfig:
@@ -88,11 +102,13 @@ def build_experiment_config(cfg: DictConfig) -> ExperimentConfig:
         remove_numeric=bool(cfg.preprocess.remove_numeric),
         min_token_length=int(cfg.preprocess.min_token_length),
         batch_size=int(cfg.preprocess.batch_size),
+        n_process=int(cfg.preprocess.get("n_process", 6)),
     )
 
     model_cfg = ModelConfig(
         kind=str(cfg.model.kind),
         name=str(cfg.model.name),
+        text_view=_validate_text_view(str(cfg.model.get("text_view", "content_lemma"))),
         vector_size=int(cfg.model.vector_size),
         window=int(cfg.model.window),
         negative=int(cfg.model.negative),
@@ -103,6 +119,7 @@ def build_experiment_config(cfg: DictConfig) -> ExperimentConfig:
         seed=int(cfg.model.seed),
         replicates=int(cfg.model.replicates),
         bert_model_name=str(cfg.model.bert_model_name),
+        bert_device=str(cfg.model.get("bert_device", "auto")),
         bert_batch_size=int(cfg.model.bert_batch_size),
         bert_layers=_tuple_int(cfg.model.bert_layers),
         bert_max_contexts_per_slice=int(cfg.model.bert_max_contexts_per_slice),
@@ -118,6 +135,31 @@ def build_experiment_config(cfg: DictConfig) -> ExperimentConfig:
         min_occurrences_per_slice=int(cfg.selection.min_occurrences_per_slice),
         min_documents_per_slice=int(cfg.selection.min_documents_per_slice),
         min_slice_presence_ratio=float(cfg.selection.min_slice_presence_ratio),
+        exclude_lemmas=_tuple_str(cfg.selection.get("exclude_lemmas")),
+        drift_candidate_allowed_pos=_tuple_str(
+            cfg.selection.get(
+                "drift_candidate_allowed_pos",
+                DEFAULT_DRIFT_CANDIDATE_ALLOWED_POS,
+            )
+        ),
+        drift_candidate_exclude_lemmas=_tuple_str(
+            cfg.selection.get(
+                "drift_candidate_exclude_lemmas",
+                DEFAULT_DRIFT_CANDIDATE_EXCLUDE_LEMMAS,
+            )
+        ),
+        stable_control_allowed_pos=_tuple_str(
+            cfg.selection.get(
+                "stable_control_allowed_pos",
+                DEFAULT_STABLE_CONTROL_ALLOWED_POS,
+            )
+        ),
+        stable_control_exclude_lemmas=_tuple_str(
+            cfg.selection.get(
+                "stable_control_exclude_lemmas",
+                DEFAULT_STABLE_CONTROL_EXCLUDE_LEMMAS,
+            )
+        ),
         top_drift_candidates=int(cfg.selection.top_drift_candidates),
         top_stable_controls=int(cfg.selection.top_stable_controls),
         top_seed_terms=int(cfg.selection.top_seed_terms),

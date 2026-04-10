@@ -1,0 +1,1713 @@
+{
+  "interest_over_time": [
+    {
+      "keyword": "democracia",
+      "items": [
+        {
+          "time": "Apr 6 – 12, 2025",
+          "value": 83
+        },
+        {
+          "time": "Apr 13 – 19, 2025",
+          "value": 50
+        },
+        {
+          "time": "Apr 20 – 26, 2025",
+          "value": 61
+        },
+        {
+          "time": "Apr 27 – May 3, 2025",
+          "value": 66
+        },
+        {
+          "time": "May 4 – 10, 2025",
+          "value": 72
+        },
+        {
+          "time": "May 11 – 17, 2025",
+          "value": 78
+        },
+        {
+          "time": "May 18 – 24, 2025",
+          "value": 80
+        },
+        {
+          "time": "May 25 – 31, 2025",
+          "value": 78
+        },
+        {
+          "time": "Jun 1 – 7, 2025",
+          "value": 86
+        },
+        {
+          "time": "Jun 8 – 14, 2025",
+          "value": 87
+        },
+        {
+          "time": "Jun 15 – 21, 2025",
+          "value": 68
+        },
+        {
+          "time": "Jun 22 – 28, 2025",
+          "value": 59
+        },
+        {
+          "time": "Jun 29 – Jul 5, 2025",
+          "value": 48
+        },
+        {
+          "time": "Jul 6 – 12, 2025",
+          "value": 45
+        },
+        {
+          "time": "Jul 13 – 19, 2025",
+          "value": 46
+        },
+        {
+          "time": "Jul 20 – 26, 2025",
+          "value": 47
+        },
+        {
+          "time": "Jul 27 – Aug 2, 2025",
+          "value": 48
+        },
+        {
+          "time": "Aug 3 – 9, 2025",
+          "value": 53
+        },
+        {
+          "time": "Aug 10 – 16, 2025",
+          "value": 58
+        },
+        {
+          "time": "Aug 17 – 23, 2025",
+          "value": 69
+        },
+        {
+          "time": "Aug 24 – 30, 2025",
+          "value": 66
+        },
+        {
+          "time": "Aug 31 – Sep 6, 2025",
+          "value": 78
+        },
+        {
+          "time": "Sep 7 – 13, 2025",
+          "value": 89
+        },
+        {
+          "time": "Sep 14 – 20, 2025",
+          "value": 100
+        },
+        {
+          "time": "Sep 21 – 27, 2025",
+          "value": 86
+        },
+        {
+          "time": "Sep 28 – Oct 4, 2025",
+          "value": 80
+        },
+        {
+          "time": "Oct 5 – 11, 2025",
+          "value": 73
+        },
+        {
+          "time": "Oct 12 – 18, 2025",
+          "value": 79
+        },
+        {
+          "time": "Oct 19 – 25, 2025",
+          "value": 91
+        },
+        {
+          "time": "Oct 26 – Nov 1, 2025",
+          "value": 76
+        },
+        {
+          "time": "Nov 2 – 8, 2025",
+          "value": 77
+        },
+        {
+          "time": "Nov 9 – 15, 2025",
+          "value": 81
+        },
+        {
+          "time": "Nov 16 – 22, 2025",
+          "value": 80
+        },
+        {
+          "time": "Nov 23 – 29, 2025",
+          "value": 77
+        },
+        {
+          "time": "Nov 30 – Dec 6, 2025",
+          "value": 65
+        },
+        {
+          "time": "Dec 7 – 13, 2025",
+          "value": 47
+        },
+        {
+          "time": "Dec 14 – 20, 2025",
+          "value": 37
+        },
+        {
+          "time": "Dec 21 – 27, 2025",
+          "value": 22
+        },
+        {
+          "time": "Dec 28, 2025 – Jan 3, 2026",
+          "value": 25
+        },
+        {
+          "time": "Jan 4 – 10, 2026",
+          "value": 37
+        },
+        {
+          "time": "Jan 11 – 17, 2026",
+          "value": 40
+        },
+        {
+          "time": "Jan 18 – 24, 2026",
+          "value": 53
+        },
+        {
+          "time": "Jan 25 – 31, 2026",
+          "value": 57
+        },
+        {
+          "time": "Feb 1 – 7, 2026",
+          "value": 61
+        },
+        {
+          "time": "Feb 8 – 14, 2026",
+          "value": 56
+        },
+        {
+          "time": "Feb 15 – 21, 2026",
+          "value": 54
+        },
+        {
+          "time": "Feb 22 – 28, 2026",
+          "value": 66
+        },
+        {
+          "time": "Mar 1 – 7, 2026",
+          "value": 70
+        },
+        {
+          "time": "Mar 8 – 14, 2026",
+          "value": 66
+        },
+        {
+          "time": "Mar 15 – 21, 2026",
+          "value": 71
+        },
+        {
+          "time": "Mar 22 – 28, 2026",
+          "value": 69
+        },
+        {
+          "time": "Mar 29 – Apr 4, 2026",
+          "value": 44
+        },
+        {
+          "time": "Apr 5 – 11, 2026",
+          "value": 40
+        }
+      ]
+    }
+  ],
+  "breakdown_by_region": [
+    {
+      "keyword": "democracia",
+      "items": [
+        {
+          "geo_code": "EC",
+          "geo_name": "Ecuador",
+          "value": 100
+        },
+        {
+          "geo_code": "ST",
+          "geo_name": "São Tomé & Príncipe",
+          "value": 0
+        },
+        {
+          "geo_code": "CV",
+          "geo_name": "Cape Verde",
+          "value": 0
+        },
+        {
+          "geo_code": "GT",
+          "geo_name": "Guatemala",
+          "value": 69
+        },
+        {
+          "geo_code": "GW",
+          "geo_name": "Guinea-Bissau",
+          "value": 0
+        },
+        {
+          "geo_code": "BO",
+          "geo_name": "Bolivia",
+          "value": 52
+        },
+        {
+          "geo_code": "AO",
+          "geo_name": "Angola",
+          "value": 51
+        },
+        {
+          "geo_code": "HN",
+          "geo_name": "Honduras",
+          "value": 47
+        },
+        {
+          "geo_code": "PE",
+          "geo_name": "Peru",
+          "value": 42
+        },
+        {
+          "geo_code": "VE",
+          "geo_name": "Venezuela",
+          "value": 40
+        },
+        {
+          "geo_code": "CL",
+          "geo_name": "Chile",
+          "value": 38
+        },
+        {
+          "geo_code": "CO",
+          "geo_name": "Colombia",
+          "value": 32
+        },
+        {
+          "geo_code": "AR",
+          "geo_name": "Argentina",
+          "value": 31
+        },
+        {
+          "geo_code": "MX",
+          "geo_name": "Mexico",
+          "value": 31
+        },
+        {
+          "geo_code": "PA",
+          "geo_name": "Panama",
+          "value": 30
+        },
+        {
+          "geo_code": "UY",
+          "geo_name": "Uruguay",
+          "value": 29
+        },
+        {
+          "geo_code": "CR",
+          "geo_name": "Costa Rica",
+          "value": 29
+        },
+        {
+          "geo_code": "MZ",
+          "geo_name": "Mozambique",
+          "value": 27
+        },
+        {
+          "geo_code": "TL",
+          "geo_name": "Timor-Leste",
+          "value": 0
+        },
+        {
+          "geo_code": "DO",
+          "geo_name": "Dominican Republic",
+          "value": 23
+        },
+        {
+          "geo_code": "GQ",
+          "geo_name": "Equatorial Guinea",
+          "value": 0
+        },
+        {
+          "geo_code": "BR",
+          "geo_name": "Brazil",
+          "value": 20
+        },
+        {
+          "geo_code": "SV",
+          "geo_name": "El Salvador",
+          "value": 18
+        },
+        {
+          "geo_code": "PY",
+          "geo_name": "Paraguay",
+          "value": 18
+        },
+        {
+          "geo_code": "CU",
+          "geo_name": "Cuba",
+          "value": 16
+        },
+        {
+          "geo_code": "ES",
+          "geo_name": "Spain",
+          "value": 16
+        },
+        {
+          "geo_code": "NI",
+          "geo_name": "Nicaragua",
+          "value": 15
+        },
+        {
+          "geo_code": "PT",
+          "geo_name": "Portugal",
+          "value": 14
+        },
+        {
+          "geo_code": "BZ",
+          "geo_name": "Belize",
+          "value": 0
+        },
+        {
+          "geo_code": "AD",
+          "geo_name": "Andorra",
+          "value": 0
+        },
+        {
+          "geo_code": "PR",
+          "geo_name": "Puerto Rico",
+          "value": 7
+        },
+        {
+          "geo_code": "XK",
+          "geo_name": "Kosovo",
+          "value": 0
+        },
+        {
+          "geo_code": "LU",
+          "geo_name": "Luxembourg",
+          "value": 0
+        },
+        {
+          "geo_code": "SN",
+          "geo_name": "Senegal",
+          "value": 0
+        },
+        {
+          "geo_code": "US",
+          "geo_name": "United States",
+          "value": 0
+        },
+        {
+          "geo_code": "AL",
+          "geo_name": "Albania",
+          "value": 0
+        },
+        {
+          "geo_code": "CN",
+          "geo_name": "China",
+          "value": 0
+        },
+        {
+          "geo_code": "VN",
+          "geo_name": "Vietnam",
+          "value": 0
+        },
+        {
+          "geo_code": "TN",
+          "geo_name": "Tunisia",
+          "value": 0
+        },
+        {
+          "geo_code": "KR",
+          "geo_name": "South Korea",
+          "value": 0
+        },
+        {
+          "geo_code": "CH",
+          "geo_name": "Switzerland",
+          "value": 0
+        },
+        {
+          "geo_code": "CA",
+          "geo_name": "Canada",
+          "value": 0
+        },
+        {
+          "geo_code": "IE",
+          "geo_name": "Ireland",
+          "value": 0
+        },
+        {
+          "geo_code": "SH",
+          "geo_name": "St. Helena",
+          "value": 0
+        },
+        {
+          "geo_code": "LV",
+          "geo_name": "Latvia",
+          "value": 0
+        },
+        {
+          "geo_code": "MA",
+          "geo_name": "Morocco",
+          "value": 0
+        },
+        {
+          "geo_code": "IL",
+          "geo_name": "Israel",
+          "value": 0
+        },
+        {
+          "geo_code": "AZ",
+          "geo_name": "Azerbaijan",
+          "value": 0
+        },
+        {
+          "geo_code": "FR",
+          "geo_name": "France",
+          "value": 0
+        },
+        {
+          "geo_code": "SK",
+          "geo_name": "Slovakia",
+          "value": 0
+        },
+        {
+          "geo_code": "CZ",
+          "geo_name": "Czechia",
+          "value": 0
+        },
+        {
+          "geo_code": "GB",
+          "geo_name": "United Kingdom",
+          "value": 0
+        },
+        {
+          "geo_code": "BE",
+          "geo_name": "Belgium",
+          "value": 0
+        },
+        {
+          "geo_code": "IQ",
+          "geo_name": "Iraq",
+          "value": 0
+        },
+        {
+          "geo_code": "SG",
+          "geo_name": "Singapore",
+          "value": 0
+        },
+        {
+          "geo_code": "NL",
+          "geo_name": "Netherlands",
+          "value": 0
+        },
+        {
+          "geo_code": "IT",
+          "geo_name": "Italy",
+          "value": 0
+        },
+        {
+          "geo_code": "DE",
+          "geo_name": "Germany",
+          "value": 0
+        },
+        {
+          "geo_code": "SI",
+          "geo_name": "Slovenia",
+          "value": 0
+        },
+        {
+          "geo_code": "RO",
+          "geo_name": "Romania",
+          "value": 0
+        },
+        {
+          "geo_code": "SE",
+          "geo_name": "Sweden",
+          "value": 0
+        },
+        {
+          "geo_code": "UZ",
+          "geo_name": "Uzbekistan",
+          "value": 0
+        },
+        {
+          "geo_code": "NO",
+          "geo_name": "Norway",
+          "value": 0
+        },
+        {
+          "geo_code": "DK",
+          "geo_name": "Denmark",
+          "value": 0
+        },
+        {
+          "geo_code": "GR",
+          "geo_name": "Greece",
+          "value": 0
+        },
+        {
+          "geo_code": "MY",
+          "geo_name": "Malaysia",
+          "value": 0
+        },
+        {
+          "geo_code": "LT",
+          "geo_name": "Lithuania",
+          "value": 0
+        },
+        {
+          "geo_code": "DZ",
+          "geo_name": "Algeria",
+          "value": 0
+        },
+        {
+          "geo_code": "AE",
+          "geo_name": "United Arab Emirates",
+          "value": 0
+        },
+        {
+          "geo_code": "RS",
+          "geo_name": "Serbia",
+          "value": 0
+        },
+        {
+          "geo_code": "HR",
+          "geo_name": "Croatia",
+          "value": 0
+        },
+        {
+          "geo_code": "PH",
+          "geo_name": "Philippines",
+          "value": 0
+        },
+        {
+          "geo_code": "AT",
+          "geo_name": "Austria",
+          "value": 0
+        },
+        {
+          "geo_code": "HU",
+          "geo_name": "Hungary",
+          "value": 0
+        },
+        {
+          "geo_code": "ZA",
+          "geo_name": "South Africa",
+          "value": 0
+        },
+        {
+          "geo_code": "EG",
+          "geo_name": "Egypt",
+          "value": 0
+        },
+        {
+          "geo_code": "PL",
+          "geo_name": "Poland",
+          "value": 0
+        },
+        {
+          "geo_code": "BY",
+          "geo_name": "Belarus",
+          "value": 0
+        },
+        {
+          "geo_code": "AU",
+          "geo_name": "Australia",
+          "value": 0
+        },
+        {
+          "geo_code": "UA",
+          "geo_name": "Ukraine",
+          "value": 0
+        },
+        {
+          "geo_code": "SA",
+          "geo_name": "Saudi Arabia",
+          "value": 0
+        },
+        {
+          "geo_code": "FI",
+          "geo_name": "Finland",
+          "value": 0
+        },
+        {
+          "geo_code": "KE",
+          "geo_name": "Kenya",
+          "value": 0
+        },
+        {
+          "geo_code": "BD",
+          "geo_name": "Bangladesh",
+          "value": 0
+        },
+        {
+          "geo_code": "TR",
+          "geo_name": "Türkiye",
+          "value": 0
+        },
+        {
+          "geo_code": "KZ",
+          "geo_name": "Kazakhstan",
+          "value": 0
+        },
+        {
+          "geo_code": "TW",
+          "geo_name": "Taiwan",
+          "value": 0
+        },
+        {
+          "geo_code": "JP",
+          "geo_name": "Japan",
+          "value": 0
+        },
+        {
+          "geo_code": "TH",
+          "geo_name": "Thailand",
+          "value": 0
+        },
+        {
+          "geo_code": "HK",
+          "geo_name": "Hong Kong",
+          "value": 0
+        },
+        {
+          "geo_code": "RU",
+          "geo_name": "Russia",
+          "value": 0
+        },
+        {
+          "geo_code": "PK",
+          "geo_name": "Pakistan",
+          "value": 0
+        },
+        {
+          "geo_code": "NG",
+          "geo_name": "Nigeria",
+          "value": 0
+        },
+        {
+          "geo_code": "ID",
+          "geo_name": "Indonesia",
+          "value": 0
+        },
+        {
+          "geo_code": "BF",
+          "geo_name": "Burkina Faso",
+          "value": 0
+        },
+        {
+          "geo_code": "IN",
+          "geo_name": "India",
+          "value": 0
+        },
+        {
+          "geo_code": "IR",
+          "geo_name": "Iran",
+          "value": 0
+        },
+        {
+          "geo_code": "LA",
+          "geo_name": "Laos",
+          "value": 0
+        },
+        {
+          "geo_code": "ZW",
+          "geo_name": "Zimbabwe",
+          "value": 0
+        },
+        {
+          "geo_code": "GY",
+          "geo_name": "Guyana",
+          "value": 0
+        },
+        {
+          "geo_code": "HT",
+          "geo_name": "Haiti",
+          "value": 0
+        },
+        {
+          "geo_code": "GU",
+          "geo_name": "Guam",
+          "value": 0
+        },
+        {
+          "geo_code": "GF",
+          "geo_name": "French Guiana",
+          "value": 0
+        },
+        {
+          "geo_code": "IM",
+          "geo_name": "Isle of Man",
+          "value": 0
+        },
+        {
+          "geo_code": "GL",
+          "geo_name": "Greenland",
+          "value": 0
+        },
+        {
+          "geo_code": "IO",
+          "geo_name": "British Indian Ocean Territory",
+          "value": 0
+        },
+        {
+          "geo_code": "GD",
+          "geo_name": "Grenada",
+          "value": 0
+        },
+        {
+          "geo_code": "GM",
+          "geo_name": "Gambia",
+          "value": 0
+        },
+        {
+          "geo_code": "GP",
+          "geo_name": "Guadeloupe",
+          "value": 0
+        },
+        {
+          "geo_code": "IS",
+          "geo_name": "Iceland",
+          "value": 0
+        },
+        {
+          "geo_code": "GN",
+          "geo_name": "Guinea",
+          "value": 0
+        },
+        {
+          "geo_code": "GI",
+          "geo_name": "Gibraltar",
+          "value": 0
+        },
+        {
+          "geo_code": "JM",
+          "geo_name": "Jamaica",
+          "value": 0
+        },
+        {
+          "geo_code": "JE",
+          "geo_name": "Jersey",
+          "value": 0
+        },
+        {
+          "geo_code": "JO",
+          "geo_name": "Jordan",
+          "value": 0
+        },
+        {
+          "geo_code": "GH",
+          "geo_name": "Ghana",
+          "value": 0
+        },
+        {
+          "geo_code": "GG",
+          "geo_name": "Guernsey",
+          "value": 0
+        },
+        {
+          "geo_code": "GE",
+          "geo_name": "Georgia",
+          "value": 0
+        },
+        {
+          "geo_code": "KG",
+          "geo_name": "Kyrgyzstan",
+          "value": 0
+        },
+        {
+          "geo_code": "KH",
+          "geo_name": "Cambodia",
+          "value": 0
+        },
+        {
+          "geo_code": "KI",
+          "geo_name": "Kiribati",
+          "value": 0
+        },
+        {
+          "geo_code": "KN",
+          "geo_name": "St. Kitts & Nevis",
+          "value": 0
+        },
+        {
+          "geo_code": "GA",
+          "geo_name": "Gabon",
+          "value": 0
+        },
+        {
+          "geo_code": "KW",
+          "geo_name": "Kuwait",
+          "value": 0
+        },
+        {
+          "geo_code": "FM",
+          "geo_name": "Micronesia",
+          "value": 0
+        },
+        {
+          "geo_code": "AW",
+          "geo_name": "Aruba",
+          "value": 0
+        },
+        {
+          "geo_code": "LB",
+          "geo_name": "Lebanon",
+          "value": 0
+        },
+        {
+          "geo_code": "LY",
+          "geo_name": "Libya",
+          "value": 0
+        },
+        {
+          "geo_code": "LC",
+          "geo_name": "St. Lucia",
+          "value": 0
+        },
+        {
+          "geo_code": "LI",
+          "geo_name": "Liechtenstein",
+          "value": 0
+        },
+        {
+          "geo_code": "LK",
+          "geo_name": "Sri Lanka",
+          "value": 0
+        },
+        {
+          "geo_code": "LS",
+          "geo_name": "Lesotho",
+          "value": 0
+        },
+        {
+          "geo_code": "FO",
+          "geo_name": "Faroe Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "FK",
+          "geo_name": "Falkland Islands (Islas Malvinas)",
+          "value": 0
+        },
+        {
+          "geo_code": "FJ",
+          "geo_name": "Fiji",
+          "value": 0
+        },
+        {
+          "geo_code": "MO",
+          "geo_name": "Macao",
+          "value": 0
+        },
+        {
+          "geo_code": "MF",
+          "geo_name": "St. Martin",
+          "value": 0
+        },
+        {
+          "geo_code": "ET",
+          "geo_name": "Ethiopia",
+          "value": 0
+        },
+        {
+          "geo_code": "MC",
+          "geo_name": "Monaco",
+          "value": 0
+        },
+        {
+          "geo_code": "MD",
+          "geo_name": "Moldova",
+          "value": 0
+        },
+        {
+          "geo_code": "MG",
+          "geo_name": "Madagascar",
+          "value": 0
+        },
+        {
+          "geo_code": "MV",
+          "geo_name": "Maldives",
+          "value": 0
+        },
+        {
+          "geo_code": "EE",
+          "geo_name": "Estonia",
+          "value": 0
+        },
+        {
+          "geo_code": "MH",
+          "geo_name": "Marshall Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "MK",
+          "geo_name": "North Macedonia",
+          "value": 0
+        },
+        {
+          "geo_code": "ML",
+          "geo_name": "Mali",
+          "value": 0
+        },
+        {
+          "geo_code": "MT",
+          "geo_name": "Malta",
+          "value": 0
+        },
+        {
+          "geo_code": "MM",
+          "geo_name": "Myanmar (Burma)",
+          "value": 0
+        },
+        {
+          "geo_code": "ME",
+          "geo_name": "Montenegro",
+          "value": 0
+        },
+        {
+          "geo_code": "MN",
+          "geo_name": "Mongolia",
+          "value": 0
+        },
+        {
+          "geo_code": "MP",
+          "geo_name": "Northern Mariana Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "EH",
+          "geo_name": "Western Sahara",
+          "value": 0
+        },
+        {
+          "geo_code": "MR",
+          "geo_name": "Mauritania",
+          "value": 0
+        },
+        {
+          "geo_code": "MS",
+          "geo_name": "Montserrat",
+          "value": 0
+        },
+        {
+          "geo_code": "MQ",
+          "geo_name": "Martinique",
+          "value": 0
+        },
+        {
+          "geo_code": "MU",
+          "geo_name": "Mauritius",
+          "value": 0
+        },
+        {
+          "geo_code": "MW",
+          "geo_name": "Malawi",
+          "value": 0
+        },
+        {
+          "geo_code": "ER",
+          "geo_name": "Eritrea",
+          "value": 0
+        },
+        {
+          "geo_code": "YT",
+          "geo_name": "Mayotte",
+          "value": 0
+        },
+        {
+          "geo_code": "NA",
+          "geo_name": "Namibia",
+          "value": 0
+        },
+        {
+          "geo_code": "NC",
+          "geo_name": "New Caledonia",
+          "value": 0
+        },
+        {
+          "geo_code": "NE",
+          "geo_name": "Niger",
+          "value": 0
+        },
+        {
+          "geo_code": "NF",
+          "geo_name": "Norfolk Island",
+          "value": 0
+        },
+        {
+          "geo_code": "DM",
+          "geo_name": "Dominica",
+          "value": 0
+        },
+        {
+          "geo_code": "DJ",
+          "geo_name": "Djibouti",
+          "value": 0
+        },
+        {
+          "geo_code": "NU",
+          "geo_name": "Niue",
+          "value": 0
+        },
+        {
+          "geo_code": "CY",
+          "geo_name": "Cyprus",
+          "value": 0
+        },
+        {
+          "geo_code": "KY",
+          "geo_name": "Cayman Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "NP",
+          "geo_name": "Nepal",
+          "value": 0
+        },
+        {
+          "geo_code": "NR",
+          "geo_name": "Nauru",
+          "value": 0
+        },
+        {
+          "geo_code": "NZ",
+          "geo_name": "New Zealand",
+          "value": 0
+        },
+        {
+          "geo_code": "OM",
+          "geo_name": "Oman",
+          "value": 0
+        },
+        {
+          "geo_code": "CX",
+          "geo_name": "Christmas Island",
+          "value": 0
+        },
+        {
+          "geo_code": "CW",
+          "geo_name": "Curaçao",
+          "value": 0
+        },
+        {
+          "geo_code": "HM",
+          "geo_name": "Heard & McDonald Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "KM",
+          "geo_name": "Comoros",
+          "value": 0
+        },
+        {
+          "geo_code": "CK",
+          "geo_name": "Cook Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "PW",
+          "geo_name": "Palau",
+          "value": 0
+        },
+        {
+          "geo_code": "PG",
+          "geo_name": "Papua New Guinea",
+          "value": 0
+        },
+        {
+          "geo_code": "CG",
+          "geo_name": "Congo - Brazzaville",
+          "value": 0
+        },
+        {
+          "geo_code": "CD",
+          "geo_name": "Congo - Kinshasa",
+          "value": 0
+        },
+        {
+          "geo_code": "KP",
+          "geo_name": "North Korea",
+          "value": 0
+        },
+        {
+          "geo_code": "CM",
+          "geo_name": "Cameroon",
+          "value": 0
+        },
+        {
+          "geo_code": "CI",
+          "geo_name": "Côte d’Ivoire",
+          "value": 0
+        },
+        {
+          "geo_code": "PS",
+          "geo_name": "Palestine",
+          "value": 0
+        },
+        {
+          "geo_code": "PF",
+          "geo_name": "French Polynesia",
+          "value": 0
+        },
+        {
+          "geo_code": "QA",
+          "geo_name": "Qatar",
+          "value": 0
+        },
+        {
+          "geo_code": "RE",
+          "geo_name": "Réunion",
+          "value": 0
+        },
+        {
+          "geo_code": "CC",
+          "geo_name": "Cocos (Keeling) Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "CF",
+          "geo_name": "Central African Republic",
+          "value": 0
+        },
+        {
+          "geo_code": "RW",
+          "geo_name": "Rwanda",
+          "value": 0
+        },
+        {
+          "geo_code": "BW",
+          "geo_name": "Botswana",
+          "value": 0
+        },
+        {
+          "geo_code": "SD",
+          "geo_name": "Sudan",
+          "value": 0
+        },
+        {
+          "geo_code": "BV",
+          "geo_name": "Bouvet Island",
+          "value": 0
+        },
+        {
+          "geo_code": "BT",
+          "geo_name": "Bhutan",
+          "value": 0
+        },
+        {
+          "geo_code": "GS",
+          "geo_name": "South Georgia & South Sandwich Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "BN",
+          "geo_name": "Brunei",
+          "value": 0
+        },
+        {
+          "geo_code": "SJ",
+          "geo_name": "Svalbard & Jan Mayen",
+          "value": 0
+        },
+        {
+          "geo_code": "SB",
+          "geo_name": "Solomon Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "SL",
+          "geo_name": "Sierra Leone",
+          "value": 0
+        },
+        {
+          "geo_code": "BB",
+          "geo_name": "Barbados",
+          "value": 0
+        },
+        {
+          "geo_code": "SM",
+          "geo_name": "San Marino",
+          "value": 0
+        },
+        {
+          "geo_code": "SO",
+          "geo_name": "Somalia",
+          "value": 0
+        },
+        {
+          "geo_code": "PM",
+          "geo_name": "St. Pierre & Miquelon",
+          "value": 0
+        },
+        {
+          "geo_code": "BM",
+          "geo_name": "Bermuda",
+          "value": 0
+        },
+        {
+          "geo_code": "SS",
+          "geo_name": "South Sudan",
+          "value": 0
+        },
+        {
+          "geo_code": "BL",
+          "geo_name": "St. Barthélemy",
+          "value": 0
+        },
+        {
+          "geo_code": "SR",
+          "geo_name": "Suriname",
+          "value": 0
+        },
+        {
+          "geo_code": "BA",
+          "geo_name": "Bosnia & Herzegovina",
+          "value": 0
+        },
+        {
+          "geo_code": "BS",
+          "geo_name": "Bahamas",
+          "value": 0
+        },
+        {
+          "geo_code": "BH",
+          "geo_name": "Bahrain",
+          "value": 0
+        },
+        {
+          "geo_code": "SZ",
+          "geo_name": "Eswatini",
+          "value": 0
+        },
+        {
+          "geo_code": "SX",
+          "geo_name": "Sint Maarten",
+          "value": 0
+        },
+        {
+          "geo_code": "SC",
+          "geo_name": "Seychelles",
+          "value": 0
+        },
+        {
+          "geo_code": "SY",
+          "geo_name": "Syria",
+          "value": 0
+        },
+        {
+          "geo_code": "TC",
+          "geo_name": "Turks & Caicos Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "TD",
+          "geo_name": "Chad",
+          "value": 0
+        },
+        {
+          "geo_code": "TG",
+          "geo_name": "Togo",
+          "value": 0
+        },
+        {
+          "geo_code": "BG",
+          "geo_name": "Bulgaria",
+          "value": 0
+        },
+        {
+          "geo_code": "TJ",
+          "geo_name": "Tajikistan",
+          "value": 0
+        },
+        {
+          "geo_code": "TK",
+          "geo_name": "Tokelau",
+          "value": 0
+        },
+        {
+          "geo_code": "TM",
+          "geo_name": "Turkmenistan",
+          "value": 0
+        },
+        {
+          "geo_code": "BQ",
+          "geo_name": "Caribbean Netherlands",
+          "value": 0
+        },
+        {
+          "geo_code": "TO",
+          "geo_name": "Tonga",
+          "value": 0
+        },
+        {
+          "geo_code": "TT",
+          "geo_name": "Trinidad & Tobago",
+          "value": 0
+        },
+        {
+          "geo_code": "BJ",
+          "geo_name": "Benin",
+          "value": 0
+        },
+        {
+          "geo_code": "BI",
+          "geo_name": "Burundi",
+          "value": 0
+        },
+        {
+          "geo_code": "TV",
+          "geo_name": "Tuvalu",
+          "value": 0
+        },
+        {
+          "geo_code": "AG",
+          "geo_name": "Antigua & Barbuda",
+          "value": 0
+        },
+        {
+          "geo_code": "TZ",
+          "geo_name": "Tanzania",
+          "value": 0
+        },
+        {
+          "geo_code": "UG",
+          "geo_name": "Uganda",
+          "value": 0
+        },
+        {
+          "geo_code": "TF",
+          "geo_name": "French Southern Territories",
+          "value": 0
+        },
+        {
+          "geo_code": "UM",
+          "geo_name": "U.S. Outlying Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "AQ",
+          "geo_name": "Antarctica",
+          "value": 0
+        },
+        {
+          "geo_code": "AS",
+          "geo_name": "American Samoa",
+          "value": 0
+        },
+        {
+          "geo_code": "AM",
+          "geo_name": "Armenia",
+          "value": 0
+        },
+        {
+          "geo_code": "VA",
+          "geo_name": "Vatican City",
+          "value": 0
+        },
+        {
+          "geo_code": "VC",
+          "geo_name": "St. Vincent & Grenadines",
+          "value": 0
+        },
+        {
+          "geo_code": "AX",
+          "geo_name": "Åland Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "VG",
+          "geo_name": "British Virgin Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "VI",
+          "geo_name": "U.S. Virgin Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "AI",
+          "geo_name": "Anguilla",
+          "value": 0
+        },
+        {
+          "geo_code": "VU",
+          "geo_name": "Vanuatu",
+          "value": 0
+        },
+        {
+          "geo_code": "WF",
+          "geo_name": "Wallis & Futuna",
+          "value": 0
+        },
+        {
+          "geo_code": "WS",
+          "geo_name": "Samoa",
+          "value": 0
+        },
+        {
+          "geo_code": "AF",
+          "geo_name": "Afghanistan",
+          "value": 0
+        },
+        {
+          "geo_code": "YE",
+          "geo_name": "Yemen",
+          "value": 0
+        },
+        {
+          "geo_code": "LR",
+          "geo_name": "Liberia",
+          "value": 0
+        },
+        {
+          "geo_code": "ZM",
+          "geo_name": "Zambia",
+          "value": 0
+        },
+        {
+          "geo_code": "PN",
+          "geo_name": "Pitcairn Islands",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "related_topics": [
+    {
+      "keyword": "democracia",
+      "items": []
+    }
+  ],
+  "related_queries": [
+    {
+      "keyword": "democracia",
+      "items": [
+        {
+          "query": "salvemos la democracia",
+          "value": 55200,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=salvemos+la+democracia&date=today+12-m"
+        },
+        {
+          "query": "salvemos la democracia mx",
+          "value": 45850,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=salvemos+la+democracia+mx&date=today+12-m"
+        },
+        {
+          "query": "año de la esperanza y el fortalecimiento de la democracia",
+          "value": 7100,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=a%C3%B1o+de+la+esperanza+y+el+fortalecimiento+de+la+democracia&date=today+12-m"
+        },
+        {
+          "query": "democracia nas redes sociais como construir um debate saudável",
+          "value": 6450,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=democracia+nas+redes+sociais+como+construir+um+debate+saud%C3%A1vel&date=today+12-m"
+        },
+        {
+          "query": "salvemos la democracia mx firmar",
+          "value": 4800,
+          "formatted_value": "+4,800%",
+          "link": "/trends/explore?q=salvemos+la+democracia+mx+firmar&date=today+12-m"
+        },
+        {
+          "query": "como destruir una democracia",
+          "value": 1150,
+          "formatted_value": "+1,150%",
+          "link": "/trends/explore?q=como+destruir+una+democracia&date=today+12-m"
+        },
+        {
+          "query": "democracia nas redes sociais",
+          "value": 450,
+          "formatted_value": "+450%",
+          "link": "/trends/explore?q=democracia+nas+redes+sociais&date=today+12-m"
+        },
+        {
+          "query": "democracia cristiana",
+          "value": 90,
+          "formatted_value": "+90%",
+          "link": "/trends/explore?q=democracia+cristiana&date=today+12-m"
+        },
+        {
+          "query": "primer presidente de la democracia española",
+          "value": 70,
+          "formatted_value": "+70%",
+          "link": "/trends/explore?q=primer+presidente+de+la+democracia+espa%C3%B1ola&date=today+12-m"
+        },
+        {
+          "query": "democracia em vertigem",
+          "value": 50,
+          "formatted_value": "+50%",
+          "link": "/trends/explore?q=democracia+em+vertigem&date=today+12-m"
+        },
+        {
+          "query": "sexual democracia",
+          "value": 50,
+          "formatted_value": "+50%",
+          "link": "/trends/explore?q=sexual+democracia&date=today+12-m"
+        },
+        {
+          "query": "imágenes de la democracia",
+          "value": 40,
+          "formatted_value": "+40%",
+          "link": "/trends/explore?q=im%C3%A1genes+de+la+democracia&date=today+12-m"
+        },
+        {
+          "query": "la democracia",
+          "value": 100,
+          "formatted_value": "100",
+          "link": "/trends/explore?q=la+democracia&date=today+12-m"
+        },
+        {
+          "query": "democracia que es",
+          "value": 28,
+          "formatted_value": "28",
+          "link": "/trends/explore?q=democracia+que+es&date=today+12-m"
+        },
+        {
+          "query": "que es la democracia",
+          "value": 20,
+          "formatted_value": "20",
+          "link": "/trends/explore?q=que+es+la+democracia&date=today+12-m"
+        },
+        {
+          "query": "estado",
+          "value": 11,
+          "formatted_value": "11",
+          "link": "/trends/explore?q=estado&date=today+12-m"
+        },
+        {
+          "query": "qué es democracia",
+          "value": 11,
+          "formatted_value": "11",
+          "link": "/trends/explore?q=qu%C3%A9+es+democracia&date=today+12-m"
+        },
+        {
+          "query": "o que e democracia",
+          "value": 10,
+          "formatted_value": "10",
+          "link": "/trends/explore?q=o+que+e+democracia&date=today+12-m"
+        },
+        {
+          "query": "qué es la democracia",
+          "value": 10,
+          "formatted_value": "10",
+          "link": "/trends/explore?q=qu%C3%A9+es+la+democracia&date=today+12-m"
+        },
+        {
+          "query": "o que é democracia",
+          "value": 9,
+          "formatted_value": "9",
+          "link": "/trends/explore?q=o+que+%C3%A9+democracia&date=today+12-m"
+        },
+        {
+          "query": "social democracia",
+          "value": 9,
+          "formatted_value": "9",
+          "link": "/trends/explore?q=social+democracia&date=today+12-m"
+        },
+        {
+          "query": "política",
+          "value": 7,
+          "formatted_value": "7",
+          "link": "/trends/explore?q=pol%C3%ADtica&date=today+12-m"
+        },
+        {
+          "query": "o que é a democracia",
+          "value": 7,
+          "formatted_value": "7",
+          "link": "/trends/explore?q=o+que+%C3%A9+a+democracia&date=today+12-m"
+        },
+        {
+          "query": "significado democracia",
+          "value": 7,
+          "formatted_value": "7",
+          "link": "/trends/explore?q=significado+democracia&date=today+12-m"
+        },
+        {
+          "query": "que es una democracia",
+          "value": 6,
+          "formatted_value": "6",
+          "link": "/trends/explore?q=que+es+una+democracia&date=today+12-m"
+        },
+        {
+          "query": "que significa democracia",
+          "value": 5,
+          "formatted_value": "5",
+          "link": "/trends/explore?q=que+significa+democracia&date=today+12-m"
+        },
+        {
+          "query": "democracia no brasil",
+          "value": 4,
+          "formatted_value": "4",
+          "link": "/trends/explore?q=democracia+no+brasil&date=today+12-m"
+        },
+        {
+          "query": "democracia representativa",
+          "value": 4,
+          "formatted_value": "4",
+          "link": "/trends/explore?q=democracia+representativa&date=today+12-m"
+        },
+        {
+          "query": "dictadura",
+          "value": 4,
+          "formatted_value": "4",
+          "link": "/trends/explore?q=dictadura&date=today+12-m"
+        },
+        {
+          "query": "significado de democracia",
+          "value": 4,
+          "formatted_value": "4",
+          "link": "/trends/explore?q=significado+de+democracia&date=today+12-m"
+        },
+        {
+          "query": "democracia participativa",
+          "value": 4,
+          "formatted_value": "4",
+          "link": "/trends/explore?q=democracia+participativa&date=today+12-m"
+        },
+        {
+          "query": "democracia nacional",
+          "value": 4,
+          "formatted_value": "4",
+          "link": "/trends/explore?q=democracia+nacional&date=today+12-m"
+        },
+        {
+          "query": "tipos de democracia",
+          "value": 3,
+          "formatted_value": "3",
+          "link": "/trends/explore?q=tipos+de+democracia&date=today+12-m"
+        },
+        {
+          "query": "democracia ateniense",
+          "value": 3,
+          "formatted_value": "3",
+          "link": "/trends/explore?q=democracia+ateniense&date=today+12-m"
+        },
+        {
+          "query": "características de la democracia",
+          "value": 3,
+          "formatted_value": "3",
+          "link": "/trends/explore?q=caracter%C3%ADsticas+de+la+democracia&date=today+12-m"
+        },
+        {
+          "query": "que significa la democracia",
+          "value": 3,
+          "formatted_value": "3",
+          "link": "/trends/explore?q=que+significa+la+democracia&date=today+12-m"
+        },
+        {
+          "query": "derechos humanos",
+          "value": 3,
+          "formatted_value": "3",
+          "link": "/trends/explore?q=derechos+humanos&date=today+12-m"
+        }
+      ]
+    }
+  ]
+}

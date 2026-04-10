@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+PT,Portugal,100,exposição
+BR,Brazil,74,exposição
+MZ,Mozambique,65,exposição
+ST,São Tomé & Príncipe,0,exposição
+CV,Cape Verde,0,exposição
+AO,Angola,29,exposição
+GW,Guinea-Bissau,0,exposição
+TL,Timor-Leste,0,exposição
+GL,Greenland,0,exposição
+MO,Macao,0,exposição
+SC,Seychelles,0,exposição
+PY,Paraguay,0,exposição
+LU,Luxembourg,0,exposição
+BO,Bolivia,0,exposição
+SH,St. Helena,0,exposição
+ES,Spain,0,exposição
+UY,Uruguay,0,exposição
+GB,United Kingdom,0,exposição
+CH,Switzerland,0,exposição
+DE,Germany,0,exposição
+US,United States,0,exposição
+IE,Ireland,0,exposição
+BE,Belgium,0,exposição
+FR,France,0,exposição
+AR,Argentina,0,exposição
+JP,Japan,0,exposição
+NL,Netherlands,0,exposição
+CL,Chile,0,exposição
+NO,Norway,0,exposição
+PA,Panama,0,exposição
+QA,Qatar,0,exposição
+IT,Italy,0,exposição
+KR,South Korea,0,exposição
+GE,Georgia,0,exposição
+CR,Costa Rica,0,exposição
+KE,Kenya,0,exposição
+CN,China,0,exposição
+RO,Romania,0,exposição
+AE,United Arab Emirates,0,exposição
+CA,Canada,0,exposição
+PE,Peru,0,exposição
+AT,Austria,0,exposição
+HK,Hong Kong,0,exposição
+CO,Colombia,0,exposição
+CZ,Czechia,0,exposição
+VN,Vietnam,0,exposição
+SI,Slovenia,0,exposição
+BY,Belarus,0,exposição
+IQ,Iraq,0,exposição
+SE,Sweden,0,exposição
+MA,Morocco,0,exposição
+RU,Russia,0,exposição
+MY,Malaysia,0,exposição
+BD,Bangladesh,0,exposição
+IL,Israel,0,exposição
+NZ,New Zealand,0,exposição
+HU,Hungary,0,exposição
+DK,Denmark,0,exposição
+FI,Finland,0,exposição
+HR,Croatia,0,exposição
+MX,Mexico,0,exposição
+EC,Ecuador,0,exposição
+KZ,Kazakhstan,0,exposição
+AU,Australia,0,exposição
+VE,Venezuela,0,exposição
+TW,Taiwan,0,exposição
+PK,Pakistan,0,exposição
+ZA,South Africa,0,exposição
+DZ,Algeria,0,exposição
+SG,Singapore,0,exposição
+GR,Greece,0,exposição
+IN,India,0,exposição
+EG,Egypt,0,exposição
+PH,Philippines,0,exposição
+TH,Thailand,0,exposição
+UA,Ukraine,0,exposição
+ID,Indonesia,0,exposição
+PL,Poland,0,exposição
+TR,Türkiye,0,exposição
+SA,Saudi Arabia,0,exposição
+IR,Iran,0,exposição
+LA,Laos,0,exposição
+ZW,Zimbabwe,0,exposição
+GI,Gibraltar,0,exposição
+GN,Guinea,0,exposição
+GP,Guadeloupe,0,exposição
+GM,Gambia,0,exposição
+GG,Guernsey,0,exposição
+GQ,Equatorial Guinea,0,exposição
+GA,Gabon,0,exposição
+GD,Grenada,0,exposição
+FM,Micronesia,0,exposição
+GT,Guatemala,0,exposição
+GF,French Guiana,0,exposição
+GU,Guam,0,exposição
+GY,Guyana,0,exposição
+FO,Faroe Islands,0,exposição
+HM,Heard & McDonald Islands,0,exposição
+HN,Honduras,0,exposição
+FK,Falkland Islands (Islas Malvinas),0,exposição
+HT,Haiti,0,exposição
+FJ,Fiji,0,exposição
+ET,Ethiopia,0,exposição
+IM,Isle of Man,0,exposição
+EE,Estonia,0,exposição
+IO,British Indian Ocean Territory,0,exposição
+EH,Western Sahara,0,exposição
+ER,Eritrea,0,exposição
+DO,Dominican Republic,0,exposição
+IS,Iceland,0,exposição
+DM,Dominica,0,exposição
+DJ,Djibouti,0,exposição
+JM,Jamaica,0,exposição
+JE,Jersey,0,exposição
+JO,Jordan,0,exposição
+CY,Cyprus,0,exposição
+KY,Cayman Islands,0,exposição
+CX,Christmas Island,0,exposição
+KG,Kyrgyzstan,0,exposição
+KH,Cambodia,0,exposição
+KI,Kiribati,0,exposição
+KN,St. Kitts & Nevis,0,exposição
+CW,Curaçao,0,exposição
+KW,Kuwait,0,exposição
+CU,Cuba,0,exposição
+AW,Aruba,0,exposição
+LB,Lebanon,0,exposição
+LY,Libya,0,exposição
+LC,St. Lucia,0,exposição
+LI,Liechtenstein,0,exposição
+LK,Sri Lanka,0,exposição
+LS,Lesotho,0,exposição
+LT,Lithuania,0,exposição
+KM,Comoros,0,exposição
+LV,Latvia,0,exposição
+CK,Cook Islands,0,exposição
+MF,St. Martin,0,exposição
+CG,Congo - Brazzaville,0,exposição
+MC,Monaco,0,exposição
+MD,Moldova,0,exposição
+MG,Madagascar,0,exposição
+MV,Maldives,0,exposição
+CD,Congo - Kinshasa,0,exposição
+MH,Marshall Islands,0,exposição
+MK,North Macedonia,0,exposição
+ML,Mali,0,exposição
+MT,Malta,0,exposição
+MM,Myanmar (Burma),0,exposição
+ME,Montenegro,0,exposição
+MN,Mongolia,0,exposição
+MP,Northern Mariana Islands,0,exposição
+CM,Cameroon,0,exposição
+MR,Mauritania,0,exposição
+MS,Montserrat,0,exposição
+MQ,Martinique,0,exposição
+MU,Mauritius,0,exposição
+MW,Malawi,0,exposição
+CI,Côte d’Ivoire,0,exposição
+YT,Mayotte,0,exposição
+NA,Namibia,0,exposição
+NC,New Caledonia,0,exposição
+NE,Niger,0,exposição
+NF,Norfolk Island,0,exposição
+NG,Nigeria,0,exposição
+NI,Nicaragua,0,exposição
+NU,Niue,0,exposição
+GH,Ghana,0,exposição
+CF,Central African Republic,0,exposição
+NP,Nepal,0,exposição
+NR,Nauru,0,exposição
+BW,Botswana,0,exposição
+OM,Oman,0,exposição
+BV,Bouvet Island,0,exposição
+BT,Bhutan,0,exposição
+PN,Pitcairn Islands,0,exposição
+BN,Brunei,0,exposição
+BB,Barbados,0,exposição
+PW,Palau,0,exposição
+PG,Papua New Guinea,0,exposição
+BM,Bermuda,0,exposição
+PR,Puerto Rico,0,exposição
+KP,North Korea,0,exposição
+BZ,Belize,0,exposição
+BL,St. Barthélemy,0,exposição
+PS,Palestine,0,exposição
+PF,French Polynesia,0,exposição
+BA,Bosnia & Herzegovina,0,exposição
+RE,Réunion,0,exposição
+BS,Bahamas,0,exposição
+BH,Bahrain,0,exposição
+RW,Rwanda,0,exposição
+BG,Bulgaria,0,exposição
+SD,Sudan,0,exposição
+SN,Senegal,0,exposição
+BF,Burkina Faso,0,exposição
+GS,South Georgia & South Sandwich Islands,0,exposição
+BQ,Caribbean Netherlands,0,exposição
+SJ,Svalbard & Jan Mayen,0,exposição
+SB,Solomon Islands,0,exposição
+SL,Sierra Leone,0,exposição
+SV,El Salvador,0,exposição
+SM,San Marino,0,exposição
+SO,Somalia,0,exposição
+PM,St. Pierre & Miquelon,0,exposição
+RS,Serbia,0,exposição
+SS,South Sudan,0,exposição
+BJ,Benin,0,exposição
+SR,Suriname,0,exposição
+SK,Slovakia,0,exposição
+BI,Burundi,0,exposição
+AZ,Azerbaijan,0,exposição
+SZ,Eswatini,0,exposição
+SX,Sint Maarten,0,exposição
+AG,Antigua & Barbuda,0,exposição
+SY,Syria,0,exposição
+TC,Turks & Caicos Islands,0,exposição
+TD,Chad,0,exposição
+TG,Togo,0,exposição
+TF,French Southern Territories,0,exposição
+TJ,Tajikistan,0,exposição
+TK,Tokelau,0,exposição
+TM,Turkmenistan,0,exposição
+AQ,Antarctica,0,exposição
+TO,Tonga,0,exposição
+TT,Trinidad & Tobago,0,exposição
+TN,Tunisia,0,exposição
+AS,American Samoa,0,exposição
+TV,Tuvalu,0,exposição
+AM,Armenia,0,exposição
+TZ,Tanzania,0,exposição
+UG,Uganda,0,exposição
+AD,Andorra,0,exposição
+UM,U.S. Outlying Islands,0,exposição
+AL,Albania,0,exposição
+AX,Åland Islands,0,exposição
+UZ,Uzbekistan,0,exposição
+VA,Vatican City,0,exposição
+VC,St. Vincent & Grenadines,0,exposição
+AI,Anguilla,0,exposição
+VG,British Virgin Islands,0,exposição
+VI,U.S. Virgin Islands,0,exposição
+AF,Afghanistan,0,exposição
+VU,Vanuatu,0,exposição
+WF,Wallis & Futuna,0,exposição
+WS,Samoa,0,exposição
+XK,Kosovo,0,exposição
+YE,Yemen,0,exposição
+LR,Liberia,0,exposição
+ZM,Zambia,0,exposição
+CC,Cocos (Keeling) Islands,0,exposição

@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+CU,Cuba,100,partido
+GQ,Equatorial Guinea,0,partido
+HN,Honduras,77,partido
+PY,Paraguay,76,partido
+CO,Colombia,74,partido
+AR,Argentina,56,partido
+GT,Guatemala,56,partido
+CR,Costa Rica,53,partido
+UY,Uruguay,52,partido
+CL,Chile,50,partido
+EC,Ecuador,50,partido
+PE,Peru,47,partido
+BO,Bolivia,45,partido
+NI,Nicaragua,39,partido
+SV,El Salvador,38,partido
+ES,Spain,31,partido
+PA,Panama,29,partido
+MX,Mexico,29,partido
+AD,Andorra,0,partido
+VE,Venezuela,12,partido
+GW,Guinea-Bissau,0,partido
+DO,Dominican Republic,9,partido
+TL,Timor-Leste,0,partido
+AW,Aruba,0,partido
+MZ,Mozambique,0,partido
+CW,Curaçao,0,partido
+ST,São Tomé & Príncipe,0,partido
+PR,Puerto Rico,6,partido
+BQ,Caribbean Netherlands,0,partido
+AO,Angola,0,partido
+BR,Brazil,5,partido
+PT,Portugal,5,partido
+CV,Cape Verde,0,partido
+FK,Falkland Islands (Islas Malvinas),0,partido
+BZ,Belize,0,partido
+GI,Gibraltar,0,partido
+SX,Sint Maarten,0,partido
+KY,Cayman Islands,0,partido
+MF,St. Martin,0,partido
+SH,St. Helena,0,partido
+US,United States,1,partido
+CF,Central African Republic,0,partido
+HT,Haiti,0,partido
+GF,French Guiana,0,partido
+TC,Turks & Caicos Islands,0,partido
+EH,Western Sahara,0,partido
+LU,Luxembourg,0,partido
+KN,St. Kitts & Nevis,0,partido
+GY,Guyana,0,partido
+BS,Bahamas,0,partido
+SC,Seychelles,0,partido
+AG,Antigua & Barbuda,0,partido
+SR,Suriname,0,partido
+CH,Switzerland,0,partido
+MA,Morocco,0,partido
+CA,Canada,0,partido
+VG,British Virgin Islands,0,partido
+GA,Gabon,0,partido
+SN,Senegal,0,partido
+GM,Gambia,0,partido
+VI,U.S. Virgin Islands,0,partido
+MT,Malta,0,partido
+MR,Mauritania,0,partido
+DM,Dominica,0,partido
+PH,Philippines,0,partido
+TT,Trinidad & Tobago,0,partido
+GB,United Kingdom,0,partido
+MC,Monaco,0,partido
+SM,San Marino,0,partido
+IE,Ireland,0,partido
+BE,Belgium,0,partido
+MO,Macao,0,partido
+DE,Germany,0,partido
+GD,Grenada,0,partido
+IT,Italy,0,partido
+BB,Barbados,0,partido
+IS,Iceland,0,partido
+BM,Bermuda,0,partido
+FR,France,0,partido
+VC,St. Vincent & Grenadines,0,partido
+ML,Mali,0,partido
+LI,Liechtenstein,0,partido
+SE,Sweden,0,partido
+IL,Israel,0,partido
+GP,Guadeloupe,0,partido
+JM,Jamaica,0,partido
+DJ,Djibouti,0,partido
+QA,Qatar,0,partido
+LC,St. Lucia,0,partido
+NA,Namibia,0,partido
+NO,Norway,0,partido
+AE,United Arab Emirates,0,partido
+NL,Netherlands,0,partido
+JE,Jersey,0,partido
+MQ,Martinique,0,partido
+CM,Cameroon,0,partido
+PF,French Polynesia,0,partido
+MV,Maldives,0,partido
+SS,South Sudan,0,partido
+CD,Congo - Kinshasa,0,partido
+BL,St. Barthélemy,0,partido
+TD,Chad,0,partido
+NZ,New Zealand,0,partido
+CY,Cyprus,0,partido
+BJ,Benin,0,partido
+GU,Guam,0,partido
+TG,Togo,0,partido
+AU,Australia,0,partido
+GN,Guinea,0,partido
+CI,Côte d’Ivoire,0,partido
+CG,Congo - Brazzaville,0,partido
+PS,Palestine,0,partido
+LB,Lebanon,0,partido
+FO,Faroe Islands,0,partido
+DK,Denmark,0,partido
+SZ,Eswatini,0,partido
+AT,Austria,0,partido
+BW,Botswana,0,partido
+NC,New Caledonia,0,partido
+LA,Laos,0,partido
+JP,Japan,0,partido
+AL,Albania,0,partido
+NE,Niger,0,partido
+RE,Réunion,0,partido
+KR,South Korea,0,partido
+CZ,Czechia,0,partido
+MU,Mauritius,0,partido
+DZ,Algeria,0,partido
+MG,Madagascar,0,partido
+NG,Nigeria,0,partido
+RW,Rwanda,0,partido
+AM,Armenia,0,partido
+FI,Finland,0,partido
+BG,Bulgaria,0,partido
+AF,Afghanistan,0,partido
+HR,Croatia,0,partido
+GR,Greece,0,partido
+RO,Romania,0,partido
+ME,Montenegro,0,partido
+IN,India,0,partido
+BF,Burkina Faso,0,partido
+ZA,South Africa,0,partido
+KH,Cambodia,0,partido
+BH,Bahrain,0,partido
+SI,Slovenia,0,partido
+ET,Ethiopia,0,partido
+IM,Isle of Man,0,partido
+TN,Tunisia,0,partido
+GH,Ghana,0,partido
+GE,Georgia,0,partido
+GG,Guernsey,0,partido
+ZM,Zambia,0,partido
+EE,Estonia,0,partido
+HU,Hungary,0,partido
+MD,Moldova,0,partido
+RU,Russia,0,partido
+CN,China,0,partido
+HK,Hong Kong,0,partido
+SG,Singapore,0,partido
+MK,North Macedonia,0,partido
+LV,Latvia,0,partido
+JO,Jordan,0,partido
+RS,Serbia,0,partido
+KW,Kuwait,0,partido
+MM,Myanmar (Burma),0,partido
+MN,Mongolia,0,partido
+PL,Poland,0,partido
+KE,Kenya,0,partido
+TW,Taiwan,0,partido
+EG,Egypt,0,partido
+BA,Bosnia & Herzegovina,0,partido
+MY,Malaysia,0,partido
+NP,Nepal,0,partido
+SO,Somalia,0,partido
+TZ,Tanzania,0,partido
+ZW,Zimbabwe,0,partido
+VN,Vietnam,0,partido
+SK,Slovakia,0,partido
+OM,Oman,0,partido
+MW,Malawi,0,partido
+UG,Uganda,0,partido
+LT,Lithuania,0,partido
+SL,Sierra Leone,0,partido
+IQ,Iraq,0,partido
+PG,Papua New Guinea,0,partido
+LY,Libya,0,partido
+FJ,Fiji,0,partido
+XK,Kosovo,0,partido
+SY,Syria,0,partido
+BY,Belarus,0,partido
+AZ,Azerbaijan,0,partido
+BD,Bangladesh,0,partido
+UA,Ukraine,0,partido
+SA,Saudi Arabia,0,partido
+PK,Pakistan,0,partido
+TH,Thailand,0,partido
+KZ,Kazakhstan,0,partido
+UZ,Uzbekistan,0,partido
+LK,Sri Lanka,0,partido
+ID,Indonesia,0,partido
+SD,Sudan,0,partido
+TJ,Tajikistan,0,partido
+BN,Brunei,0,partido
+TR,Türkiye,0,partido
+YE,Yemen,0,partido
+KG,Kyrgyzstan,0,partido
+IR,Iran,0,partido
+KM,Comoros,0,partido
+GL,Greenland,0,partido
+CC,Cocos (Keeling) Islands,0,partido
+BV,Bouvet Island,0,partido
+BT,Bhutan,0,partido
+MS,Montserrat,0,partido
+YT,Mayotte,0,partido
+GS,South Georgia & South Sandwich Islands,0,partido
+MP,Northern Mariana Islands,0,partido
+KI,Kiribati,0,partido
+ER,Eritrea,0,partido
+CK,Cook Islands,0,partido
+SB,Solomon Islands,0,partido
+TK,Tokelau,0,partido
+TM,Turkmenistan,0,partido
+MH,Marshall Islands,0,partido
+TO,Tonga,0,partido
+BI,Burundi,0,partido
+IO,British Indian Ocean Territory,0,partido
+PM,St. Pierre & Miquelon,0,partido
+TV,Tuvalu,0,partido
+NF,Norfolk Island,0,partido
+LS,Lesotho,0,partido
+NU,Niue,0,partido
+FM,Micronesia,0,partido
+UM,U.S. Outlying Islands,0,partido
+NR,Nauru,0,partido
+TF,French Southern Territories,0,partido
+KP,North Korea,0,partido
+VA,Vatican City,0,partido
+AQ,Antarctica,0,partido
+AS,American Samoa,0,partido
+AX,Åland Islands,0,partido
+AI,Anguilla,0,partido
+HM,Heard & McDonald Islands,0,partido
+VU,Vanuatu,0,partido
+WF,Wallis & Futuna,0,partido
+WS,Samoa,0,partido
+PN,Pitcairn Islands,0,partido
+CX,Christmas Island,0,partido
+LR,Liberia,0,partido
+PW,Palau,0,partido
+SJ,Svalbard & Jan Mayen,0,partido

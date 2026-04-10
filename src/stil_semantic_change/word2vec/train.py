@@ -8,6 +8,11 @@ from pathlib import Path
 import pandas as pd
 from gensim.models import Word2Vec
 
+from stil_semantic_change.preprocessing.views import (
+    TEXT_VIEW_TO_COLUMN,
+    prepared_text_view_by_slice_dir,
+    prepared_text_views_by_doc_dir,
+)
 from stil_semantic_change.utils.artifacts import write_dataframe, write_json
 from stil_semantic_change.utils.config.schema import ExperimentConfig
 from stil_semantic_change.word2vec.vector_store import save_vector_store, vector_store_from_model
@@ -15,16 +20,30 @@ from stil_semantic_change.word2vec.vector_store import save_vector_store, vector
 logger = logging.getLogger(__name__)
 
 
-class SliceSentenceIterable:
-    def __init__(self, doc_shards: list[Path], slice_id: str) -> None:
+class SliceSentenceFileIterable:
+    def __init__(self, sentence_file: Path) -> None:
+        self.sentence_file = sentence_file
+
+    def __iter__(self) -> Iterator[list[str]]:
+        with self.sentence_file.open(encoding="utf-8") as handle:
+            for line in handle:
+                clean_text = line.strip()
+                if not clean_text:
+                    continue
+                yield [token for token in clean_text.split(" ") if token]
+
+
+class SliceSentenceShardIterable:
+    def __init__(self, doc_shards: list[Path], slice_id: str, text_column: str) -> None:
         self.doc_shards = doc_shards
         self.slice_id = slice_id
+        self.text_column = text_column
 
     def __iter__(self) -> Iterator[list[str]]:
         for shard_path in self.doc_shards:
-            frame = pd.read_parquet(shard_path, columns=["slice_id", "clean_text"])
+            frame = pd.read_parquet(shard_path, columns=["slice_id", self.text_column])
             shard = frame.loc[frame["slice_id"] == self.slice_id]
-            for clean_text in shard["clean_text"].tolist():
+            for clean_text in shard[self.text_column].tolist():
                 if not clean_text:
                     continue
                 yield [token for token in clean_text.split(" ") if token]
@@ -41,9 +60,14 @@ def train_word2vec_models(
     prepared_root: Path,
     models_root: Path,
 ) -> TrainingOutputs:
-    doc_shards = sorted((prepared_root / "docs").glob("*.parquet"))
-    if not doc_shards:
-        raise FileNotFoundError(f"No prepared document shards found under {prepared_root / 'docs'}")
+    text_column = TEXT_VIEW_TO_COLUMN[cfg.model.text_view]
+    sentence_dir = prepared_text_view_by_slice_dir(prepared_root, cfg.model.text_view)
+    doc_shards = sorted(prepared_text_views_by_doc_dir(prepared_root).glob("*.parquet"))
+    if not sentence_dir.exists() and not doc_shards:
+        raise FileNotFoundError(
+            "No prepared slice text files or text view shards found under "
+            f"{sentence_dir} or {prepared_text_views_by_doc_dir(prepared_root)}"
+        )
 
     slice_summary = pd.read_parquet(prepared_root / "slice_summary.parquet").sort_values("sort_key")
     slice_order = slice_summary["slice_id"].tolist()
@@ -65,7 +89,16 @@ def train_word2vec_models(
                 continue
 
             target_dir.mkdir(parents=True, exist_ok=True)
-            sentences = SliceSentenceIterable(doc_shards, slice_id)
+            sentence_file = sentence_dir / f"{slice_id}.txt"
+            if sentence_file.exists():
+                sentences: Iterator[list[str]] = SliceSentenceFileIterable(sentence_file)
+            else:
+                logger.warning(
+                    "Falling back to shard scan for slice %s because %s is missing",
+                    slice_id,
+                    sentence_file,
+                )
+                sentences = SliceSentenceShardIterable(doc_shards, slice_id, text_column)
             total_examples = int(
                 slice_summary.loc[slice_summary["slice_id"] == slice_id, "document_count"].iloc[0]
             )
@@ -97,6 +130,7 @@ def train_word2vec_models(
                     "slice_id": slice_id,
                     "replicate": replicate,
                     "seed": replicate_seed,
+                    "text_view": cfg.model.text_view,
                     "vector_size": cfg.model.vector_size,
                     "vocabulary_size": len(store.words),
                     "total_examples": total_examples,

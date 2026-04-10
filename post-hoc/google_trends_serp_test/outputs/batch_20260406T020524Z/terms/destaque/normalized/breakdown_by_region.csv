@@ -1,0 +1,251 @@
+geo_code,geo_name,value,keyword
+BR,Brazil,100,destaque
+AO,Angola,44,destaque
+CV,Cape Verde,0,destaque
+GW,Guinea-Bissau,0,destaque
+MZ,Mozambique,36,destaque
+ST,São Tomé & Príncipe,0,destaque
+PT,Portugal,16,destaque
+NI,Nicaragua,0,destaque
+PE,Peru,4,destaque
+PY,Paraguay,0,destaque
+DO,Dominican Republic,4,destaque
+CU,Cuba,0,destaque
+PA,Panama,0,destaque
+EC,Ecuador,2,destaque
+BO,Bolivia,0,destaque
+CO,Colombia,2,destaque
+GF,French Guiana,0,destaque
+VE,Venezuela,2,destaque
+HN,Honduras,0,destaque
+UY,Uruguay,0,destaque
+PR,Puerto Rico,0,destaque
+CR,Costa Rica,0,destaque
+SV,El Salvador,0,destaque
+AR,Argentina,1,destaque
+GY,Guyana,0,destaque
+SH,St. Helena,0,destaque
+MX,Mexico,0,destaque
+LU,Luxembourg,0,destaque
+GT,Guatemala,0,destaque
+CL,Chile,0,destaque
+SR,Suriname,0,destaque
+BW,Botswana,0,destaque
+MO,Macao,0,destaque
+MG,Madagascar,0,destaque
+ES,Spain,0,destaque
+SN,Senegal,0,destaque
+CH,Switzerland,0,destaque
+ET,Ethiopia,0,destaque
+IE,Ireland,0,destaque
+GB,United Kingdom,0,destaque
+MY,Malaysia,0,destaque
+DE,Germany,0,destaque
+US,United States,0,destaque
+KH,Cambodia,0,destaque
+JP,Japan,0,destaque
+KR,South Korea,0,destaque
+HK,Hong Kong,0,destaque
+BE,Belgium,0,destaque
+FR,France,0,destaque
+AE,United Arab Emirates,0,destaque
+VN,Vietnam,0,destaque
+IT,Italy,0,destaque
+KW,Kuwait,0,destaque
+CA,Canada,0,destaque
+NL,Netherlands,0,destaque
+IN,India,0,destaque
+SG,Singapore,0,destaque
+BD,Bangladesh,0,destaque
+MA,Morocco,0,destaque
+CN,China,0,destaque
+RS,Serbia,0,destaque
+NO,Norway,0,destaque
+AU,Australia,0,destaque
+DZ,Algeria,0,destaque
+IQ,Iraq,0,destaque
+LT,Lithuania,0,destaque
+ZA,South Africa,0,destaque
+ID,Indonesia,0,destaque
+TH,Thailand,0,destaque
+FI,Finland,0,destaque
+KZ,Kazakhstan,0,destaque
+RU,Russia,0,destaque
+PK,Pakistan,0,destaque
+UA,Ukraine,0,destaque
+EG,Egypt,0,destaque
+BG,Bulgaria,0,destaque
+AT,Austria,0,destaque
+SE,Sweden,0,destaque
+DK,Denmark,0,destaque
+NG,Nigeria,0,destaque
+NZ,New Zealand,0,destaque
+IR,Iran,0,destaque
+PH,Philippines,0,destaque
+IL,Israel,0,destaque
+TW,Taiwan,0,destaque
+GR,Greece,0,destaque
+TR,Türkiye,0,destaque
+RO,Romania,0,destaque
+HU,Hungary,0,destaque
+SA,Saudi Arabia,0,destaque
+PL,Poland,0,destaque
+LA,Laos,0,destaque
+ZW,Zimbabwe,0,destaque
+GD,Grenada,0,destaque
+GU,Guam,0,destaque
+GQ,Equatorial Guinea,0,destaque
+GM,Gambia,0,destaque
+HM,Heard & McDonald Islands,0,destaque
+GP,Guadeloupe,0,destaque
+HR,Croatia,0,destaque
+HT,Haiti,0,destaque
+GN,Guinea,0,destaque
+GI,Gibraltar,0,destaque
+IM,Isle of Man,0,destaque
+GH,Ghana,0,destaque
+IO,British Indian Ocean Territory,0,destaque
+GG,Guernsey,0,destaque
+GE,Georgia,0,destaque
+GA,Gabon,0,destaque
+IS,Iceland,0,destaque
+FM,Micronesia,0,destaque
+FO,Faroe Islands,0,destaque
+JM,Jamaica,0,destaque
+JE,Jersey,0,destaque
+JO,Jordan,0,destaque
+FK,Falkland Islands (Islas Malvinas),0,destaque
+FJ,Fiji,0,destaque
+KE,Kenya,0,destaque
+KG,Kyrgyzstan,0,destaque
+EE,Estonia,0,destaque
+KI,Kiribati,0,destaque
+KN,St. Kitts & Nevis,0,destaque
+EH,Western Sahara,0,destaque
+ER,Eritrea,0,destaque
+DM,Dominica,0,destaque
+AW,Aruba,0,destaque
+LB,Lebanon,0,destaque
+LY,Libya,0,destaque
+LC,St. Lucia,0,destaque
+LI,Liechtenstein,0,destaque
+LK,Sri Lanka,0,destaque
+LS,Lesotho,0,destaque
+DJ,Djibouti,0,destaque
+CZ,Czechia,0,destaque
+LV,Latvia,0,destaque
+CY,Cyprus,0,destaque
+MF,St. Martin,0,destaque
+KY,Cayman Islands,0,destaque
+MC,Monaco,0,destaque
+MD,Moldova,0,destaque
+CX,Christmas Island,0,destaque
+MV,Maldives,0,destaque
+CW,Curaçao,0,destaque
+MH,Marshall Islands,0,destaque
+MK,North Macedonia,0,destaque
+ML,Mali,0,destaque
+MT,Malta,0,destaque
+MM,Myanmar (Burma),0,destaque
+ME,Montenegro,0,destaque
+MN,Mongolia,0,destaque
+MP,Northern Mariana Islands,0,destaque
+KM,Comoros,0,destaque
+MR,Mauritania,0,destaque
+MS,Montserrat,0,destaque
+MQ,Martinique,0,destaque
+MU,Mauritius,0,destaque
+MW,Malawi,0,destaque
+CK,Cook Islands,0,destaque
+YT,Mayotte,0,destaque
+NA,Namibia,0,destaque
+NC,New Caledonia,0,destaque
+NE,Niger,0,destaque
+NF,Norfolk Island,0,destaque
+CG,Congo - Brazzaville,0,destaque
+CD,Congo - Kinshasa,0,destaque
+NU,Niue,0,destaque
+CM,Cameroon,0,destaque
+CI,Côte d’Ivoire,0,destaque
+NP,Nepal,0,destaque
+NR,Nauru,0,destaque
+CC,Cocos (Keeling) Islands,0,destaque
+GL,Greenland,0,destaque
+CF,Central African Republic,0,destaque
+BV,Bouvet Island,0,destaque
+PN,Pitcairn Islands,0,destaque
+BT,Bhutan,0,destaque
+BN,Brunei,0,destaque
+PW,Palau,0,destaque
+PG,Papua New Guinea,0,destaque
+BB,Barbados,0,destaque
+BM,Bermuda,0,destaque
+KP,North Korea,0,destaque
+BZ,Belize,0,destaque
+BY,Belarus,0,destaque
+PS,Palestine,0,destaque
+PF,French Polynesia,0,destaque
+QA,Qatar,0,destaque
+RE,Réunion,0,destaque
+BL,St. Barthélemy,0,destaque
+BA,Bosnia & Herzegovina,0,destaque
+RW,Rwanda,0,destaque
+BS,Bahamas,0,destaque
+SD,Sudan,0,destaque
+BH,Bahrain,0,destaque
+BF,Burkina Faso,0,destaque
+GS,South Georgia & South Sandwich Islands,0,destaque
+BQ,Caribbean Netherlands,0,destaque
+SJ,Svalbard & Jan Mayen,0,destaque
+SB,Solomon Islands,0,destaque
+SL,Sierra Leone,0,destaque
+BJ,Benin,0,destaque
+SM,San Marino,0,destaque
+SO,Somalia,0,destaque
+PM,St. Pierre & Miquelon,0,destaque
+BI,Burundi,0,destaque
+SS,South Sudan,0,destaque
+AZ,Azerbaijan,0,destaque
+AG,Antigua & Barbuda,0,destaque
+SK,Slovakia,0,destaque
+SI,Slovenia,0,destaque
+TF,French Southern Territories,0,destaque
+SZ,Eswatini,0,destaque
+SX,Sint Maarten,0,destaque
+SC,Seychelles,0,destaque
+SY,Syria,0,destaque
+TC,Turks & Caicos Islands,0,destaque
+TD,Chad,0,destaque
+TG,Togo,0,destaque
+AQ,Antarctica,0,destaque
+TJ,Tajikistan,0,destaque
+TK,Tokelau,0,destaque
+TM,Turkmenistan,0,destaque
+TL,Timor-Leste,0,destaque
+TO,Tonga,0,destaque
+TT,Trinidad & Tobago,0,destaque
+TN,Tunisia,0,destaque
+AS,American Samoa,0,destaque
+TV,Tuvalu,0,destaque
+AM,Armenia,0,destaque
+TZ,Tanzania,0,destaque
+UG,Uganda,0,destaque
+AD,Andorra,0,destaque
+UM,U.S. Outlying Islands,0,destaque
+AL,Albania,0,destaque
+AX,Åland Islands,0,destaque
+UZ,Uzbekistan,0,destaque
+VA,Vatican City,0,destaque
+VC,St. Vincent & Grenadines,0,destaque
+AI,Anguilla,0,destaque
+VG,British Virgin Islands,0,destaque
+VI,U.S. Virgin Islands,0,destaque
+AF,Afghanistan,0,destaque
+VU,Vanuatu,0,destaque
+WF,Wallis & Futuna,0,destaque
+WS,Samoa,0,destaque
+XK,Kosovo,0,destaque
+YE,Yemen,0,destaque
+LR,Liberia,0,destaque
+ZM,Zambia,0,destaque
+OM,Oman,0,destaque

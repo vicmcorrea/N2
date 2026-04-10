@@ -6,6 +6,10 @@ from pathlib import Path
 
 import pandas as pd
 
+from stil_semantic_change.preprocessing.views import (
+    prepared_content_tokens_dir,
+    prepared_doc_metadata_dir,
+)
 from stil_semantic_change.utils.artifacts import read_json, write_dataframe
 
 
@@ -37,7 +41,7 @@ def collect_context_samples(
         raise ValueError("No terms were provided or inferred from candidate_sets.json")
 
     target_slices = {slice_id for ids in phases.values() for slice_id in ids}
-    tokens_root = prepared_root / "tokens"
+    tokens_root = prepared_content_tokens_dir(prepared_root)
     occurrences = _load_occurrences(tokens_root, set(ordered_terms), target_slices)
     contexts: list[dict[str, object]] = []
 
@@ -103,7 +107,7 @@ def collect_context_samples(
     )
 
     doc_tokens = _collect_doc_token_map(tokens_root, sampled_docs)
-    doc_metadata = _collect_doc_metadata(prepared_root / "docs", sampled_docs)
+    doc_metadata = _collect_doc_metadata(prepared_doc_metadata_dir(prepared_root), sampled_docs)
 
     snippet_rows: list[dict[str, object]] = []
     for row in context_frame.itertuples(index=False):

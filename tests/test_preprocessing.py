@@ -77,3 +77,108 @@ def test_lookup_fallback_excludes_obvious_discourse_markers(monkeypatch) -> None
     assert "aliás" not in lemmas
     assert "democracia" in lemmas
     assert "economia" in lemmas
+
+
+def test_preprocessing_repairs_broken_lemmas_and_pronominal_spacing() -> None:
+    cfg = PreprocessConfig(
+        spacy_model="pt_lookup",
+        fallback_to_blank=True,
+        remove_stopwords=False,
+        remove_punctuation=True,
+        remove_numeric=True,
+        min_token_length=2,
+    )
+    processor = PortuguesePreprocessor(cfg)
+
+    class FakeToken:
+        def __init__(self, text: str, lemma: str, pos: str = "VERB") -> None:
+            self.text = text
+            self.lemma_ = lemma
+            self.pos_ = pos
+            self.is_punct = False
+
+    fake_doc = [
+        FakeToken("digo", "digar"),
+        FakeToken("repita", "repitar"),
+        FakeToken("trata-se", "tratar se"),
+        FakeToken("fazê-lo", "fazer ele"),
+        FakeToken("começaremos", "começarer"),
+        FakeToken("estaremos", "estarer"),
+        FakeToken("veremos", "verer"),
+        FakeToken("iríamos", "irer"),
+        FakeToken("deveríamos", "deverer"),
+        FakeToken("transformou-se", "transformour se"),
+        FakeToken("conferido", "conferer"),
+        FakeToken("procurem", "procur"),
+        FakeToken("vejam", "vejar"),
+        FakeToken("teríamos", "teríar"),
+        FakeToken("entendo", "enter"),
+        FakeToken("mantidas", "mantir"),
+        FakeToken("ademais", "ademal", pos="ADV"),
+    ]
+
+    token_rows = processor._extract_tokens(
+        fake_doc,
+        {
+            "doc_id": "doc3",
+            "date": pd.Timestamp("2001-01-01"),
+            "slice_id": "2001",
+        },
+    )
+    lemmas = [row["lemma"] for row in token_rows]
+
+    assert "dizer" in lemmas
+    assert "repetir" in lemmas
+    assert "tratar-se" in lemmas
+    assert "fazê-lo" in lemmas
+    assert "começar" in lemmas
+    assert "estar" in lemmas
+    assert "ver" in lemmas
+    assert "ir" in lemmas
+    assert "dever" in lemmas
+    assert "transformou-se" in lemmas
+    assert "conferido" in lemmas
+    assert "procurar" in lemmas
+    assert "ver" in lemmas
+    assert "ter" in lemmas
+    assert "entender" in lemmas
+    assert "manter" in lemmas
+    assert "ademais" not in lemmas
+
+
+def test_preprocessing_can_strip_accents(monkeypatch) -> None:
+    import spacy
+
+    monkeypatch.setattr(
+        spacy,
+        "load",
+        lambda *args, **kwargs: (_ for _ in ()).throw(OSError("missing model")),
+    )
+    cfg = PreprocessConfig(
+        spacy_model="pt_lookup",
+        fallback_to_blank=True,
+        preserve_accents=False,
+        remove_stopwords=True,
+        remove_punctuation=True,
+        remove_numeric=True,
+        min_token_length=2,
+    )
+    processor = PortuguesePreprocessor(cfg)
+    records = pd.DataFrame(
+        [
+            {
+                "doc_id": "doc4",
+                "date": pd.Timestamp("2001-01-01"),
+                "slice_id": "2001",
+                "text": "Ação econômica, aliás, democrática.",
+                "source_file": "toy.csv",
+            }
+        ]
+    )
+
+    batch = processor.process_records(records)
+    assert "acao" in batch.documents.loc[0, "normalized_surface_text"]
+    assert "economica" in batch.documents.loc[0, "content_surface_text"]
+    assert "economica" in batch.tokens["lemma"].tolist()
+    assert "democratico" in batch.tokens["lemma"].tolist()
+    assert "alias" not in batch.tokens["lemma"].tolist()

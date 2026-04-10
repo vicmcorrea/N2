@@ -6,6 +6,12 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from stil_semantic_change.selection import (
+    build_candidate_sets,
+    candidate_exclusion_flags,
+    eligible_vocabulary,
+    lemma_pos_summary,
+)
 from stil_semantic_change.utils.artifacts import write_dataframe, write_json
 from stil_semantic_change.utils.config.schema import ExperimentConfig
 from stil_semantic_change.word2vec.vector_store import load_vector_store
@@ -20,35 +26,6 @@ def _cosine_distance(left: np.ndarray, right: np.ndarray) -> float:
     return 1.0 - float(np.dot(left, right) / denominator)
 
 
-def _eligible_vocabulary(
-    lemma_slice_stats: pd.DataFrame,
-    cfg: ExperimentConfig,
-    total_slices: int,
-) -> pd.DataFrame:
-    stats = lemma_slice_stats.copy()
-    stats["qualifies"] = (
-        (stats["frequency"] >= cfg.selection.min_occurrences_per_slice)
-        & (stats["document_count"] >= cfg.selection.min_documents_per_slice)
-    )
-
-    grouped = (
-        stats.groupby("lemma")
-        .agg(
-            qualifying_slices=("qualifies", "sum"),
-            total_frequency=("frequency", "sum"),
-            mean_frequency=("frequency", "mean"),
-            mean_document_count=("document_count", "mean"),
-        )
-        .reset_index()
-    )
-    grouped["slice_presence_ratio"] = grouped["qualifying_slices"] / float(total_slices)
-    grouped["eligible"] = grouped["slice_presence_ratio"] >= cfg.selection.min_slice_presence_ratio
-    return grouped.sort_values(
-        ["eligible", "slice_presence_ratio", "total_frequency"],
-        ascending=[False, False, False],
-    )
-
-
 def score_candidates(
     cfg: ExperimentConfig,
     prepared_root: Path,
@@ -58,12 +35,13 @@ def score_candidates(
     slice_summary = pd.read_parquet(prepared_root / "slice_summary.parquet").sort_values("sort_key")
     slice_order = slice_summary["slice_id"].tolist()
     lemma_slice_stats = pd.read_parquet(prepared_root / "lemma_slice_stats.parquet")
-    eligible_vocab = _eligible_vocabulary(lemma_slice_stats, cfg, total_slices=len(slice_order))
+    eligible_vocab = eligible_vocabulary(lemma_slice_stats, cfg, total_slices=len(slice_order))
     write_dataframe(scores_root / "eligible_vocabulary.parquet", eligible_vocab)
 
     eligible_words = set(eligible_vocab.loc[eligible_vocab["eligible"], "lemma"].tolist())
     if not eligible_words:
         raise ValueError("No eligible vocabulary survived the slice-level selection filters")
+    lemma_pos = lemma_pos_summary(prepared_root, eligible_words)
 
     score_rows: list[dict[str, object]] = []
     trajectory_rows: list[dict[str, object]] = []
@@ -150,38 +128,40 @@ def score_candidates(
         eligible_vocab[
             [
                 "lemma",
+                "observed_slices",
                 "slice_presence_ratio",
                 "qualifying_slices",
                 "total_frequency",
                 "mean_frequency",
+                "min_frequency",
                 "mean_document_count",
+                "min_document_count",
+                "min_qualifying_frequency",
+                "min_qualifying_document_count",
             ]
         ],
         on="lemma",
         how="left",
     )
+    summary = summary.merge(lemma_pos, on="lemma", how="left")
+    summary["method"] = "word2vec"
+    summary["primary_drift"] = summary["primary_drift_mean"]
+    summary["first_last_drift"] = summary["first_last_drift_mean"]
+    summary["slice_count"] = summary["qualifying_slices"]
+    summary["sample_count_total"] = summary["total_frequency"]
+    summary["sample_count_min"] = summary["min_qualifying_frequency"].fillna(
+        summary["min_frequency"]
+    )
+    summary = candidate_exclusion_flags(summary, cfg)
     summary = summary.sort_values("primary_drift_mean", ascending=False).reset_index(drop=True)
 
-    seed_set = set(cfg.selection.theory_seeds)
-    drift_pool = summary.loc[~summary["lemma"].isin(seed_set)]
-    drift_candidates = drift_pool.head(cfg.selection.top_drift_candidates)["lemma"].tolist()
-    stable_controls = (
-        drift_pool.sort_values("primary_drift_mean", ascending=True)
-        .head(cfg.selection.top_stable_controls)["lemma"]
-        .tolist()
-    )
-    seeds = [seed for seed in cfg.selection.theory_seeds if seed in set(summary["lemma"].tolist())]
+    candidate_sets = build_candidate_sets(summary, cfg, slice_order, drift_column="primary_drift")
 
     write_dataframe(scores_root / "scores_per_replicate.parquet", per_replicate)
     write_dataframe(scores_root / "scores_aggregated.parquet", summary)
     write_dataframe(scores_root / "trajectory.parquet", trajectory)
     write_json(
         scores_root / "candidate_sets.json",
-        {
-            "drift_candidates": drift_candidates,
-            "stable_controls": stable_controls,
-            "theory_seeds": seeds[: cfg.selection.top_seed_terms],
-            "slice_order": slice_order,
-        },
+        candidate_sets,
     )
     return summary, trajectory

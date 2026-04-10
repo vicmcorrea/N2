@@ -1,0 +1,2539 @@
+{
+  "interest_over_time": [
+    {
+      "keyword": "direito",
+      "items": [
+        {
+          "time": "Jan 2004",
+          "value": 41
+        },
+        {
+          "time": "Feb 2004",
+          "value": 52
+        },
+        {
+          "time": "Mar 2004",
+          "value": 75
+        },
+        {
+          "time": "Apr 2004",
+          "value": 77
+        },
+        {
+          "time": "May 2004",
+          "value": 75
+        },
+        {
+          "time": "Jun 2004",
+          "value": 69
+        },
+        {
+          "time": "Jul 2004",
+          "value": 43
+        },
+        {
+          "time": "Aug 2004",
+          "value": 74
+        },
+        {
+          "time": "Sep 2004",
+          "value": 73
+        },
+        {
+          "time": "Oct 2004",
+          "value": 69
+        },
+        {
+          "time": "Nov 2004",
+          "value": 66
+        },
+        {
+          "time": "Dec 2004",
+          "value": 38
+        },
+        {
+          "time": "Jan 2005",
+          "value": 31
+        },
+        {
+          "time": "Feb 2005",
+          "value": 51
+        },
+        {
+          "time": "Mar 2005",
+          "value": 72
+        },
+        {
+          "time": "Apr 2005",
+          "value": 74
+        },
+        {
+          "time": "May 2005",
+          "value": 65
+        },
+        {
+          "time": "Jun 2005",
+          "value": 68
+        },
+        {
+          "time": "Jul 2005",
+          "value": 44
+        },
+        {
+          "time": "Aug 2005",
+          "value": 70
+        },
+        {
+          "time": "Sep 2005",
+          "value": 70
+        },
+        {
+          "time": "Oct 2005",
+          "value": 58
+        },
+        {
+          "time": "Nov 2005",
+          "value": 65
+        },
+        {
+          "time": "Dec 2005",
+          "value": 38
+        },
+        {
+          "time": "Jan 2006",
+          "value": 36
+        },
+        {
+          "time": "Feb 2006",
+          "value": 49
+        },
+        {
+          "time": "Mar 2006",
+          "value": 69
+        },
+        {
+          "time": "Apr 2006",
+          "value": 66
+        },
+        {
+          "time": "May 2006",
+          "value": 65
+        },
+        {
+          "time": "Jun 2006",
+          "value": 59
+        },
+        {
+          "time": "Jul 2006",
+          "value": 42
+        },
+        {
+          "time": "Aug 2006",
+          "value": 63
+        },
+        {
+          "time": "Sep 2006",
+          "value": 65
+        },
+        {
+          "time": "Oct 2006",
+          "value": 58
+        },
+        {
+          "time": "Nov 2006",
+          "value": 58
+        },
+        {
+          "time": "Dec 2006",
+          "value": 35
+        },
+        {
+          "time": "Jan 2007",
+          "value": 36
+        },
+        {
+          "time": "Feb 2007",
+          "value": 46
+        },
+        {
+          "time": "Mar 2007",
+          "value": 63
+        },
+        {
+          "time": "Apr 2007",
+          "value": 59
+        },
+        {
+          "time": "May 2007",
+          "value": 61
+        },
+        {
+          "time": "Jun 2007",
+          "value": 60
+        },
+        {
+          "time": "Jul 2007",
+          "value": 44
+        },
+        {
+          "time": "Aug 2007",
+          "value": 65
+        },
+        {
+          "time": "Sep 2007",
+          "value": 62
+        },
+        {
+          "time": "Oct 2007",
+          "value": 60
+        },
+        {
+          "time": "Nov 2007",
+          "value": 60
+        },
+        {
+          "time": "Dec 2007",
+          "value": 40
+        },
+        {
+          "time": "Jan 2008",
+          "value": 45
+        },
+        {
+          "time": "Feb 2008",
+          "value": 57
+        },
+        {
+          "time": "Mar 2008",
+          "value": 66
+        },
+        {
+          "time": "Apr 2008",
+          "value": 67
+        },
+        {
+          "time": "May 2008",
+          "value": 61
+        },
+        {
+          "time": "Jun 2008",
+          "value": 68
+        },
+        {
+          "time": "Jul 2008",
+          "value": 48
+        },
+        {
+          "time": "Aug 2008",
+          "value": 66
+        },
+        {
+          "time": "Sep 2008",
+          "value": 73
+        },
+        {
+          "time": "Oct 2008",
+          "value": 62
+        },
+        {
+          "time": "Nov 2008",
+          "value": 63
+        },
+        {
+          "time": "Dec 2008",
+          "value": 42
+        },
+        {
+          "time": "Jan 2009",
+          "value": 46
+        },
+        {
+          "time": "Feb 2009",
+          "value": 55
+        },
+        {
+          "time": "Mar 2009",
+          "value": 83
+        },
+        {
+          "time": "Apr 2009",
+          "value": 71
+        },
+        {
+          "time": "May 2009",
+          "value": 71
+        },
+        {
+          "time": "Jun 2009",
+          "value": 65
+        },
+        {
+          "time": "Jul 2009",
+          "value": 53
+        },
+        {
+          "time": "Aug 2009",
+          "value": 69
+        },
+        {
+          "time": "Sep 2009",
+          "value": 78
+        },
+        {
+          "time": "Oct 2009",
+          "value": 67
+        },
+        {
+          "time": "Nov 2009",
+          "value": 69
+        },
+        {
+          "time": "Dec 2009",
+          "value": 47
+        },
+        {
+          "time": "Jan 2010",
+          "value": 43
+        },
+        {
+          "time": "Feb 2010",
+          "value": 55
+        },
+        {
+          "time": "Mar 2010",
+          "value": 71
+        },
+        {
+          "time": "Apr 2010",
+          "value": 73
+        },
+        {
+          "time": "May 2010",
+          "value": 70
+        },
+        {
+          "time": "Jun 2010",
+          "value": 72
+        },
+        {
+          "time": "Jul 2010",
+          "value": 50
+        },
+        {
+          "time": "Aug 2010",
+          "value": 65
+        },
+        {
+          "time": "Sep 2010",
+          "value": 70
+        },
+        {
+          "time": "Oct 2010",
+          "value": 57
+        },
+        {
+          "time": "Nov 2010",
+          "value": 63
+        },
+        {
+          "time": "Dec 2010",
+          "value": 43
+        },
+        {
+          "time": "Jan 2011",
+          "value": 44
+        },
+        {
+          "time": "Feb 2011",
+          "value": 63
+        },
+        {
+          "time": "Mar 2011",
+          "value": 66
+        },
+        {
+          "time": "Apr 2011",
+          "value": 64
+        },
+        {
+          "time": "May 2011",
+          "value": 67
+        },
+        {
+          "time": "Jun 2011",
+          "value": 71
+        },
+        {
+          "time": "Jul 2011",
+          "value": 57
+        },
+        {
+          "time": "Aug 2011",
+          "value": 71
+        },
+        {
+          "time": "Sep 2011",
+          "value": 74
+        },
+        {
+          "time": "Oct 2011",
+          "value": 62
+        },
+        {
+          "time": "Nov 2011",
+          "value": 63
+        },
+        {
+          "time": "Dec 2011",
+          "value": 45
+        },
+        {
+          "time": "Jan 2012",
+          "value": 49
+        },
+        {
+          "time": "Feb 2012",
+          "value": 54
+        },
+        {
+          "time": "Mar 2012",
+          "value": 66
+        },
+        {
+          "time": "Apr 2012",
+          "value": 65
+        },
+        {
+          "time": "May 2012",
+          "value": 63
+        },
+        {
+          "time": "Jun 2012",
+          "value": 59
+        },
+        {
+          "time": "Jul 2012",
+          "value": 51
+        },
+        {
+          "time": "Aug 2012",
+          "value": 67
+        },
+        {
+          "time": "Sep 2012",
+          "value": 67
+        },
+        {
+          "time": "Oct 2012",
+          "value": 60
+        },
+        {
+          "time": "Nov 2012",
+          "value": 59
+        },
+        {
+          "time": "Dec 2012",
+          "value": 42
+        },
+        {
+          "time": "Jan 2013",
+          "value": 45
+        },
+        {
+          "time": "Feb 2013",
+          "value": 52
+        },
+        {
+          "time": "Mar 2013",
+          "value": 62
+        },
+        {
+          "time": "Apr 2013",
+          "value": 68
+        },
+        {
+          "time": "May 2013",
+          "value": 60
+        },
+        {
+          "time": "Jun 2013",
+          "value": 64
+        },
+        {
+          "time": "Jul 2013",
+          "value": 50
+        },
+        {
+          "time": "Aug 2013",
+          "value": 63
+        },
+        {
+          "time": "Sep 2013",
+          "value": 70
+        },
+        {
+          "time": "Oct 2013",
+          "value": 63
+        },
+        {
+          "time": "Nov 2013",
+          "value": 64
+        },
+        {
+          "time": "Dec 2013",
+          "value": 43
+        },
+        {
+          "time": "Jan 2014",
+          "value": 51
+        },
+        {
+          "time": "Feb 2014",
+          "value": 60
+        },
+        {
+          "time": "Mar 2014",
+          "value": 64
+        },
+        {
+          "time": "Apr 2014",
+          "value": 67
+        },
+        {
+          "time": "May 2014",
+          "value": 67
+        },
+        {
+          "time": "Jun 2014",
+          "value": 60
+        },
+        {
+          "time": "Jul 2014",
+          "value": 57
+        },
+        {
+          "time": "Aug 2014",
+          "value": 69
+        },
+        {
+          "time": "Sep 2014",
+          "value": 72
+        },
+        {
+          "time": "Oct 2014",
+          "value": 64
+        },
+        {
+          "time": "Nov 2014",
+          "value": 66
+        },
+        {
+          "time": "Dec 2014",
+          "value": 47
+        },
+        {
+          "time": "Jan 2015",
+          "value": 48
+        },
+        {
+          "time": "Feb 2015",
+          "value": 57
+        },
+        {
+          "time": "Mar 2015",
+          "value": 73
+        },
+        {
+          "time": "Apr 2015",
+          "value": 72
+        },
+        {
+          "time": "May 2015",
+          "value": 69
+        },
+        {
+          "time": "Jun 2015",
+          "value": 68
+        },
+        {
+          "time": "Jul 2015",
+          "value": 62
+        },
+        {
+          "time": "Aug 2015",
+          "value": 70
+        },
+        {
+          "time": "Sep 2015",
+          "value": 76
+        },
+        {
+          "time": "Oct 2015",
+          "value": 67
+        },
+        {
+          "time": "Nov 2015",
+          "value": 70
+        },
+        {
+          "time": "Dec 2015",
+          "value": 51
+        },
+        {
+          "time": "Jan 2016",
+          "value": 53
+        },
+        {
+          "time": "Feb 2016",
+          "value": 62
+        },
+        {
+          "time": "Mar 2016",
+          "value": 78
+        },
+        {
+          "time": "Apr 2016",
+          "value": 76
+        },
+        {
+          "time": "May 2016",
+          "value": 70
+        },
+        {
+          "time": "Jun 2016",
+          "value": 71
+        },
+        {
+          "time": "Jul 2016",
+          "value": 56
+        },
+        {
+          "time": "Aug 2016",
+          "value": 68
+        },
+        {
+          "time": "Sep 2016",
+          "value": 72
+        },
+        {
+          "time": "Oct 2016",
+          "value": 66
+        },
+        {
+          "time": "Nov 2016",
+          "value": 65
+        },
+        {
+          "time": "Dec 2016",
+          "value": 56
+        },
+        {
+          "time": "Jan 2017",
+          "value": 57
+        },
+        {
+          "time": "Feb 2017",
+          "value": 74
+        },
+        {
+          "time": "Mar 2017",
+          "value": 81
+        },
+        {
+          "time": "Apr 2017",
+          "value": 69
+        },
+        {
+          "time": "May 2017",
+          "value": 66
+        },
+        {
+          "time": "Jun 2017",
+          "value": 69
+        },
+        {
+          "time": "Jul 2017",
+          "value": 52
+        },
+        {
+          "time": "Aug 2017",
+          "value": 68
+        },
+        {
+          "time": "Sep 2017",
+          "value": 66
+        },
+        {
+          "time": "Oct 2017",
+          "value": 67
+        },
+        {
+          "time": "Nov 2017",
+          "value": 75
+        },
+        {
+          "time": "Dec 2017",
+          "value": 51
+        },
+        {
+          "time": "Jan 2018",
+          "value": 54
+        },
+        {
+          "time": "Feb 2018",
+          "value": 65
+        },
+        {
+          "time": "Mar 2018",
+          "value": 72
+        },
+        {
+          "time": "Apr 2018",
+          "value": 77
+        },
+        {
+          "time": "May 2018",
+          "value": 63
+        },
+        {
+          "time": "Jun 2018",
+          "value": 75
+        },
+        {
+          "time": "Jul 2018",
+          "value": 59
+        },
+        {
+          "time": "Aug 2018",
+          "value": 73
+        },
+        {
+          "time": "Sep 2018",
+          "value": 70
+        },
+        {
+          "time": "Oct 2018",
+          "value": 64
+        },
+        {
+          "time": "Nov 2018",
+          "value": 63
+        },
+        {
+          "time": "Dec 2018",
+          "value": 44
+        },
+        {
+          "time": "Jan 2019",
+          "value": 52
+        },
+        {
+          "time": "Feb 2019",
+          "value": 65
+        },
+        {
+          "time": "Mar 2019",
+          "value": 66
+        },
+        {
+          "time": "Apr 2019",
+          "value": 62
+        },
+        {
+          "time": "May 2019",
+          "value": 62
+        },
+        {
+          "time": "Jun 2019",
+          "value": 63
+        },
+        {
+          "time": "Jul 2019",
+          "value": 57
+        },
+        {
+          "time": "Aug 2019",
+          "value": 68
+        },
+        {
+          "time": "Sep 2019",
+          "value": 71
+        },
+        {
+          "time": "Oct 2019",
+          "value": 62
+        },
+        {
+          "time": "Nov 2019",
+          "value": 62
+        },
+        {
+          "time": "Dec 2019",
+          "value": 50
+        },
+        {
+          "time": "Jan 2020",
+          "value": 55
+        },
+        {
+          "time": "Feb 2020",
+          "value": 58
+        },
+        {
+          "time": "Mar 2020",
+          "value": 72
+        },
+        {
+          "time": "Apr 2020",
+          "value": 100
+        },
+        {
+          "time": "May 2020",
+          "value": 69
+        },
+        {
+          "time": "Jun 2020",
+          "value": 68
+        },
+        {
+          "time": "Jul 2020",
+          "value": 60
+        },
+        {
+          "time": "Aug 2020",
+          "value": 57
+        },
+        {
+          "time": "Sep 2020",
+          "value": 63
+        },
+        {
+          "time": "Oct 2020",
+          "value": 59
+        },
+        {
+          "time": "Nov 2020",
+          "value": 57
+        },
+        {
+          "time": "Dec 2020",
+          "value": 51
+        },
+        {
+          "time": "Jan 2021",
+          "value": 52
+        },
+        {
+          "time": "Feb 2021",
+          "value": 60
+        },
+        {
+          "time": "Mar 2021",
+          "value": 64
+        },
+        {
+          "time": "Apr 2021",
+          "value": 67
+        },
+        {
+          "time": "May 2021",
+          "value": 64
+        },
+        {
+          "time": "Jun 2021",
+          "value": 63
+        },
+        {
+          "time": "Jul 2021",
+          "value": 55
+        },
+        {
+          "time": "Aug 2021",
+          "value": 63
+        },
+        {
+          "time": "Sep 2021",
+          "value": 57
+        },
+        {
+          "time": "Oct 2021",
+          "value": 65
+        },
+        {
+          "time": "Nov 2021",
+          "value": 63
+        },
+        {
+          "time": "Dec 2021",
+          "value": 51
+        },
+        {
+          "time": "Jan 2022",
+          "value": 74
+        },
+        {
+          "time": "Feb 2022",
+          "value": 87
+        },
+        {
+          "time": "Mar 2022",
+          "value": 96
+        },
+        {
+          "time": "Apr 2022",
+          "value": 84
+        },
+        {
+          "time": "May 2022",
+          "value": 75
+        },
+        {
+          "time": "Jun 2022",
+          "value": 71
+        },
+        {
+          "time": "Jul 2022",
+          "value": 70
+        },
+        {
+          "time": "Aug 2022",
+          "value": 81
+        },
+        {
+          "time": "Sep 2022",
+          "value": 75
+        },
+        {
+          "time": "Oct 2022",
+          "value": 74
+        },
+        {
+          "time": "Nov 2022",
+          "value": 70
+        },
+        {
+          "time": "Dec 2022",
+          "value": 55
+        },
+        {
+          "time": "Jan 2023",
+          "value": 61
+        },
+        {
+          "time": "Feb 2023",
+          "value": 73
+        },
+        {
+          "time": "Mar 2023",
+          "value": 76
+        },
+        {
+          "time": "Apr 2023",
+          "value": 69
+        },
+        {
+          "time": "May 2023",
+          "value": 73
+        },
+        {
+          "time": "Jun 2023",
+          "value": 69
+        },
+        {
+          "time": "Jul 2023",
+          "value": 61
+        },
+        {
+          "time": "Aug 2023",
+          "value": 68
+        },
+        {
+          "time": "Sep 2023",
+          "value": 63
+        },
+        {
+          "time": "Oct 2023",
+          "value": 65
+        },
+        {
+          "time": "Nov 2023",
+          "value": 66
+        },
+        {
+          "time": "Dec 2023",
+          "value": 57
+        }
+      ]
+    }
+  ],
+  "breakdown_by_region": [
+    {
+      "keyword": "direito",
+      "items": [
+        {
+          "geo_code": "ST",
+          "geo_name": "São Tomé & Príncipe",
+          "value": 0
+        },
+        {
+          "geo_code": "AO",
+          "geo_name": "Angola",
+          "value": 100
+        },
+        {
+          "geo_code": "MZ",
+          "geo_name": "Mozambique",
+          "value": 85
+        },
+        {
+          "geo_code": "BR",
+          "geo_name": "Brazil",
+          "value": 65
+        },
+        {
+          "geo_code": "CV",
+          "geo_name": "Cape Verde",
+          "value": 0
+        },
+        {
+          "geo_code": "GW",
+          "geo_name": "Guinea-Bissau",
+          "value": 0
+        },
+        {
+          "geo_code": "PT",
+          "geo_name": "Portugal",
+          "value": 29
+        },
+        {
+          "geo_code": "TL",
+          "geo_name": "Timor-Leste",
+          "value": 0
+        },
+        {
+          "geo_code": "MO",
+          "geo_name": "Macao",
+          "value": 0
+        },
+        {
+          "geo_code": "PY",
+          "geo_name": "Paraguay",
+          "value": 0
+        },
+        {
+          "geo_code": "LU",
+          "geo_name": "Luxembourg",
+          "value": 0
+        },
+        {
+          "geo_code": "BO",
+          "geo_name": "Bolivia",
+          "value": 0
+        },
+        {
+          "geo_code": "SH",
+          "geo_name": "St. Helena",
+          "value": 0
+        },
+        {
+          "geo_code": "GF",
+          "geo_name": "French Guiana",
+          "value": 0
+        },
+        {
+          "geo_code": "NA",
+          "geo_name": "Namibia",
+          "value": 0
+        },
+        {
+          "geo_code": "AD",
+          "geo_name": "Andorra",
+          "value": 0
+        },
+        {
+          "geo_code": "SR",
+          "geo_name": "Suriname",
+          "value": 0
+        },
+        {
+          "geo_code": "SN",
+          "geo_name": "Senegal",
+          "value": 0
+        },
+        {
+          "geo_code": "JE",
+          "geo_name": "Jersey",
+          "value": 0
+        },
+        {
+          "geo_code": "UY",
+          "geo_name": "Uruguay",
+          "value": 0
+        },
+        {
+          "geo_code": "CH",
+          "geo_name": "Switzerland",
+          "value": 0
+        },
+        {
+          "geo_code": "ES",
+          "geo_name": "Spain",
+          "value": 0
+        },
+        {
+          "geo_code": "GB",
+          "geo_name": "United Kingdom",
+          "value": 0
+        },
+        {
+          "geo_code": "DE",
+          "geo_name": "Germany",
+          "value": 0
+        },
+        {
+          "geo_code": "MC",
+          "geo_name": "Monaco",
+          "value": 0
+        },
+        {
+          "geo_code": "IE",
+          "geo_name": "Ireland",
+          "value": 0
+        },
+        {
+          "geo_code": "LI",
+          "geo_name": "Liechtenstein",
+          "value": 0
+        },
+        {
+          "geo_code": "HT",
+          "geo_name": "Haiti",
+          "value": 0
+        },
+        {
+          "geo_code": "US",
+          "geo_name": "United States",
+          "value": 0
+        },
+        {
+          "geo_code": "GY",
+          "geo_name": "Guyana",
+          "value": 0
+        },
+        {
+          "geo_code": "LA",
+          "geo_name": "Laos",
+          "value": 0
+        },
+        {
+          "geo_code": "AG",
+          "geo_name": "Antigua & Barbuda",
+          "value": 0
+        },
+        {
+          "geo_code": "GG",
+          "geo_name": "Guernsey",
+          "value": 0
+        },
+        {
+          "geo_code": "GM",
+          "geo_name": "Gambia",
+          "value": 0
+        },
+        {
+          "geo_code": "JP",
+          "geo_name": "Japan",
+          "value": 0
+        },
+        {
+          "geo_code": "VC",
+          "geo_name": "St. Vincent & Grenadines",
+          "value": 0
+        },
+        {
+          "geo_code": "CW",
+          "geo_name": "Curaçao",
+          "value": 0
+        },
+        {
+          "geo_code": "CU",
+          "geo_name": "Cuba",
+          "value": 0
+        },
+        {
+          "geo_code": "KE",
+          "geo_name": "Kenya",
+          "value": 0
+        },
+        {
+          "geo_code": "AR",
+          "geo_name": "Argentina",
+          "value": 0
+        },
+        {
+          "geo_code": "GA",
+          "geo_name": "Gabon",
+          "value": 0
+        },
+        {
+          "geo_code": "CG",
+          "geo_name": "Congo - Brazzaville",
+          "value": 0
+        },
+        {
+          "geo_code": "MW",
+          "geo_name": "Malawi",
+          "value": 0
+        },
+        {
+          "geo_code": "AW",
+          "geo_name": "Aruba",
+          "value": 0
+        },
+        {
+          "geo_code": "BE",
+          "geo_name": "Belgium",
+          "value": 0
+        },
+        {
+          "geo_code": "FR",
+          "geo_name": "France",
+          "value": 0
+        },
+        {
+          "geo_code": "MT",
+          "geo_name": "Malta",
+          "value": 0
+        },
+        {
+          "geo_code": "KR",
+          "geo_name": "South Korea",
+          "value": 0
+        },
+        {
+          "geo_code": "PA",
+          "geo_name": "Panama",
+          "value": 0
+        },
+        {
+          "geo_code": "ZW",
+          "geo_name": "Zimbabwe",
+          "value": 0
+        },
+        {
+          "geo_code": "IS",
+          "geo_name": "Iceland",
+          "value": 0
+        },
+        {
+          "geo_code": "NL",
+          "geo_name": "Netherlands",
+          "value": 0
+        },
+        {
+          "geo_code": "TG",
+          "geo_name": "Togo",
+          "value": 0
+        },
+        {
+          "geo_code": "PS",
+          "geo_name": "Palestine",
+          "value": 0
+        },
+        {
+          "geo_code": "BJ",
+          "geo_name": "Benin",
+          "value": 0
+        },
+        {
+          "geo_code": "CD",
+          "geo_name": "Congo - Kinshasa",
+          "value": 0
+        },
+        {
+          "geo_code": "ZA",
+          "geo_name": "South Africa",
+          "value": 0
+        },
+        {
+          "geo_code": "NC",
+          "geo_name": "New Caledonia",
+          "value": 0
+        },
+        {
+          "geo_code": "CA",
+          "geo_name": "Canada",
+          "value": 0
+        },
+        {
+          "geo_code": "QA",
+          "geo_name": "Qatar",
+          "value": 0
+        },
+        {
+          "geo_code": "IT",
+          "geo_name": "Italy",
+          "value": 0
+        },
+        {
+          "geo_code": "BS",
+          "geo_name": "Bahamas",
+          "value": 0
+        },
+        {
+          "geo_code": "MQ",
+          "geo_name": "Martinique",
+          "value": 0
+        },
+        {
+          "geo_code": "MV",
+          "geo_name": "Maldives",
+          "value": 0
+        },
+        {
+          "geo_code": "AE",
+          "geo_name": "United Arab Emirates",
+          "value": 0
+        },
+        {
+          "geo_code": "VN",
+          "geo_name": "Vietnam",
+          "value": 0
+        },
+        {
+          "geo_code": "NO",
+          "geo_name": "Norway",
+          "value": 0
+        },
+        {
+          "geo_code": "AF",
+          "geo_name": "Afghanistan",
+          "value": 0
+        },
+        {
+          "geo_code": "CL",
+          "geo_name": "Chile",
+          "value": 0
+        },
+        {
+          "geo_code": "KH",
+          "geo_name": "Cambodia",
+          "value": 0
+        },
+        {
+          "geo_code": "ET",
+          "geo_name": "Ethiopia",
+          "value": 0
+        },
+        {
+          "geo_code": "MR",
+          "geo_name": "Mauritania",
+          "value": 0
+        },
+        {
+          "geo_code": "LB",
+          "geo_name": "Lebanon",
+          "value": 0
+        },
+        {
+          "geo_code": "GN",
+          "geo_name": "Guinea",
+          "value": 0
+        },
+        {
+          "geo_code": "GH",
+          "geo_name": "Ghana",
+          "value": 0
+        },
+        {
+          "geo_code": "TZ",
+          "geo_name": "Tanzania",
+          "value": 0
+        },
+        {
+          "geo_code": "BW",
+          "geo_name": "Botswana",
+          "value": 0
+        },
+        {
+          "geo_code": "PE",
+          "geo_name": "Peru",
+          "value": 0
+        },
+        {
+          "geo_code": "MN",
+          "geo_name": "Mongolia",
+          "value": 0
+        },
+        {
+          "geo_code": "DO",
+          "geo_name": "Dominican Republic",
+          "value": 0
+        },
+        {
+          "geo_code": "MD",
+          "geo_name": "Moldova",
+          "value": 0
+        },
+        {
+          "geo_code": "GP",
+          "geo_name": "Guadeloupe",
+          "value": 0
+        },
+        {
+          "geo_code": "ZM",
+          "geo_name": "Zambia",
+          "value": 0
+        },
+        {
+          "geo_code": "BB",
+          "geo_name": "Barbados",
+          "value": 0
+        },
+        {
+          "geo_code": "CI",
+          "geo_name": "Côte d’Ivoire",
+          "value": 0
+        },
+        {
+          "geo_code": "NP",
+          "geo_name": "Nepal",
+          "value": 0
+        },
+        {
+          "geo_code": "RO",
+          "geo_name": "Romania",
+          "value": 0
+        },
+        {
+          "geo_code": "AM",
+          "geo_name": "Armenia",
+          "value": 0
+        },
+        {
+          "geo_code": "CR",
+          "geo_name": "Costa Rica",
+          "value": 0
+        },
+        {
+          "geo_code": "BD",
+          "geo_name": "Bangladesh",
+          "value": 0
+        },
+        {
+          "geo_code": "NZ",
+          "geo_name": "New Zealand",
+          "value": 0
+        },
+        {
+          "geo_code": "TT",
+          "geo_name": "Trinidad & Tobago",
+          "value": 0
+        },
+        {
+          "geo_code": "JM",
+          "geo_name": "Jamaica",
+          "value": 0
+        },
+        {
+          "geo_code": "MM",
+          "geo_name": "Myanmar (Burma)",
+          "value": 0
+        },
+        {
+          "geo_code": "CO",
+          "geo_name": "Colombia",
+          "value": 0
+        },
+        {
+          "geo_code": "IN",
+          "geo_name": "India",
+          "value": 0
+        },
+        {
+          "geo_code": "MY",
+          "geo_name": "Malaysia",
+          "value": 0
+        },
+        {
+          "geo_code": "MG",
+          "geo_name": "Madagascar",
+          "value": 0
+        },
+        {
+          "geo_code": "RW",
+          "geo_name": "Rwanda",
+          "value": 0
+        },
+        {
+          "geo_code": "BH",
+          "geo_name": "Bahrain",
+          "value": 0
+        },
+        {
+          "geo_code": "NI",
+          "geo_name": "Nicaragua",
+          "value": 0
+        },
+        {
+          "geo_code": "MU",
+          "geo_name": "Mauritius",
+          "value": 0
+        },
+        {
+          "geo_code": "RU",
+          "geo_name": "Russia",
+          "value": 0
+        },
+        {
+          "geo_code": "IQ",
+          "geo_name": "Iraq",
+          "value": 0
+        },
+        {
+          "geo_code": "EC",
+          "geo_name": "Ecuador",
+          "value": 0
+        },
+        {
+          "geo_code": "EG",
+          "geo_name": "Egypt",
+          "value": 0
+        },
+        {
+          "geo_code": "SV",
+          "geo_name": "El Salvador",
+          "value": 0
+        },
+        {
+          "geo_code": "VE",
+          "geo_name": "Venezuela",
+          "value": 0
+        },
+        {
+          "geo_code": "GE",
+          "geo_name": "Georgia",
+          "value": 0
+        },
+        {
+          "geo_code": "IL",
+          "geo_name": "Israel",
+          "value": 0
+        },
+        {
+          "geo_code": "SE",
+          "geo_name": "Sweden",
+          "value": 0
+        },
+        {
+          "geo_code": "SG",
+          "geo_name": "Singapore",
+          "value": 0
+        },
+        {
+          "geo_code": "AL",
+          "geo_name": "Albania",
+          "value": 0
+        },
+        {
+          "geo_code": "AU",
+          "geo_name": "Australia",
+          "value": 0
+        },
+        {
+          "geo_code": "AT",
+          "geo_name": "Austria",
+          "value": 0
+        },
+        {
+          "geo_code": "MA",
+          "geo_name": "Morocco",
+          "value": 0
+        },
+        {
+          "geo_code": "HK",
+          "geo_name": "Hong Kong",
+          "value": 0
+        },
+        {
+          "geo_code": "EE",
+          "geo_name": "Estonia",
+          "value": 0
+        },
+        {
+          "geo_code": "NG",
+          "geo_name": "Nigeria",
+          "value": 0
+        },
+        {
+          "geo_code": "PK",
+          "geo_name": "Pakistan",
+          "value": 0
+        },
+        {
+          "geo_code": "LY",
+          "geo_name": "Libya",
+          "value": 0
+        },
+        {
+          "geo_code": "SO",
+          "geo_name": "Somalia",
+          "value": 0
+        },
+        {
+          "geo_code": "DK",
+          "geo_name": "Denmark",
+          "value": 0
+        },
+        {
+          "geo_code": "CN",
+          "geo_name": "China",
+          "value": 0
+        },
+        {
+          "geo_code": "TJ",
+          "geo_name": "Tajikistan",
+          "value": 0
+        },
+        {
+          "geo_code": "BF",
+          "geo_name": "Burkina Faso",
+          "value": 0
+        },
+        {
+          "geo_code": "TH",
+          "geo_name": "Thailand",
+          "value": 0
+        },
+        {
+          "geo_code": "ME",
+          "geo_name": "Montenegro",
+          "value": 0
+        },
+        {
+          "geo_code": "AZ",
+          "geo_name": "Azerbaijan",
+          "value": 0
+        },
+        {
+          "geo_code": "TW",
+          "geo_name": "Taiwan",
+          "value": 0
+        },
+        {
+          "geo_code": "CM",
+          "geo_name": "Cameroon",
+          "value": 0
+        },
+        {
+          "geo_code": "PH",
+          "geo_name": "Philippines",
+          "value": 0
+        },
+        {
+          "geo_code": "CY",
+          "geo_name": "Cyprus",
+          "value": 0
+        },
+        {
+          "geo_code": "BY",
+          "geo_name": "Belarus",
+          "value": 0
+        },
+        {
+          "geo_code": "MX",
+          "geo_name": "Mexico",
+          "value": 0
+        },
+        {
+          "geo_code": "KZ",
+          "geo_name": "Kazakhstan",
+          "value": 0
+        },
+        {
+          "geo_code": "SI",
+          "geo_name": "Slovenia",
+          "value": 0
+        },
+        {
+          "geo_code": "DZ",
+          "geo_name": "Algeria",
+          "value": 0
+        },
+        {
+          "geo_code": "ML",
+          "geo_name": "Mali",
+          "value": 0
+        },
+        {
+          "geo_code": "CZ",
+          "geo_name": "Czechia",
+          "value": 0
+        },
+        {
+          "geo_code": "UA",
+          "geo_name": "Ukraine",
+          "value": 0
+        },
+        {
+          "geo_code": "MK",
+          "geo_name": "North Macedonia",
+          "value": 0
+        },
+        {
+          "geo_code": "ID",
+          "geo_name": "Indonesia",
+          "value": 0
+        },
+        {
+          "geo_code": "HN",
+          "geo_name": "Honduras",
+          "value": 0
+        },
+        {
+          "geo_code": "UG",
+          "geo_name": "Uganda",
+          "value": 0
+        },
+        {
+          "geo_code": "RE",
+          "geo_name": "Réunion",
+          "value": 0
+        },
+        {
+          "geo_code": "XK",
+          "geo_name": "Kosovo",
+          "value": 0
+        },
+        {
+          "geo_code": "TN",
+          "geo_name": "Tunisia",
+          "value": 0
+        },
+        {
+          "geo_code": "UZ",
+          "geo_name": "Uzbekistan",
+          "value": 0
+        },
+        {
+          "geo_code": "LT",
+          "geo_name": "Lithuania",
+          "value": 0
+        },
+        {
+          "geo_code": "GT",
+          "geo_name": "Guatemala",
+          "value": 0
+        },
+        {
+          "geo_code": "SY",
+          "geo_name": "Syria",
+          "value": 0
+        },
+        {
+          "geo_code": "LV",
+          "geo_name": "Latvia",
+          "value": 0
+        },
+        {
+          "geo_code": "BG",
+          "geo_name": "Bulgaria",
+          "value": 0
+        },
+        {
+          "geo_code": "PR",
+          "geo_name": "Puerto Rico",
+          "value": 0
+        },
+        {
+          "geo_code": "BN",
+          "geo_name": "Brunei",
+          "value": 0
+        },
+        {
+          "geo_code": "FI",
+          "geo_name": "Finland",
+          "value": 0
+        },
+        {
+          "geo_code": "BA",
+          "geo_name": "Bosnia & Herzegovina",
+          "value": 0
+        },
+        {
+          "geo_code": "SD",
+          "geo_name": "Sudan",
+          "value": 0
+        },
+        {
+          "geo_code": "JO",
+          "geo_name": "Jordan",
+          "value": 0
+        },
+        {
+          "geo_code": "GR",
+          "geo_name": "Greece",
+          "value": 0
+        },
+        {
+          "geo_code": "KG",
+          "geo_name": "Kyrgyzstan",
+          "value": 0
+        },
+        {
+          "geo_code": "YE",
+          "geo_name": "Yemen",
+          "value": 0
+        },
+        {
+          "geo_code": "RS",
+          "geo_name": "Serbia",
+          "value": 0
+        },
+        {
+          "geo_code": "KW",
+          "geo_name": "Kuwait",
+          "value": 0
+        },
+        {
+          "geo_code": "HU",
+          "geo_name": "Hungary",
+          "value": 0
+        },
+        {
+          "geo_code": "HR",
+          "geo_name": "Croatia",
+          "value": 0
+        },
+        {
+          "geo_code": "OM",
+          "geo_name": "Oman",
+          "value": 0
+        },
+        {
+          "geo_code": "LK",
+          "geo_name": "Sri Lanka",
+          "value": 0
+        },
+        {
+          "geo_code": "SK",
+          "geo_name": "Slovakia",
+          "value": 0
+        },
+        {
+          "geo_code": "SA",
+          "geo_name": "Saudi Arabia",
+          "value": 0
+        },
+        {
+          "geo_code": "PL",
+          "geo_name": "Poland",
+          "value": 0
+        },
+        {
+          "geo_code": "IR",
+          "geo_name": "Iran",
+          "value": 0
+        },
+        {
+          "geo_code": "TR",
+          "geo_name": "Türkiye",
+          "value": 0
+        },
+        {
+          "geo_code": "NR",
+          "geo_name": "Nauru",
+          "value": 0
+        },
+        {
+          "geo_code": "MS",
+          "geo_name": "Montserrat",
+          "value": 0
+        },
+        {
+          "geo_code": "IO",
+          "geo_name": "British Indian Ocean Territory",
+          "value": 0
+        },
+        {
+          "geo_code": "PW",
+          "geo_name": "Palau",
+          "value": 0
+        },
+        {
+          "geo_code": "PG",
+          "geo_name": "Papua New Guinea",
+          "value": 0
+        },
+        {
+          "geo_code": "PN",
+          "geo_name": "Pitcairn Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "NU",
+          "geo_name": "Niue",
+          "value": 0
+        },
+        {
+          "geo_code": "KP",
+          "geo_name": "North Korea",
+          "value": 0
+        },
+        {
+          "geo_code": "BI",
+          "geo_name": "Burundi",
+          "value": 0
+        },
+        {
+          "geo_code": "HM",
+          "geo_name": "Heard & McDonald Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "GU",
+          "geo_name": "Guam",
+          "value": 0
+        },
+        {
+          "geo_code": "PF",
+          "geo_name": "French Polynesia",
+          "value": 0
+        },
+        {
+          "geo_code": "BQ",
+          "geo_name": "Caribbean Netherlands",
+          "value": 0
+        },
+        {
+          "geo_code": "CF",
+          "geo_name": "Central African Republic",
+          "value": 0
+        },
+        {
+          "geo_code": "GL",
+          "geo_name": "Greenland",
+          "value": 0
+        },
+        {
+          "geo_code": "GD",
+          "geo_name": "Grenada",
+          "value": 0
+        },
+        {
+          "geo_code": "NF",
+          "geo_name": "Norfolk Island",
+          "value": 0
+        },
+        {
+          "geo_code": "NE",
+          "geo_name": "Niger",
+          "value": 0
+        },
+        {
+          "geo_code": "BV",
+          "geo_name": "Bouvet Island",
+          "value": 0
+        },
+        {
+          "geo_code": "GQ",
+          "geo_name": "Equatorial Guinea",
+          "value": 0
+        },
+        {
+          "geo_code": "GI",
+          "geo_name": "Gibraltar",
+          "value": 0
+        },
+        {
+          "geo_code": "GS",
+          "geo_name": "South Georgia & South Sandwich Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "TF",
+          "geo_name": "French Southern Territories",
+          "value": 0
+        },
+        {
+          "geo_code": "SJ",
+          "geo_name": "Svalbard & Jan Mayen",
+          "value": 0
+        },
+        {
+          "geo_code": "SB",
+          "geo_name": "Solomon Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "SL",
+          "geo_name": "Sierra Leone",
+          "value": 0
+        },
+        {
+          "geo_code": "CK",
+          "geo_name": "Cook Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "SM",
+          "geo_name": "San Marino",
+          "value": 0
+        },
+        {
+          "geo_code": "KM",
+          "geo_name": "Comoros",
+          "value": 0
+        },
+        {
+          "geo_code": "PM",
+          "geo_name": "St. Pierre & Miquelon",
+          "value": 0
+        },
+        {
+          "geo_code": "YT",
+          "geo_name": "Mayotte",
+          "value": 0
+        },
+        {
+          "geo_code": "SS",
+          "geo_name": "South Sudan",
+          "value": 0
+        },
+        {
+          "geo_code": "AQ",
+          "geo_name": "Antarctica",
+          "value": 0
+        },
+        {
+          "geo_code": "AS",
+          "geo_name": "American Samoa",
+          "value": 0
+        },
+        {
+          "geo_code": "BT",
+          "geo_name": "Bhutan",
+          "value": 0
+        },
+        {
+          "geo_code": "KY",
+          "geo_name": "Cayman Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "FM",
+          "geo_name": "Micronesia",
+          "value": 0
+        },
+        {
+          "geo_code": "SZ",
+          "geo_name": "Eswatini",
+          "value": 0
+        },
+        {
+          "geo_code": "SX",
+          "geo_name": "Sint Maarten",
+          "value": 0
+        },
+        {
+          "geo_code": "SC",
+          "geo_name": "Seychelles",
+          "value": 0
+        },
+        {
+          "geo_code": "KI",
+          "geo_name": "Kiribati",
+          "value": 0
+        },
+        {
+          "geo_code": "TC",
+          "geo_name": "Turks & Caicos Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "TD",
+          "geo_name": "Chad",
+          "value": 0
+        },
+        {
+          "geo_code": "FO",
+          "geo_name": "Faroe Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "FK",
+          "geo_name": "Falkland Islands (Islas Malvinas)",
+          "value": 0
+        },
+        {
+          "geo_code": "FJ",
+          "geo_name": "Fiji",
+          "value": 0
+        },
+        {
+          "geo_code": "TK",
+          "geo_name": "Tokelau",
+          "value": 0
+        },
+        {
+          "geo_code": "TM",
+          "geo_name": "Turkmenistan",
+          "value": 0
+        },
+        {
+          "geo_code": "KN",
+          "geo_name": "St. Kitts & Nevis",
+          "value": 0
+        },
+        {
+          "geo_code": "TO",
+          "geo_name": "Tonga",
+          "value": 0
+        },
+        {
+          "geo_code": "CX",
+          "geo_name": "Christmas Island",
+          "value": 0
+        },
+        {
+          "geo_code": "MP",
+          "geo_name": "Northern Mariana Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "CC",
+          "geo_name": "Cocos (Keeling) Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "TV",
+          "geo_name": "Tuvalu",
+          "value": 0
+        },
+        {
+          "geo_code": "EH",
+          "geo_name": "Western Sahara",
+          "value": 0
+        },
+        {
+          "geo_code": "ER",
+          "geo_name": "Eritrea",
+          "value": 0
+        },
+        {
+          "geo_code": "BM",
+          "geo_name": "Bermuda",
+          "value": 0
+        },
+        {
+          "geo_code": "LC",
+          "geo_name": "St. Lucia",
+          "value": 0
+        },
+        {
+          "geo_code": "UM",
+          "geo_name": "U.S. Outlying Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "MH",
+          "geo_name": "Marshall Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "AX",
+          "geo_name": "Åland Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "BZ",
+          "geo_name": "Belize",
+          "value": 0
+        },
+        {
+          "geo_code": "VA",
+          "geo_name": "Vatican City",
+          "value": 0
+        },
+        {
+          "geo_code": "AI",
+          "geo_name": "Anguilla",
+          "value": 0
+        },
+        {
+          "geo_code": "DM",
+          "geo_name": "Dominica",
+          "value": 0
+        },
+        {
+          "geo_code": "VG",
+          "geo_name": "British Virgin Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "VI",
+          "geo_name": "U.S. Virgin Islands",
+          "value": 0
+        },
+        {
+          "geo_code": "DJ",
+          "geo_name": "Djibouti",
+          "value": 0
+        },
+        {
+          "geo_code": "VU",
+          "geo_name": "Vanuatu",
+          "value": 0
+        },
+        {
+          "geo_code": "WF",
+          "geo_name": "Wallis & Futuna",
+          "value": 0
+        },
+        {
+          "geo_code": "WS",
+          "geo_name": "Samoa",
+          "value": 0
+        },
+        {
+          "geo_code": "LS",
+          "geo_name": "Lesotho",
+          "value": 0
+        },
+        {
+          "geo_code": "MF",
+          "geo_name": "St. Martin",
+          "value": 0
+        },
+        {
+          "geo_code": "LR",
+          "geo_name": "Liberia",
+          "value": 0
+        },
+        {
+          "geo_code": "BL",
+          "geo_name": "St. Barthélemy",
+          "value": 0
+        },
+        {
+          "geo_code": "IM",
+          "geo_name": "Isle of Man",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "related_topics": [
+    {
+      "keyword": "direito",
+      "items": []
+    }
+  ],
+  "related_queries": [
+    {
+      "keyword": "direito",
+      "items": [
+        {
+          "query": "como saber se tenho direito ao pis",
+          "value": 44950,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=como+saber+se+tenho+direito+ao+pis&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "dor no lado direito da barriga",
+          "value": 31750,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=dor+no+lado+direito+da+barriga&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "dor no braço direito",
+          "value": 29850,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=dor+no+bra%C3%A7o+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "dor de cabeça lado direito",
+          "value": 26600,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=dor+de+cabe%C3%A7a+lado+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "bolsa familia quem tem direito",
+          "value": 19000,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=bolsa+familia+quem+tem+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "auxilio emergencial quem tem direito",
+          "value": 18550,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=auxilio+emergencial+quem+tem+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "quem tem direito ao auxílio emergencial",
+          "value": 14400,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=quem+tem+direito+ao+aux%C3%ADlio+emergencial&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "quem tem direito ao bolsa familia",
+          "value": 10100,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=quem+tem+direito+ao+bolsa+familia&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "auxilio maternidade quem tem direito",
+          "value": 9800,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=auxilio+maternidade+quem+tem+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "dor no pé da barriga lado direito",
+          "value": 9500,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=dor+no+p%C3%A9+da+barriga+lado+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "quem tem direito ao pis pasep",
+          "value": 8700,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=quem+tem+direito+ao+pis+pasep&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "buscador dizer o direito",
+          "value": 7300,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=buscador+dizer+o+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "lei de introdução às normas do direito brasileiro",
+          "value": 6700,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=lei+de+introdu%C3%A7%C3%A3o+%C3%A0s+normas+do+direito+brasileiro&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "dizer o direito",
+          "value": 5900,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=dizer+o+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "r2 direito",
+          "value": 5850,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=r2+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "faculdade baiana de direito",
+          "value": 5250,
+          "formatted_value": "Breakout",
+          "link": "/trends/explore?q=faculdade+baiana+de+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito ao pis",
+          "value": 4550,
+          "formatted_value": "+4,550%",
+          "link": "/trends/explore?q=direito+ao+pis&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "saber direito",
+          "value": 3100,
+          "formatted_value": "+3,100%",
+          "link": "/trends/explore?q=saber+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "seguro desemprego quem tem direito",
+          "value": 2400,
+          "formatted_value": "+2,400%",
+          "link": "/trends/explore?q=seguro+desemprego+quem+tem+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "seguro desemprego",
+          "value": 2250,
+          "formatted_value": "+2,250%",
+          "link": "/trends/explore?q=seguro+desemprego&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "quem tem direito ao pis",
+          "value": 1950,
+          "formatted_value": "+1,950%",
+          "link": "/trends/explore?q=quem+tem+direito+ao+pis&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "pé direito",
+          "value": 950,
+          "formatted_value": "+950%",
+          "link": "/trends/explore?q=p%C3%A9+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "o que é direito",
+          "value": 140,
+          "formatted_value": "+140%",
+          "link": "/trends/explore?q=o+que+%C3%A9+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "constituição federal",
+          "value": 40,
+          "formatted_value": "+40%",
+          "link": "/trends/explore?q=constitui%C3%A7%C3%A3o+federal&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "clt",
+          "value": 40,
+          "formatted_value": "+40%",
+          "link": "/trends/explore?q=clt&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "o que é direito",
+          "value": 100,
+          "formatted_value": "100",
+          "link": "/trends/explore?q=o+que+%C3%A9+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito civil",
+          "value": 91,
+          "formatted_value": "91",
+          "link": "/trends/explore?q=direito+civil&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito penal",
+          "value": 88,
+          "formatted_value": "88",
+          "link": "/trends/explore?q=direito+penal&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito do trabalho",
+          "value": 62,
+          "formatted_value": "62",
+          "link": "/trends/explore?q=direito+do+trabalho&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito administrativo",
+          "value": 54,
+          "formatted_value": "54",
+          "link": "/trends/explore?q=direito+administrativo&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "saber direito",
+          "value": 54,
+          "formatted_value": "54",
+          "link": "/trends/explore?q=saber+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "curso de direito",
+          "value": 50,
+          "formatted_value": "50",
+          "link": "/trends/explore?q=curso+de+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito ao pis",
+          "value": 47,
+          "formatted_value": "47",
+          "link": "/trends/explore?q=direito+ao+pis&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "faculdade de direito",
+          "value": 47,
+          "formatted_value": "47",
+          "link": "/trends/explore?q=faculdade+de+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito constitucional",
+          "value": 47,
+          "formatted_value": "47",
+          "link": "/trends/explore?q=direito+constitucional&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "seguro desemprego",
+          "value": 34,
+          "formatted_value": "34",
+          "link": "/trends/explore?q=seguro+desemprego&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito do consumidor",
+          "value": 29,
+          "formatted_value": "29",
+          "link": "/trends/explore?q=direito+do+consumidor&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "estado de direito",
+          "value": 26,
+          "formatted_value": "26",
+          "link": "/trends/explore?q=estado+de+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "dizer o direito",
+          "value": 24,
+          "formatted_value": "24",
+          "link": "/trends/explore?q=dizer+o+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito internacional",
+          "value": 24,
+          "formatted_value": "24",
+          "link": "/trends/explore?q=direito+internacional&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito publico",
+          "value": 22,
+          "formatted_value": "22",
+          "link": "/trends/explore?q=direito+publico&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "quem tem direito ao pis",
+          "value": 20,
+          "formatted_value": "20",
+          "link": "/trends/explore?q=quem+tem+direito+ao+pis&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito empresarial",
+          "value": 17,
+          "formatted_value": "17",
+          "link": "/trends/explore?q=direito+empresarial&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito tributário",
+          "value": 17,
+          "formatted_value": "17",
+          "link": "/trends/explore?q=direito+tribut%C3%A1rio&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "pé direito",
+          "value": 17,
+          "formatted_value": "17",
+          "link": "/trends/explore?q=p%C3%A9+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito trabalhista",
+          "value": 16,
+          "formatted_value": "16",
+          "link": "/trends/explore?q=direito+trabalhista&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "conceito de direito",
+          "value": 16,
+          "formatted_value": "16",
+          "link": "/trends/explore?q=conceito+de+direito&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito ambiental",
+          "value": 14,
+          "formatted_value": "14",
+          "link": "/trends/explore?q=direito+ambiental&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "direito de familia",
+          "value": 14,
+          "formatted_value": "14",
+          "link": "/trends/explore?q=direito+de+familia&date=2004-01-01+2023-12-31"
+        },
+        {
+          "query": "constituição federal",
+          "value": 12,
+          "formatted_value": "12",
+          "link": "/trends/explore?q=constitui%C3%A7%C3%A3o+federal&date=2004-01-01+2023-12-31"
+        }
+      ]
+    }
+  ]
+}
