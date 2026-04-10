@@ -27,6 +27,8 @@
 
 \title{Comparing Lexical, Static-Embedding, and Contextual Drift Signals in Brazilian Portuguese Political Discourse}
 
+\usepackage{subfigure}
+
 \author{}
 \address{}
 
@@ -360,6 +362,23 @@ closely with each other.
     Annotations report Spearman $\bm{\rho}$ and two-sided p-values.}
     \label{fig:method_agreement}
 \end{figure}
+
+\begin{figure}[!htb]
+	\centering
+	\subfigure[Performance evaluated in all words.\label{fig:dunn_allWords}]{
+		\centering
+		\includegraphics[width=1.0\linewidth]{figs/paper/figure_02_method_agreement.pdf}
+	}
+	\quad
+	\subfigure[Performance evaluated only in the OOV words.\label{fig:dunn_onlyOOVs}]{
+		\centering
+		\includegraphics[width=1.0\linewidth]{figs/paper/figure_02_method_agreement.pdf}
+	}
+	\caption{Average rankings and critical differences calculated using the Bonferroni-Dunn
+post-hoc test.\label{fig:statisticalAnalisys}}
+     
+\end{figure}
+
 
 Overlap statistics and bucket-level rank distributions prove more informative
 than raw top-$k$ lists alone. In the preferred BERT layer,
