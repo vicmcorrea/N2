@@ -46,12 +46,12 @@
 \maketitle
 
 \begin{abstract}
-The shift in political discourse often reflects deeper societal changes, but quantifying how specific terms evolve semantically over decades remains a significant challenge for computational linguistics. In this study, we compare three families of diachronic drift signals in Brazilian Portuguese
-political discourse: a lexical-profile baseline based on TF-IDF, a static
+The shift in political discourse often reflects deeper societal changes, but quantifying how specific terms evolve semantically over decades remains a significant challenge for computational linguistics. In this study, we propose a cost-aware comparative framework and use it to compare three families of diachronic drift signals in Brazilian Portuguese
+political discourse, namely a lexical-profile baseline based on TF-IDF, a static
 embedding pipeline based on slice-specific Word2Vec models with Orthogonal
 Procrustes alignment, and a contextual analysis based on a Portuguese BERT
-checkpoint. %The study uses the floor subset of BrPoliCorpus, covering 24 yearly slices from 2000 to 2023 with 428{,}366 speeches and 63.0 million retained tokens after preprocessing. To make the methods directly comparable, we build a shared panel of 55 lemmas containing method-specific drift candidates, stable controls, and theory seeds. 
-Using a BrPoliCorpus subset (428k speeches from 2000-2023), to make the methods directly comparable, we build a shared panel of 55 lemmas containing method-specific drift candidates, stable controls, and theory seeds. 
+checkpoint.
+Using a BrPoliCorpus subset (428k speeches from 2000--2023), to make the methods directly comparable, we build a shared panel of 55 lemmas containing method-specific drift candidates, stable controls, and theory seeds.
 The resulting comparison shows strong disagreement between the
 lighter baselines, with Spearman correlation of $-0.54$ and zero overlap in their
 top 15 terms, while contextual BERT remains moderately closer to Word2Vec than
@@ -60,7 +60,7 @@ highlights terms such as ``\textit{bloqueio}'', ``\textit{sal\'ario}'',
 ``\textit{interven\c{c}\~ao}'', and ``\textit{elei\c{c}\~ao}''. Rather than treating
 one detector as externally validated ground truth, we frame the study as an
 exploratory comparison of complementary drift sensitivities, interpretability,
-and computational cost in Brazilian Portuguese political discourse.
+and computational cost in Brazilian Portuguese political discourse. The framework itself is model- and language-agnostic, offering a reusable blueprint for multi-method drift studies.
 \end{abstract}
 
 \section{Introduction}
@@ -73,7 +73,10 @@ of change
 In political corpora the situation is especially complex, since a term may drift
 because of a new policy referent, a rhetorical reframing, a shift in
 collocational profile, or a reorganization of discourse coalitions, and none of
-these mechanisms reduces neatly to a single lexical sense change.
+these mechanisms reduces neatly to a single lexical sense change. To structure
+this comparison, we introduce a cost-aware comparative framework that stages
+detection methods by computational expense and channels their outputs through a
+shared comparison panel for cross-method agreement analysis.
 
 This complexity carries over to evaluation, where shared-task benchmarks have
 improved comparability in lexical semantic change
@@ -89,11 +92,12 @@ timeline.
 This question is timely for Brazilian Portuguese. Large-scale political corpora
 such as BrPoliCorpus \cite{lima-lopes-2025-brpolicorpus} are only now becoming
 available, yet comparative drift studies that place multiple detection families
-side by side on the same Portuguese political material remain rare. We use the
-floor subset of BrPoliCorpus, which covers 24 yearly slices of Chamber speeches
-from 2000 to 2023, and compare a TF-IDF lexical-profile baseline, a
-slice-specific aligned Word2Vec pipeline, and a contextual BERT stage, all
-scored on a shared comparison panel of 55 lemmas. The paper addresses the following questions: 
+side by side on the same Portuguese political material remain rare. We
+instantiate the framework on the floor subset of BrPoliCorpus, which covers 24
+yearly slices of Chamber speeches from 2000 to 2023, comparing a TF-IDF
+lexical-profile baseline, a slice-specific aligned Word2Vec pipeline, and a
+contextual BERT stage, all scored on a shared comparison panel of 55 lemmas.
+The paper addresses the following questions: 
 
 \begin{enumerate}
     \item How strongly do the methods agree on the same lemmas? 
@@ -104,10 +108,11 @@ scored on a shared comparison panel of 55 lemmas. The paper addresses the follow
 stage add enough interpretive value to justify its expense?
 \end{enumerate}
 
-The comparisons conducted to address these research questions
-fill a descriptive gap in Portuguese, where published multi-method drift
-analyses remain much scarcer than in the better-studied English-centered
-literature.
+Beyond addressing these questions for Portuguese political discourse, where
+published multi-method drift analyses remain much scarcer than in the
+better-studied English-centered literature, this work contributes a reusable
+framework design that can be instantiated with alternative models, corpora, and
+languages.
 
 \section{Related Work}
 \label{sec:related_work}
@@ -152,13 +157,94 @@ historical and literary material rather than political discourse, leaving a
 gap that BrPoliCorpus \cite{lima-lopes-2025-brpolicorpus} now fills with the
 scale needed for controlled comparative work.
 
-\section{Corpus and Experimental Setup}
-\label{sec:data_setup}
+\section{Comparative Drift Framework}
+\label{sec:framework}
 
+The framework organizes lexical semantic change detection into three
+computational tiers arranged by increasing cost, each targeting a distinct
+facet of diachronic drift. The first tier, a \textbf{lexical-statistical
+baseline}, operates on surface-level frequency or weighting counts and
+requires no model training, capturing shifts in lexical salience at negligible
+computational expense. The second tier, a \textbf{static-embedding method},
+maps each word type to a single dense vector per temporal slice and aligns
+slice-specific models into a common geometric space so that drift becomes a
+measurable displacement; training cost is moderate and results are
+interpretable through nearest-neighbor inspection. The third tier, a
+\textbf{contextual-embedding method}, relies on a pretrained language model
+that produces a distinct vector for every token occurrence, which means this
+tier can in principle detect sense-level divergence that the cheaper stages
+miss, though it is the most expensive and the hardest to interpret.
+
+The key design principle is \emph{staged cost awareness}. The two cheaper
+tiers screen the full scored vocabulary first, and their method-led candidates
+feed forward into the expensive contextual stage, which avoids running heavy
+inference over every eligible lemma. Cross-method comparison then requires a
+fixed evaluation set that prevents each method from being assessed only on the
+terms it would naturally favour. The framework therefore prescribes a
+\emph{shared comparison panel} assembled from four sources: (i)~high-drift
+candidates nominated by the lexical-statistical baseline, (ii)~high-drift
+candidates nominated by the static-embedding method, (iii)~low-drift stable
+controls selected jointly by both cheaper tiers, and (iv)~theory-driven seed
+terms drawn from domain expertise or prior work. Because all three tiers score
+exactly the same candidate set, any disagreement reflects genuine differences
+in what each method measures rather than divergent vocabularies.
+
+On the shared panel the framework computes an \emph{agreement analysis layer}
+consisting of pairwise rank correlations, top-$k$ overlap curves, and
+bucket-level rank distributions that separate drift candidates from stable
+controls. These diagnostics reveal where the tiers converge, where they
+diverge, and whether the more expensive contextual stage adds enough
+interpretive value to justify its cost; the analysis layer itself is agnostic
+to the specific models plugged into each tier.
+
+The framework assumes a diachronic corpus partitioned into temporal slices,
+where each slice must contain enough documents and tokens to support stable
+frequency estimates and distributional model training, and a preprocessing
+step normalizes surface forms to a shared lemma representation so that all
+three tiers operate on the same vocabulary. Not every word form is suitable
+for drift scoring, so the framework applies three joint filters before any
+method runs: a minimum per-slice frequency to guarantee sufficient token mass
+for embedding training, a document-dispersion threshold to prevent a single
+source from inflating apparent salience, and a minimum slice-presence rate to
+restrict attention to genuinely diachronic terms rather than episodic ones.
+Drift and stable-control candidates may be further restricted to dominant
+part-of-speech classes.
+
+Figure~\ref{fig:study_design} summarizes the staged pipeline. Although
+we present a particular instantiation in Section~\ref{sec:methodology}, the
+framework itself is model- and language-agnostic, and any combination of
+methods that respects the three-tier cost ordering can be substituted.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.86\linewidth]{figs/paper/figure_05_study_design.pdf}
+    \caption{Staged comparative framework for lexical semantic change
+    detection. Two cheaper tiers screen the scored vocabulary and nominate
+    drift candidates; a shared comparison panel combines those candidates
+    with stable controls and theory seeds before the expensive contextual
+    tier and agreement analysis.}
+    \label{fig:study_design}
+\end{figure}
+
+\section{Methodology}
+\label{sec:methodology}
+
+We instantiate the comparative framework of Section~\ref{sec:framework} on
+Brazilian Portuguese parliamentary discourse. Each tier is realized with a
+specific, well-established model: TF-IDF for the lexical-statistical baseline,
+slice-aligned Word2Vec with Orthogonal Procrustes for the static-embedding
+tier, and BERTimbau Large for the contextual tier. The individual techniques
+are grounded in the
+literature~\cite{hamilton-etal-2016-diachronic,giulianelli-etal-2020-analysing};
+our contribution is their orchestration through the staged pipeline and shared
+panel design.
+
+\subsection{Corpus and Preprocessing}
 
 The experiments use the floor subset of BrPoliCorpus
 \cite{lima-lopes-2025-brpolicorpus}, which contains Brazilian Chamber floor
-speeches from 2000 to 2023 organized into 24 yearly slices. A growing number of diachronic Portuguese resources are now
+speeches from 2000 to 2023 organized into 24 yearly slices. A growing number
+of diachronic Portuguese resources are now
 available~\cite{osorio-cardoso-2025-historical}, ranging from syntactically
 annotated literary collections such as the Tycho Brahe Parsed
 Corpus~\cite{galves-faria-2017-tycho} to large multi-genre repositories such
@@ -173,8 +259,6 @@ across 24 slices), a uniform parliamentary register, and exact date metadata,
 making it the most suitable segment for a year-by-year comparative drift study
 in the political domain.
 
-\subsection{Preprocessing}
-
 Raw speeches are tokenized and tagged with
 \texttt{spaCy} (\texttt{pt\_core\_news\_sm}). We retain nouns, verbs, and
 adjectives, exclude proper nouns, remove stopwords, punctuation, and numeric
@@ -186,21 +270,18 @@ After preprocessing, the corpus retains 428{,}366 speeches and
 Table~\ref{tab:dataset_summary} summarizes the corpus totals and the quartile
 structure of yearly variation.
 
-\subsection{Candidate Eligibility}
-
-A lemma enters the scored vocabulary only if
-it appears at least 50 times per slice, in at least 5 documents per slice, and
-in at least 80\% of the 24 slices. These thresholds were fixed as practical
-corpus-stability defaults rather than tuned to optimize any particular method.
-The frequency floor ensures sufficient token mass for reliable embedding
-training in each yearly slice; the document-dispersion requirement prevents a
-single speaker or parliamentary session from inflating a lemma's apparent
-salience; and the slice-presence constraint restricts attention to lemmas that
-are genuinely diachronic rather than episodic. Drift and stable-control
-candidates are further restricted to dominant part-of-speech classes (nouns and
-adjectives), and a small set of procedural high-frequency terms is excluded.
-These filters reduce the scored vocabulary to 3{,}221 lemmas for the two
-cheaper methods.
+A lemma enters the scored vocabulary only if it appears at least 50 times per
+slice, in at least 5 documents per slice, and in at least 80\% of the 24
+slices. These thresholds were fixed as practical corpus-stability defaults
+rather than tuned to optimize any particular method. The frequency floor
+ensures sufficient token mass for reliable embedding training in each yearly
+slice; the document-dispersion requirement prevents a single speaker or
+parliamentary session from inflating a lemma's apparent salience; and the
+slice-presence constraint restricts attention to lemmas that are genuinely
+diachronic rather than episodic. Drift and stable-control candidates are
+further restricted to nouns and adjectives, and a small set of procedural
+high-frequency terms is excluded. These filters reduce the scored vocabulary
+to 3{,}221 lemmas for the two cheaper methods.
 
 Yearly document counts range from 3{,}041 to 26{,}868 (median 16{,}752) and
 retained token volume from 630K to 4.2M (median 2.6M). Document volume is high
@@ -262,23 +343,6 @@ frequency and slice-presence controls described above.
 
 \FloatBarrier
 
-\section{Methodology}
-\label{sec:methodology}
-
-Figure~\ref{fig:study_design} summarizes the workflow, which was designed for
-this study rather than adopted from a single prior work. Each
-component, from TF-IDF lexical profiles and slice-aligned Word2Vec to
-contextual BERT inspection, is individually grounded in the
-literature~\cite{hamilton-etal-2016-diachronic,giulianelli-etal-2020-analysing},
-but their orchestration into a cost-aware comparative pipeline is ours. The
-sequence follows a deliberate logic in which two cheaper baselines first
-screen the full scored vocabulary, and their method-led candidates are then
-combined with
-stable controls and theory seeds to create the shared panel used for
-contextual inspection and agreement analysis. This design concentrates the
-more expensive contextual stage on the subset where inter-method disagreement
-makes adjudication most informative.
-
 \subsection{TF-IDF Baseline}
 
 For each eligible lemma we compute a TF-IDF vector
@@ -309,29 +373,21 @@ robustness view.
 
 \subsection{Shared Comparison Panel}
 
-Rather than compare unrestricted vocabularies, we construct a shared panel of
-55~lemmas: 15 Word2Vec-led drift candidates, 15 TF-IDF-led drift candidates,
-20~stable controls (lemmas ranked lowest by both cheap methods), and 5~theory
-seeds drawn from prior work on Brazilian political vocabulary
-(\textit{democracia}, \textit{corrup\c{c}\~ao}, \textit{reforma},
-\textit{economia}, \textit{liberdade}). All three methods observe the same
-candidate set, so disagreement reflects properties of the signal rather than
-divergent vocabularies. The agreement layer derives pairwise rank correlations,
-top-$k$ overlaps, stable-control leakage diagnostics, and a filtered contextual
+Following the panel design prescribed by the framework
+(Section~\ref{sec:framework}), we construct a shared panel of 55~lemmas:
+15~Word2Vec-led drift candidates, 15~TF-IDF-led drift candidates, 20~stable
+controls (lemmas ranked lowest by both cheaper methods), and 5~theory seeds
+drawn from prior work on Brazilian political vocabulary (\textit{democracia},
+\textit{corrup\c{c}\~ao}, \textit{reforma}, \textit{economia},
+\textit{liberdade}). All three methods observe the same candidate set, so
+disagreement reflects properties of the signal rather than divergent
+vocabularies. The agreement layer derives pairwise rank correlations, top-$k$
+overlaps, stable-control leakage diagnostics, and a filtered contextual
 ranking.
 
 Figure~\ref{fig:method_agreement} visualizes the pairwise agreement structure,
 while Figure~\ref{fig:overlap_rank_stats} summarizes overlap and
 rank-distribution statistics.
-
-\begin{figure}[!htb]
-    \centering
-    \includegraphics[width=0.86\linewidth]{figs/paper/figure_05_study_design.pdf}
-    \caption{Comparative workflow. The two cheaper baselines nominate
-    candidates; the shared panel combines those candidates with controls and
-    theory seeds before contextual inspection and agreement analysis.}
-    \label{fig:study_design}
-\end{figure}
 
 \section{Results}
 \label{sec:results}
@@ -346,37 +402,33 @@ These positive associations are directionally informative but not strong enough
 to justify treating contextual BERT as a substitute for either cheaper method.
 Figure~\ref{fig:method_agreement} visualizes this pairwise rank structure.
 Each panel plots the drift scores of the 55 lemmas under two methods, with
-Spearman $\rho$ and $p$-values annotated. Panel~(A) reveals the strong
-negative trend between Word2Vec and TF-IDF, where terms ranked highly by one
-baseline tend to be ranked low by the other, confirming that they capture
-fundamentally different facets of change. Panels~(B) and~(C) show that
-contextual BERT draws partial support from both camps without collapsing onto
-either, while Panel~(D) confirms that the two BERT extraction layers agree
-closely with each other.
+Spearman $\rho$ and $p$-values annotated. The Word2Vec vs.\ TF-IDF scatter
+reveals the strong negative trend where terms ranked highly by one baseline
+tend to be ranked low by the other, confirming that they capture fundamentally
+different facets of change. The BERT vs.\ Word2Vec and BERT vs.\ TF-IDF panels
+show that contextual BERT draws partial support from both camps without
+collapsing onto either, while the BERT layer comparison confirms that the two
+extraction layers agree closely with each other.
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=1.0\linewidth]{figs/paper/figure_02_method_agreement.pdf}
-    \caption{Agreement on the shared panel across TF-IDF, Word2Vec, and the
-    preferred BERT layer; panel (D) compares BERT layers -4 and -1.
-    Annotations report Spearman $\bm{\rho}$ and two-sided p-values.}
+    \subfigure{%
+        \includegraphics[width=0.47\linewidth]{figs/paper/figure_02_method_agreement_panel_a.pdf}%
+    }\hfill%
+    \subfigure{%
+        \includegraphics[width=0.47\linewidth]{figs/paper/figure_02_method_agreement_panel_b.pdf}%
+    }\\[4pt]
+    \subfigure{%
+        \includegraphics[width=0.47\linewidth]{figs/paper/figure_02_method_agreement_panel_c.pdf}%
+    }\hfill%
+    \subfigure{%
+        \includegraphics[width=0.47\linewidth]{figs/paper/figure_02_method_agreement_panel_d.pdf}%
+    }
+    \caption{Pairwise rank agreement on the shared comparison panel across BERT vs.\
+    Word2Vec (top left), BERT vs.\ TF-IDF (top right), Word2Vec vs.\ TF-IDF (bottom left),
+    and BERT layers $-4$ vs.\ $-1$ (bottom right). Annotations report Spearman $\bm{\rho}$
+    and two-sided p-values; legend in the top-left panel applies throughout.}
     \label{fig:method_agreement}
-\end{figure}
-
-\begin{figure}[!htb]
-	\centering
-	\subfigure[Performance evaluated in all words.\label{fig:dunn_allWords}]{
-		\centering
-		\includegraphics[width=1.0\linewidth]{figs/paper/figure_02_method_agreement.pdf}
-	}
-	\quad
-	\subfigure[Performance evaluated only in the OOV words.\label{fig:dunn_onlyOOVs}]{
-		\centering
-		\includegraphics[width=1.0\linewidth]{figs/paper/figure_02_method_agreement.pdf}
-	}
-	\caption{Average rankings and critical differences calculated using the Bonferroni-Dunn
-post-hoc test.\label{fig:statisticalAnalisys}}
-     
 \end{figure}
 
 
@@ -418,11 +470,23 @@ noisy signal for this panel-based comparison.
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=0.90\linewidth]{figs/paper/figure_03_overlap_and_rank_statistics.pdf}
-    \caption{Overlap and rank-distribution summaries on the shared comparison
-    panel. Panel (A) traces top-$\bm{k}$ overlap; panels (B) through (D) compare
-    rank-percentile distributions for selected drift terms, theory seeds, and
-    stable controls.}
+    \subfigure{%
+        \includegraphics[width=0.47\linewidth]{figs/paper/figure_03_overlap_and_rank_statistics_panel_a.pdf}%
+    }\hfill%
+    \subfigure{%
+        \includegraphics[width=0.47\linewidth]{figs/paper/figure_03_overlap_and_rank_statistics_panel_b.pdf}%
+    }\\[4pt]
+    \subfigure{%
+        \includegraphics[width=0.47\linewidth]{figs/paper/figure_03_overlap_and_rank_statistics_panel_c.pdf}%
+    }\hfill%
+    \subfigure{%
+        \includegraphics[width=0.47\linewidth]{figs/paper/figure_03_overlap_and_rank_statistics_panel_d.pdf}%
+    }
+    \caption{Overlap and rank-distribution summaries on the shared comparison panel.
+    Top left shows top-$\bm{k}$ overlap between methods; top right through bottom right show
+    rank-percentile distributions by bucket for Word2Vec, TF-IDF, and BERT respectively.
+    Points are individual terms; large markers are bootstrap means with 95\% confidence
+    intervals; brackets report one-sided Mann--Whitney tests for drift terms vs.\ stable controls.}
     \label{fig:overlap_rank_stats}
 \end{figure}
 
@@ -439,10 +503,23 @@ static drift (\textit{reforma}), and a stable-control diagnostic term
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=0.92\linewidth]{figs/paper/figure_04_representative_trajectories.pdf}
-    \caption{Representative term trajectories across methods. Scores are
-    standardized within term and method to emphasize temporal shape rather than
-    absolute scale.}
+    \subfigure{%
+        \includegraphics[width=0.47\linewidth]{figs/paper/figure_04_representative_trajectories_panel_a.pdf}%
+    }\hfill%
+    \subfigure{%
+        \includegraphics[width=0.47\linewidth]{figs/paper/figure_04_representative_trajectories_panel_b.pdf}%
+    }\\[4pt]
+    \subfigure{%
+        \includegraphics[width=0.47\linewidth]{figs/paper/figure_04_representative_trajectories_panel_c.pdf}%
+    }\hfill%
+    \subfigure{%
+        \includegraphics[width=0.47\linewidth]{figs/paper/figure_04_representative_trajectories_panel_d.pdf}%
+    }
+    \caption{Representative term trajectories for \textit{bloqueio} (top left),
+    \textit{sal\'{a}rio} (top right), \textit{reforma} (bottom left), and
+    \textit{trabalho} (bottom right). Scores are standardized within term and method
+    to emphasize temporal shape rather than absolute scale; legend in the top-left panel
+    applies throughout. Word2Vec ribbons denote replicate variability.}
     \label{fig:representative_trajectories}
 \end{figure}
 
@@ -521,7 +598,11 @@ together, these results frame disagreement itself as part of the
 contribution, suggesting that the three method families are sensitive to
 different mixtures of lexical
 salience, neighborhood displacement, and usage-level variation in Brazilian
-Portuguese political discourse.
+Portuguese political discourse. Because the comparative framework
+(Section~\ref{sec:framework}) specifies roles and interfaces rather than
+particular models, it can be instantiated with alternative static or
+contextual embeddings, applied to other languages, or extended with
+additional tiers.
 
 \section{Limitations}
 \label{sec:limitations}

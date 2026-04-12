@@ -5,6 +5,7 @@ description = "Portuguese diachronic semantic-change pipeline for the N2 STIL pa
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+  "adjusttext>=1.3.0",
   "gensim>=4.3.3",
   "hydra-core>=1.3.2",
   "matplotlib>=3.10",

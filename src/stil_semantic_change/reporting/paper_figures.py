@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from adjustText import adjust_text
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 from scipy.stats import mannwhitneyu, spearmanr
 
@@ -245,6 +246,28 @@ def _save_bundle(fig: plt.Figure, output_stem: Path) -> None:
     plt.close(fig)
 
 
+def _save_individual_panels(
+    fig: plt.Figure,
+    axes: list[plt.Axes],
+    output_stem: Path,
+) -> None:
+    """Crop and save each axis as a standalone figure file for use with \\subfigure."""
+    fig.canvas.draw()
+    renderer = fig.canvas.get_renderer()
+    output_stem.parent.mkdir(parents=True, exist_ok=True)
+    for idx, ax in enumerate(axes):
+        letter = ascii_uppercase[idx].lower()
+        panel_stem = output_stem.parent / f"{output_stem.name}_panel_{letter}"
+        tight_bbox = ax.get_tightbbox(renderer)
+        bbox_in = tight_bbox.transformed(fig.dpi_scale_trans.inverted())
+        for suffix, kwargs in EXPORT_SUFFIXES.items():
+            path = panel_stem.with_suffix(f".{suffix}")
+            save_kw: dict[str, object] = {"bbox_inches": bbox_in}
+            if kwargs["dpi"] is not None:
+                save_kw["dpi"] = kwargs["dpi"]
+            fig.savefig(path, **save_kw)
+
+
 def _add_panel_labels(axes: list[plt.Axes], *, x: float = -0.14, y: float = 1.05) -> None:
     for index, axis in enumerate(axes):
         axis.text(
@@ -415,7 +438,7 @@ def _plot_study_design(output_stem: Path) -> None:
         0.35,
         0.18,
         0.30,
-        "BrPoliCorpus floor\n24 yearly slices\nmain corpus",
+        "Diachronic corpus\ntemporal slices\n(preprocessed)",
         facecolor="#F2F2F2",
         edgecolor=OKABE_ITO["grey"],
     )
@@ -424,7 +447,7 @@ def _plot_study_design(output_stem: Path) -> None:
         0.58,
         0.18,
         0.22,
-        "TF-IDF\nadjacent-slice\nsalience",
+        "Lexical-statistical\nbaseline",
         facecolor="#FBE5D6",
         edgecolor=OKABE_ITO["orange"],
         fontsize=8.4,
@@ -434,7 +457,7 @@ def _plot_study_design(output_stem: Path) -> None:
         0.20,
         0.18,
         0.22,
-        "Word2Vec\naligned slice\nneighborhoods",
+        "Static embedding\nmethod",
         facecolor="#DCEAF6",
         edgecolor=OKABE_ITO["blue"],
         fontsize=8.4,
@@ -444,7 +467,7 @@ def _plot_study_design(output_stem: Path) -> None:
         0.32,
         0.20,
         0.36,
-        "Shared panel\n55 lemmas\n15 W2V + 15 TF-IDF\n20 stable + 5 theory",
+        "Shared comparison\npanel\ndrift + stable\n+ theory seeds",
         facecolor="#FFF4D0",
         edgecolor="#B79000",
         fontsize=8.2,
@@ -454,10 +477,10 @@ def _plot_study_design(output_stem: Path) -> None:
         0.56,
         0.20,
         0.24,
-        "Contextual BERT\nsampled usages",
+        "Contextual\nembedding method",
         facecolor="#DDF1E4",
         edgecolor=OKABE_ITO["green"],
-        fontsize=8.4,
+        fontsize=8.2,
     )
     add_box(
         0.76,
@@ -478,25 +501,64 @@ def _plot_study_design(output_stem: Path) -> None:
     add_arrow((0.70, 0.42), (0.76, 0.30), color="#B79000")
     add_arrow((0.86, 0.56), (0.86, 0.42), color=OKABE_ITO["green"])
 
-    ax.text(
-        0.32,
-        0.86,
-        "cheap discovery",
-        color=OKABE_ITO["grey"],
-        fontsize=7.4,
-        ha="center",
-        va="bottom",
-    )
-    ax.text(
-        0.86,
-        0.86,
-        "contextual adjudication",
-        color=OKABE_ITO["grey"],
-        fontsize=7.4,
-        ha="center",
-        va="bottom",
-    )
     _save_bundle(fig, output_stem)
+
+
+def _draw_agreement_scatter(
+    ax: plt.Axes,
+    frame: pd.DataFrame,
+    x_col: str,
+    y_col: str,
+    xlabel: str,
+    ylabel: str,
+    highlight_terms: set[str],
+    add_legend: bool = False,
+) -> dict[str, float]:
+    rho, p_value = spearmanr(frame[x_col], frame[y_col])
+    for bucket, bucket_frame in frame.groupby("bucket", sort=False):
+        ax.scatter(
+            bucket_frame[x_col],
+            bucket_frame[y_col],
+            s=42,
+            alpha=0.9,
+            color=BUCKET_COLORS.get(bucket, OKABE_ITO["black"]),
+            marker=_marker_for_bucket(bucket),
+            linewidth=0.5,
+            edgecolor="white",
+            label=BUCKET_LABELS.get(bucket, bucket),
+        )
+    ax.plot([0, 1], [0, 1], color=OKABE_ITO["grey"], linestyle="--", linewidth=1)
+    ax.set_xlim(-0.02, 1.02)
+    ax.set_ylim(-0.02, 1.02)
+    ax.grid(alpha=0.2)
+    ax.set_xlabel(xlabel)
+    ax.set_ylabel(ylabel)
+    ax.text(
+        0.03,
+        0.05,
+        f"$\\rho$ = {rho:.2f}\n{_format_p_value(float(p_value))}",
+        transform=ax.transAxes,
+        ha="left",
+        va="bottom",
+        bbox={"facecolor": "white", "edgecolor": "none", "alpha": 0.9},
+    )
+    subset = frame.loc[frame["lemma"].isin(highlight_terms)]
+    texts = [
+        ax.text(row[x_col], row[y_col], row["lemma"], fontsize=6.5)
+        for _, row in subset.iterrows()
+    ]
+    adjust_text(
+        texts,
+        ax=ax,
+        arrowprops={"arrowstyle": "-", "color": OKABE_ITO["grey"], "lw": 0.5},
+        expand=(1.2, 1.4),
+        force_text=(0.3, 0.5),
+    )
+    if add_legend:
+        handles, labels = ax.get_legend_handles_labels()
+        unique = dict(zip(labels, handles, strict=False))
+        ax.legend(unique.values(), unique.keys(), loc="lower right", frameon=False, fontsize=6, ncol=2)
+    return {"spearman_r": float(rho), "p_value": float(p_value)}
 
 
 def _plot_method_agreement(
@@ -512,100 +574,66 @@ def _plot_method_agreement(
     bert = bert_comparison.loc[bert_comparison["layer"] == preferred_layer].copy()
     bert["bert_rank"] = bert["primary_drift"].rank(method="first", ascending=False)
     bert["bert_pct"] = _rank_to_percentile(bert["bert_rank"])
-    bert = bert.merge(
-        panel[["lemma", "word2vec_pct", "tfidf_pct"]],
-        on="lemma",
-        how="left",
-    )
+    bert = bert.merge(panel[["lemma", "word2vec_pct", "tfidf_pct"]], on="lemma", how="left")
 
     layer_pivot = bert_comparison.pivot_table(
-        index="lemma",
-        columns="layer",
-        values="primary_drift",
-        aggfunc="first",
+        index="lemma", columns="layer", values="primary_drift", aggfunc="first"
     ).reset_index()
     layer_pivot["bert_minus4_rank"] = layer_pivot[-4].rank(method="first", ascending=False)
     layer_pivot["bert_minus1_rank"] = layer_pivot[-1].rank(method="first", ascending=False)
     layer_pivot["bert_minus4_pct"] = _rank_to_percentile(layer_pivot["bert_minus4_rank"])
     layer_pivot["bert_minus1_pct"] = _rank_to_percentile(layer_pivot["bert_minus1_rank"])
-    layer_pivot = layer_pivot.merge(
-        bert[["lemma", "bucket"]],
-        on="lemma",
-        how="left",
-    )
+    layer_pivot = layer_pivot.merge(bert[["lemma", "bucket"]], on="lemma", how="left")
 
-    fig, axes = plt.subplots(2, 2, figsize=(6.6, 5.9))
     highlight_terms = {"bloqueio", "salário", "reforma", "trabalho"}
-
-    metrics: dict[str, dict[str, float]] = {}
-    panel_specs = [
-        ("BERT vs Word2Vec", bert, "word2vec_pct", "bert_pct", axes[0, 0]),
-        ("BERT vs TF-IDF", bert, "tfidf_pct", "bert_pct", axes[0, 1]),
-        ("Word2Vec vs TF-IDF", bert, "word2vec_pct", "tfidf_pct", axes[1, 0]),
-        ("BERT layer agreement", layer_pivot, "bert_minus4_pct", "bert_minus1_pct", axes[1, 1]),
+    panel_configs = [
+        ("BERT vs Word2Vec",    bert,        "word2vec_pct",    "bert_pct",        "Word2Vec rank percentile",    "BERT rank percentile"),
+        ("BERT vs TF-IDF",      bert,        "tfidf_pct",       "bert_pct",        "TF-IDF rank percentile",      "BERT rank percentile"),
+        ("Word2Vec vs TF-IDF",  bert,        "word2vec_pct",    "tfidf_pct",       "Word2Vec rank percentile",    "TF-IDF rank percentile"),
+        ("BERT layer agreement", layer_pivot, "bert_minus4_pct", "bert_minus1_pct", "BERT layer \u22124 rank percentile", "BERT layer \u22121 rank percentile"),
     ]
 
-    for title, frame, x_col, y_col, axis in panel_specs:
-        rho, p_value = spearmanr(frame[x_col], frame[y_col])
-        metrics[title] = {"spearman_r": float(rho), "p_value": float(p_value)}
-        for bucket, bucket_frame in frame.groupby("bucket", sort=False):
-            axis.scatter(
-                bucket_frame[x_col],
-                bucket_frame[y_col],
-                s=42,
-                alpha=0.9,
-                color=BUCKET_COLORS.get(bucket, OKABE_ITO["black"]),
-                marker=_marker_for_bucket(bucket),
-                linewidth=0.5,
-                edgecolor="white",
-                label=BUCKET_LABELS.get(bucket, bucket),
-            )
-        axis.plot([0, 1], [0, 1], color=OKABE_ITO["grey"], linestyle="--", linewidth=1)
-        axis.set_xlim(-0.02, 1.02)
-        axis.set_ylim(-0.02, 1.02)
-        axis.grid(alpha=0.2)
-        axis.set_title(title)
-        axis.text(
-            0.03,
-            0.05,
-            f"$\\rho$ = {rho:.2f}\n{_format_p_value(float(p_value))}",
-            transform=axis.transAxes,
-            ha="left",
-            va="bottom",
-            bbox={"facecolor": "white", "edgecolor": "none", "alpha": 0.9},
+    metrics: dict[str, dict[str, float]] = {}
+
+    for idx, (name, frame, x_col, y_col, xlabel, ylabel) in enumerate(panel_configs):
+        pfig, pax = plt.subplots(1, 1, figsize=(3.3, 3.0))
+        metrics[name] = _draw_agreement_scatter(
+            pax, frame, x_col, y_col, xlabel, ylabel, highlight_terms, add_legend=(idx == 0)
         )
-        for _, row in frame.loc[frame["lemma"].isin(highlight_terms)].iterrows():
-            axis.annotate(
-                row["lemma"],
-                (row[x_col], row[y_col]),
-                textcoords="offset points",
-                xytext=(4, 4),
-                fontsize=6.5,
-            )
+        letter = ascii_uppercase[idx].lower()
+        _save_bundle(pfig, output_stem.parent / f"{output_stem.name}_panel_{letter}")
 
-    axes[0, 0].set_xlabel("Word2Vec rank percentile")
-    axes[0, 0].set_ylabel("BERT rank percentile")
-    axes[0, 1].set_xlabel("TF-IDF rank percentile")
-    axes[0, 1].set_ylabel("BERT rank percentile")
-    axes[1, 0].set_xlabel("Word2Vec rank percentile")
-    axes[1, 0].set_ylabel("TF-IDF rank percentile")
-    axes[1, 1].set_xlabel("BERT layer -4 rank percentile")
-    axes[1, 1].set_ylabel("BERT layer -1 rank percentile")
+    fig, axes = plt.subplots(2, 2, figsize=(6.6, 5.9))
+    flat_axes = [axes[0, 0], axes[0, 1], axes[1, 0], axes[1, 1]]
+    for ax, (name, frame, x_col, y_col, xlabel, ylabel) in zip(flat_axes, panel_configs):
+        _draw_agreement_scatter(ax, frame, x_col, y_col, xlabel, ylabel, highlight_terms)
 
-    handles, labels = axes[0, 0].get_legend_handles_labels()
+    handles, labels = flat_axes[0].get_legend_handles_labels()
     unique = dict(zip(labels, handles, strict=False))
-    fig.legend(
-        unique.values(),
-        unique.keys(),
-        loc="upper center",
-        ncol=4,
-        frameon=False,
-        bbox_to_anchor=(0.5, 1.02),
-    )
-    _add_panel_labels([axes[0, 0], axes[0, 1], axes[1, 0], axes[1, 1]], x=-0.13, y=1.04)
+    fig.legend(unique.values(), unique.keys(), loc="upper center", ncol=4, frameon=False, bbox_to_anchor=(0.5, 1.02))
+    _add_panel_labels(flat_axes, x=-0.13, y=1.04)
     fig.subplots_adjust(top=0.85)
     _save_bundle(fig, output_stem)
     return metrics
+
+
+def _draw_topk_overlap_panel(ax: plt.Axes, overlap: pd.DataFrame, pair_columns: list[tuple[str, str]]) -> None:
+    for label, column in pair_columns:
+        ax.plot(overlap["k"], overlap[column], marker="o", linewidth=2, color=PAIR_COLORS[label], label=label)
+        for _, row in overlap.iterrows():
+            ax.annotate(
+                f"{int(row[column])}",
+                (row["k"], row[column]),
+                textcoords="offset points",
+                xytext=(0, 5),
+                ha="center",
+                fontsize=6.5,
+            )
+    ax.set_xlabel("Top-k threshold")
+    ax.set_ylabel("Shared terms")
+    ax.set_xticks(overlap["k"])
+    ax.grid(alpha=0.2)
+    ax.legend(frameon=False, loc="upper left")
 
 
 def _plot_overlap_and_rank_statistics(
@@ -615,80 +643,50 @@ def _plot_overlap_and_rank_statistics(
     preferred_layer: int,
     output_stem: Path,
 ) -> dict[str, object]:
-    fig, axes = plt.subplots(2, 2, figsize=(6.6, 5.7))
-
     overlap = topk_overlap.loc[
         (topk_overlap["layer"] == preferred_layer) & (topk_overlap["subset"] == "all_panel")
-    ].copy()
-    overlap = overlap.sort_values("k")
+    ].copy().sort_values("k")
     pair_columns = [
         ("BERT vs Word2Vec", "bert_word2vec_topk_overlap"),
         ("BERT vs TF-IDF", "bert_tfidf_topk_overlap"),
         ("Word2Vec vs TF-IDF", "word2vec_tfidf_topk_overlap"),
     ]
-    for label, column in pair_columns:
-        axes[0, 0].plot(
-            overlap["k"],
-            overlap[column],
-            marker="o",
-            linewidth=2,
-            color=PAIR_COLORS[label],
-            label=label,
-        )
-        for _, row in overlap.iterrows():
-            axes[0, 0].annotate(
-                f"{int(row[column])}",
-                (row["k"], row[column]),
-                textcoords="offset points",
-                xytext=(0, 5),
-                ha="center",
-                fontsize=6.5,
-            )
-    axes[0, 0].set_xlabel("Top-k threshold")
-    axes[0, 0].set_ylabel("Shared terms")
-    axes[0, 0].set_title("Top-k overlap on the shared panel")
-    axes[0, 0].set_xticks(overlap["k"])
-    axes[0, 0].grid(alpha=0.2)
-    axes[0, 0].legend(frameon=False, loc="upper left")
 
     preferred = bert_comparison.loc[bert_comparison["layer"] == preferred_layer].copy()
     panel = comparison_panel.copy()
     preferred["bert_rank"] = preferred["primary_drift"].rank(method="first", ascending=False)
     method_frames = {
-        "Word2Vec": panel[["lemma", "bucket", "word2vec_rank"]].rename(
-            columns={"word2vec_rank": "rank"}
-        ),
-        "TF-IDF": panel[["lemma", "bucket", "tfidf_rank"]].rename(
-            columns={"tfidf_rank": "rank"}
-        ),
-        "BERT": preferred[["lemma", "bucket", "bert_rank"]].rename(
-            columns={"bert_rank": "rank"}
-        ),
-    }
-
-    stats_summary: dict[str, object] = {
-        "overlap": overlap.to_dict(orient="records"),
-        "bucket_tests": {},
+        "Word2Vec": panel[["lemma", "bucket", "word2vec_rank"]].rename(columns={"word2vec_rank": "rank"}),
+        "TF-IDF":   panel[["lemma", "bucket", "tfidf_rank"]].rename(columns={"tfidf_rank": "rank"}),
+        "BERT":     preferred[["lemma", "bucket", "bert_rank"]].rename(columns={"bert_rank": "rank"}),
     }
     bucket_order = ["Selected drift", "Theory seed", "Stable control"]
     bucket_palette = {
         "Selected drift": OKABE_ITO["yellow"],
-        "Theory seed": OKABE_ITO["purple"],
+        "Theory seed":    OKABE_ITO["purple"],
         "Stable control": OKABE_ITO["grey"],
     }
 
-    for axis, (method_label, frame) in zip(
-        [axes[0, 1], axes[1, 0], axes[1, 1]],
-        method_frames.items(),
-        strict=False,
-    ):
+    stats_summary: dict[str, object] = {"overlap": overlap.to_dict(orient="records"), "bucket_tests": {}}
+
+    pfig_a, pax_a = plt.subplots(1, 1, figsize=(3.3, 2.9))
+    _draw_topk_overlap_panel(pax_a, overlap, pair_columns)
+    _save_bundle(pfig_a, output_stem.parent / f"{output_stem.name}_panel_a")
+
+    for idx, (method_label, frame) in enumerate(method_frames.items(), start=1):
+        pfig, pax = plt.subplots(1, 1, figsize=(3.3, 2.9))
         stats_summary["bucket_tests"][method_label] = _plot_bucket_rank_panel(
-            axis=axis,
-            method_label=method_label,
-            frame=frame,
-            bucket_order=bucket_order,
-            bucket_palette=bucket_palette,
+            axis=pax, method_label=method_label, frame=frame,
+            bucket_order=bucket_order, bucket_palette=bucket_palette,
         )
+        letter = ascii_uppercase[idx].lower()
+        _save_bundle(pfig, output_stem.parent / f"{output_stem.name}_panel_{letter}")
+
+    fig, axes = plt.subplots(2, 2, figsize=(6.6, 5.7))
+    _draw_topk_overlap_panel(axes[0, 0], overlap, pair_columns)
+    for axis, (method_label, frame) in zip([axes[0, 1], axes[1, 0], axes[1, 1]], method_frames.items(), strict=False):
+        _plot_bucket_rank_panel(axis=axis, method_label=method_label, frame=frame,
+                                bucket_order=bucket_order, bucket_palette=bucket_palette)
 
     _add_panel_labels([axes[0, 0], axes[0, 1], axes[1, 0], axes[1, 1]], x=-0.13, y=1.04)
     _save_bundle(fig, output_stem)
@@ -739,7 +737,6 @@ def _plot_bucket_rank_panel(
     axis.set_xticklabels(bucket_order, rotation=18, ha="right")
     axis.set_ylim(-0.02, 1.05)
     axis.set_ylabel("Rank percentile")
-    axis.set_title(method_label)
     axis.grid(axis="y", alpha=0.2)
 
     drift_values = plot_frame.loc[
@@ -789,10 +786,8 @@ def _plot_representative_trajectories(
     preferred_layer: int,
     output_stem: Path,
 ) -> None:
-    fig, axes = plt.subplots(2, 2, figsize=(6.6, 5.7), sharex=True, sharey=True)
-    flat_axes = [axes[0, 0], axes[0, 1], axes[1, 0], axes[1, 1]]
-
-    for axis, (term, subtitle) in zip(flat_axes, SELECTED_TRAJECTORY_TERMS.items(), strict=False):
+    term_data: list[tuple[str, pd.DataFrame, pd.DataFrame, pd.DataFrame, np.ndarray, np.ndarray, np.ndarray]] = []
+    for term in SELECTED_TRAJECTORY_TERMS:
         w_frame = (
             word2vec_trajectory.loc[word2vec_trajectory["lemma"] == term]
             .groupby(["to_slice", "transition"])
@@ -812,64 +807,58 @@ def _plot_representative_trajectories(
             .sort_values("to_slice")
             .reset_index(drop=True)
         )
-
         years = w_frame["to_slice"].astype(int).to_numpy()
         w_mean = _zscore(w_frame["mean_drift"].to_numpy())
         w_std = w_frame["std_drift"].fillna(0.0).to_numpy()
         w_scale = float(w_frame["mean_drift"].std(ddof=0))
         w_std = w_std / w_scale if w_scale > 0 else np.zeros_like(w_std)
+        term_data.append((term, t_frame, b_frame, years, w_mean, w_std))
 
-        axis.plot(
-            years,
-            w_mean,
-            color=METHOD_COLORS["Word2Vec"],
-            linewidth=2,
-            marker="o",
-            label="Word2Vec",
-        )
-        axis.fill_between(
-            years,
-            w_mean - w_std,
-            w_mean + w_std,
-            color=METHOD_COLORS["Word2Vec"],
-            alpha=0.18,
-        )
-        axis.plot(
-            t_frame["to_slice"].astype(int),
-            _zscore(t_frame["drift"].to_numpy()),
-            color=METHOD_COLORS["TF-IDF"],
-            linewidth=1.8,
-            marker="s",
-            label="TF-IDF",
-        )
-        axis.plot(
-            b_frame["to_slice"].astype(int),
-            _zscore(b_frame["drift"].to_numpy()),
-            color=METHOD_COLORS["BERT"],
-            linewidth=1.8,
-            marker="^",
-            label="BERT",
-        )
-        axis.axhline(0.0, color=OKABE_ITO["grey"], linewidth=0.8, linestyle="--", alpha=0.8)
-        axis.set_title(f"{term}\n{subtitle}", fontsize=8.5)
-        axis.grid(alpha=0.2)
-        axis.set_xlim(years.min() - 0.2, years.max() + 0.2)
-        axis.set_xticks(years[::4])
+    def _draw_trajectory_panel(
+        ax: plt.Axes,
+        term: str,
+        t_frame: pd.DataFrame,
+        b_frame: pd.DataFrame,
+        years: np.ndarray,
+        w_mean: np.ndarray,
+        w_std: np.ndarray,
+        add_legend: bool = False,
+    ) -> None:
+        ax.plot(years, w_mean, color=METHOD_COLORS["Word2Vec"], linewidth=2, marker="o", label="Word2Vec")
+        ax.fill_between(years, w_mean - w_std, w_mean + w_std, color=METHOD_COLORS["Word2Vec"], alpha=0.18)
+        ax.plot(t_frame["to_slice"].astype(int), _zscore(t_frame["drift"].to_numpy()),
+                color=METHOD_COLORS["TF-IDF"], linewidth=1.8, marker="s", label="TF-IDF")
+        ax.plot(b_frame["to_slice"].astype(int), _zscore(b_frame["drift"].to_numpy()),
+                color=METHOD_COLORS["BERT"], linewidth=1.8, marker="^", label="BERT")
+        ax.axhline(0.0, color=OKABE_ITO["grey"], linewidth=0.8, linestyle="--", alpha=0.8)
+        ax.set_title(term, fontsize=8.5)
+        ax.grid(alpha=0.2)
+        ax.set_xlim(years.min() - 0.2, years.max() + 0.2)
+        ax.set_xticks(years[::4])
+        ax.set_xlabel("Right-hand slice year")
+        ax.set_ylabel("Within-term standardized drift")
+        if add_legend:
+            handles, labels = ax.get_legend_handles_labels()
+            ax.legend(handles, labels, loc="upper right", frameon=False, fontsize=6, ncol=3)
 
-    for axis in flat_axes[2:]:
-        axis.set_xlabel("Right-hand slice year")
-    for axis in [axes[0, 0], axes[1, 0]]:
-        axis.set_ylabel("Within-term standardized drift")
+    for idx, (term, t_frame, b_frame, years, w_mean, w_std) in enumerate(term_data):
+        pfig, pax = plt.subplots(1, 1, figsize=(3.3, 2.9))
+        _draw_trajectory_panel(pax, term, t_frame, b_frame, years, w_mean, w_std, add_legend=(idx == 0))
+        letter = ascii_uppercase[idx].lower()
+        _save_bundle(pfig, output_stem.parent / f"{output_stem.name}_panel_{letter}")
+
+    fig, axes = plt.subplots(2, 2, figsize=(6.6, 5.7), sharex=True, sharey=True)
+    flat_axes = [axes[0, 0], axes[0, 1], axes[1, 0], axes[1, 1]]
+    for ax, (term, t_frame, b_frame, years, w_mean, w_std) in zip(flat_axes, term_data):
+        _draw_trajectory_panel(ax, term, t_frame, b_frame, years, w_mean, w_std)
+
+    for axis in flat_axes[:2]:
+        axis.set_xlabel("")
+    for axis in [axes[0, 1], axes[1, 1]]:
+        axis.set_ylabel("")
 
     handles, labels = flat_axes[0].get_legend_handles_labels()
-    fig.legend(
-        handles,
-        labels,
-        loc="upper center",
-        ncol=3,
-        frameon=False,
-        bbox_to_anchor=(0.5, 1.02),
-    )
+    fig.legend(handles, labels, loc="upper center", ncol=3, frameon=False, bbox_to_anchor=(0.5, 1.02))
     _add_panel_labels(flat_axes, x=-0.13, y=1.06)
     fig.subplots_adjust(top=0.87)
     _save_bundle(fig, output_stem)
