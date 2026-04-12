@@ -44,3 +44,18 @@ run/outputs/
 *.out
 *.synctex.gz
 *.toc
+
+# Figure outputs not used in article compilation
+# Non-PDF formats (only .pdf is referenced by LaTeX)
+2026S1_STIL_conceptDrift (1)/figs/paper/*.eps
+2026S1_STIL_conceptDrift (1)/figs/paper/*.png
+2026S1_STIL_conceptDrift (1)/figs/paper/*.tiff
+# Combined (non-panel) figures for 2/3/4 — superseded by individual panels
+2026S1_STIL_conceptDrift (1)/figs/paper/figure_02_method_agreement.pdf
+2026S1_STIL_conceptDrift (1)/figs/paper/figure_03_overlap_and_rank_statistics.pdf
+2026S1_STIL_conceptDrift (1)/figs/paper/figure_04_representative_trajectories.pdf
+# Corpus profile figure — not included in article
+2026S1_STIL_conceptDrift (1)/figs/paper/figure_01_corpus_profile.pdf
+# Figure generation metadata
+2026S1_STIL_conceptDrift (1)/figs/paper/figure_manifest.json
+2026S1_STIL_conceptDrift (1)/figs/paper/figure_inventory.md
