@@ -52,7 +52,7 @@ Spearman rank correlations against internal drift scores.
     \centering
     \footnotesize
     \caption{Spearman $\rho$ between internal drift and Google Trends movement.
-    \textbf{Bold} = $p < 0.05$.}
+    \textbf{Bold} = uncorrected $p < 0.05$.}
     \label{tab:external_correlations}
     \begin{tabularx}{\linewidth}{@{}l l >{\raggedleft\arraybackslash}X >{\raggedleft\arraybackslash}X >{\raggedleft\arraybackslash}X@{}}
         \toprule
@@ -63,6 +63,8 @@ Spearman rank correlations against internal drift scores.
         TF-IDF & Full panel & $-0.07$ & $\bm{-0.45}$ & $\bm{-0.41}$ \\
         TF-IDF & Drift only & $-0.26$ & $\bm{-0.54}$ & $\bm{-0.47}$ \\
         BERT($-1$) & Full panel & $0.06$ & $0.07$ & $0.01$ \\
+        EmbeddingGemma & Full panel & $0.14$ & $\bm{0.40}$ & $\bm{0.32}$ \\
+        EmbeddingGemma & Drift only & $0.07$ & $\bm{0.36}$ & $0.25$ \\
         \bottomrule
     \end{tabularx}
 \end{table}
@@ -75,9 +77,23 @@ the flattest stable controls, not by rank-ordering within the drift list.
 Group-level tests confirm this pattern, as Word2Vec drift terms have higher external
 movement than controls (Mann--Whitney $p = 0.013$, Cliff's $\delta = 0.50$).
 \textbf{TF-IDF correlates negatively} ($\rho = -0.45$, $p < 0.001$), meaning
-TF-IDF-led candidates are on average \emph{less} externally salient than
-controls, reinforcing that TF-IDF captures agenda-internal reweightings.
-\textbf{BERT shows no correlation} ($|\rho| < 0.08$, $p > 0.59$).
+that higher TF-IDF drift is associated with \emph{lower} external volatility,
+consistent with agenda-internal reweightings rather than public search
+salience. \textbf{BERT shows no correlation} ($|\rho| < 0.08$, $p > 0.59$).
+
+A supplementary \textbf{EmbeddingGemma} comparator, run post hoc on the same
+frozen 55-term panel and the same sampled occurrence set, falls between
+Word2Vec and frozen BERT. It shows a \textbf{positive association with Google
+volatility} on the full panel ($\rho = 0.40$, $p = 0.002$ for $\sigma$;
+$\rho = 0.32$, $p = 0.016$ for range), stronger than BERT but weaker than
+Word2Vec. Internally, it agrees moderately with both Word2Vec ($\rho = 0.52$,
+$p < 0.001$) and BERT($-1$) ($\rho = 0.47$, $p < 0.001$), while remaining
+negative with TF-IDF ($\rho = -0.44$, $p < 0.001$). At the same time, its top
+15 contains \textbf{five stable controls}, and its drift scores are
+\textbf{negatively associated with sample support} ($\rho = -0.55$ with total
+sample count), indicating substantial low-frequency leakage. We therefore treat
+EmbeddingGemma as an informative supplementary comparator, not as a replacement
+for the frozen contextual stage.
 
 The time-series overlays in Figure~\ref{fig:ts_overlays} illustrate what these
 correlations look like at the term level. All series are $z$-standardized
@@ -140,9 +156,12 @@ Trends movement ($\rho = 0.51$ on the full panel), but this correlation is
 \textbf{driven by the gap between drift candidates and the flattest controls},
 not by a monotonic relationship within the drift list itself. Once stable
 controls are removed, the association drops to non-significant. TF-IDF drift
-shows a \textbf{significant negative correlation}, meaning its top candidates
-are \emph{less} publicly salient, not more. BERT shows \textbf{no relationship
-at all}.
+shows a \textbf{significant negative correlation}, meaning that higher TF-IDF
+drift tends to align with \emph{lower} Google volatility. BERT shows
+\textbf{no relationship at all}. The supplementary EmbeddingGemma comparator
+recovers part of the Word2Vec-side pattern, with a positive correlation for
+Google volatility ($\rho = 0.40$), but this comes with noticeably more
+stable-control leakage and stronger sensitivity to sparse terms.
 
 At the term level, the pattern is informative. Convergence occurs for
 \textbf{publicly salient issue terms} such as \textit{previd\^encia},
@@ -154,11 +173,11 @@ neighborhood shifts inside parliament leave no trace in public search behavior.
 
 This selectivity is itself the main takeaway. Google Trends does not adjudicate
 which drift detector is correct, but it confirms that the three methods
-\textbf{capture fundamentally different facets of change}. Word2Vec picks up
-publicly resonant neighborhood reorganizations, TF-IDF picks up
-agenda-internal salience shifts that are invisible to Google, and BERT operates
-at a usage level that a population-level search proxy simply cannot reach.
-No single external signal benchmarks all three, reinforcing the paper's core
+\textbf{capture different facets of change}. The supplementary EmbeddingGemma
+run reinforces this point rather than resolving it: it aligns partly with
+Word2Vec and partly with frozen BERT, shows some positive external resonance,
+yet still promotes several stable controls. No single external signal
+benchmarks all of these representations cleanly, reinforcing the paper's core
 finding that \textbf{disagreement among methods is not noise --- it is
 evidence that they measure different things}.
 
