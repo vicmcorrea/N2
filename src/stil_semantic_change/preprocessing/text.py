@@ -197,7 +197,9 @@ class PortuguesePreprocessor:
         return ProcessedBatch(documents=documents_df, tokens=tokens_df)
 
     def tokenize_text(self, text: str) -> list[str]:
-        return [str(token.text) for token in self._nlp(text)]
+        # Tokenization-only callers should bypass the full pipeline to avoid
+        # unnecessary tagging/lemmatization work.
+        return [str(token.text) for token in self._nlp.make_doc(text)]
 
     def _process_document(
         self,
