@@ -78,12 +78,11 @@ and computational cost in Brazilian Portuguese political discourse. %The framewo
 \label{sec:introduction}
 
 % Political discourse is a productive setting for diachronic NLP because shifts in agenda, coalition structure, and policy framing leave traces in lexical choice and word usage over time. 
-The language of politics reflects historical change, as shifts in ideological agendas, coalition structures, and policy framing become observable in patterns of lexical choice and word usage over time. However, manually analyzing large-scale and evolving patterns in political discourse is challenging. Diachronic natural language processing (NLP) methods can capture some of these movements at scale, but different modeling choices foreground different aspects of change
+Political language carries historical change in its lexical choices, as shifts in ideological agendas, coalition structures, and policy framing leave traces in word usage over time. Analyzing these large-scale patterns by hand is impractical. Diachronic natural language processing (NLP) methods can capture some of the movement at scale, but different modeling choices foreground different aspects of change
 \cite{hamilton-etal-2016-diachronic,kutuzov-etal-2018-diachronic,tahmasebi-etal-2021-computational}.
-In political corpora the situation is especially complex, since a term may drift
+In political corpora the picture is especially complex, since a term may drift
 because of a new policy referent, a rhetorical reframing, a shift in
-collocational profile, or a reorganization of discourse coalitions. None of
-these mechanisms reduces neatly to a single lexical sense change. 
+collocational profile, or a reorganization of discourse coalitions. No single mechanism accounts for all of them. 
 
 This complexity carries over to evaluation, where shared-task benchmarks have
 improved comparability in lexical semantic change
@@ -129,12 +128,12 @@ Such embeddings remain attractive because they are efficient and produce
 interpretable neighborhood movements, but they compress all usages of a word
 into a single vector, blurring cases in which older and newer usages coexist.
 
-Despite these methodological advances, evaluation remains a central challenge. Standardized shared tasks have improved
+Evaluation remains a central challenge. Standardized shared tasks have improved
 comparability \cite{schlechtweg-etal-2020-semeval}, yet many real-world studies
 still operate without external semantic ground truth, and apparent change can
 emerge from temporal referencing, alignment noise, or genre shifts rather than
 from semantic drift alone \cite{dubossarsky-etal-2019-timeout}. These concerns
-motivate the stable controls and agreement analysis in the present work.
+motivate the stable controls and agreement analysis we use below.
 
 %Contextual models offer a partial response to the aggregation problem. BERT-style representations encode token-level usages and can surface variation that static spaces smooth over \cite{giulianelli-etal-2020-analysing,devlin-etal-2019-bert}.
 Contextual models provide a complementary perspective. BERT-style representations encode token-level usages and can surface variation that static spaces smooth over \cite{giulianelli-etal-2020-analysing,devlin-etal-2019-bert}.
@@ -153,12 +152,12 @@ and literary material rather than political discourse
 \cite{lima-lopes-2025-brpolicorpus} now provides the scale needed for
 controlled comparative work in this domain.
 
-Taken together, this literature motivates a comparison in which no single detector is treated as ground truth. The framework below therefore makes the comparison itself explicit: cheaper methods screen broadly, contextual modeling is used selectively, and agreement diagnostics show where the resulting rankings converge or diverge.
+This literature motivates a comparison in which no single detector is treated as ground truth. Our framework makes the comparison itself explicit: cheaper methods screen broadly, contextual modeling is used selectively, and agreement diagnostics show where the resulting rankings converge or diverge.
 
 \section{Comparative Drift Framework}
 \label{sec:framework}
 
-This section defines the general design of the proposed framework before any corpus-specific choices are introduced. The source code of the framework and the experiments is available in the \href{https://anonymous.4open.science/r/STIL2025\%20conceptdrift-3DAC}{anonymous repository}. Section~\ref{sec:methodology} then instantiates the design with BrPoliCorpus, TF-IDF, Word2Vec, and BERTimbau Large. The framework is summarized in Figure~\ref{fig:study_design}. 
+We first describe the framework in general terms, independent of any particular corpus or model. Section~\ref{sec:methodology} then instantiates it with BrPoliCorpus, TF-IDF, Word2Vec, and BERTimbau Large. Figure~\ref{fig:study_design} summarizes the overall flow. Source code for the framework and experiments is available in the \href{https://anonymous.4open.science/r/STIL2025\%20conceptdrift-3DAC}{anonymous repository}. 
 
 \begin{figure}[!htb]
     \centering
@@ -206,8 +205,7 @@ The framework is model- and language-agnostic. Any combination of methods that r
 \section{Methodology}
 \label{sec:methodology}
 
-We instantiate the comparative framework of Section~\ref{sec:framework} on
-Brazilian Portuguese parliamentary discourse. 
+We instantiate the framework on Brazilian Portuguese parliamentary discourse, specifying the corpus, preprocessing choices, and the model used in each tier.
 
 \subsection{Corpus and Preprocessing}
 
@@ -251,10 +249,7 @@ further restricted to nouns and adjectives, and a small set of procedural
 high-frequency terms is excluded. These filters reduce the scored vocabulary
 to 3{,}221 lemmas for the two cheaper methods.
 
-Yearly document counts range from 3{,}041 to 26{,}868 (median 16{,}752) and
-retained token volume from 630K to 4.2M (median 2.6M). Document volume is high
-throughout, but token and vocabulary variation across slices motivates the
-frequency and slice-presence controls described above.
+Yearly document counts range from 3{,}041 to 26{,}868 (median 16{,}752) and retained token volume from 630K to 4.2M (median 2.6M), which is why the frequency and slice-presence thresholds matter in practice.
 
 \begin{table*}[!htb]
     \centering
@@ -313,11 +308,7 @@ frequency and slice-presence controls described above.
 
 \subsection{Drift Detection Tiers}
 
-Each tier of the proposed framework (Section~\ref{sec:framework}) is instantiated with a specific, well-established model: TF-IDF for the lexical-statistical baseline,
-slice-aligned Word2Vec with Orthogonal Procrustes for the static-embedding
-tier, and BERTimbau Large for the contextual tier. The individual techniques
-are grounded in the literature~\cite{hamilton-etal-2016-diachronic,giulianelli-etal-2020-analysing} %; our contribution is their orchestration through the staged pipeline and shared panel design.
-and are integrated through the staged pipeline and shared panel design introduced in Section~\ref{sec:framework}.
+Each tier is filled with a well-established model: TF-IDF for the lexical-statistical baseline, slice-aligned Word2Vec with Orthogonal Procrustes for the static-embedding tier, and BERTimbau Large for the contextual tier. These individual techniques are standard in the literature~\cite{hamilton-etal-2016-diachronic,giulianelli-etal-2020-analysing}; the contribution here lies in combining them inside the staged comparison.
 
 % \subsubsection{TF-IDF Baseline}
 
@@ -358,7 +349,7 @@ For the \textbf{contextual tier}, we embed sampled in-context occurrences using 
 %Following the panel design prescribed by the framework (Section~\ref{sec:framework}), we construct a shared panel of 55~lemmas: 15~Word2Vec-led drift candidates, 15~TF-IDF-led drift candidates, 20~stable controls (lemmas ranked lowest by both cheaper methods), and 5~theory seeds drawn from prior work on Brazilian political vocabulary (\textit{democracia}, \textit{corrup\c{c}\~ao}, \textit{reforma}, \textit{economia}, \textit{liberdade}). All three methods observe the same candidate set, so disagreement reflects properties of the signal rather than divergent vocabularies. The agreement layer derives pairwise rank correlations, top-$k$ overlaps, stable-control leakage diagnostics, and a filtered contextual ranking. 
 Following the framework design (Section~\ref{sec:framework}), we build one shared panel before running the contextual stage. The panel contains 55~lemmas: 15~Word2Vec-led drift candidates, 15~TF-IDF-led drift candidates, 20~stable controls, and 5~theory seeds. The method-led candidates are the highest-ranked nouns or adjectives from each cheaper tier after the eligibility filters described above. Stable controls are low-drift nouns or adjectives ranked near the bottom by both cheaper tiers, following the logic that control terms help reveal spurious drift signals rather than only highlighting positive examples~\cite{dubossarsky-etal-2017-outta}. The theory seeds are \textit{democracia}, \textit{corrup\c{c}\~ao}, \textit{reforma}, \textit{economia}, and \textit{liberdade}, selected from the study design as broad political vocabulary anchors rather than as data-mined drift candidates.
 
-The 15+15+20+5 composition is a practical default fixed before contextual scoring, not a tuned result. Fifteen candidates per cheaper tier capture the top region of each method-specific ranking while keeping BERT inference tractable, since each additional lemma can require sampled contexts across 24 yearly slices. The 20 stable controls give the diagnostics enough negative examples to detect leakage, and the 5 theory seeds keep a small interpretive anchor without turning domain knowledge into a third candidate source. All three methods score this same panel. The agreement layer then reports pairwise Spearman rank correlations, top-$k$ overlap curves for $k=1,\dots,15$, stable-control leakage, and a filtered contextual ranking for qualitative inspection.
+The 15+15+20+5 composition is an empirical design choice, fixed before contextual scoring rather than tuned against results. We picked it by balancing three practical concerns, namely coverage of each method's top region, enough negative examples for the leakage diagnostics, and BERT inference time over 24 yearly slices. Fifteen candidates per cheaper tier stay within the informative top region of each method-specific ranking without inflating contextual cost, since each additional lemma requires sampled contexts across all slices. Twenty stable controls give the diagnostics enough negative examples to detect leakage, and five theory seeds act as an interpretive anchor without turning domain knowledge into a third candidate source. All three methods score this same panel. The agreement layer then reports pairwise Spearman rank correlations, top-$k$ overlap curves for $k=1,\dots,15$, stable-control leakage, and a filtered contextual ranking for qualitative inspection.
 
 \section{Results}
 \label{sec:results}
@@ -402,10 +393,11 @@ Figure~\ref{fig:method_agreement} reports the pairwise Spearman rank-correlation
         \includegraphics[width=0.45\linewidth]{figs/paper/figure_03_overlap_and_rank_statistics_panel_d.pdf}%
     }
     \caption{Overlap and rank-distribution summaries on the shared comparison panel.
-    Top left shows top-$\bm{k}$ overlap between methods; top right through bottom right show
-    rank-percentile distributions by bucket for Word2Vec, TF-IDF, and BERT respectively.
-    Points are individual terms; large markers are bootstrap means with 95\% confidence
-    intervals; brackets report one-sided Mann--Whitney tests for drift terms vs.\ stable controls.}
+    Panel A shows top-$\bm{k}$ overlap between methods. Panels B--D use standard
+    boxplots to summarize rank-percentile distributions by bucket for Word2Vec, TF-IDF, and BERT respectively.
+    Boxes show medians and interquartile ranges, whiskers extend to 1.5$\times$
+    the interquartile range, and points show outliers. Brackets report one-sided
+    Mann--Whitney tests for drift terms vs.\ stable controls.}
     \label{fig:overlap_rank_stats}
 \end{figure}
 
@@ -422,13 +414,13 @@ The BERT layer comparison gives a separate robustness check. Layers $-4$ and $-1
 
 % Figure~\ref{fig:method_agreement} visualizes this pairwise rank structure. Each panel plots the drift scores of the 55 lemmas under two methods, with Spearman $\rho$ and $p$-values annotated. The Word2Vec vs.\ TF-IDF scatter reveals the strong negative trend where terms ranked highly by one baseline tend to be ranked low by the other, confirming that they capture fundamentally different facets of change. The BERT vs.\ Word2Vec and BERT vs.\ TF-IDF panels show that contextual BERT draws partial support from both camps without collapsing onto either, while the BERT layer comparison confirms that the two extraction layers agree closely with each other.
 
-Figure~\ref{fig:overlap_rank_stats} reports the remaining diagnostics of the agreement layer. The top-left panel shows top-$k$ overlap across methods, while the remaining panels compare rank-percentile distributions of drift-candidate buckets and stable controls for Word2Vec, TF-IDF, and BERT.
+Figure~\ref{fig:overlap_rank_stats} reports the remaining diagnostics of the agreement layer. Panel~A shows top-$k$ overlap across methods, while Panels~B--D use standard boxplots to compare the rank-percentile distributions of drift-candidate buckets and stable controls for Word2Vec, TF-IDF, and BERT.
 
 %Overlap statistics and bucket-level rank distributions prove more informativethan raw top-$k$ lists alone. 
 Top-$k$ overlap statistics reinforce the previous interpretation. In the primary BERT layer ($-1$),
 the top-15 overlap is 7 terms with Word2Vec and 6 terms with TF-IDF, whereas the
 baseline-to-baseline overlap remains zero. Thus, contextual BERT recovers candidates favored by both cheaper tiers while preserving an intermediate ranking structure of its own. %Figure~\ref{fig:overlap_rank_stats} also shows that selected drift terms are ranked significantly above stable controls by Word2Vec and TF-IDF ($p < .001$ in both cases), while contextual BERT still separates the groups but with weaker margins ($p = .008$). This pattern is consistent with the filtered contextual panel, where BERT provides useful adjudication but the raw contextual ranking still leaks some stable controls and should not be treated as an unrestricted final list. The two contextual extraction layers nevertheless agree strongly with each other (Spearman $= 0.858$), so the broad comparative picture does not depend on a single extraction depth. This high inter-layer agreement accords with findings that mid-to-upper layers carry most of the semantic change signal, while the final layer increasingly encodes surface-form information that can bias change scores~\cite{laicher-etal-2021-explaining,periti-tahmasebi-2024-systematic}; the stability between layers $-1$ and $-4$ in our setting suggests that orthographic bias does not yet dominate, though it does not rule it out.
-Bucket-level rank distributions further evaluate whether each method separates nominated drift terms from stable controls. Word2Vec and TF-IDF rank drift candidates significantly above stable controls ($p < .001$ in both cases, one-sided Mann--Whitney), showing clean bucket separation. BERT also separates the groups, but with weaker margins ($p = .008$). This weaker contrast is consistent with inspection of the raw contextual ranking, where some stable controls still appear near the top positions.
+The boxplots in Panels~B--D further evaluate whether each method separates nominated drift terms from stable controls. Word2Vec and TF-IDF rank drift candidates significantly above stable controls ($p < .001$ in both cases, one-sided Mann--Whitney), showing clean bucket separation. BERT also separates the groups, but with weaker margins ($p = .008$). This weaker contrast is consistent with inspection of the raw contextual ranking, where some stable controls still appear near the top positions.
 
 For that reason, the contextual ranking is most useful as a selective interpretive layer rather than as an unrestricted final candidate list. After filtering leaked controls, the remaining contextual candidates provide informative arbitration among terms proposed by the cheaper methods.
 
@@ -449,7 +441,7 @@ comparative conclusions are robust to the choice of contextual aggregation,
 while the separation difference suggests that centroid distance is a less
 noisy signal for this panel-based comparison.
 
-In summary, the agreement layer shows why the staged design matters. The two cheaper tiers provide distinct candidate pools at low cost, while the more expensive contextual stage adds useful comparative evidence when disagreement between baselines is itself informative.
+The agreement layer thus shows where the staged design pays off: the two cheaper tiers produce distinct candidate pools at low cost, and the contextual stage adds comparative evidence in the places where the baselines disagree.
 
 \section{Discussion}
 \label{sec:discussion}
@@ -565,11 +557,7 @@ At roughly $600{\times}$ the cost of TF-IDF, though, the current evidence
 favors using it selectively rather than as a replacement for the cheaper
 methods. 
 
-Taken together, these results frame disagreement itself as part of the
-contribution, suggesting that the three method families are sensitive to
-different mixtures of lexical
-salience, neighborhood displacement, and usage-level variation in Brazilian
-Portuguese political discourse. Because the comparative framework
+These results frame disagreement itself as part of the contribution: the three method families respond to different mixtures of lexical salience, neighborhood displacement, and usage-level variation in Brazilian Portuguese political discourse. Because the comparative framework
 (Section~\ref{sec:framework}) specifies roles and interfaces rather than
 particular models, it can be instantiated with alternative static or
 contextual embeddings, applied to other languages, or extended with

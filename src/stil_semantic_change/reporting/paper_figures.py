@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 from adjustText import adjust_text
+from matplotlib.colors import to_rgba
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 from scipy.stats import mannwhitneyu, spearmanr
 
@@ -158,10 +159,11 @@ def generate_paper_figures(experiment_root: Path, output_dir: Path) -> dict[str,
             "caption": (
                 "Overlap and rank-distribution summaries on the shared comparison panel. Panel "
                 "(A) traces top-k overlap for the preferred BERT layer. Panels (B) through (D) "
-                "show rank-percentile distributions by bucket for Word2Vec, TF-IDF, and BERT. "
-                "Points show individual terms, large markers show means, error bars show 95% "
-                "bootstrap confidence intervals, and brackets report one-sided Mann-Whitney tests "
-                "for selected drift terms versus stable controls."
+                "use standard boxplots to summarize rank-percentile distributions by bucket "
+                "for Word2Vec, TF-IDF, and BERT. "
+                "Boxes show medians and interquartile ranges, whiskers extend to 1.5 times the "
+                "interquartile range, points show outliers, and brackets report one-sided "
+                "Mann-Whitney tests for selected drift terms versus stable controls."
             ),
             "stats": overlap_metrics,
         }
@@ -617,7 +619,13 @@ def _plot_method_agreement(
     return metrics
 
 
-def _draw_topk_overlap_panel(ax: plt.Axes, overlap: pd.DataFrame, pair_columns: list[tuple[str, str]]) -> None:
+def _draw_topk_overlap_panel(
+    ax: plt.Axes,
+    overlap: pd.DataFrame,
+    pair_columns: list[tuple[str, str]],
+    *,
+    panel_label: str | None = None,
+) -> None:
     for label, column in pair_columns:
         ax.plot(overlap["k"], overlap[column], marker="o", linewidth=2, color=PAIR_COLORS[label], label=label)
         for _, row in overlap.iterrows():
@@ -634,6 +642,9 @@ def _draw_topk_overlap_panel(ax: plt.Axes, overlap: pd.DataFrame, pair_columns: 
     ax.set_xticks(overlap["k"])
     ax.grid(alpha=0.2)
     ax.legend(frameon=False, loc="upper left")
+    ax.set_title("Top-k overlap")
+    if panel_label is not None:
+        _add_axis_panel_label(ax, panel_label)
 
 
 def _plot_overlap_and_rank_statistics(
@@ -662,15 +673,15 @@ def _plot_overlap_and_rank_statistics(
     }
     bucket_order = ["Selected drift", "Theory seed", "Stable control"]
     bucket_palette = {
-        "Selected drift": OKABE_ITO["yellow"],
+        "Selected drift": OKABE_ITO["blue"],
         "Theory seed":    OKABE_ITO["purple"],
-        "Stable control": OKABE_ITO["grey"],
+        "Stable control": OKABE_ITO["black"],
     }
 
     stats_summary: dict[str, object] = {"overlap": overlap.to_dict(orient="records"), "bucket_tests": {}}
 
     pfig_a, pax_a = plt.subplots(1, 1, figsize=(3.3, 2.9))
-    _draw_topk_overlap_panel(pax_a, overlap, pair_columns)
+    _draw_topk_overlap_panel(pax_a, overlap, pair_columns, panel_label="A")
     _save_bundle(pfig_a, output_stem.parent / f"{output_stem.name}_panel_a")
 
     for idx, (method_label, frame) in enumerate(method_frames.items(), start=1):
@@ -678,17 +689,21 @@ def _plot_overlap_and_rank_statistics(
         stats_summary["bucket_tests"][method_label] = _plot_bucket_rank_panel(
             axis=pax, method_label=method_label, frame=frame,
             bucket_order=bucket_order, bucket_palette=bucket_palette,
+            panel_label=ascii_uppercase[idx],
         )
         letter = ascii_uppercase[idx].lower()
         _save_bundle(pfig, output_stem.parent / f"{output_stem.name}_panel_{letter}")
 
     fig, axes = plt.subplots(2, 2, figsize=(6.6, 5.7))
-    _draw_topk_overlap_panel(axes[0, 0], overlap, pair_columns)
-    for axis, (method_label, frame) in zip([axes[0, 1], axes[1, 0], axes[1, 1]], method_frames.items(), strict=False):
+    _draw_topk_overlap_panel(axes[0, 0], overlap, pair_columns, panel_label="A")
+    for idx, (axis, (method_label, frame)) in enumerate(
+        zip([axes[0, 1], axes[1, 0], axes[1, 1]], method_frames.items(), strict=False),
+        start=1,
+    ):
         _plot_bucket_rank_panel(axis=axis, method_label=method_label, frame=frame,
-                                bucket_order=bucket_order, bucket_palette=bucket_palette)
+                                bucket_order=bucket_order, bucket_palette=bucket_palette,
+                                panel_label=ascii_uppercase[idx])
 
-    _add_panel_labels([axes[0, 0], axes[0, 1], axes[1, 0], axes[1, 1]], x=-0.13, y=1.04)
     _save_bundle(fig, output_stem)
     return stats_summary
 
@@ -699,45 +714,55 @@ def _plot_bucket_rank_panel(
     frame: pd.DataFrame,
     bucket_order: list[str],
     bucket_palette: dict[str, str],
+    panel_label: str | None = None,
 ) -> dict[str, float]:
     plot_frame = frame.copy()
     plot_frame["bucket_group"] = plot_frame["bucket"].map(_bucket_group)
     plot_frame["rank_pct"] = _rank_to_percentile(plot_frame["rank"])
 
-    jitter_rng = np.random.default_rng(13)
-    stats: list[tuple[str, float, float, float]] = []
+    values_by_bucket = [
+        plot_frame.loc[plot_frame["bucket_group"] == bucket_group, "rank_pct"].to_numpy()
+        for bucket_group in bucket_order
+    ]
+    boxplot = axis.boxplot(
+        values_by_bucket,
+        positions=np.arange(len(bucket_order), dtype=float),
+        widths=0.52,
+        patch_artist=True,
+        showfliers=True,
+        whis=1.5,
+        boxprops={"linewidth": 1.2},
+        medianprops={"color": OKABE_ITO["black"], "linewidth": 1.8},
+        whiskerprops={"color": OKABE_ITO["black"], "linewidth": 1.0},
+        capprops={"color": OKABE_ITO["black"], "linewidth": 1.0},
+        flierprops={
+            "marker": "o",
+            "markerfacecolor": OKABE_ITO["black"],
+            "markeredgecolor": OKABE_ITO["black"],
+            "markersize": 4,
+            "alpha": 0.7,
+        },
+    )
     for index, bucket_group in enumerate(bucket_order):
-        values = plot_frame.loc[plot_frame["bucket_group"] == bucket_group, "rank_pct"].to_numpy()
-        if len(values) == 0:
-            continue
-        x = np.full(len(values), float(index)) + jitter_rng.uniform(-0.08, 0.08, size=len(values))
-        axis.scatter(
-            x,
-            values,
-            s=16,
-            color=bucket_palette[bucket_group],
-            alpha=0.35,
-            linewidth=0.0,
-        )
-        mean_value, ci_low, ci_high = _bootstrap_ci(values)
-        stats.append((bucket_group, mean_value, ci_low, ci_high))
-        axis.errorbar(
-            index,
-            mean_value,
-            yerr=np.array([[mean_value - ci_low], [ci_high - mean_value]]),
-            color=METHOD_COLORS[method_label],
-            marker="o",
-            markersize=5,
-            linewidth=1.5,
-            capsize=3,
-            zorder=4,
-        )
+        box = boxplot["boxes"][index]
+        box.set_facecolor(to_rgba(bucket_palette[bucket_group], 0.18))
+        box.set_edgecolor(bucket_palette[bucket_group])
 
     axis.set_xticks(range(len(bucket_order)))
-    axis.set_xticklabels(bucket_order, rotation=18, ha="right")
+    axis.set_xticklabels(
+        [
+            f"{bucket_group}\n(n={len(values_by_bucket[index])})"
+            for index, bucket_group in enumerate(bucket_order)
+        ],
+        rotation=18,
+        ha="right",
+    )
     axis.set_ylim(-0.02, 1.05)
     axis.set_ylabel("Rank percentile")
     axis.grid(axis="y", alpha=0.2)
+    axis.set_title(f"{method_label} rank percentiles")
+    if panel_label is not None:
+        _add_axis_panel_label(axis, panel_label)
 
     drift_values = plot_frame.loc[
         plot_frame["bucket_group"] == "Selected drift",
@@ -761,6 +786,19 @@ def _plot_bucket_rank_panel(
         "drift_mean": float(drift_values.mean()),
         "stable_mean": float(stable_values.mean()),
     }
+
+
+def _add_axis_panel_label(axis: plt.Axes, label: str) -> None:
+    axis.text(
+        -0.14,
+        1.08,
+        label,
+        transform=axis.transAxes,
+        fontsize=11,
+        fontweight="bold",
+        va="top",
+        ha="left",
+    )
 
 
 def _add_significance_bracket(
