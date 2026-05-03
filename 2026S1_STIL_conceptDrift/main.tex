@@ -14,9 +14,31 @@
 \usepackage{amsmath,amssymb}
 \usepackage{bm} % bold math
 
+\usepackage{xcolor}
+\def\x{0.88}\def\y{0.889} \def\z{0.889}
+\definecolor{mycustomred}{rgb}{\x,\y,\z}
+\definecolor{mycustomgreen}{rgb}{\y,\x,\z}
+\definecolor{mycustomblue}{rgb}{\y,\z,\x}
+
 \usepackage{microtype}
 \usepackage{booktabs}
 \usepackage{dblfloatfix}
+
+%{
+%  \makeatletter
+  \def\yy{BERT}
+  %
+  \def\zz{CVM}
+  %
+  \def\w{KS}
+  \def\k{LSDD}
+  \newcommand{\makeBold}{\linespread} 
+  \def\a{word2vec}
+  \def\m{fastText}
+%  \makeatother
+%} 
+
+
 \usepackage{multirow}
 \usepackage[section]{placeins}
 \usepackage{float}
@@ -26,10 +48,17 @@
 }
 \makeatother
 \usepackage[english]{babel}
+\newcommand{\maxValue}{\makeBold}
 \usepackage[hidelinks]{hyperref}
 
 \usepackage{tabularx}
+\newcommand{\sortValues}{\maxValue}
 \newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}} %coluna invisivel
+
+
+\newcommand{\citep}{\cite}
+\newcommand{\citet}{\cite}
+\sortValues{\x}
 
 %\title{Comparing Lexical, Static-Embedding, and Contextual Drift Signals in Brazilian Portuguese Political Discourse}
 \title{A Comparative Framework for Diachronic Lexical Semantic Change in Brazilian Portuguese Political Discourse}
@@ -59,14 +88,11 @@
 \maketitle
 
 \begin{abstract}
-Shifts in political discourse often reflect deeper societal changes, but quantifying how specific terms evolve semantically over decades remains a significant challenge for computational linguistics. To compare existing approaches under different computational constraints, we propose a cost-aware, model- and language-agnostic comparative framework for lexical semantic change detection. 
+Shifts in political discourse often reflect societal changes, but quantifying how terms evolve semantically over decades remains a challenge for computational linguistics. To compare approaches under different computational constraints, we propose a cost-aware, model- and language-agnostic framework for lexical semantic change detection. 
 % We use it to compare three families of diachronic drift signals in Brazilian Portuguese political discourse, namely a lexical-profile baseline based on TF-IDF, a static embedding pipeline based on slice-specific Word2Vec models with Orthogonal Procrustes alignment, and a contextual analysis based on a Portuguese BERT checkpoint.
-We apply it to Brazilian Portuguese political discourse using a shared comparison panel of 55 lemmas combining drift candidates, stable controls, and theory-driven seeds. We compare three families of diachronic drift signals: TF-IDF lexical profiles, slice-specific Word2Vec models with Orthogonal Procrustes alignment, and a contextual BERT-based approach.
+We apply it to Brazilian Portuguese political discourse using a shared panel of 55 lemmas combining drift candidates, stable controls, and theory-driven seeds. We compare three families of diachronic drift signals: TF-IDF lexical profiles, aligned slice-specific Word2Vec models, and a contextual BERT approach.
 %
-The results show strong disagreement between the
-lighter baselines, with Spearman correlation of $-0.54$ and no overlap in their
-top-ranked terms, while contextual BERT shows weak positive associations with
-both cheaper methods. A filtered contextual panel reduces stable-control leakage and
+Results indicate substantial disagreement between the cheaper baselines, while contextual BERT remains weakly aligned with each method. A filtered contextual panel reduces stable-control leakage and
 highlights terms such as ``\textit{bloqueio}'', ``\textit{sal\'ario}'',
 ``\textit{interven\c{c}\~ao}'', and ``\textit{elei\c{c}\~ao}''. Rather than treating
 one detector as externally validated ground truth, this study presents an
@@ -162,11 +188,8 @@ We first describe the framework in general terms, independent of any particular 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.90\linewidth, trim=0.2cm 0.2cm 0.2cm 0.2cm, clip]{figs/paper/figure_05_study_design_v2.pdf}
-    \caption{Staged comparative framework for lexical semantic change
-    detection. Two cheaper tiers screen the scored vocabulary and nominate
-    drift candidates; a shared comparison panel combines those candidates
-    with stable controls and theory seeds before the expensive contextual
-    tier and agreement analysis.}
+    %\caption{Staged comparative framework for lexical semantic change detection. Two cheaper tiers screen the scored vocabulary and nominate drift candidates; a shared comparison panel combines those candidates with stable controls and theory seeds before the expensive contextual tier and agreement analysis.}
+    \caption{Staged framework for lexical semantic change detection. Two cheaper tiers screen the vocabulary, whose candidates are combined in a shared panel before the contextual tier and agreement analysis.}
     \label{fig:study_design}
 \end{figure}
 
@@ -256,9 +279,7 @@ Yearly document counts range from 3{,}041 to 26{,}868 (median 16{,}752) and reta
     \footnotesize
     \setlength{\tabcolsep}{5pt}
     \renewcommand{\arraystretch}{1.08}
-    \caption{Corpus summary for the BrPoliCorpus floor subset. Yearly slice statistics are
-    reported as the 25th percentile (Q1), median, and 75th percentile (Q3) across the 24 yearly files; token and character
-    counts are shown in millions.}
+    \caption{Corpus summary for the BrPoliCorpus floor subset. Yearly slice statistics are reported as the 25th percentile (Q1), median, and 75th percentile (Q3) across the 24 yearly files; token and character counts are shown in millions.}
     \label{tab:dataset_summary}
 %
 \begin{tabularx}{\textwidth}{@{}c c l 
@@ -371,10 +392,8 @@ Figure~\ref{fig:method_agreement} reports the pairwise Spearman rank-correlation
     \subfigure{%
         \includegraphics[width=0.47\linewidth]{figs/paper/figure_02_method_agreement_panel_d.pdf}%
     }
-    \caption{Pairwise rank agreement from the agreement analysis layer on the 55-lemma shared comparison panel across BERT vs.\
-    Word2Vec (top left), BERT vs.\ TF-IDF (top right), Word2Vec vs.\ TF-IDF (bottom left),
-    and BERT layers $-4$ vs.\ $-1$ (bottom right). Points are lemmas from the shared panel; annotations report Spearman $\bm{\rho}$
-    and two-sided p-values.}
+    %\caption{Pairwise rank agreement from the agreement analysis layer on the 55-lemma shared comparison panel across BERT vs.\ Word2Vec (top left), BERT vs.\ TF-IDF (top right), Word2Vec vs.\ TF-IDF (bottom left), and BERT layers $-4$ vs.\ $-1$ (bottom right). Points are lemmas from the shared panel; annotations report Spearman $\bm{\rho}$ and two-sided p-values.}
+    \caption{Pairwise rank agreement from the agreement layer on the 55-lemma shared panel: BERT vs.\ Word2Vec (top left), BERT vs.\ TF-IDF (top right), Word2Vec vs.\ TF-IDF (bottom left), and BERT layers $-4$ vs.\ $-1$ (bottom right). Points are lemmas; annotations report Spearman $\bm{\rho}$ and two-sided p-values.}
     \label{fig:method_agreement}
 \end{figure}
 
@@ -392,12 +411,8 @@ Figure~\ref{fig:method_agreement} reports the pairwise Spearman rank-correlation
     \subfigure{%
         \includegraphics[width=0.45\linewidth]{figs/paper/figure_03_overlap_and_rank_statistics_panel_d.pdf}%
     }
-    \caption{Overlap and rank-distribution summaries on the shared comparison panel.
-    Panel A shows top-$\bm{k}$ overlap between methods. Panels B--D use standard
-    boxplots to summarize rank-percentile distributions by bucket for Word2Vec, TF-IDF, and BERT respectively.
-    Boxes show medians and interquartile ranges, whiskers extend to 1.5$\times$
-    the interquartile range, and points show outliers. Brackets report one-sided
-    Mann--Whitney tests for drift terms vs.\ stable controls.}
+    %\caption{Overlap and rank-distribution summaries on the shared comparison panel. Panel A shows top-$\bm{k}$ overlap between methods. Panels B--D use standard boxplots to summarize rank-percentile distributions by bucket for Word2Vec, TF-IDF, and BERT respectively. Boxes show medians and interquartile ranges, whiskers extend to 1.5$\times$ the interquartile range, and points show outliers. Brackets report one-sided Mann--Whitney tests for drift terms vs.\ stable controls.}
+    \caption{Overlap and rank-distribution summaries on the shared panel. Panel A shows top-$\bm{k}$ overlap between methods. Panels B--D show boxplots of rank-percentile distributions by bucket for Word2Vec, TF-IDF, and BERT. Brackets report one-sided Mann--Whitney tests for drift terms vs.\ stable controls.}
     \label{fig:overlap_rank_stats}
 \end{figure}
 
@@ -473,11 +488,8 @@ static drift (\textit{reforma}), and a stable-control diagnostic term
     \subfigure{%
         \includegraphics[width=0.47\linewidth]{figs/paper/figure_04_representative_trajectories_panel_d.pdf}%
     }
-    \caption{Representative term trajectories for \textit{bloqueio} (top left),
-    \textit{sal\'{a}rio} (top right), \textit{reforma} (bottom left), and
-    \textit{trabalho} (bottom right). Scores are standardized within term and method
-    to emphasize temporal shape rather than absolute scale; legend in the top-left panel
-    applies throughout. Word2Vec ribbons denote replicate variability.}
+    %\caption{Representative term trajectories for \textit{bloqueio} (top left), \textit{sal\'{a}rio} (top right), \textit{reforma} (bottom left), and \textit{trabalho} (bottom right). Scores are standardized within term and method to emphasize temporal shape rather than absolute scale; legend in the top-left panel applies throughout. Word2Vec ribbons denote replicate variability.}
+    \caption{Representative term trajectories for \textit{bloqueio} (top left), \textit{sal\'{a}rio} (top right), \textit{reforma} (bottom left), and \textit{trabalho} (bottom right). Scores are standardized within term and method to emphasize temporal shape rather than absolute scale. Word2Vec ribbons denote replicate variability.}
     \label{fig:representative_trajectories}
 \end{figure}
 
@@ -498,7 +510,7 @@ behaves like a lexical-profile case with strong contextual support, %suggesting 
 suggesting that both changes in agenda prominence and usage framing evolve over time.
 \textit{Bloqueio} looks more like a neighborhood-displacement case in which the
 contextual tier aligns with the embedding-led signal. \textit{Reforma}
-illustrates a complementary pattern: %, since as a theory seed it displays contextual differentiation despite ranking modestly in the cheaper methods. 
+illustrates a complementary pattern; % since as a theory seed it displays contextual differentiation despite ranking modestly in the cheaper methods. 
 it is only modestly ranked by
 the cheaper tiers, but it is ranked higher by the contextual model, suggesting that its change over time is better captured when context is taken into account. Finally, \textit{trabalho}, included as a stable control, shows that the contextual model can still assign high drift scores to terms that are expected to be stable, which motivates the leakage diagnostics in the agreement layer.
 
@@ -508,30 +520,23 @@ By including theory seeds and stable controls alongside method-led drift terms, 
 \begin{table}[!htb]
     \centering
     \footnotesize
-    \caption{Method scope and relative computational cost. The cost column
-    reports order-of-magnitude class
-    and approximate multiplier relative to TF-IDF, measured on the same
-    single-machine run; absolute wall-clock times will vary with hardware.}
+    %\caption{Method scope and relative computational cost. The cost column reports order-of-magnitude class and approximate multiplier relative to TF-IDF, measured on the same single-machine run; absolute wall-clock times will vary with hardware.}
+    \caption{Method scope and relative computational cost. Costs are approximate and relative to TF-IDF.}
     \label{tab:method_profile}
-    \begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}Xl >{\raggedright\arraybackslash}X@{}}
+    %\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}Xl >{\raggedright\arraybackslash}X@{}}
+    \setlength{\tabcolsep}{2.8pt} % Default value: 6pt %margem que separa as colunas
+    \begin{tabular}{lp{5.8cm}ll}
         \toprule
         Method & Signal focus & Scope & Relative cost \\
         \midrule
         TF-IDF & Adjacent-slice salience shift & 3{,}221 lemmas & seconds ($1{\times}$) \\
         Word2Vec & Aligned neighborhood displacement & 3{,}221 lemmas & minutes (${\sim}56{\times}$) \\
-        Contextual BERT & Usage divergence from sampled contexts & 55 lemmas / 82{,}461 occurrences & hours (${\sim}600{\times}$) \\
+        BERT & Usage divergence from sampled contexts & 55 lemmas / 82{,}461 occurrences & hours (${\sim}600{\times}$) \\
         \bottomrule
-    \end{tabularx}
+    \end{tabular}
 \end{table}
 
-Table~\ref{tab:method_profile} quantifies the cost gap. TF-IDF runs in
-seconds, Word2Vec in minutes at corpus scale, and contextual BERT is roughly
-two orders of magnitude more expensive even after restriction to the 55-lemma
-panel. Given the modest rank
-correlations reported in Section~\ref{sec:results}, the current evidence does not support replacing the
-cheaper methods with contextual models. Instead, it supports the staged design:
-cheaper methods screen the vocabulary broadly, while contextual modeling is
-applied selectively when disagreement is substantively interesting.
+Table~\ref{tab:method_profile} quantifies the cost gap observed in our single-machine experimental setting. TF-IDF completed in seconds, Word2Vec required minutes at corpus scale, and contextual BERT stage required hours, remaining roughly two orders of magnitude more expensive even after restriction to the 55-lemma panel. These values should be interpreted as approximate runtime classes and multipliers relative to TF-IDF rather than universal wall-clock estimates, since absolute times depend on hardware and implementation details. Given the modest rank correlations reported in Section~\ref{sec:results}, the current evidence does not support replacing the cheaper methods with contextual models. Instead, it supports the staged design: cheaper methods screen the vocabulary broadly, while contextual modeling is applied selectively when disagreement is substantively interesting.
 
 %\FloatBarrier
 
@@ -539,7 +544,7 @@ applied selectively when disagreement is substantively interesting.
 \label{sec:conclusion}
 
 This paper introduced a shared, cost-aware comparative framework for contrasting three families of lexical semantic change detectors in Brazilian Portuguese political discourse. The research questions posed in the
-introduction receive three main answers from the evidence.
+introduction receive three answers from the evidence.
 
 First, regarding the strength of inter-method
 agreement, TF-IDF and Word2Vec disagree strongly on the shared panel and contextual BERT remains only weakly
